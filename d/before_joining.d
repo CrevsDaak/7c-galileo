@@ -32,7 +32,7 @@ END
 
 IF ~~ BEGIN 7c#end.angry.2
   SAY @12 /* Well that was uncalled for. Bugger off, rude one. */
-    IF~~ DO ~SetGlobal("7C#GalileoHappiness1","GLOBAL",5)~ EXIT
+    IF ~~ DO ~SetGlobal("7C#GalileoHappiness1","GLOBAL",5)~ EXIT
 END
 
 IF ~~ BEGIN 7c#answers.1
@@ -60,7 +60,7 @@ END
 
 IF ~~ BEGIN 7c#happy.good.bye.1
   SAY @21 /* You make me sad. So be it. */
-    IF ~~ DO ~SetGlobal("7C#GalileoHappiness1","GLOBAL",15)~ EXIT~
+    IF ~~ DO ~SetGlobal("7C#GalileoHappiness1","GLOBAL",15)~ EXIT
 END
 
 IF ~!NumTimesTalkedTo(0)
