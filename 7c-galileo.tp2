@@ -234,7 +234,7 @@ END
 
 COPY_EXISTING "%tutu_prefix%gandol.dlg" override
   DECOMPILE_AND_PATCH BEGIN
-    REPLACE_TEXTUALLY ~GiveGoldForce\(.*.$)\~ ~GiveGoldForce\1
+    REPLACE_TEXTUALLY ~GiveGoldForce\(.*.$\)~ ~GiveGoldForce\1
 SetGlobal("7C#DoneFirewineRuins","GLOBAL",1)~
   END
   UNLESS "7C#DoneFirewineRuins"
