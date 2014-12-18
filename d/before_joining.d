@@ -107,7 +107,7 @@ END
 IF ~~ BEGIN 7c#kill.u.r.mom
   SAY @37 /* I ... What?! What did I ever do to you? */
     IF ~~ REPLY @38 /* You exist. */ GOTO 7c#fuck.you
-    IF ~~ REPLY @39 /* You are an ugly butt, and your butt is stupid. /* GOTO 7c#fuck.you
+    IF ~~ REPLY @39 /* You are an ugly butt, and your butt is stupid. */ GOTO 7c#fuck.you
     IF ~~ REPLY @40 /* No, I was only joking. I didn't mean all that. */ GOTO 7c#oh.sorry
 END
 
@@ -141,7 +141,17 @@ IF ~~ BEGIN 7c#hey.there.shorty
     IF ~~ REPLY @48 /* No thank you. */ GOTO 7c#no.prob.bob.bye
 END
 
-IF ~~ BEGIN 7c#no.place4.ya
+IF ~~ BEGIN 7c#no.place.4.ya
   SAY @49 /* What? How? Oi, I'm this small! Oh ... fine. */
+    IF ~~ DO ~SetGlobal("7C#GalileoHappiness1","GLOBAL",15)~ EXIT
+END
+
+IF ~~ BEGIN 7c#meet.angry.happy.bye.1
+  SAY @51 /* No trouble at all, good sir. Come back if you need me, I likely won't be going anywhere. */
+    IF ~~ DO ~SetGlobal("7C#GalileoHappiness1","GLOBAL",15)~ EXIT
+END
+
+IF ~~ BEGIN 7c#no.prob.bob.bye
+  SAY @52 /* That's no problem. Let me know if'n you change your mind, I'm bored. */
     IF ~~ DO ~SetGlobal("7C#GalileoHappiness1","GLOBAL",15)~ EXIT
 END

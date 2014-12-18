@@ -49,6 +49,8 @@
 @48 = ~No thank you.~
 @49 = ~What? How? Oi, I'm this small! Oh ... fine.~
 @50 = ~Okay, why not.~
+@51 = ~No trouble at all, good sir. Come back if you need me, I likely won't be going anywhere.~
+@52 = ~That's no problem. Let me know if'n you change your mind, I'm bored.~
 // party_dialog.d
-@51 = ~Hey <CHARNAME>, I hear Feldepost fetches a fair price for fresh poultry... Only joking.~
-@52 = ~Well that's only slightly disturbing.~
+@53 = ~Hey <CHARNAME>, I hear Feldepost fetches a fair price for fresh poultry... Only joking.~
+@54 = ~Well that's only slightly disturbing.~
