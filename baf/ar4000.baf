@@ -1,0 +1,45 @@
+IF
+	%bgt_check%
+	Global("7C#GalileoSpawnedBG1","GLOBAL",0)
+	AreaCheck(~"%Gullykin%"~)
+	!Exists("Galileo1")
+	!Dead(Galileo1")
+	LevelLT(Player1,4)
+THEN
+	RESPONSE #100
+		CreateCreature("7C#GAL02",[1401.656],SE)
+		SetGlobal("7C#GalileoSpawnedBG1","GLOBAL",1)
+		SetGlobal("7C#GalileoHappiness","GLOBAL",10)
+		Continue()
+END
+
+IF
+	%bgt_check%
+	Global("7C#GalileoSpawnedBG1","GLOBAL",0)
+	AreaCheck(~"%Gullykin%"~)
+	!Exists("Galileo1")
+	!Dead(Galileo1")
+	LevelGT(Player1,3)
+	LevelLT(Player1,6)
+THEN
+	RESPONSE #100
+		CreateCreature("7C#GAL04",[1401.656],SE)
+		SetGlobal("7C#GalileoSpawnedBG1","GLOBAL",1)
+		SetGlobal("7C#GalileoHappiness","GLOBAL",10)
+		Continue()
+END
+
+IF
+	%bgt_check%
+	Global("7C#GalileoSpawnedBG1","GLOBAL",0)
+	AreaCheck(~"%Gullykin%"~)
+	!Exists("Galileo1")
+	!Dead(Galileo1")
+	LevelGT(Player1,5)
+THEN
+	RESPONSE #100
+		CreateCreature("7C#GAL06",[1401.656],SE)
+		SetGlobal("7C#GalileoSpawnedBG1","GLOBAL",1)
+		SetGlobal("7C#GalileoHappiness","GLOBAL",10)
+		Continue()
+END

@@ -1,0 +1,85 @@
+Galileo
+Neutral Good
+Halfling
+Bard - Jester
+STR: 12
+DEX: 19
+CON: 14
+INT: 15
+WIS: 9
+CHA: 16
+
+Galileo is a follower of Finder Wyvernspur.
+
+Leader: What? The Jester in the front? Have you gone mad?
+Battle Cry: Prepare to die, obviously!
+You will find honor in death!
+Yes, blood of the innocents! Sorry, got carried away.
+Bored: Oi, don't we have anything better to do?
+Tired: This is making me very tired. You won't like me when I'm tired.
+Morale Failure: Time to bugger off!
+Selected: Aye?
+You need me?
+How can I help you?
+Action: Well okay then, boss!
+I'll see what I can do.
+An excellent plan, good sir.
+Rare: Can I just sing instead? No? Fine.
+But I don't want any of that. I'd rather just sing.
+I'm going on an adventure!
+Does this seem like a good idea to you? Yes other Galileo, yes it does.
+Day: I'm walkin' on sunshine! Whoa-oh!
+Night: The night is young, and you're so beautiful.
+Forest: 
+Dungeon: 
+City: These human settlements never cease to amaze me. So ambitious and filled with wonder.
+Alora Death: No! Not Alora…
+Coran Death: A merrier fool I've never known.
+Garrick Death: Goodnight, sweet bard.
+Montaron Death: A stranger halfling I've never known, but I already miss him.
+Quayle Death: I thought he was too smart to die?
+Tiax Death: Mad as a hatter, dead and it does not matter.
+Critical Miss: D'oh!
+Critical Hit: Take that, you bastard!
+Pick Pocket: I need this more than you do. Honest.
+Set Trap: I've left a dastardly trap for our enemies.
+Spell Interrupted: You bastard! You vicious, heartless bastard!
+
+LVL 2
+11 HP
+Short Bow *
+Axe *
+Blindness
+Invisibility
+
+LVL 4
+20 HP
+Short Bow *
+Axe *
+Sling *
+Blindness
+Magic Missile
+Invisibility
+Knock
+
+LVL 6
+30 HP
+Short Bow *
+Axe *
+Sling *
+Blindness
+Magic Missile
+Chromatic Orb
+Invisibility
+Knock
+Glitterdust
+
+Traits:
+Energetic
+Imaginative
+Humorous
+Reliable
+Jealous?
+A bit shy, a bit awkward
+Melodramatic
+Moody

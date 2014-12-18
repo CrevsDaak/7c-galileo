@@ -1,0 +1,40 @@
+IF
+	%bgt_check%
+	!Global("7C#DoneFirewineRuins","GLOBAL",1)
+	Dead("DICK")
+THEN
+	RESPONSE #100
+		SetGlobal("7C#DoneFirewineRuins","GLOBAL",1)
+END
+
+IF
+	%bgt_check%
+	Global("7C#GalileoMelicampComment","GLOBAL",0)
+	PartyHasItem(~"%tutu_prefix%misc49"~)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("7C#GalileoTalkPlayer1","LOCALS",TWO_ROUNDS)
+		SetGlobal("7C#GalileoMelicampComment","GLOBAL",1)
+END
+
+IF
+	%bgt_check%
+	Global("7C#GalileoMelicampComment","GLOBAL",1)
+	!GlobalTimerNotExpired("7C#GalileoTalkPlayer1","LOCALS")
+THEN
+	RESPONSE #100
+		SetGlobal("7C#GalileoMelicampComment","GLOBAL",2)
+		Dialog("Player1")
+END
+
+IF
+	%bgt_check%
+	Detect("DeadHalflingMessager")
+	Range("DeadHalflingMessager",20)
+	Dead("DeadHalflingMessager")
+	Global("7C#GalileoDeadHalflingComment","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("7C#GalileoDeadHalflingComment","GLOBAL",1)
+		Dialog("Player1")
+END
