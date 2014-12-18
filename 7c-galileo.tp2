@@ -135,8 +135,8 @@ COPY_EXISTING 7c#gal02.cre "override/7c#gal04.cre"
   END
   ADD_MEMORIZED_SPELL SPWI206 #1 wizard #1
   ADD_MEMORIZED_SPELL SPWI112 #0 wizard #1
-  ADD_CRE_ITEM bull01 #34 #0 #0 none quiv1
-  ADD_CRE_ITEM bull01 #26 #0 #0 none quiv2
+  ADD_CRE_ITEM bull01 #34 #0 #0 none quiver1
+  ADD_CRE_ITEM bull01 #26 #0 #0 none quiver2
   ADD_CRE_ITEM slng01 #0 #0 #0 none inv3
   LPF ADD_CRE_EFFECT
     INT_VAR
