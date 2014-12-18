@@ -107,7 +107,7 @@ END
 IF ~~ BEGIN 7c#kill.u.r.mom
   SAY @37 /* I ... What?! What did I ever do to you? */
     IF ~~ REPLY @38 /* You exist. */ GOTO 7c#fuck.you
-    IF ~~ REPLY @39 /* You are an ugly butt, and your butt is stupid. /* GOTO 7c#fuck.you
+    IF ~~ REPLY @39 /* You are an ugly butt, and your butt is stupid. */ GOTO 7c#fuck.you
     IF ~~ REPLY @40 /* No, I was only joking. I didn't mean all that. */ GOTO 7c#oh.sorry
 END
 
