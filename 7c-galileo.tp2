@@ -25,16 +25,16 @@ REQUIRE_PREDICATE GAME_IS "bgee bgt eet tutu tutu_totsc" @2
 ACTION_IF GAME_IS "tutu tutu_totsc" BEGIN
   OUTER_SPRINT bgt_check ""
   OUTER_SPRINT tutu_prefix "_"
-  OUTER_SPRINT melicamp _misc49
+  OUTER_SPRINT melicamp ~"_misc49"~
   OUTER_SPRINT dead_halfling _halfmir
   OUTER_SPRINT Gullykin fw4000
 END ELSE ACTION_IF GAME_IS bgt BEGIN
-  OUTER_SPRINT melicamp misc49
+  OUTER_SPRINT melicamp ~"misc49"~
   OUTER_SPRINT dead_halfling halfmiri
   OUTER_SPRINT Gullykin ar9900
   OUTER_SPRINT bgt_check ~!Global("endofbg1","GLOBAL",2)~
 END ELSE ACTION_IF GAME_IS bgee BEGIN
-  OUTER_SPRINT melicamp misc49
+  OUTER_SPRINT melicamp ~"misc49"~
   OUTER_SPRINT bgt_check ""
   OUTER_SPRINT dead_halfling halfmiri
   OUTER_SPRINT Gullykin ar4000
