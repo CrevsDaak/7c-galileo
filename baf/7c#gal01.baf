@@ -10,7 +10,7 @@ END
 IF
 	%bgt_check%
 	Global("7C#GalileoMelicampComment","GLOBAL",0)
-	PartyHasItem(~"%tutu_prefix%misc49"~)
+	PartyHasItem(~"%melicamp%"~)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("7C#GalileoTalkPlayer1","LOCALS",TWO_ROUNDS)
