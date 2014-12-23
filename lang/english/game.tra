@@ -47,3 +47,6 @@
 @7731 = ~I've left a dastardly trap for our enemies.~ [7C#GAL30]
 // spell interrupted
 @7732 = ~You bastard! You vicious, heartless bastard!~ [7C#GAL31]
+// turned hostile
+@7733 = ~You stupid <CHARNAME>! You can't fight Galileo and win!
+(Or maybe yes... Bloody bastard!)~ [7C#GAL32]

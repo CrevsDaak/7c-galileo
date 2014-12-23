@@ -1,12 +1,58 @@
-BEGIN "7C#GAL01"
+BEGIN "7C#GAL1P"
+
+IF ~!NumTimesTalkedTo(0)
+!InParty("Galileo1")
+Global("7C#GalileoInParty","GLOBAL",1)~ BEGIN 7c#meet.after.kicking.1
+  SAY ~DO YOU WANT ME BACK ON YOUR PARTY?~
+    IF ~~ REPLY ~YES.~ DO ~JoinParty()
+SetGlobal("7C#GalileoInParty","GLOBAL",2)~ EXIT
+    IF ~~ REPLY ~NO.~ DO ~~ EXIT
+END
 
 IF ~NumTimesTalkedTo(0)
-!Global("7C#DoneFirewineRuins","GLOBAL",1)~ BEGIN 7c#meeting.1
+!Global("7C#DoneFirewineRuins","GLOBAL",1)
+!Global("7C#GalileoInParty","GLOBAL",1)~ BEGIN 7c#meeting.1
   SAY @1 /* Greetings, I am called Galileo; bard, servant of Finder Wyvernspur, and I am at your service. */
     IF ~~ REPLY @2 /* Hello there my small friend, I am <CHARNAME> */ GOTO 7c#meeting.2
     IF ~~ REPLY @3 /* No, I do not like you. */ GOTO 7c#end.angry.1
     IF ~~ REPLY @4 /* Yes, I would appreciate your help. */ GOTO 7c#joins.1
     IF ~~ REPLY @5 /* Please excuse me, I haven't the time to speak with you. */ GOTO 7c#happy.bye.1
+END
+
+IF ~NumTimesTalkedTo(0)
+Global("7C#DoneFirewineRuins","GLOBAL",1)
+!Global("7C#GalileoInParty","GLOBAL",1)~ BEGIN 7c#meet.firewine.done.1
+  SAY @44 /* Well, it's nice to finally meet the savior of our little town! */
+    IF ~~ REPLY @45 /* Hello there my small friend. */ GOTO 7c#hey.there.shorty
+    IF ~~ REPLY @5 /* Please excuse me, I haven't the time to speak with you. */ GOTO 7c#happy.bye.1
+END
+
+IF ~!NumTimesTalkedTo(0)
+GlobalGT("7C#GalileoHappiness1","GLOBAL",9)
+!Global("7C#DoneFirewineRuins","GLOBAL",1)
+!Global("7C#GalileoInParty","GLOBAL",1)~ BEGIN 7c#meet.2.happy
+  SAY @22 /* Looking to have a helper for exploring the Firewine Ruins? */
+    IF ~~ REPLY @23 /* Yes, I would be pleased to have you join me. */ GOTO 7c#meet.2.happy.join.1
+    IF ~~ REPLY @3 /* No, I do not like you */ GOTO 7c#end.angry.1
+    IF ~~ REPLY @24 /* Could you tell me what your abilities are? */ GOTO 7c#answers.1
+    IF ~~ REPLY @25 /* Not at this time, sorry. */ GOTO 7c#happy.bye.again.1
+END
+
+IF ~!NumTimesTalkedTo(0)
+GlobalLT("7C#GalileoHappiness1","GLOBAL",10)
+!Global("7C#DoneFirewineRuins","GLOBAL",1)
+!Global("7C#GalileoInParty","GLOBAL",1)~ BEGIN 7c#meet.angry.1
+  SAY @28 /* Hmm? Oh, what do you want? */
+    IF ~~ REPLY @29 /* I was wondering if you could join my group in our venture in the Firewine Ruins. */ GOTO 7c#meet.angry.joins.1
+    IF ~~ REPLY @30 /* I just wanted to say that I'm sorry for what I said before. */ GOTO 7c#sorry.bro.1
+    IF ~~ REPLY @31 /* I came to let you know that you are a failure and no one loves you. */ GOTO 7c#kill.u.r.mom
+END
+
+IF ~!NumTimesTalkedTo(0)
+GlobalLT("7C#GalileoHappiness1","GLOBAL",5)
+!Global("7C#GalileoInParty","GLOBAL",1)~ BEGIN 7c#very.angry
+  SAY @43 /* Bugger off. */
+    IF ~~ DO ~~ EXIT
 END
 
 IF ~~ BEGIN 7c#meeting.2
@@ -22,7 +68,8 @@ END
 
 IF ~~ BEGIN 7c#joins.1
   SAY @10 /* Excellent. To the Firewine then. Let us be off! */
-    IF ~~ DO ~JoinParty()~ EXIT
+    IF ~~ DO ~JoinParty()
+SetGlobal("7C#GalileoInParty","GLOBAL",2)~ EXIT
 END
 
 IF ~~ BEGIN 7c#happy.bye.1
@@ -50,12 +97,14 @@ END
 
 IF ~~ BEGIN 7c#joins.sarcasm.1
   SAY @19 /* I hope you are not being sarcastic, my friend. */
-    IF ~~ DO ~JoinParty()~ EXIT
+    IF ~~ DO ~JoinParty()
+SetGlobal("7C#GalileoInParty","GLOBAL",2)~ EXIT
 END
 
 IF ~~ BEGIN 7c#marvelous.joins.1
   SAY @20 /* Oh marvelous, just mah-velous! */
-    IF ~~ DO ~JoinParty()~ EXIT
+    IF ~~ DO ~JoinParty()
+SetGlobal("7C#GalileoInParty","GLOBAL",2)~ EXIT
 END
 
 IF ~~ BEGIN 7c#happy.good.bye.1
@@ -63,19 +112,10 @@ IF ~~ BEGIN 7c#happy.good.bye.1
     IF ~~ DO ~SetGlobal("7C#GalileoHappiness1","GLOBAL",15)~ EXIT
 END
 
-IF ~!NumTimesTalkedTo(0)
-GlobalGT("7C#GalileoHappiness1","GLOBAL",9)
-!Global("7C#DoneFirewineRuins","GLOBAL",1)~ BEGIN 7c#meet.2.happy
-  SAY @22 /* Looking to have a helper for exploring the Firewine Ruins? */
-    IF ~~ REPLY @23 /* Yes, I would be pleased to have you join me. */ GOTO 7c#meet.2.happy.join.1
-    IF ~~ REPLY @3 /* No, I do not like you */ GOTO 7c#end.angry.1
-    IF ~~ REPLY @24 /* Could you tell me what your abilities are? */ GOTO 7c#answers.1
-    IF ~~ REPLY @25 /* Not at this time, sorry. */ GOTO 7c#happy.bye.again.1
-END
-
 IF ~~ BEGIN 7c#meet.2.happy.join.1
   SAY @26 /* Joyous day! Most excellent! */
-    IF ~~ DO ~JoinParty()~ EXIT
+    IF ~~ DO ~JoinParty()
+SetGlobal("7C#GalileoInParty","GLOBAL",2)~ EXIT
 END
 
 IF ~~ BEGIN 7c#happy.bye.again.1
@@ -83,18 +123,10 @@ IF ~~ BEGIN 7c#happy.bye.again.1
     IF ~~ DO ~SetGlobal("7C#GalileoHappiness1","GLOBAL",15)~ EXIT
 END
 
-IF ~!NumTimesTalkedTo(0)
-GlobalLT("7C#GalileoHappiness1","GLOBAL",10)
-!Global("7C#DoneFirewineRuins","GLOBAL",1)~ BEGIN 7c#meet.angry.1
-  SAY @28 /* Hmm? Oh, what do you want? */
-    IF ~~ REPLY @29 /* I was wondering if you could join my group in our venture in the Firewine Ruins. */ GOTO 7c#meet.angry.joins.1
-    IF ~~ REPLY @30 /* I just wanted to say that I'm sorry for what I said before. */ GOTO 7c#sorry.bro.1
-    IF ~~ REPLY @31 /* I came to let you know that you are a failure and no one loves you. */ GOTO 7c#kill.u.r.mom
-END
-
 IF ~~ BEGIN 7c#meet.angry.joins.1
   SAY @32 /* Just like that? Here I thought you were not nice at all. All right then, let us be off. */
-    IF ~~ DO ~JoinParty()~ EXIT
+    IF ~~ DO ~JoinParty()
+SetGlobal("7C#GalileoInParty","GLOBAL",2)~ EXIT
 END
 
 IF ~~ BEGIN 7c#sorry.bro.1
@@ -119,19 +151,6 @@ END
 IF ~~ BEGIN 7c#oh.sorry
   SAY @42 /* Erm ... I see. Well, that's not exactly my type of humor, but okay. */
     IF ~~ DO ~SetGlobal("7C#GalileoHappiness1","GLOBAL",15)~ EXIT
-END
-
-IF ~!NumTimesTalkedTo(0)
-GlobalLT("7C#GalileoHappiness1","GLOBAL",5)~ BEGIN 7c#very.angry
-  SAY @43 /* Bugger off. */
-    IF ~~ DO ~~ EXIT
-END
-
-IF ~NumTimesTalkedTo(0)
-Global("7C#DoneFirewineRuins","GLOBAL",1)~ BEGIN 7c#meet.firewine.done.1
-  SAY @44 /* Well, it's nice to finally meet the savior of our little town! */
-    IF ~~ REPLY @45 /* Hello there my small friend. */ GOTO 7c#hey.there.shorty
-    IF ~~ REPLY @5 /* Please excuse me, I haven't the time to speak with you. */ GOTO 7c#happy.bye.1
 END
 
 IF ~~ BEGIN 7c#hey.there.shorty

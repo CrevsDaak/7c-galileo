@@ -1,0 +1,103 @@
+IF
+	!InParty("Galileo1")
+	Global("7C#GalileoHostileWatchOut","GLOBAL",0)
+	OR(2)
+		Global("7C#GalileoInParty","GLOBAL",2)
+		!Global("7C#GalileoInParty","GLOBAL",1)
+	OR(9)
+		AttackedBy([GOODCUTOFF.0.0.0.0.SUMMONED],DEFAULT)
+		AttackedBy([PC],DEFAULT)
+		AttackedBy([FAMILIAR],DEFAULT)
+		AttackedBy([ALLY],DEFAULT)
+		AttackedBy([CONTROLLED],DEFAULT)
+		AttackedBy([CHARMED],DEFAULT)
+		SpellCastOnMe([GOODCUTOFF],WIZARD_BLINDNESS)
+		SpellCastOnMe([GOODCUTOFF],WIZARD_FEEBLEMIND)
+		SpellCastOnMe([GOODCUTOFF],WIZARD_RAY_OF_ENFEEBLEMENT)
+	!Allegiance(Myself,ENEMY)
+THEN
+	RESPONSE #100
+		Enemy()
+		DisplayStringHead(Myself,@7733)
+		SetGlobal("7C#GalileoHostileWatchOut","GLOBAL",1)
+END
+
+IF
+	Allegiance(Myself,ENEMY)
+	!InParty(Myself)
+	Global("7C#GalileoHostileWatchOut","GLOBAL",1)
+	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
+	!StateCheck(Myself,STATE_MIRRORIMAGE)
+THEN
+	RESPONSE #100
+		SetGlobal("7C#GalileoHostileWatchOut","GLOBAL",2)
+		ForceSpell(Myself,WIZARD_MIRROR_IMAGE)
+END
+	
+IF
+	!InParty("Galileo1")
+	Global("7C#GalileoHostileWatchOut","GLOBAL",2)
+	Allegiance(Myself,ENEMY)
+	See([PC])
+	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
+	HaveSpell(WIZARD_BLINDNESS)
+	!StateCheck([PC],STATE_BLIND)
+THEN
+	RESPONSE #100
+		Spell([PC],WIZARD_BLINDNESS)
+END
+
+IF
+	!InParty("Galileo1")
+	Global("7C#GalileoHostileWatchOut","GLOBAL",2)
+	Allegiance(Myself,ENEMY)
+	See([PC])
+	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
+	HaveSpell(WIZARD_MAGIC_MISSILE)
+	CheckStatLT([PC],50,RESISTMAGIC)
+	CheckStatLT([PC],50,MAGICDAMAGERESISTANCE)
+THEN
+	RESPONSE #100
+		Spell([PC],WIZARD_MAGIC_MISSILE)
+END
+
+IF
+	!InParty("Galileo1")
+	Global("7C#GalileoHostileWatchOut","GLOBAL",2)
+	Allegiance(Myself,ENEMY)
+	See(Player1)
+	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
+	HaveSpell(WIZARD_GLITTERDUST)
+	NumInPartyGT(2)
+	Range(Player1,30)
+	!Range(Player1,10)
+	OR(2)
+		Range(Player2,40)
+		Range(Player5,40)
+	OR(2)
+		Range(Player3,50)
+		Range(Player4,50)
+	!StateCheck(Player1,STATE_BLIND)
+THEN
+	RESPONSE #100
+		Spell(Player1,WIZARD_GLITTERDUST)
+END
+
+IF
+	!InParty("Galileo1")
+	Global("7C#GalileoHostileWatchOut","GLOBAL",2)
+	Allegiance(Myself,ENEMY)
+	See([PC])
+	!StateCheck(Myself,7C_STATE_INVISIBLE)
+	HaveSpell(WIZARD_INVISIBILITY)
+	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
+THEN
+	RESPONSE #100
+		Spell(Myself,WIZARD_INVISIBILITY)
+END
+
+IF
+	!InParty("Galileo1")
+	Global("7C#GalileoHostileWatchOut","GLOBAL",2)
+	Allegiance(Myself,ENEMY)
+	

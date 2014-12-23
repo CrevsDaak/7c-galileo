@@ -1,8 +1,6 @@
 IF
 	%bgt_check%
 	Global("7C#GalileoSpawnedBG1","GLOBAL",0)
-	!Exists("Galileo1")
-	!Dead("Galileo1")
 	LevelLT("Player1",4)
 THEN
 	RESPONSE #100
@@ -15,8 +13,6 @@ END
 IF
 	%bgt_check%
 	Global("7C#GalileoSpawnedBG1","GLOBAL",0)
-	!Exists("Galileo1")
-	!Dead("Galileo1")
 	LevelGT("Player1",3)
 	LevelLT("Player1",6)
 THEN
@@ -30,8 +26,6 @@ END
 IF
 	%bgt_check%
 	Global("7C#GalileoSpawnedBG1","GLOBAL",0)
-	!Exists("Galileo1")
-	!Dead("Galileo1")
 	LevelGT("Player1",5)
 THEN
 	RESPONSE #100

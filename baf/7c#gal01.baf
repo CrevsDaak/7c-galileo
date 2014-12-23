@@ -9,6 +9,7 @@ END
 
 IF
 	%bgt_check%
+	InParty("Galileo1")
 	Global("7C#GalileoMelicampComment","GLOBAL",0)
 	PartyHasItem(%melicamp%)
 THEN
@@ -19,6 +20,7 @@ END
 
 IF
 	%bgt_check%
+	InParty("Galileo1")
 	Global("7C#GalileoMelicampComment","GLOBAL",1)
 	!GlobalTimerNotExpired("7C#GalileoTalkPlayer1","LOCALS")
 THEN
@@ -29,6 +31,7 @@ END
 
 IF
 	%bgt_check%
+	InParty("Galileo1")
 	Detect("DeadHalflingMessager")
 	Range("DeadHalflingMessager",20)
 	Dead("DeadHalflingMessager")
@@ -37,4 +40,18 @@ THEN
 	RESPONSE #100
 		SetGlobal("7C#GalileoDeadHalflingComment","GLOBAL",1)
 		Dialog("Player1")
+END
+
+IF
+	%bgt_check%
+	!InParty("Galileo1")
+	OR(2)
+		Global("7C#GalileoInParty","GLOBAL",2)
+		!Global("7C#GalileoInParty","GLOBAL",1)
+	!Allegiance(Myself,ENEMY)
+	Global("KickedOut","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("KickedOut","LOCALS",1)
+		SetGlobal("7C#GalileoInParty","GLOBAL",1)
 END

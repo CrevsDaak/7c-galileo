@@ -1,6 +1,6 @@
 BACKUP "7c-galileo/backup"
 AUTHOR "Quartz and Crevs Daak"
-VERSION "v0.1 alpha 18.12.14"
+VERSION "v0.2 alpha"
 
 ALWAYS
   ACTION_IF "%LANGUAGE%" STR_CMP "english" BEGIN
@@ -34,6 +34,12 @@ END ELSE ACTION_IF GAME_IS bgt BEGIN
   OUTER_SPRINT dead_halfling halfmiri
   OUTER_SPRINT Gullykin ar9900
   OUTER_SPRINT bgt_check ~!Global("endofbg1","GLOBAL",2)~
+END ELSE ACTION_IF GAME_IS eet BEGIN
+  OUTER_SPRINT tutu_prefix ""
+  OUTER_SPRINT melicamp ~"misc49"~
+  OUTER_SPRINT bgt_check ~
+  OUTER_SPRINT dead_halfling halfmiri
+  OUTER_SPRINT Gullykin fh4000
 END ELSE ACTION_IF GAME_IS bgee BEGIN
   OUTER_SPRINT tutu_prefix ""
   OUTER_SPRINT melicamp ~"misc49"~
@@ -91,13 +97,19 @@ COPY "7c-galileo/cre/galileo.cre" "override/7c#gal02.cre"
   SAY PICKED_POCKET @7730
   SAY SET_A_TRAP @7731
   SAY SPELL_DISRUPTED @7732
+  WRITE_LONG 0x18 1473
+  WRITE_BYTE 0x23b 8
+  WRITE_SHORT 0x24 11
+  WRITE_SHORT 0x26 11
   WRITE_ASCII 0x34 "7c#gas" #8
   WRITE_ASCII 0x3c "7c#gam" #8
-  WRITE_ASCII 0x2cc "7c#gal01" #8
+  WRITE_ASCII 0x2cc "7c#gal1p" #8
   WRITE_LONG 0x1c 57
-  WRITE_BYTE 0x6a 30
+  READ_BYTE 0x6a pick_pockets
+  WRITE_BYTE 0x6a (pick_pockets + 5)
   WRITE_ASCII 0x280 "Galileo1" #32
   WRITE_ASCII 0x248 "7c#gal01" #8
+  WRITE_ASCII 0x268 "7c#gal00" #8
   ADD_KNOWN_SPELL SPWI106 #0 wizard
   ADD_KNOWN_SPELL SPWI206 #1 wizard
   ADD_MEMORIZED_SPELL SPWI106 #0 wizard #1
@@ -112,8 +124,12 @@ COPY "7c-galileo/cre/galileo.cre" "override/7c#gal02.cre"
   END
 
 COPY_EXISTING 7c#gal02.cre "override/7c#gal04.cre"
+  WRITE_SHORT 0x24 20
+  WRITE_SHORT 0x26 20
+  WRITE_LONG 0x18 6091
   WRITE_LONG 0x1c 73
-  WRITE_BYTE 0x6a 40
+  READ_BYTE 0x6a pick_pockets
+  WRITE_BYTE 0x6a (pick_pockets + 10)
   ADD_KNOWN_SPELL SPWI112 #0 wizard
   ADD_KNOWN_SPELL SPWI207 #1 wizard
   READ_LONG 0x2b0 mem_offset
@@ -150,8 +166,12 @@ COPY_EXISTING 7c#gal02.cre "override/7c#gal04.cre"
   END
 
 COPY_EXISTING 7c#gal04.cre "override/7c#gal06.cre"
+  WRITE_SHORT 0x24 30
+  WRITE_SHORT 0x26 30
+  WRITE_LONG 0x18 29392
   WRITE_LONG 0x1c 86
-  WRITE_BYTE 0x6a 50
+  READ_BYTE 0x6a pick_pockets
+  WRITE_BYTE 0x6a (pick_pockets + 10)
   READ_BYTE 0x53 save_death
   READ_BYTE 0x54 save_wands
   READ_BYTE 0x55 save_poly
@@ -187,12 +207,18 @@ COPY_EXISTING 7c#gal04.cre "override/7c#gal06.cre"
   ADD_MEMORIZED_SPELL SPWI224 #1 wizard #1
   ADD_MEMORIZED_SPELL SPWI112 #0 wizard #1
 
-APPEND pdialog.2da "GALILEO1            7C#GALP           7C#GALJ           7C#GALD"
+APPEND pdialog.2da "GALILEO1         7C#GAL1P       7C#GAL1J       7C#GAL1D"
   UNLESS "GALILEO1"
+
+APPEND state.ids "0x00400010 7C_STATE_INVISIBLE"
+  UNLESS "7C_STATE_INVISIBLE"
+
+CLEAR_IDS_MAP
 
 COMPILE EVAL "7c-galileo/d/before_joining.d" USING "%tra%/dialog.tra"
 COMPILE EVAL "7c-galileo/d/party_dialog.d" USING "%tra%/dialog.tra"
 COMPILE EVAL "7c-galileo/baf/7c#gal01.baf"
+COMPILE EVAL "7c-galileo/baf/7c#gal00.baf" EVAL
 
 ACTION_IF GAME_IS "bgee eet" BEGIN
   COPY "7c-galileo/bmp/ee" override
@@ -209,7 +235,7 @@ COPY_EXISTING "%Gullykin%.are" override
     FOR (j = 0; j < actors_count && found > 1; ++j) BEGIN
       READ_SHORT 0x20 current_x
       READ_SHORT 0x22 current_y
-      PATCH_IF (current_x > 1350 && current_x < 1450 && current_y > 600 && current_y < 700) BEGIN
+      PATCH_IF current_x = 1431 && current_y = 666 BEGIN
         WRITE_SHORT 0x20 1044 
         WRITE_SHORT 0x22 694
         WRITE_SHORT 0x24 1044
