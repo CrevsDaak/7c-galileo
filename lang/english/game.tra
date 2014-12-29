@@ -48,5 +48,14 @@
 // spell interrupted
 @7732 = ~You bastard! You vicious, heartless bastard!~ [7C#GAL31]
 // turned hostile
-@7733 = ~You stupid <CHARNAME>! You can't fight Galileo and win!
-(Or maybe yes... Bloody bastard!)~ [7C#GAL32]
+@7733 = ~Oi! What the bloody hell is your problem?~ [7C#GAL32]
+@7734 = ~Song of Wyvernspur~
+@7735 = ~Song of Wyvernspur:
+
+Heals party members 1d8+1/level hit points of all party members within a 30 feet radius of Galileo.
+At level 10, it also cures and grants party members immunity to Fear for 1 round/level of the caster.
+At level 20, it also cures and grants party members immunity to Confusion and Charm for 1 round/level of the caster.~
+@7736 = ~Healed~
+@7737 = ~You can not fire magical arrows with the Gem Bow.~
+@7738 = ~Gem Bow~
+@7739 = ~<<<GEM BOW DESCRIPTION GOES HERE>>>~

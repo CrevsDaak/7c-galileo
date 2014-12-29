@@ -37,7 +37,7 @@ END ELSE ACTION_IF GAME_IS bgt BEGIN
 END ELSE ACTION_IF GAME_IS eet BEGIN
   OUTER_SPRINT tutu_prefix ""
   OUTER_SPRINT melicamp ~"misc49"~
-  OUTER_SPRINT bgt_check ~~
+  OUTER_SPRINT bgt_check ~GlobalLT("endofbg1","GLOBAL",2)~
   OUTER_SPRINT dead_halfling halfmiri
   OUTER_SPRINT Gullykin fh4000
 END ELSE ACTION_IF GAME_IS bgee BEGIN
@@ -48,26 +48,59 @@ END ELSE ACTION_IF GAME_IS bgee BEGIN
   OUTER_SPRINT Gullykin ar4000
 END
 
-APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
-  UNLESS ~0x80101FEF CD_STATE_NOTVALID~
-
-ACTION_DEFINE_ASSOCIATIVE_ARRAY append_gtimes BEGIN
-  ONE_ROUND => 6
-  TWO_ROUNDS => 12
-  THREE_ROUNDS => 18
-  FOUR_ROUNDS => 24
-  FIVE_ROUNDS => 30
-  SIX_ROUNDS => 36
-  SEVEN_ROUNDS => 42
-  EIGHT_ROUNDS => 48
-  NINE_ROUNDS => 54
-  TEN_ROUNDS => 60
-END
-
-ACTION_PHP_EACH append_gtimes AS name => value BEGIN
-  APPEND gtimes.ids ~%value% %name%~
-    UNLESS ~%value% %name%~
-END
+COPY "7c#galileo/spl/7c#gal01.spl" override
+  SAY 0x8 @7734
+  SAY 0x50 @7735
+  WRITE_ASCII 0x3a "7c#gal01" #8
+  LPF DELETE_SPELL_EFFECT INT_VAR opcode_to_delete = "-1" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode = 17 parameter1 = 1 timing = 1 dicenumber = 1 dicesize = 8 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode = 139 parameter1 = RESOLVE_STR_REF @7736 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode = 215 parameter2 = 1 STR_VAR resource = sphealin END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode = 50 parameter1 = "-4365568" parameter2 = 1966080 duration = 1 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode = 101 parameter2 = 24 header = 10 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode = 296 header = 20 STR_VAR resource = spnwchrm END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode = 174 duration = 1 STR_VAR resource = eff_p51 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode = 174 timing = 3 STR_VAR resource = eff_p55 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode = 142 parameter2 = 37 header = 10 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode = 142 parameter2 = 52 header = 20 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode = 242 header = 20 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode = 161 header = 10 END
+  PATCH_FOR_EACH num IN 2 3 43 47 BEGIN
+    LPF ADD_SPELL_EFFECT INT_VAR opcode = 240 parameter2 = num header = 20 END
+  END
+  PATCH_FOR_EACH num IN 0 1 2 3 43 47 BEGIN
+    LPF ADD_SPELL_EFFECT INT_VAR opcode = 169 parameter2 = num header = 20 END
+  END
+  PATCH_FOR_EACH num IN 169 240 BEGIN
+    LPF ADD_SPELL_EFFECT INT_VAR opcode = num parameter = 36 header = 10 END
+  END
+  PATCH_FOR_EACH num IN 128 5 241 BEGIN
+    LPF ADD_SPELL_EFFECT INT_VAR opcode = 101 paramter2 = num header = 20 END
+  END
+  READ_LONG 0x64 header_offset
+  READ_SHORT 0x68 header_count
+  FOR (ij = 0; ij < header_count; ++ij) BEGIN
+    WRITE_ASCII (header_offset + 0x4 + ij * 0x28) "7c#gal01" #8
+    READ_SHORT (header_offset + 0x1e + ij * 0x28) feature_count
+    READ_SHORT (header_offset + 0x20 + ij * 0x28) feature_offset
+    WRITE_SHORT (header_offset + 0x0e + ij * 0x28) 30
+    FOR (ji = 1; ji < feature_count - 1; ++ji) BEGIN
+      READ_SHORT (header_offset + feature_offset + ij * 0x28 + ji * 0x30) fx_op
+      WRITE_BYTE (header_offset + feature_offset + 0x2 + ij * 0x28 + ji * 0x30) 2
+      WRITE_BYTE (header_offset + feature_offset + 0x3 + ij * 0x28 + ji * 0x30) 1
+      WRITE_LONG (header_offset + feature_offset + 0x4 + ij * 0x28 + ji * 0x30) ij
+      PATCH_IF fx_op = 17 BEGIN
+        WRITE_LONG (header_offset + feature_offset + 0x4 + ij * 0x28 + ji * 0x30) ij
+      END ELSE PATCH_IF fx_op = 101 || fx_op = 142 || fx_op = 169 || fx_op = 296 BEGIN
+        WRITE_LONG (header_offset + feature_offset + 0x0e + ij * 0x28 + ji * 0x30) (ij * 6)
+      END ELSE PATCH_IF fx_op = 174 BEGIN
+        READ_ASCII (header_offset + feature_offset + 0x14 + ij * 0x28 + ji * 0x30) fx_res
+        PATCH_IF "%fx_res%" STRING_EQUAL_CASE "eff_p55" BEGIN
+          WRITE_LONG (header_offset + feature_offset + 0x0e + ij * 0x28 + ji * 0x30) (ij * 6)
+        END
+      END
+    END
+  END
 
 COPY "7c-galileo/cre/galileo.cre" "override/7c#gal02.cre"
   SAY NAME1 @771
@@ -110,9 +143,11 @@ COPY "7c-galileo/cre/galileo.cre" "override/7c#gal02.cre"
   WRITE_ASCII 0x280 "Galileo1" #32
   WRITE_ASCII 0x248 "7c#gal01" #8
   WRITE_ASCII 0x268 "7c#gal00" #8
-  ADD_KNOWN_SPELL SPWI106 #0 wizard
-  ADD_KNOWN_SPELL SPWI206 #1 wizard
-  ADD_MEMORIZED_SPELL SPWI106 #0 wizard #1
+  ADD_KNOWN_SPELL 7c#gal01 #0 innate
+  ADD_KNOWN_SPELL spwi106 #0 wizard
+  ADD_KNOWN_SPELL spwi206 #1 wizard
+  ADD_MEMORIZED_SPELL 7c#gal01 #0 innate #1
+  ADD_MEMORIZED_SPELL spwi106 #0 wizard #1
   ADD_CRE_ITEM "%tutu_prefix%ax1h01" #0 #0 #0 none weapon1 EQUIP
   ADD_CRE_ITEM "%tutu_prefix%dart01" #17 #0 #0 none weapon2
   ADD_CRE_ITEM "%tutu_prefix%dart01" #21 #0 #0 none inv1
@@ -130,8 +165,8 @@ COPY_EXISTING 7c#gal02.cre "override/7c#gal04.cre"
   WRITE_LONG 0x1c 73
   READ_BYTE 0x6a pick_pockets
   WRITE_BYTE 0x6a (pick_pockets + 10)
-  ADD_KNOWN_SPELL SPWI112 #0 wizard
-  ADD_KNOWN_SPELL SPWI207 #1 wizard
+  ADD_KNOWN_SPELL spwi112 #0 wizard
+  ADD_KNOWN_SPELL spwi207 #1 wizard
   READ_LONG 0x2b0 mem_offset
   READ_LONG 0x2b4 mem_count
   SET found = 0
@@ -152,8 +187,8 @@ COPY_EXISTING 7c#gal02.cre "override/7c#gal04.cre"
       WRITE_LONG (mem_offset + 0x4 + i * 0x10 + extra) 1
     END
   END
-  ADD_MEMORIZED_SPELL SPWI206 #1 wizard #1
-  ADD_MEMORIZED_SPELL SPWI112 #0 wizard #1
+  ADD_MEMORIZED_SPELL spwi206 #1 wizard #1
+  ADD_MEMORIZED_SPELL spwi112 #0 wizard #1
   ADD_CRE_ITEM bull01 #34 #0 #0 none quiver1
   ADD_CRE_ITEM bull01 #26 #0 #0 none quiver2
   ADD_CRE_ITEM slng01 #0 #0 #0 none inv3
@@ -182,8 +217,8 @@ COPY_EXISTING 7c#gal04.cre "override/7c#gal06.cre"
   WRITE_BYTE 0x55 (save_poly - 1)
   WRITE_BYTE 0x56 (save_breath - 1)
   WRITE_BYTE 0x57 (save_spell - 2)
-  ADD_KNOWN_SPELL SPWI118 #0 wizard
-  ADD_KNOWN_SPELL SPWI224 #1 wizard
+  ADD_KNOWN_SPELL spwi118 #0 wizard
+  ADD_KNOWN_SPELL spwi224 #1 wizard
   READ_LONG 0x2b0 mem_offset
   READ_LONG 0x2b4 mem_count
   SET found = 0
@@ -204,11 +239,32 @@ COPY_EXISTING 7c#gal04.cre "override/7c#gal06.cre"
       WRITE_LONG (mem_offset + 0x4 + i * 0x10 + extra) 2
     END
   END
-  ADD_MEMORIZED_SPELL SPWI224 #1 wizard #1
-  ADD_MEMORIZED_SPELL SPWI112 #0 wizard #1
+  ADD_MEMORIZED_SPELL spwi224 #1 wizard #1
+  ADD_MEMORIZED_SPELL spwi112 #0 wizard #1
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY append_gtimes BEGIN
+  6 => ONE_ROUND
+  12 => TWO_ROUNDS
+  18 => THREE_ROUNDS
+  24 => FOUR_ROUNDS
+  30 => FIVE_ROUNDS
+  36 => SIX_ROUNDS
+  42 => SEVEN_ROUNDS
+  48 => EIGHT_ROUNDS
+  54 => NINE_ROUNDS
+  60 => TEN_ROUNDS
+END
+
+ACTION_PHP_EACH append_gtimes AS value => name BEGIN
+  APPEND gtimes.ids ~%value% %name%~
+    UNLESS ~%value% %name%~
+END
 
 APPEND pdialog.2da "GALILEO1         7C#GAL1P       7C#GAL1J       7C#GAL1D"
   UNLESS "GALILEO1"
+
+APPEND state.ids "0x80101FEF CD_STATE_NOTVALID"
+  UNLESS "CD_STATE_NOTVALID"
 
 APPEND state.ids "0x00400010 7C_STATE_INVISIBLE"
   UNLESS "7C_STATE_INVISIBLE"
@@ -217,7 +273,7 @@ CLEAR_IDS_MAP
 
 COMPILE EVAL "7c-galileo/d/before_joining.d" USING "%tra%/dialog.tra"
 COMPILE EVAL "7c-galileo/d/party_dialog.d" USING "%tra%/dialog.tra"
-COMPILE EVAL "7c-galileo/baf/7c#gal01.baf"
+COMPILE EVAL "7c-galileo/baf/7c#gal01.baf" EVAL
 COMPILE EVAL "7c-galileo/baf/7c#gal00.baf" EVAL
 
 ACTION_IF GAME_IS "bgee eet" BEGIN
