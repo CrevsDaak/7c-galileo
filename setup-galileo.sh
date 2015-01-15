@@ -11,4 +11,4 @@ else
   WEIDU_EXEC = "weidu_osx"
 fi
 
-./WEIDU_EXEC --log setup-7c-galileo.debug  7c-galileo/7c-galileo.tp2
+./"$WEIDU_EXEC" --log setup-7c-galileo.debug  7c-galileo/7c-galileo.tp2
