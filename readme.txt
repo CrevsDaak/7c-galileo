@@ -64,10 +64,12 @@ When updating the mod, uninstall and completely delete the old version
 before unpackaging and installing the new version of the mod.
 
 To install on GNU/Linux, download WeiDU from http://www.weidu.org/~thebigg,
-run tolower (if you haven't already), answer [y]es to both queries, place
-both weidu and weinstall on /usr/bin (or export their directory to $PATH) and
-enter ``weinstall galileo'' in your shell (while you are in the directory
-containing the ``chitin.key'' file).
+run tolower, answer [y]es to both queries (if you haven't already generated
+the linux.ini file), place both weidu and weinstall on /usr/bin (or export
+their directory to $PATH) and enter ``weinstall galileo'' in your shell
+(while you are in the directory containing the ``chitin.key'' file). When
+updating the mod, uninstall and completely delete the old version before
+unpackaging and installing the new version of the mod.
 
 -----------------------
 IV. Stats

@@ -130,6 +130,7 @@ COPY "7c-galileo/cre/galileo.cre" "override/7c#gal02.cre"
   SAY PICKED_POCKET @7730
   SAY SET_A_TRAP @7731
   SAY SPELL_DISRUPTED @7732
+  SAY BIO @7740
   WRITE_LONG 0x18 1473
   WRITE_BYTE 0x23b 8
   WRITE_SHORT 0x24 11
@@ -157,6 +158,8 @@ COPY "7c-galileo/cre/galileo.cre" "override/7c#gal02.cre"
   END ELSE BEGIN
     ADD_CRE_ITEM shld10a #0 #0 #0 none shield
   END
+  SET_BG2_PROFICIENCY PROFICIENCYSHORTBOW 1
+  SET_BG2_PROFICIENCY PROFICIENCYDART 0
 
 COPY_EXISTING 7c#gal02.cre "override/7c#gal04.cre"
   WRITE_SHORT 0x24 20
@@ -192,13 +195,7 @@ COPY_EXISTING 7c#gal02.cre "override/7c#gal04.cre"
   ADD_CRE_ITEM bull01 #34 #0 #0 none quiver1
   ADD_CRE_ITEM bull01 #26 #0 #0 none quiver2
   ADD_CRE_ITEM slng01 #0 #0 #0 none inv3
-  LPF ADD_CRE_EFFECT
-    INT_VAR
-	opcode = 233
-	parameter1 = 1
-	parameter2 = 107
-	timing = 9
-  END
+  SET_BG2_PROFICIENCY PROFICIENCYDART 1
 
 COPY_EXISTING 7c#gal04.cre "override/7c#gal06.cre"
   WRITE_SHORT 0x24 30
@@ -266,7 +263,7 @@ APPEND pdialog.2da "GALILEO1         7C#GAL1P       7C#GAL1J       7C#GAL1D"
 APPEND state.ids "0x80101FEF CD_STATE_NOTVALID"
   UNLESS "CD_STATE_NOTVALID"
 
-APPEND state.ids "0x00400010 7C_STATE_INVISIBLE"
+APPEND state.ids "0x00400010 STATE_NOT_VISIBLE"
   UNLESS "7C_STATE_INVISIBLE"
 
 CLEAR_IDS_MAP
