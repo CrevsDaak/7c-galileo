@@ -25,6 +25,7 @@ END
 IF
 	Allegiance(Myself,ENEMY)
 	!InParty(Myself)
+	!GlobalTimerNotExpired("7C#SpellCast","LOCALS")
 	Global("7C#GalileoHostileWatchOut","GLOBAL",1)
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_MIRRORIMAGE)
@@ -32,72 +33,85 @@ THEN
 	RESPONSE #100
 		SetGlobal("7C#GalileoHostileWatchOut","GLOBAL",2)
 		ForceSpell(Myself,WIZARD_MIRROR_IMAGE)
+		SetGlobalTimer("7C#SpellCast","LOCALS",ONE_ROUND)
 END
 	
 IF
-	!InParty("Galileo1")
+	!GlobalTimerNotExpired("7C#SpellCast","LOCALS")
 	Global("7C#GalileoHostileWatchOut","GLOBAL",2)
 	Allegiance(Myself,ENEMY)
 	See([PC])
+	!StateCheck([PC],STATE_NOT_VISIBLE)
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	HaveSpell(WIZARD_BLINDNESS)
 	!StateCheck([PC],STATE_BLIND)
 THEN
 	RESPONSE #100
+		SetGlobalTimer("7C#SpellCast","LOCALS",ONE_ROUND)
 		Spell([PC],WIZARD_BLINDNESS)
 END
 
 IF
-	!InParty("Galileo1")
+	!GlobalTimerNotExpired("7C#SpellCast","LOCALS")
 	Global("7C#GalileoHostileWatchOut","GLOBAL",2)
 	Allegiance(Myself,ENEMY)
 	See([PC])
+	!StateCheck([PC],STATE_NOT_VISIBLE)
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	HaveSpell(WIZARD_MAGIC_MISSILE)
 	CheckStatLT([PC],50,RESISTMAGIC)
 	CheckStatLT([PC],50,MAGICDAMAGERESISTANCE)
 THEN
 	RESPONSE #100
+		SetGlobalTimer("7C#SpellCast","LOCALS",ONE_ROUND)
 		Spell([PC],WIZARD_MAGIC_MISSILE)
 END
 
 IF
-	!InParty("Galileo1")
+	!GlobalTimerNotExpired("7C#SpellCast","LOCALS")
 	Global("7C#GalileoHostileWatchOut","GLOBAL",2)
 	Allegiance(Myself,ENEMY)
 	See(Player1)
+	!StateCheck(Player1,STATE_NOT_VISIBLE)
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	HaveSpell(WIZARD_GLITTERDUST)
 	NumInPartyGT(2)
 	Range(Player1,30)
 	!Range(Player1,10)
-	OR(2)
+	OR(3)
 		Range(Player2,40)
 		Range(Player5,40)
-	OR(2)
+		NumInPartyLT(2)
+	OR(3)
 		Range(Player3,50)
 		Range(Player4,50)
-	!StateCheck(Player1,STATE_BLIND)
+		NumInPartyLT(3)
 THEN
 	RESPONSE #100
+		SetGlobalTimer("7C#SpellCast","LOCALS",ONE_ROUND)
 		Spell(Player1,WIZARD_GLITTERDUST)
 END
 
 IF
-	!InParty("Galileo1")
+	!GlobalTimerNotExpired("7C#SpellCast","LOCALS")
 	Global("7C#GalileoHostileWatchOut","GLOBAL",2)
 	Allegiance(Myself,ENEMY)
 	See([PC])
-	!StateCheck(Myself,7C_STATE_INVISIBLE)
+	!StateCheck(Myself,STATE_NOT_VISIBLE)
 	HaveSpell(WIZARD_INVISIBILITY)
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 THEN
 	RESPONSE #100
+		SetGlobalTimer("7C#SpellCast","LOCALS",ONE_ROUND)
 		Spell(Myself,WIZARD_INVISIBILITY)
 END
 
 IF
-	!InParty("Galileo1")
 	Global("7C#GalileoHostileWatchOut","GLOBAL",2)
 	Allegiance(Myself,ENEMY)
-	
+	See([PC])
+	Range([PC],5)
+	StateCheck(Myself,STATE_MIRRORIMAGE)
+	!HPPercentLT(Myself,65)
+
+

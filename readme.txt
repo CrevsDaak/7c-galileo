@@ -192,11 +192,11 @@ Programming, implementation: Nicolás Clotta, AKA CrevsDaak
 Portrait: Isandir
 
 Quartz: I want to issue a huge thanks to Crevs for helping me with this
-project. At a certain point, I realized that I very much wanted to make
-a NPC mod, for Baldur's Gate will always be one of my favorite games,
-and I enjoy creative writing and voice acting. It wouldn't have been possible
-without his programming help, as coding intimidates me and I would've lost
-heart without his implementation of my hours of work.
+  project. At a certain point, I realized that I very much wanted to make
+  a NPC mod, for Baldur's Gate will always be one of my favorite games,
+  and I enjoy creative writing and voice acting. It wouldn't have been possible
+  without his programming help, as coding intimidates me and I would've lost
+  heart without his implementation of my hours of work.
 
 	Furthermore, I would love to thank my Baldur's Gate Forum fellow Isandir
 for crafting the lovely portrait and not even asking for anything in return.

@@ -258,20 +258,20 @@ ACTION_PHP_EACH append_gtimes AS value => name BEGIN
 END
 
 APPEND pdialog.2da "GALILEO1         7C#GAL1P       7C#GAL1J       7C#GAL1D"
-  UNLESS "GALILEO1"
+  UNLESS GALILEO1
 
 APPEND state.ids "0x80101FEF CD_STATE_NOTVALID"
-  UNLESS "CD_STATE_NOTVALID"
+  UNLESS CD_STATE_NOTVALID
 
 APPEND state.ids "0x00400010 STATE_NOT_VISIBLE"
-  UNLESS "7C_STATE_INVISIBLE"
+  UNLESS STATE_NOT_VISIBLE
 
 CLEAR_IDS_MAP
 
 COMPILE EVAL "7c-galileo/d/before_joining.d" USING "%tra%/dialog.tra"
 COMPILE EVAL "7c-galileo/d/party_dialog.d" USING "%tra%/dialog.tra"
-COMPILE EVAL "7c-galileo/baf/7c#gal01.baf" EVAL
-COMPILE EVAL "7c-galileo/baf/7c#gal00.baf" EVAL
+COMPILE EVAL "7c-galileo/baf/7c#gal01.baf"
+COMPILE EVAL "7c-galileo/baf/7c#gal00.baf"
 
 ACTION_IF GAME_IS "bgee eet" BEGIN
   COPY "7c-galileo/bmp/ee" override
