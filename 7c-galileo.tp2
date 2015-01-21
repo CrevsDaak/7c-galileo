@@ -48,11 +48,11 @@ END ELSE ACTION_IF GAME_IS bgee BEGIN
   OUTER_SPRINT Gullykin ar4000
 END
 
+COPY "7c#galileo/spl/7c#gal01.bam" override
 COPY "7c#galileo/spl/7c#gal01.spl" override
   SAY 0x8 @7734
   SAY 0x50 @7735
   WRITE_ASCII 0x3a "7c#gal01" #8
-  LPF DELETE_SPELL_EFFECT INT_VAR opcode_to_delete = "-1" END
   LPF ADD_SPELL_EFFECT INT_VAR opcode = 17 parameter1 = 1 timing = 1 dicenumber = 1 dicesize = 8 END
   LPF ADD_SPELL_EFFECT INT_VAR opcode = 139 parameter1 = RESOLVE_STR_REF @7736 END
   LPF ADD_SPELL_EFFECT INT_VAR opcode = 215 parameter2 = 1 STR_VAR resource = sphealin END
@@ -77,26 +77,30 @@ COPY "7c#galileo/spl/7c#gal01.spl" override
   PATCH_FOR_EACH num IN 128 5 241 BEGIN
     LPF ADD_SPELL_EFFECT INT_VAR opcode = 101 paramter2 = num header = 20 END
   END
-  READ_LONG 0x64 header_offset
-  READ_SHORT 0x68 header_count
-  FOR (ij = 0; ij < header_count; ++ij) BEGIN
-    WRITE_ASCII (header_offset + 0x4 + ij * 0x28) "7c#gal01" #8
-    READ_SHORT (header_offset + 0x1e + ij * 0x28) feature_count
-    READ_SHORT (header_offset + 0x20 + ij * 0x28) feature_offset
-    WRITE_SHORT (header_offset + 0x0e + ij * 0x28) 30
-    FOR (ji = 1; ji < feature_count - 1; ++ji) BEGIN
-      READ_SHORT (header_offset + feature_offset + ij * 0x28 + ji * 0x30) fx_op
-      WRITE_BYTE (header_offset + feature_offset + 0x2 + ij * 0x28 + ji * 0x30) 2
-      WRITE_BYTE (header_offset + feature_offset + 0x3 + ij * 0x28 + ji * 0x30) 1
-      WRITE_LONG (header_offset + feature_offset + 0x4 + ij * 0x28 + ji * 0x30) ij
+  READ_LONG 0x64 h_of
+  READ_SHORT 0x68 h_c
+  FOR (ij = 0; ij < h_c; ++ij) BEGIN
+    WRITE_ASCII (h_of + 0x4 + ij * 0x28) "7c#gal01" #8
+    READ_SHORT (h_of + 0x1e + ij * 0x28) f_c
+    READ_SHORT (h_of + 0x20 + ij * 0x28) f_of
+    WRITE_SHORT (h_of + 0x0e + ij * 0x28) 30
+    WRITE_SHORT (h_of + 0x2 + ij * 0x28) 4
+    WRITE_BYTE (h_of + 0x0c + ij * 0x28) 5
+    WRITE_SHORT (h_of + 0x12 + ij * 0x28) 3
+    WRITE_SHORT (h_of + 0x26 + ij * 0x28) 160
+    FOR (ji = 1; ji < f_c - 1; ++ji) BEGIN
+      READ_SHORT (h_of + f_of + ij * 0x28 + ji * 0x30) fx_op
+      WRITE_BYTE (h_of + f_of + 0x2 + ij * 0x28 + ji * 0x30) 2
+      WRITE_BYTE (h_of + f_of + 0x3 + ij * 0x28 + ji * 0x30) 1
+      WRITE_LONG (h_of + f_of + 0x4 + ij * 0x28 + ji * 0x30) ij
       PATCH_IF fx_op = 17 BEGIN
-        WRITE_LONG (header_offset + feature_offset + 0x4 + ij * 0x28 + ji * 0x30) ij
+        WRITE_LONG (h_of + f_of + 0x4 + ij * 0x28 + ji * 0x30) ij
       END ELSE PATCH_IF fx_op = 101 || fx_op = 142 || fx_op = 169 || fx_op = 296 BEGIN
-        WRITE_LONG (header_offset + feature_offset + 0x0e + ij * 0x28 + ji * 0x30) (ij * 6)
+        WRITE_LONG (h_of + f_of + 0x0e + ij * 0x28 + ji * 0x30) (ij * 6)
       END ELSE PATCH_IF fx_op = 174 BEGIN
-        READ_ASCII (header_offset + feature_offset + 0x14 + ij * 0x28 + ji * 0x30) fx_res
+        READ_ASCII (h_of + f_of + 0x14 + ij * 0x28 + ji * 0x30) fx_res
         PATCH_IF "%fx_res%" STRING_EQUAL_CASE "eff_p55" BEGIN
-          WRITE_LONG (header_offset + feature_offset + 0x0e + ij * 0x28 + ji * 0x30) (ij * 6)
+          WRITE_LONG (h_of + f_of + 0x0e + ij * 0x28 + ji * 0x30) (ij * 6)
         END
       END
     END
