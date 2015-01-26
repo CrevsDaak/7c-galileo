@@ -1,9 +1,8 @@
 IF
 	!InParty("Galileo1")
-	Global("7C#GalileoHostileWatchOut","GLOBAL",0)
 	OR(2)
 		Global("7C#GalileoInParty","GLOBAL",2)
-		!Global("7C#GalileoInParty","GLOBAL",1)
+		Global("7C#GalileoInParty","GLOBAL",0)
 	OR(9)
 		AttackedBy([GOODCUTOFF.0.0.0.0.SUMMONED],DEFAULT)
 		AttackedBy([PC],DEFAULT)
@@ -19,26 +18,29 @@ THEN
 	RESPONSE #100
 		Enemy()
 		DisplayStringHead(Myself,@7733)
-		SetGlobal("7C#GalileoHostileWatchOut","GLOBAL",1)
+		SetGlobal("7C#GalileoInParty","GLOBAL",4)
+		Continue()
 END
 
 IF
 	Allegiance(Myself,ENEMY)
 	!InParty(Myself)
+	OR(2)
+		Global("7C#GalileoInParty","GLOBAL",2)
+		Global("7C#GalileoInParty","GLOBAL",0)
 	!GlobalTimerNotExpired("7C#SpellCast","LOCALS")
-	Global("7C#GalileoHostileWatchOut","GLOBAL",1)
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_MIRRORIMAGE)
 THEN
 	RESPONSE #100
-		SetGlobal("7C#GalileoHostileWatchOut","GLOBAL",2)
-		ForceSpell(Myself,WIZARD_MIRROR_IMAGE)
+		SetGlobal("7C#GalileoInParty","GLOBAL",5)
 		SetGlobalTimer("7C#SpellCast","LOCALS",ONE_ROUND)
+		ForceSpell(Myself,WIZARD_MIRROR_IMAGE)
 END
 	
 IF
 	!GlobalTimerNotExpired("7C#SpellCast","LOCALS")
-	Global("7C#GalileoHostileWatchOut","GLOBAL",2)
+	Global("7C#GalileoInParty","GLOBAL",5)
 	Allegiance(Myself,ENEMY)
 	See([PC])
 	!StateCheck([PC],STATE_NOT_VISIBLE)
@@ -53,7 +55,7 @@ END
 
 IF
 	!GlobalTimerNotExpired("7C#SpellCast","LOCALS")
-	Global("7C#GalileoHostileWatchOut","GLOBAL",2)
+	Global("7C#GalileoInParty","GLOBAL",5)
 	Allegiance(Myself,ENEMY)
 	See([PC])
 	!StateCheck([PC],STATE_NOT_VISIBLE)
@@ -69,22 +71,21 @@ END
 
 IF
 	!GlobalTimerNotExpired("7C#SpellCast","LOCALS")
-	Global("7C#GalileoHostileWatchOut","GLOBAL",2)
+	Global("7C#GalileoInParty","GLOBAL",5)
 	Allegiance(Myself,ENEMY)
 	See(Player1)
 	!StateCheck(Player1,STATE_NOT_VISIBLE)
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	HaveSpell(WIZARD_GLITTERDUST)
 	NumInPartyGT(2)
-	Range(Player1,30)
-	!Range(Player1,10)
+	Range(Player1,20)
 	OR(3)
-		Range(Player2,40)
-		Range(Player5,40)
+		Range(Player2,30)
+		Range(Player5,30)
 		NumInPartyLT(2)
 	OR(3)
-		Range(Player3,50)
-		Range(Player4,50)
+		Range(Player3,30)
+		Range(Player4,30)
 		NumInPartyLT(3)
 THEN
 	RESPONSE #100
@@ -94,7 +95,7 @@ END
 
 IF
 	!GlobalTimerNotExpired("7C#SpellCast","LOCALS")
-	Global("7C#GalileoHostileWatchOut","GLOBAL",2)
+	Global("7C#GalileoInParty","GLOBAL",5)
 	Allegiance(Myself,ENEMY)
 	See([PC])
 	!StateCheck(Myself,STATE_NOT_VISIBLE)
@@ -107,11 +108,16 @@ THEN
 END
 
 IF
-	Global("7C#GalileoHostileWatchOut","GLOBAL",2)
+	Global("7C#GalileoInParty","GLOBAL",5)
 	Allegiance(Myself,ENEMY)
 	See([PC])
 	Range([PC],5)
+	CheckStatLT([PC],50,RESISTSLASHING)
 	StateCheck(Myself,STATE_MIRRORIMAGE)
 	!HPPercentLT(Myself,65)
-
+THEN
+	RESPONSE #100
+		EquipMostDamagingMelee()
+		AttackReevaluate([PC],TWO_ROUNDS)
+END
 

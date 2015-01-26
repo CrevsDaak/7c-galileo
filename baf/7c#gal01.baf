@@ -14,7 +14,7 @@ IF
 	PartyHasItem(%melicamp%)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("7C#GalileoTalkPlayer1","LOCALS",TWO_ROUNDS)
+		SetGlobalTimer("7C#GalileoTalkPlayer1","LOCALS",TWO_ROUNDS) // per Quartz's request
 		SetGlobal("7C#GalileoMelicampComment","GLOBAL",1)
 END
 
