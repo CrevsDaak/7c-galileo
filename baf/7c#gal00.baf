@@ -17,7 +17,7 @@ IF
 THEN
 	RESPONSE #100
 		Enemy()
-		DisplayStringHead(Myself,@7733)
+		DisplayStringHead(Myself,@7733) // Oi! What the bloody hell is your problem!
 		SetGlobal("7C#GalileoInParty","GLOBAL",4)
 		Continue()
 END
@@ -120,4 +120,3 @@ THEN
 		EquipMostDamagingMelee()
 		AttackReevaluate([PC],TWO_ROUNDS)
 END
-
