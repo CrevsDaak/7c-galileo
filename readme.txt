@@ -211,7 +211,7 @@ which is a beautiful thing.
 IX. Version history
 -----------------------
 
-v0.2:
+v0.0.2:
  - Fixed a bug with Galileo's:
    + Pick Pockets score.
    + Starting HP, XP and level.
@@ -219,6 +219,6 @@ v0.2:
    + Override and default scripts.
  - Included Galileo's special ability.
 
-v0.1:
+v0.0.1:
  - Initial alpha release
  - The mod now actually installs.
