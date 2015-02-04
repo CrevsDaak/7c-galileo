@@ -1,6 +1,6 @@
 BACKUP "7c-galileo/backup"
 AUTHOR "Quartz and Crevs Daak"
-VERSION "v0.2 alpha"
+VERSION "v0.0.2 alpha"
 
 ALWAYS
   ACTION_IF "%LANGUAGE%" STR_CMP "english" BEGIN
