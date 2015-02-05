@@ -54,3 +54,22 @@
 // party_dialog.d
 @53 = ~Hey <CHARNAME>, I hear Feldepost fetches a fair price for fresh poultry... Only joking.~
 @54 = ~Well that's only slightly disturbing.~
+// before_joining.d
+@55 = ~Fancy seeing you here. Starting to miss my company, I hope? I know I've missed yours', my friend.~
+@56 = ~Yes, Galileo, I would like to take you back in.~
+@57 = ~I just thought I'd say hello and check on how you're doing. I do not need your services at the moment.~
+@58 = ~No, I must be on my way.~
+@59 = ~Excellent! Let's be on our way!~
+@60 = ~Yes, you don't need them, but do you want them?~
+@61 = ~Quite amusing, Galileo. Why not, welcome aboard.~
+@62 = ~Very funny, but no, I must be off.~
+@63 = ~What a tease! I'll win myself back into your party yet, just you wait.~
+@64 = ~I suppose it will take more than a witty line or two to win myself back into your group. Fair enough. Thanks for stopping by, and best of luck on your travels.~
+@65 = ~It is fascinating for a halfling to be a follower of Finder Wyvernspur.~
+@66 = ~Aye, you're quite right about that. He's not exactly the most popular god to begin with. You are a Harper, no?~
+@67 = ~Correct. How did you become acquainted with our organization?~
+@68 = ~My old music teacher is a Harper, and quite the admirable man. I hold a lot of respect for them. Mystra sure did get Finder out of a hell of a lot of trouble.~
+@69 /* hehehe */ = ~While it is not my place to question her actions, I do wonder why Mystra bothered. Finder was quite irresponsible in his actions.~
+@70 = ~It is the tale of an impassioned artist becoming too arrogant in his own works, and the consequences it presents.~
+@71 = ~Yes, I suppose so. And have you taken that lesson to heart?~
+@72 = ~Aye, I've attempted to. Honestly, most folks don't appreciate my original pieces, so it's quite humbling, you see.~
