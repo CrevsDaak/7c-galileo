@@ -1,8 +1,8 @@
 IF
 	!InParty("Galileo1")
 	OR(2)
-		Global("7C#GalileoInParty","GLOBAL",2)
-		Global("7C#GalileoInParty","GLOBAL",0)
+		Global("7C#GalileoInParty","LOCALS",2)
+		Global("7C#GalileoInParty","LOCALS",0)
 	OR(9)
 		AttackedBy([GOODCUTOFF.0.0.0.0.SUMMONED],DEFAULT)
 		AttackedBy([PC],DEFAULT)
@@ -18,7 +18,7 @@ THEN
 	RESPONSE #100
 		Enemy()
 		DisplayStringHead(Myself,@7733) // Oi! What the bloody hell is your problem!
-		SetGlobal("7C#GalileoInParty","GLOBAL",4)
+		SetGlobal("7C#GalileoInParty","LOCALS",4)
 		Continue()
 END
 
@@ -26,21 +26,21 @@ IF
 	Allegiance(Myself,ENEMY)
 	!InParty(Myself)
 	OR(2)
-		Global("7C#GalileoInParty","GLOBAL",2)
-		Global("7C#GalileoInParty","GLOBAL",0)
+		Global("7C#GalileoInParty","LOCALS",2)
+		Global("7C#GalileoInParty","LOCALS",0)
 	!GlobalTimerNotExpired("7C#SpellCast","LOCALS")
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_MIRRORIMAGE)
 THEN
 	RESPONSE #100
-		SetGlobal("7C#GalileoInParty","GLOBAL",5)
+		SetGlobal("7C#GalileoInParty","LOCALS",5)
 		SetGlobalTimer("7C#SpellCast","LOCALS",ONE_ROUND)
 		ForceSpell(Myself,WIZARD_MIRROR_IMAGE)
 END
 	
 IF
 	!GlobalTimerNotExpired("7C#SpellCast","LOCALS")
-	Global("7C#GalileoInParty","GLOBAL",5)
+	Global("7C#GalileoInParty","LOCALS",5)
 	Allegiance(Myself,ENEMY)
 	See([PC])
 	!StateCheck([PC],STATE_NOT_VISIBLE)
@@ -55,7 +55,7 @@ END
 
 IF
 	!GlobalTimerNotExpired("7C#SpellCast","LOCALS")
-	Global("7C#GalileoInParty","GLOBAL",5)
+	Global("7C#GalileoInParty","LOCALS",5)
 	Allegiance(Myself,ENEMY)
 	See([PC])
 	!StateCheck([PC],STATE_NOT_VISIBLE)
@@ -71,7 +71,7 @@ END
 
 IF
 	!GlobalTimerNotExpired("7C#SpellCast","LOCALS")
-	Global("7C#GalileoInParty","GLOBAL",5)
+	Global("7C#GalileoInParty","LOCALS",5)
 	Allegiance(Myself,ENEMY)
 	See(Player1)
 	!StateCheck(Player1,STATE_NOT_VISIBLE)
@@ -95,7 +95,7 @@ END
 
 IF
 	!GlobalTimerNotExpired("7C#SpellCast","LOCALS")
-	Global("7C#GalileoInParty","GLOBAL",5)
+	Global("7C#GalileoInParty","LOCALS",5)
 	Allegiance(Myself,ENEMY)
 	See([PC])
 	!StateCheck(Myself,STATE_NOT_VISIBLE)
@@ -108,7 +108,7 @@ THEN
 END
 
 IF
-	Global("7C#GalileoInParty","GLOBAL",5)
+	Global("7C#GalileoInParty","LOCALS",5)
 	Allegiance(Myself,ENEMY)
 	See([PC])
 	Range([PC],5)
