@@ -48,8 +48,8 @@ END ELSE ACTION_IF GAME_IS bgee BEGIN
   OUTER_SPRINT Gullykin ar4000
 END
 
-COPY "7c#galileo/spl/7c#gal01.bam" override
-COPY "7c#galileo/spl/7c#gal01.spl" override
+COPY "7c-galileo/spl/7c#gal01.bam" override
+COPY "7c-galileo/spl/7c#gal01.spl" override
   SAY 0x8 @7734
   SAY 0x50 @7735
   WRITE_ASCII 0x3a "7c#gal01" #8
@@ -320,7 +320,7 @@ COPY_EXISTING "%tutu_prefix%gandol.dlg" override
     REPLACE_TEXTUALLY ~GiveGoldForce\(.*.$\)~ ~GiveGoldForce\1
 SetGlobal("7C#DoneFirewineRuins","GLOBAL",1)~
   END
-  UNLESS "7C#DoneFirewineRuins"
+  UNLESS ~7C#DoneFirewineRuins~
 BUT_ONLY
 
 COPY_EXISTING "%dead_halfling%.cre" override
