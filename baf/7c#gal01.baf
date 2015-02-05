@@ -14,7 +14,7 @@ IF
 	PartyHasItem(%melicamp%)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("7C#GalileoTalkPlayer1","LOCALS",TWO_ROUNDS) // per Quartz's request
+		SetGlobalTimer("7C#GalileoMelicampTimer","LOCALS",TWO_ROUNDS) // per Quartz's request
 		SetGlobal("7C#GalileoMelicampComment","LOCALS",1)
 END
 
@@ -22,7 +22,7 @@ IF
 	%bgt_check%
 	InParty("Galileo1")
 	Global("7C#GalileoMelicampComment","LOCALS",1)
-	!GlobalTimerNotExpired("7C#GalileoTalkPlayer1","LOCALS")
+	!GlobalTimerNotExpired("7C#GalileoMelicampTimer","LOCALS")
 THEN
 	RESPONSE #100
 		SetGlobal("7C#GalileoMelicampComment","LOCALS",2)
@@ -45,14 +45,10 @@ END
 IF
 	%bgt_check%
 	!InParty("Galileo1")
-	OR(2)
-		Global("7C#GalileoInParty","LOCALS",2)
-		!Global("7C#GalileoInParty","LOCALS",1)
+	Global("7C#GalileoInParty","LOCALS",2)
 	!Allegiance(Myself,ENEMY)
-	Global("KickedOut","LOCALS",0)
+	Global("KickedOut","LOCALS",1)
 THEN
 	RESPONSE #100
-		SetGlobal("KickedOut","LOCALS",1)
 		SetGlobal("7C#GalileoInParty","LOCALS",1)
-		Dialog("Player1")
 END

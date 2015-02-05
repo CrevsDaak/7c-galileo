@@ -1,7 +1,7 @@
 IF
 	!InParty("Galileo1")
 	OR(2)
-		Global("7C#GalileoInParty","LOCALS",2)
+		Global("7C#GalileoInParty","LOCALS",1)
 		Global("7C#GalileoInParty","LOCALS",0)
 	OR(9)
 		AttackedBy([GOODCUTOFF.0.0.0.0.SUMMONED],DEFAULT)
@@ -26,7 +26,7 @@ IF
 	Allegiance(Myself,ENEMY)
 	!InParty(Myself)
 	OR(2)
-		Global("7C#GalileoInParty","LOCALS",2)
+		Global("7C#GalileoInParty","LOCALS",1)
 		Global("7C#GalileoInParty","LOCALS",0)
 	!GlobalTimerNotExpired("7C#SpellCast","LOCALS")
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
