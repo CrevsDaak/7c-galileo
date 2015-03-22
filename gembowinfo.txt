@@ -1,0 +1,358 @@
+MORE THAN YOU EVER WANTED TO KNOW REGARDING CREVS' AND QUARTZ' MARVELOUS … GEM BOW!
+
+
+=========================
+OUTLINE
+=========================
+
+
+In the depths of the Firewine Ruins, you will find four halfling ghosts inside the largest room.
+
+Wenwan - Level 5 Fighter. Male halfling fighter model, no armor. Base AC 0, base 50 HP.
+STR 17
+DEX 14
+CON 15
+INT 10
+WIS 10
+CHA 10
+Wields Short Sword +1 and Small Shield.
+
+Calna - Level 5 Fighter. Female halfling fighter model, no armor. Base AC 3, base 40 HP.
+STR 16
+DEX  15
+CON 13
+INT 10
+WIS 10
+CHA 10
+Dual-wields two Daggers +1.
+
+Yola - Level 7 Cleric. Female halfling cleric model, no armor. Base AC 4, base 40 HP.
+STR 15
+DEX 16
+CON 12
+INT 10
+WIS 18
+CHA 10
+Wields War Hammer +1, Small Shield +1, and Sling +1. She should prefer ranged combat.
+Spells: Bless, Cure Light Wounds, Hold Person, Silence, Miscast Magic, Animate Dead, Cloak of Fear.
+
+=========================
+DESCRIPTIONS
+=========================
+
+
+Uncharged Gem Bow
+
+Created long ago by a prestigious halfling bowyer and the Archmage Bendalyre, gem bows were developed to help halfling societies combat their enemies. Over the years, the gem bows have disappeared from halfling realms. They are now lost and all but forgotten by the race that created them. All are of excellent craftsmanship, and have the ability to gain additional powers. On the face of each bow is an indentation above the handgrip. If certain gemstones are set into this notch, the bow is then capable of bestowing one of numerous special powers on any arrow fired.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+
+Glittering Gem Bow
+
+Currently, there is a Turquoise gem affixed to it. The Gem Bow glitters more than ever, making its wearer appear to be incredibly desirable.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+
+Infernal Gem Bow
+
+Currently, there is a Fire Agate gem affixed to it. The result is that any arrows shot from the Gem Bow catch fire, doing additional damage upon impact.
+
+Weapon Type: Short Bow
+Damage: +1, +2 Fire Damage
+THAC0: +1
+
+Dead Eye Gem Bow
+
+Currently, there is a Lynx Eye gem affixed to it. Enhanced with this gem, the Gem Bow is even more deadly and likely to make its mark.
+
+Weapon Type: Short Bow
+Damage: +2
+THAC0: +2
+
+Bright Light Gem Bow
+
+Currently, there is a Sunstone gem affixed to it. Each arrow fired has a chance to blind its target for two rounds unless a successful Save vs. Spell is made.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+Special: Blindness on hit
+
+Blasted Gem Bow
+
+Currently, there is an Andar gem affixed to it. Arrows fired from the Gem Bow crackle with magical energy as they assault their target.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+
+Gem Bow of Tasloi Slaying
+
+Currently, there is a Jasper gem affixed to it. Any tasloi unfortunate enough to be struck by your arrow will explode into bloody chunks, its soul condemned to the Nine Hells for all eternity.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+Special: Instantly slays tasloi
+
+Vengeful Gem Bow
+
+Currently, there is a Tchazar gem affixed to it. Each arrow fired pelts its targets with such force it incurs an additional 3 Blunt Damage.
+
+Weapon Type: Short Bow
+Damage: +1, +3 Blunt Damage
+THAC0: +1
+
+Rainbow Gem Bow
+
+Currently, there is a Iol gem affixed to it. Each arrow fired incurs the Mage spell Color Spray upon its target.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+Special: Color Spray on hit
+
+White Gem Bow
+
+Currently, there is a Skydrop gem affixed to it. Whether a blessing or a curse, each arrow that makes its mark slows poison.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+Special: Slows Poison on hit
+
+Stone Gem Bow
+
+Currently, there is a Zircon gem affixed to it. The wielder is protected from petrification.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+Special: Protection from Petrification while equipped
+
+Crimson Gem Bow
+
+Currently, there is a Bloodstone gem affixed to it. Upon hit, it causes additional bleeding in its targets.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+Special: Bleeding effect on hit for 2 rounds
+
+Lunar Gem Bow
+
+Currently, there is a Moonstone gem affixed to it. Upon hit, it confuses its targets for 1 round. (Unless a successful save vs. spell is made)
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+Special: Confusion effect on hit for 1 round
+
+Seductive Gem Bow
+
+Currently, there is a Ziose gem affixed to it. Upon hit, a humanoid target must save vs. spell at +4 or be charmed.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+
+Pernicious Gem Bow
+
+Currently, there is a Chrysoberyl gem affixed to it. Upon hit, the target must save vs. spell or be polymorphed into a tasloi, the poor bastard.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+Special: Polymorphs target into a pathetic tasloi
+
+Blessed Gem Bow
+
+Currently, there is a Waterstar gem affixed to it. The wearer is protected from evil.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+Special: Protection from Evil while equipped
+
+Gem Bow of Liberation
+
+Currently, there is a Shandon gem affixed to it. Whether a blessing or a curse, the wearer is granted Free Action.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+Special: Free Action while equipped
+
+Withering Gem Bow
+
+Currently, there is a Star Diopside gem affixed to it. Arrows fired from the Gem Bow are coated in poison.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+Special: Poison target on hit unless successful save vs. death is made
+
+Black Gem Bow
+
+Currently, there is a Horn Coral gem affixed to it. Upon hit, the target must save vs. spell or be struck with fear, as if being struck with an arrow isn't enough to ruin someone's day.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+Special: Spook on hit
+
+Vampiric Gem Bow
+
+Currently, there is an Aquamarine gem affixed to it. Upon hit, the target will be drained of a further 1d4 hit points, which is returned to the Gem Bow's user.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+Special: Larloch's Minor Drain on hit
+
+Jinxing Gem Bow
+
+Currently, there is a Garnet gem affixed to it. The target is struck with the mage spell Greater Malison upon a successful hit.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+Special: Greater Malison on hit
+
+Sirine's Gem Bow
+
+Currently, there is a Pearl affixed to it. The wearer is protected from alluring charm magics.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+Special: Charm Protection on wearer
+
+Nature's Gem Bow
+
+Currently, there is a Sphene gem affixed to it. Enemies struck must successfully save vs. spell or be entangled, unable to move.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+Special: Entangle on hit
+
+Molasses' Gem Bow
+
+Currently, there is a Black Opal gem affixed to it. Enemies hit must successfully save vs. spell or be coated in a black ichor, greatly slowing their movement speed.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+Special: Grease on hit
+
+
+Currently, there is a Water Opal affixed to it. The wielder slowly regenerates health.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+Special: Regenerate 1 HP/3 rounds
+
+Freezing Gem Bow
+
+Currently, there is a Moonbar gem affixed to it. Arrows fired from the Gem Bow sizzle with a chilling frost effect.
+
+Weapon Type: Short Bow
+Damage: +1, +3 Cold Damage
+THAC0: +1
+
+Thunderous Gem Bow
+
+Currently, there is a Diamond affixed to it. Arrows fired from the Gem Bow are quite striking, if you catch my drift.
+
+Weapon Type: Short Bow
+Damage: +1, +4 Electrical Damage
+THAC0: +1
+
+Stinging Gem Bow
+
+Currently, there is an Emerald affixed to it. Arrows fired from the Gem Bow are coated in a rapid and potent acid.
+
+Weapon Type: Short Bow
+Damage: +1, +4 Acid Damage
+THAC0: +1
+
+Boring Gem Bow
+
+Currently, there is a Star Sapphire affixed to it. The Gem Bow fires arrows at breakneck speed, penetrating deeper into its unfortunate targets.
+
+Weapon Type: Short Bow
+Damage: +1, +3 Piercing Damage
+THAC0: +1
+
+Gambler's Gem Bow
+
+Currently, there is a King's Tear affixed to it. This exotic Gem Bow seems to hum slightly with powerful and strange magics. Upon hitting a target, the wielder will find they have either lost or gained 5 Gold Pieces. It may also compensate its victims with gems.
+
+Do you feel lucky, punk?
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+Special: On hit, 50% chance of adding 5 GP, 50% chance of removing 5 GP. 10% chance of "Gems!" wild magic effect on target.
+
+Rogue's Gem Bow
+
+Currently, there is a Rogue Stone affixed to it. This magnificent bow grants its user additional dexterity and accuracy.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +2
+Special: +1 Dexterity while equipped
+
+Exotic Gem Bow
+
+Currently, there is a Glittering Bejurril Stone affixed to it. You think yourself quite clever, don't you?
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+Special: Wild Magic incurred on target upon hit
+
+
+=========================
+NOTES
+=========================
+
+
+Turquoise Gem - 2 GP - Glittering Gem Bow: +1 Charisma while equipped.
+Fire Agate Gem - 5 GP - Infernal Gem Bow: +2 Fire Damage.
+Lynx Eye Gem - 7 GP - Dead Eye Gem Bow: Further +1 THAC0, +1 Damage.
+Sunstone Gem - 12 GP - Bright Light Gem Bow: Blind target for 2 rounds on hit. (Unless successful save vs. spell is made)
+Andar Gem - 15 GP - Blasted Gem Bow: +2 Magic Damage. (Needs a pretty cool effect on the flying arrow, if possible)
+Jasper Gem - 17 GP - Gem Bow of Tasloi Slaying: Instantly slays tasloi on hit. (Into bloody chunks. Also, the "soul leaving" effect from Finger of Death" would be proper if doable.)
+Tchazar Gem - 17 GP - Vengeful Gem Bow: +3 Blunt Damage.
+Iol Gem - 20 GP - Rainbow Gem Bow: Color Spray effect on target when hit.
+Skydrop Gem - 20 GP - White Gem Bow: Slows Poison on hit.
+Zircon Gem - 22 GP - Stone Gem Bow: Protection from Petrification while equipped.
+Bloodstone Gem - 25 GP - Crimson Gem Bow: Bleeding activated on hit, adding 1 extra damage for 2 rounds.
+Moonstone Gem - 25 GP - Lunar Gem Bow: Confuse target for 1 round on hit. (Unless successful save vs. spell is made)
+Ziose Gem - 30 GP - Seductive Gem Bow: Charm Person effect on target when hit.
+Chrysoberyl Gem - 35 GP - Pernicious Gem Bow: Polymorph target into Tasloi on hit. (Unless successful save vs. spell is made at +4) (Victim adopts tasloi armor class, attacks, basically everything except hit points.)
+Waterstar Gem - 40 GP - Blessed Gem Bow: Protection from Evil on wearer.
+Shandon Gem - 45 GP - Gem Bow of Liberation: Free Action on wearer.
+Star Diopside Gem - 47 GP - Withering Gem Bow: Weak poison incurred on hit unless Save vs. Death is made. Should not stack with itself.
+Horn Coral Gem - 67 GP - Black Gem Bow: Low level Spook on target.
+Aquamarine Gem - 75 GP - Vampiric Gem Bow: Larloch's Minor Drain on target when hit. (Force not to allow user to gain hit points beyond their usual maximum)
+Garnet Gem - 87 GP - Jinxing Gem Bow: Greater Malison effect on target when hit.
+Pearl - 100 GP - Sirine's Gem Bow: Protection from Charm while equipped.
+Sphene Gem - 112 GP - Nature's Gem Bow: Entangle target on hit. (Unless successful save vs. spell is made)
+Black Opal - 150 GP - Molasses' Gem Bow: Grease target for 2 rounds on hit. (Unless successful save vs. spell is made)
+Water Opal - 175 GP - Soothing Gem Bow: Regenerate 1 HP per 3 rounds.
+Moonbar Gem - 187 GP - Freezing Gem Bow: +3 Cold Damage.
+Diamond - 500 GP - Thunderous Gem Bow: +4 Electrical Damage.
+Emerald - 750 GP - Stinging Gem Bow: +4 Acid Damage.
+Star Sapphire - 1000 GP - Boring Gem Bow: +3 Piercing Damage.
+King's Tear - 2000 GP - Gambler's Gem Bow: On hit, 50% chance of adding 5 GP, 50% chance of removing 5 GP; 10% chance of "Gems!" wild magic effect on target.
+Rogue Stone - 2500 GP - Rogue's Gem Bow: +1 Dexterity while equipped, further +1 THAC0.
+Glittering Bejurril Stone - 600 GP - Exotic Gem Bow: On hit, incur Wild Magic on target. (Make warden in Durlag's drop the Bejurril when killed)
