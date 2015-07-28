@@ -1,0 +1,14 @@
+IF
+	!Global("7c#TimerInit","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("7c#TimerInit","LOCALS",1)
+		SetGlobalTimer("7c#TimerSweetAir","GLOBAL",6)
+END
+
+IF
+	GlobalTimerExpired("7c#TimerSweetAir","GLOBAL")
+THEN
+	RESPONSE #100
+		DestroySelf()
+END

@@ -1,0 +1,31 @@
+IF
+	!Global("7c#TimerInit","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("7c#TimerInit","LOCALS",1)
+		SetGlobalTimer("7c#TimerShout","LOCALS",3)
+		SetGlobalTimer("7c#TimerDie","LOCALS",%time%)
+END
+
+IF
+	%is_cloud%
+	GlobalTimerNotExpired("7c#TimerSweetAir","GLOBAL")
+THEN
+	RESPONSE #100
+		DestroySelf()
+END
+
+IF
+	GlobalTimerExpired("7c#TimerShout","LOCALS")
+THEN
+	RESPONSE #100
+		Shout(%shout%)
+		SetGlobalTimer("7c#TimerShout","LOCALS",3)
+END
+
+IF
+	GlobalTimerExpired("7c#TimerDie","LOCALS")
+THEN
+	RESPONSE #100
+		DestroySelf()
+END
