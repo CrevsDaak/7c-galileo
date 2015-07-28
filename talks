@@ -1,0 +1,190 @@
+-----------
+TALKS
+-----------
+
+TALK 1:
+Galileo: Hmmm, I could use a new hat. What do you think?
+1. I have never had much of an eye for style.
+	Galileo: Don't worry, I could tell. HAH! I'm kidding, of course. Don't hit me.
+	1. *Hit him*
+		Galileo: Ouch! You're no fun at all!
+		1. MwuhahaHAHAhaHA!
+			Galileo: *Laughs nervously* <END DIALOGUE>
+		2. Sorry, I had to.
+			Galileo: Oh no, it's fine. Practical jokes are wonderful. Err, that's not an invitation for more, though... <END DIALOGUE>
+	2. Harsh, Galileo. But very funny.
+		Galileo: Glad I could bring a smile to your face, <CHARNAME>! <END DIALOGUE>
+2. Doesn't the one you already have suffice?
+	Galileo: You are probably right. This hat works well with our current climate, but ho hum... Some day, I would so love to visit Amn, partly for the sights and partly to emulate their wonderful sense of style.
+	1. After our business here in the Sword Coast is through, maybe you could give it a visit.
+		Galileo: And leave behind this glorious group? Ahh, maybe. Adventure is very exciting, you know? I shall think on this.
+	2. I too would like to visit Amn.
+		Galileo: What good fortune! Mayhaps some day we may travel to Amn arm in arm. See what I did there? HahAH, I love this group!
+3. You are right, your current hat is rather gaudy.
+	Galileo: Hah! What makes you think my next one will be any less eye-catching?
+	1. I should have known.
+		Galileo: Yes well, this hat works well with our current climate, but ho hum... Some day, I would so love to visit Amn, partly for the sights and partly to emulate their wonderful sense of style.
+		1. After our business here in the Sword Coast is through, maybe you could give it a visit.
+			Galileo: And leave behind this glorious group? Ahh, maybe. Adventure is very exciting, you know? I shall think on this.
+		2. I too would like to visit Amn.
+			Galileo: What good fortune! Mayhaps some day we may travel to Amn arm in arm. See what I did there? HahAH, I love this group!
+	2. I rather like the idea of eye-catching; watching all our half-witted enemies flock towards you with murderous intent could provide for quite some entertainment!
+		Galileo: I'm not sure whether to laugh or be offended. Good one, <CHARNAME>.
+
+TALK 2:
+Galileo: So, if you don't mind me saying, I have been watching you and it seems to me that you have somewhat of an awkward nature walking about the Sword Coast. Err, I say this because you seem -- well, like a very good leader and all and... it just seems strange. Sorry.
+1. Maybe you should have trusted your instincts and not bothered talking, Galileo.
+	Galileo: Right -- sorry, boss. Lead on.
+2. Perhaps you are right. I hail from Candlekeep, which is a bit separated from the rest of the Sword Coast, in a sense.
+	Galileo: Candlekeep? Ah! That would explain it. A very sheltered life, to be sure. I suppose that must have all changed very suddenly, did it not?
+	1. I'd rather not talk about it.
+		Galileo: My apologies. Lead on.
+	2. Yes, my life took a very sudden turn not so long ago with the death of my foster father.
+		Galileo: I am sorry to hear that. Ahh, opening new chapters of life is very exciting, it is just a shame when it occurs due to such a tragedy. But I prattle. Thank you, <CHARNAME>, very interesting indeed. <END DIALOGUE><Set parameter GALIFRIENDS=1>
+3. I don't understand what the question is.
+	Galileo: Oh! Right, well, I guess I'm wondering if you're really from around here.
+	1. Well, I am.
+		Galileo: Alright then. (I have my doubts.) <END DIALOGUE>
+		1. What was that?
+			Galileo: Hmm? Oh! Nothing at all. <END DIALOGUE>
+	2. I hail from Candlekeep, which is a bit separated from the rest of the Sword Coast, in a 	sense.
+		Galileo: Candlekeep? Ah! That would explain it. A very sheltered life, to be sure. I suppose that must have all changed very suddenly, did it not?
+		1. I'd rather not talk about it.
+			Galileo: My apologies. Lead on. <END DIALOGUE>
+		2. Yes, my life took a very sudden turn not so long ago with the death of my foster father.
+			Galileo: I am sorry to hear that. Ahh, opening new chapters of life is very exciting, it is just a shame when it occurs due to such a tragedy. But I prattle. Thank you, <CHARNAME>, very interesting indeed. <END DIALOGUE><Set parameter GALIFRIENDS=1>
+	3. Ah, nope.
+		Galileo: So... Are you going to tell me where you're from?
+		1. Not at this time.
+			Galileo: Fair enough, I suppose. <END DIALOGUE>
+		2. Okay, okay, truth is I come from Candlekeep.
+			Galileo: Candlekeep? Ah! That would explain it. A very sheltered life, to be sure. I suppose that must have all changed very suddenly, did it not?
+			1. I'd rather not talk about it.
+				Galileo: My apologies. Lead on. <END DIALOGUE>
+			2. Yes, my life took a very sudden turn not so long ago with the death of my foster father.
+				Galileo: I am sorry to hear that. Ahh, opening new chapters of life is very exciting, it is just a shame when it occurs due to such a tragedy. But I prattle. Thank you, <CHARNAME>, very interesting indeed. <END DIALOGUE><Set parameter GALIFRIENDS=1>
+		3. It's none of your business.
+			Galileo: If you say so. <END DIALOGUE>
+	4. It's really none of your business.
+		Galileo: If you say so. <END DIALOGUE>
+
+TALK 3:
+Galileo: I won't lie, this adventuring business is not exactly all I thought it to be.
+1. I had the same realization not long ago.
+	Galileo: Yes, I'm not surprised.
+	<"NOT SO GLORIOUS">
+2. Are you resigning?
+	Galileo: No, no. I am merely... lamenting our lot in life.
+	<"NOT SO GLORIOUS">
+3. What's this? Galileo is learning to keep one foot in reality?
+	Galileo: Hah! No, of course, I don't dare do anything of the sort. Ah, but I am... Lamenting our 	lot in life.
+	<"NOT SO GLORIOUS">
+
+"NOT SO GLORIOUS"
+Galileo: It is not so glorious; adventuring is rough and tumble. And though we have always arisen after battles victorious, we are a mere inch from death, should we but stumble.
+1. It's not the death that bothers me so much as the poor hygiene.
+	Galileo: Hah! That aspect is bothersome as well, but, truly? The death does not shake you?
+	1. That is strange, isn't it? I hadn't thought about it. Hmm.
+		Galileo: You scare me sometimes. <END DIALOGUE>
+	2. Not really.
+		Galileo: You scare me sometimes. <END DIALOGUE>
+	3. What can I say? When the stakes are higher, it excites me.
+		Galileo: Heh. You're... different, <CHARNAME>. <END DIALOGUE>
+2. A rather bleak outlook, but your observations ring true. I hope one day we can put the death behind us.
+	Galileo: That would be nice, wouldn't it? I suppose the killing goes hand in hand with the treasure hunting, unfortunately. Perhaps death and adventure aren't separable at all.
+	<XAN INTERJECT> Xan: It shocks me it took you so long to figure that out.
+	1. I believe it possible to overcome any and all obstacles.
+		Galileo: Well, I am glad our leader is so fearless. <END DIALOGUE>
+	2. Perhaps. But we shall try our best to avoid unnecessary conflict.
+		Galileo: Aye, I would drink to that! Onward, then. <END DIALOGUE>
+	3. I wish I could say I believed otherwise.
+		Galileo: I hope your quest ends soon enough and you find what you are looking for, <CHARNAME>, whether you know you are looking for it or not. <END DIALOGUE>
+	4. Unfortunately, you are right.
+		Galileo: Do not lose hope. I hope your quest ends soon enough and you find what you are looking for, <CHARNAME>, whether you know you are looking for it or not. <END DIALOGUE>
+3. Death is not so frightening.
+	Galileo: Do you think so? I find myself worried. Dealing with it myself is one thing, but there are people out there who care about me.
+	1. Luckily for me, there is nobody who cares about me, so I only have to deal with it myself, as you put it.
+		<IMOEN INTERJECT> Imoen: I care about you, you silly goose! Don't be so mopey.
+		<JAHEIRA INTERJECT> Jaheira: Don't be foolish. There are those of us who care about you, <CHARNAME>, and Gorion has seen to it that we are by your side.
+		Galileo: Well, I know I'd hate to see you go. It may not be much to you, but providing me this opportunity to... Get away from it all, helps me think and sort out my life a bit. You're a friend to me, <CHARNAME>. <END DIALOGUE>
+	2. I simply know that I won't be dying any time soon.
+		Galileo: You may have the skill to back up that cocky bravado of yours', but one day, skill may not be enough. <END DIALOGUE>
+	3. I reckon I will die when I am intended to die.
+		Galileo: Interesting, faith-based perspective you have there. I suppose I should think along the same lines. <END DIALOGUE>
+
+TALK 4:
+
+<THIS TALK ONLY HAPPENS IF GALIFRIENDS=0>
+Galileo: As glorious as all this is, I must admit there are times I miss my family. Do you have a family, <CHARNAME>?
+1. No. I am an orphan, and my foster father Gorion passed away recently.
+	Galileo: Bloody hell, that's a tough break. This life style is new to you, is it not? Is there anything you miss, or are you quite content with all this?
+	1. Questions, questions. Aren't I entitled to a little privacy, Galileo?
+		Galileo: Ack! Well, of course you are. I didn't mean to pry, I'm sorry.
+	2. I do miss my home. Candlekeep was quite stagnant, but it offered serenity and solitude that I haven't known since I left.
+	<IMOEN INTERJECT> Imoen: Stagnant is a real nice word for how boring that old castle was.
+		Galileo: Ahh, Candlekeep. I've wanted to visit there, but it's quite an obstacle to get in. ...They won't let you back in, will they?
+		1. No, unfortunately. Not without Gorion.
+			Galileo: Hmm, I'm sorry. <END DIALOGUE><Set parameter GALIFRIENDS=1>
+		2. They might, I haven't really tried. I'm not sure of the policy.
+			Galileo: You lived there your whole life and you don't know? Hah! <END DIALOGUE><Set parameter GALIFRIENDS=1>
+	3. No, nothing. Were this adventure less bloody, I'd practically be enjoying myself.
+		Galileo: Aye, I'd drink to that. Here's to the road ahead. If only we had some bloody ale or something, but regardless, cheers, <CHARNAME>. <END DIALOGUE><Set parameter GALIFRIENDS=1>
+	4. Nothing at all. I'm rather enjoying this new freedom.
+		Galileo: Aye, freedom is certainly something to be thankful for. I can relate. Very interesting, but I'll hush up now and let us move on. <END DIALOGUE><Set parameter GALIFRIENDS=1>
+2. I do. Do you see that obnoxious little thief over there? <This option available if Imoen is in party>
+	<iMOEN INTERJECT> Imoen: Aww, stop it, you. Our fearless leader can't be so gushy!
+	Galileo: Really? You two do seem a bit like siblings, now that you mention it... But I never would 	have guessed.
+	1. Well, siblings in spirit, but we're not actually related.
+		<IMOEN INTERJECT> Imoen: Drat! We had him going, <CHARNAME>!
+		Galileo: Ahh, I see. Did you two grow up together, then?
+		1. Yes, we're both orphans, raised by a sage named Gorion in Candlekeep.
+			Galileo: Where is Gorion?
+			1. Questions, questions. Aren't I entitled to a little privacy, Galileo?
+				Galileo: Your ... adoptive father ... died, didn't he?
+				1. Yes, yes he did. I don't want to talk about it anymore, Galileo, I'm afraid I haven't quite moved past it yet.
+					Galileo: Yes, sorry, I understand. You have my condolences. Lead on, boss. <END DIALOGUE><Set parameter GALIFRIENDS=1>
+				2. There is no end to your prying, is there? Get out of my sight, halfling, I don't want to see you again.
+					Galileo: I'm... Sorry. Well then, I'll just be on my way. <Galileo leaves the game for good, gives you his inventory>
+			2. He fell in battle protecting me very recently. That's how this all got started.
+				Galileo: Good lords. I'm sorry for your loss, both of you. Well, lead on, and I shall follow, <CHARNAME>. <END DIALOGUE><Set parameter GALIFRIENDS=1>
+3. I don't want to talk about it, Galileo.
+	Galileo: Well, alright, let us carry on then.
+
+TALK 5:
+
+<THIS TALK ONLY HAPPENS IF GALIFRIENDS=0>
+Galileo: I hate to be so direct, but I must understand the purpose of this journey. I tagged along for adventure, and I never anticipated that it would be quite so dangerous. It seems more and more perilous, and if I'm going to put my life on the line for you, I need to understand your cause, <CHARNAME>.
+	1. How dare you question my authority!
+		Galileo: I'm not questioning your authority, boss. How would you like to die for someone or something and not even know why you did it?
+		1. You have no right to intrude.
+			Galileo: I can search for another group.
+			1. Wait, you little fool. I'll explain, then, if I must.
+				Galileo: I'm listening.
+			2. Goodbye and good riddance.
+				Galileo: Best of luck on your quest ... Ya bastard. <Galileo leaves game for good, keeps his stuff>
+		2. Oh, very well. I'll explain if I must.
+			Galileo: I'm listening.
+	2. Ah, very well, then.
+			Galileo: I'm listening.
+
+After "I'm listening":
+1. This journey started when my foster father, Gorion, decided we were unsafe at our home, in Candlekeep.
+	Galileo: Bloody hell, unsafe in Candlekeep? (Is something truly powerful hunting [him/her]?) What was Gorion's reasoning for that?
+		1. He said that a mobile target was harder to hit than an immobile one.
+			Galileo: Wise man, that one. Sorry for the interruption, go on.
+				1. He was struck down by a powerful, heavily-armored man. I've been on my own since and have had to make due.
+					Galileo: A tough break, to be sure. You have my condolences. So then, what is 	the purpose of this quest?
+		2. I don't know. Damn, I wish I had paid more attention to him. I was such a fool, taking his presence for granted. Everything is so much harder now.
+			Galileo: I think you're doing fine, <CHARNAME>. You're a good leader, and we're all by your side.
+				1. Yes, thank you, Galileo. Anyway, he was struck down by a powerful, heavily-armored man. I've been on my own since, and have had to make due.
+					Galileo: A tough break, to be sure. You have my condolences. So then, what is 	the purpose of this quest?
+		3. I don't recall. Anyway, he was struck down by a powerful, heavily-armored man. I've been on my own since, and have had to make due.
+			Galileo: A tough break, to be sure. You have my condolences. So then, what is the purpose of this quest?
+
+Following "Purpose of this quest":
+1. Vengeance. I must become powerful enough to defeat that armored man, and avenge my foster father.
+	Galileo: A dark goal, but I may have similar thoughts if I had suffered such a loss. Well then, let us march on towards your mark. <END DIALOGUE><Set parameter GALIFRIENDS=1>
+2. Self discovery. It seems this adventuring profession has been thrust upon me, and I'm making the best of it.
+	Galileo: Ah, yes. I share your sentiment, although I chose this lifestyle in favor of complacency. Onward! <END DIALOGUE><Set parameter GALIFRIENDS=1>
+3. I don't rightly know. One way or the other, we've been helping the Sword Coast. If I get the chance to avenge my foster father, I'll take it.
+	Galileo: I can certainly respect that. Let us continue your journey. <END DIALOGUE><Set parameter GALIFRIENDS=1>
