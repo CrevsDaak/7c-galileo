@@ -1,0 +1,22 @@
+DEFINE_PATCH_FUNCTION tutu_items BEGIN
+  READ_LONG 0x2bc itm_off
+  READ_LONG 0x2c0 itm_co
+  FOR (i = 0; i < itm_co; i += 1) BEGIN
+    READ_ASCII (itm_off + i * 0x14) itm_name
+    PATCH_IF  FILE_EXISTS_IN_GAME "_%itm_name%" || !FILE_EXISTS_IN_GAME "%itm_name%" BEGIN
+      PATCH_IF STRING_LENGTH "%itm_name%" == 8 BEGIN
+        LPF SUBSTRING
+          INT_VAR
+            length = 7
+            start = 1
+          STR_VAR
+            string = EVAL "%itm_name%"
+          RET
+            substring
+        END
+        OUTER_SPRINT itm_name EVAL "%substring%"
+      END
+      WRITE_ASCII (itm_off + i * 0x14) "_%itm_name%"
+    END
+  END
+END
