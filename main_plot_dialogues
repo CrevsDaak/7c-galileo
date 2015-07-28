@@ -1,0 +1,143 @@
+-----------
+PLOT-DRIVEN DIALOGUES
+-----------
+
+MEET GALILEO FIRST TIME. FIREWINE RUINS STILL ACTIVE:
+Galileo: Greetings, I am called Galileo; bard, servant of Finder Wyvernspur, and I am at your service.
+1. Hello there my small friend, I am <CHARNAME>.
+	Galileo: Pleased to meet you! Aye so, I assume you've talked to Gondolar? Good man, that one. Thinking of exploring the Firewine Ruins, are ya? If'n you want, I can help you. After all, you need people of intelligence on this journey ... quest ... thing.
+	1. Well that rules you out.
+		Galileo: Well that was uncalled for. Bugger off, rude one. <GALILEO END DIALOGUE ANGRY>
+	2. That depends. How can you assist my party?
+		Galileo: Aye now, I'm glad you asked! See I'm a Jester. I'm like a Bard, except my music is so pitifully bad it makes our enemies go mad from the cacophony!
+		1. Why would I want that?
+			Galileo: I ... well ... I don't know! I like adventuring and stuff! Do you want my help or not?
+			1. Okay, let's go investigate these ruins.
+				Galileo: Oh marvelous, just mah-velous! <END DIALOGUE><GALILEO JOINS>
+			2. No thank you. Good-bye.
+				Galileo: You make me sad. So be it. <GALILEO END DIALOGUE HAPPY>
+		2. Sounds good to me!
+			Galileo: I hope you are not being sarcastic, my friend. <END DIALOGUE><GALILEO JOINS>
+2. No. No, I do not like you.
+	Galileo: Oh. <GALILEO END DIALOGUE ANGRY>
+3. Yes, I would appreciate your help.
+	Galileo: Excellent. To the Firewine then. Let us be off! <END DIALOGUE><GALILEO JOINS>
+4. Please excuse me, I haven't the time to speak with you.
+	Galileo: No trouble at all, good sir. Come back if you need me, I likely won't be going 	anywhere. <GALILEO END DIALOGUE HAPPY>
+
+MEET GALILEO AFTER END DIALOGUE HAPPY. FIREWINE RUINS STILL ACTIVE:
+Galileo: Aye, have you changed your mind? Looking to have a helper for exploring the Firewine Ruins?
+1. Yes, I would be pleased to have you join me.
+	Galileo: Joyous day! Most excellent! <END DIALOGUE><GALILEO JOINS>
+2. No. No, I do not like you.
+	Galileo: Oh. <GALILEO END DIALOGUE ANGRY>
+3. Could you tell me what your abilities are?
+	Galileo: Aye now, I'm glad you asked! See I'm a Jester. I'm like a Bard, except my music is so
+	pitifully bad it makes our enemies go mad from the cacophony!
+	1. Why would I want that?
+		Galileo: I ... well ... I don't know! I like adventuring and stuff! Do you want my help or 		not?
+		1. Okay, let's go investigate these ruins.
+			Galileo: Oh marvelous, just mah-velous! <END DIALOGUE><GALILEO JOINS>
+		2. No thank you. Good-bye.
+			Galileo: You make me sad. So be it. <GALILEO END DIALOGUE HAPPY>
+	2. Sounds good to me!
+		Galileo: I hope you are not being sarcastic, my friend. <END DIALOGUE><GALILEO JOINS>
+4. Not at this time, sorry.
+	Galileo: No trouble. <GALILEO END DIALOGUE HAPPY>
+
+MEET GALILEO AFTER END DIALOGUE ANGRY. FIREWINE RUINS STILL ACTIVE:
+Galileo: Hmm? Oh, what do you want?
+1. I was wondering if you could join my group in our venture in the Firewine Ruins.
+	Galileo: Just like that? Here I thought you were not nice at all. All right then, let us be off. <END DIALOGUE><GALILEO JOINS>
+2. I just wanted to say that I'm sorry for what I said before.
+	Galileo: Oh, that's alright. I understand, adventuring must be a stressful business, which is why so many of my kind do not wish to live that way. Speaking of which, are you looking for help exploring the Firewine?
+	1. No, that was all.
+		Galileo: No trouble at all, good sir. Come back if you need me, I likely won't be going anywhere. <GALILEO END DIALOGUE HAPPY>
+	2. Yes, I would appreciate your help.
+		Galileo: Joyous day! Most excellent! <END DIALOGUE><GALILEO JOINS>
+	3. That would depend on your skill set.
+		Galileo: Aye now, I'm glad you mentioned it! See I'm a Jester. I'm like a Bard, except my music 	is so pitifully bad it makes our enemies go mad from the cacophony!
+		1. Why would I want that?
+			Galileo: I ... well ... I don't know! I like adventuring and stuff! Do you want my help or not?
+			1. Okay, let's go investigate these ruins.
+				Galileo: Oh marvelous, just mah-velous! <END DIALOGUE><GALILEO JOINS>
+			2. No thank you. Good-bye.
+				Galileo: You make me sad. So be it. <GALILEO END DIALOGUE HAPPY>
+		2. Sounds good to me!
+			Galileo: I hope you are not being sarcastic, my friend. <END DIALOGUE><GALILEO JOINS>
+3. I came to let you know that you are a failure and no one loves you.
+	Galileo: I ... What?! What did I ever do to you?
+	1. You exist.
+		Galileo: Well, I never! <GALILEO END DIALOGUE VERY ANGRY>
+	2. You are an ugly butt, and your butt is stupid.
+		Galileo: Well, I never! <GALILEO END DIALOGUE VERY ANGRY>
+	3. No, I was only joking. I didn't mean all that.
+		Galileo: Erm ... I see. Well, that's not exactly my type of humor, but okay. <GALILEO END DIALOGUE HAPPY>
+
+MEET GALILEO AFTER END DIALOGUE VERY ANGRY:
+Galileo: Bugger off. <END DIALOGUE>
+
+MEET GALILEO FIRST TIME, FIREWINE RUINS DONE:
+Galileo: Well, it's nice to finally meet the savior of our little town! I am called Galileo; bard, servant of Finder Wyvernspur, and you are, of course, <CHARNAME>.
+1. Hello there, my small friend.
+	Galileo: Aye so, it's a bit forward ... but are you not adventurers? This place has become very boring ever since you solved our problem. Do you mind if I join you?
+	1. That depends. How can you assist my party?
+		Galileo: Aye now, I'm glad you asked! See I'm a Jester. I'm like a Bard, except my music is so pitifully bad it makes our enemies go mad from the cacophony!
+		1. Why would I want that?
+			Galileo: I ... well ... I don't know! I like adventuring and stuff! Do you want my help or not?
+			1. Okay, why not.
+				Galileo: Oh marvelous, just mah-velous! <END DIALOGUE><GALILEO JOINS>
+			2. No thank you. Good-bye.
+				Galileo: You make me sad. So be it. <GALILEO END DIALOGUE HAPPY>
+		2. Sounds good to me!
+			Galileo: I hope you are not being sarcastic, my friend. <END DIALOGUE><GALILEO JOINS>
+	2. No, I do not have room for you at the moment.
+		Galileo: What? How? Oi, I'm this small! Oh ... fine. <GALILEO END DIALOGUE HAPPY>
+	3. No thank you.
+		Galileo: That's no problem. Let me know if'n you change your mind, I'm bored. <GALILEO END DIALOGUE HAPPY>
+2. Please excuse me, I haven't the time to speak with you.
+	Galileo: No trouble at all, good sir. Come back if you need me, I likely won't be going anywhere. <GALILEO END DIALOGUE HAPPY>
+
+AFTER KILLING JARKEL:
+Galileo: A halfling letting kobolds attack his fellow halflings? I don't understand. What was his motivation?
+1. Some men aren't looking for anything logical. They can't be bought, bullied, reasoned, or negotiated with. Some men just want to watch the world burn.
+	Galileo: Hmm... We should talk to Gondolar. <END DIALOGUE>
+2. He wasn't very forthcoming, was he? I suppose we shall never know.
+	Galileo: Indeed. Well, at least the problem is solved! We should talk to Gondolar. <END DIALOGUE>
+3. Maybe he was receiving a cut of the loot?
+	Galileo: Aye; a solid theory, to be sure. He looked the roguish type, after all. He was wearing a hood, and all thieves wear hoods, you see.
+	<IMOEN INTERJECT>
+	Imoen: He's got a point, ya know.
+	1. Shut up, will you?
+		Galileo: Oh, fine. We should talk to Gondolar and let him know this rather ugly business has been finished. <END DIALOGUE>
+	2. Indeed.
+		Galileo: Right, we should talk to Gondolar and let him know this rather ugly business has been finished. <END DIALOGUE>
+	3. *Remain silent*
+		Galileo: Well, we should talk to Gondolar and let him know this rather ugly business has been finished. <END DIALOGUE>
+
+AFTER GALILEO END DIALOGUE HAPPY, FIREWINE RUINS QUEST DONE:
+Galileo: You looking for another hand in your adventuring crew as of yet? I'm available if you need me. This town is starting to bore me.
+	1. I would be pleased to have you join me, Galileo.
+	Galileo: Excellent! Let's be on our way. <END DIALOGUE><GALILEO JOINS>
+	2. Not at the moment, no.
+	Galileo: Alright. I'll just be here, singing the same songs over and over again to a halfling village. Let me know if you need me. <END DIALOGUE>
+
+IF YOU AGREE TO HELP THE OGRE MAGE:
+Galileo: What the bloody hell are you doing, casting your lot in with the ogre mage terrorizing our village?! If this is some kind of ruse, hurry up and kill the bastard!
+1. The ogre may not be all of the problem here, Galileo. If he can grant us safer passage through these tunnels by telling his kobolds to stand down, the better we can figure out what all is going on.
+	Galileo: Then let's get on with it. I'm not sure as I trust you, the shady way you're acting. <END DIALOGUE>
+2. Yes, it's a ruse. We can take him down easier this way.
+	Galileo: Then let's get on with it. I'm not sure as I trust you, the shady way you're acting. <END DIALOGUE>
+3. I'm simply finding the most profit I can reap from your village and its associated ruins. If you've a problem with that, then you can leave.
+	Galileo: Leave?! These folk are my friends! If I can't convince you to change your mind, then... Then I'll fight you!
+	1. Don't make me laugh. You're no match for me.
+		Galileo: Death before dishonor, you cur! <END DIALOGUE, BOOT GALILEO FROM PARTY, GALILEO SET HOSTILE>
+	2. Oh, fine. I'll do it your way.
+		Galileo: Just like that? Very well then... <END DIALOGUE><set parameter "Galileo gonna leave" 'GALIGONLEAV=1' or something lol>
+
+TALKING TO OGRE MAGE AFTER ACCEPTING HIS OFFER:
+Ogre Mage: What you want? Halfling ghosts not dead!
+1. I've decided to rescind your offer when I should really be killing you. Any last words?
+	Ogre Mage: HAHA! You think you clever, but now you DIE! <END DIALOGUE, SET OGRE MAGE HOSTILE>
+2. Never mind, I must be getting back to that.
+	Ogre Mage: Good, now get going! <END DIALOGUE>
