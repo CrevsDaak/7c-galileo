@@ -70,7 +70,7 @@ Like other non-player characters, Galileo has three different iterations of hims
 
 Level 2
 11 Hit Points
-Bow *
+Short Bow *
 Axe *
 Wizard Spells:
 Blindness
@@ -78,9 +78,9 @@ Invisibility
 
 Level 4
 20 Hit Points
-Bow *
+Short Bow *
 Axe *
-Sling *
+Darts *
 Wizard Spells:
 Blindness
 Magic Missile
@@ -89,9 +89,9 @@ Knock
 
 Level 6
 30 Hit Points
-Bow *
+Short Bow *
 Axe *
-Sling *
+Darts *
 Wizard Spells:
 Blindness
 Magic Missile
