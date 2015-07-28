@@ -70,7 +70,7 @@ Like other non-player characters, Galileo has three different iterations of hims
 
 Level 2
 11 Hit Points
-Short Bow *
+Darts *
 Axe *
 Wizard Spells:
 Blindness
@@ -78,9 +78,9 @@ Invisibility
 
 Level 4
 20 Hit Points
-Short Bow *
-Axe *
 Darts *
+Axe *
+Short Bow *
 Wizard Spells:
 Blindness
 Magic Missile
@@ -91,7 +91,7 @@ Level 6
 30 Hit Points
 Short Bow *
 Axe *
-Darts *
+Short Bow *
 Wizard Spells:
 Blindness
 Magic Missile
@@ -112,7 +112,7 @@ V. Tips
 
 The following tips are spoiler free in terms of dialogue and the like.
 
-Unfortunately we have none as of yet. Sucks to be you.
+Galileo uses Axes and Darts so you can sword while you board, and board while you sword. Buckley's Buckler is a nice choice.
 
 -----------------------
 VI. Lines
