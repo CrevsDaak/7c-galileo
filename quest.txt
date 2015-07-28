@@ -1,0 +1,106 @@
+Here's some shit you can get started on.
+
+Placement of halfling ghosts:
+http://i.imgur.com/ahRXj0w.png
+
+-----------
+EDITED ALREADY-EXISTING DIALOGUES
+(Showing modified lines only.)
+
+GANDOL:
+
+Gandolar Luckyfoot: Aye, I can point the way to you, and gladly so, but I must warn you as well. There be many an odd thing that roam through there, and I hear tell they be a touch more organized than your normal critters, but I hear many things. Just go to the basement of the winery, there you will find a secret door. If you'd like some local help, you could likely enlist Galileo, our resident bard. I reckon he's caught the adventuring bug, much the same as yourselves.
+
+(Crevs -- that bit of dialogue appears in a couple of different dialogues, I believe. If you approach Gandolar he initially assumes you're in need of healing after attacking Durlag's, and you can tell him you're going for Firewine and he'll say this. If you talk to him a second time *without* following said dialogue path previously, he'll directly ask you to investigate the Firewine Ruins and accepting it will result in that same line. Please make sure to edit both of those! Thanks!! -Q)
+
+Ogre Mage in Firewine Ruins:
+
+Ogre Mage: MMMaaaahaha! Puny peoples come to fight?! Good! ... etc ... (no changes to this line)
+(Add option 4!!)
+4. Hold a moment, beast. I've no love of the halflings and no wish to fight you. Perhaps we can offer a trade of services.
+	Ogre Mage: Trade of more value than your treasure?! You are funny to me!
+	1. Surely there's some bother that needs solving, otherwise you'd already have taken down the whole village. You seem to be doing a fine job.
+		Ogre Mage: HMM! Okay, fool. Pesky halfling ghosts keep me and kobolds from overthrowing halfling village. You kill halfling ghosts, I let you live.
+		1. Surely you can offer me something other than that. You may well be a powerful mage, but we are experienced and well equipped. The odds do not favor you.
+			Ogre Mage: Don't make me laugh. Me ready for fools like you. But this task important, so me give you treasure if you succeed. Good?
+			1. Very well, I accept your offer.
+				Ogre Mage: Good, now get going! HAHA! Good fun! <END DIALOGUE, SET KOBOLDS, OGRILLONS, LENDARN FRIENDLY, SET OGREQUEST=1> (IF THAT'S NOT POSSIBLE, HARASS ME PLEASE :) )
+			2. "Treasure" is awfully vague. Not good enough.
+				Ogre Mage: Then you will die! MMahaha! <END DIALOGUE, OGRE MAGE SET HOSTILE>
+		2. I suppose I've little choice. Very well then, I accept your terms.
+			Ogre Mage: Good, now get going! HAHA! Good fun! <END DIALOGUE, SET KOBOLDS, OGRILLONS, LENDARN FRIENDLY, SET OGREQUEST=1>
+		3. Let me live? I don't like your attitude. I can take you easily.
+			Ogre Mage: HA! Me like to see you try! <END DIALOGUE, OGRE MAGE SET HOSTILE>
+	2. If that's all you care about, then so be it. Die!
+		Ogre Mage: HA! Me kill you laughing! RAAAAGH! <END DIALOGUE, OGRE MAGE SET HOSTILE>
+
+-----------
+MORE QUEST STUFF…
+
+IF YOU AGREE TO HELP THE OGRE MAGE:
+Galileo: What the bloody hell are you doing, casting your lot in with the ogre mage terrorizing our village?! If this is some kind of ruse, hurry up and kill the bastard!
+1. The ogre may not be all of the problem here, Galileo. If he can grant us safer passage through these tunnels by telling his kobolds to stand down, the better we can figure out what all is going on.
+	Galileo: Then let's get on with it. I'm not sure as I trust you, the shady way you're acting.
+	<END DIALOGUE>
+2. Yes, it's a ruse. We can take him down easier this way.
+	Galileo: Then let's get on with it. I'm not sure as I trust you, the shady way you're acting.
+	<END DIALOGUE>
+3. I'm simply finding the most profit I can reap from your village and its associated ruins. If you've a problem with that, then you can leave.
+	Galileo: Leave?! These folk are my friends! If I can't convince you to change your mind, then... Then I'll fight you!
+	1. Don't make me laugh. You're no match for me.
+		Galileo: Death before dishonor, you cur!
+		<END DIALOGUE, BOOT GALILEO FROM PARTY, GALILEO SET HOSTILE>
+	2. Oh, fine. I'll do it your way.
+		Galileo: Just like that? Very well then... <set parameter "Galileo gonna leave" 'GALIGONLEAV=1' or something lol> <END DIALOGUE>
+
+TALKING TO OGRE MAGE AFTER ACCEPTING HIS OFFER:
+Ogre Mage: What you want? Halfling ghosts not dead!
+1. I've decided to rescind your offer when I should really be killing you. Any last words?
+	Ogre Mage: HAHA! You think you clever, but now you DIE! <END DIALOGUE, SET OGRE MAGE HOSTILE>
+2. Never mind, I must be getting back to that.
+	Ogre Mage: Good, now get going! <END DIALOGUE>
+
+COMING WITHIN VIEW OF WENWAN
+Wenwan: Hello then. How very refreshing to see the face of someone other than a kobold. My apologies for pointing an arrow at your face, I'm afraid it's become second nature as of late. I am Wenwan, and these are my comrades-in-arms. To what do I owe the honor?
+1. Greetings. Gullykin, the village above, is a troubled town as of late, and I am seeking out the source.
+	Wenwan: Then you need look no further. There is an ogre mage who stalks these halls, commanding kobolds to rob the village in waves. Dispose of him, and the crisis will quickly subside.
+	1. You lot look plenty powerful yourself. What stops you?
+		Wenwan: That human mage, Lendarn, has cast a spell that bars our entrance beyond a certain distance. While the four of us have maintained a far greater semblance of our former selves compared to many undead, we still carry such weaknesses. I've no idea what manner of man would associate himself with such scum, but that is irrelevant.
+		1. Very well then. Could you point the way?
+			Wenwan: Certainly. The passage to the Northeast will get you there. Do be cautious. Return to us when the deed is done, it will be a relief to hear of your success. <END DIALOGUE>
+		<option available if OGREQUEST=1>
+		2. That's all very well and interesting, but that ogre mage has a price on your head.
+			Wenwan: Oh really? Shall I give you the benefit of the doubt in assuming that you were coerced into hunting us, or are you just as much a cur as that Lendarn tool?
+			1. We were given little option, but truth be known, I rather like the option. Your bow catches the light quite nicely, I can only assume it's extremely valuable.
+				Wenwan: You fool. We've been guarding these halls for centuries, and so it shall remain. <END DIALOGUE, SET HALFLING GHOSTS HOSTILE>
+			2. It's true, we bargained for our lives. Could you help us turn the tide somehow?
+				Wenwan: Since you asked, we are in possession of an Arrow of Slaying. This particular one just so happens to be attuned to ogre mages. If it helps you, we shall give it to you.
+				1. You have been more than reasonable. Thank you.
+					Wenwan: Indeed. One last piece of advice?
+					Wenwan: Don't miss. <END DIALOGUE, PLACE ONE ARROW OF SLAYING IN SPEAKER'S INVENTORY>
+	2. Very well then. Could you point the way?
+		Wenwan: Certainly. The passage to the Northeast will get you there. Do be cautious. Return to us when the deed is done, it will be a relief to hear of your success. <END DIALOGUE>
+
+2. I'm not entirely sure why I'm here. Just crawling through a dungeon, really.
+	Wenwan: Is that so? Well, you seem the adventurous sort. How fond are you of ogre mages?
+	<KIVAN INTERJECT> Kivan: I thought I smelt one of those beasts when we crawled in here.
+	1. Not very fond. Why do you ask?
+		Wenwan: An ogre mage has recently fortified itself in these ruins, and has made itself quite a pest. With his raids of Gullykin, I'm sure he's amassed a fair share of treasure. I may offer you something of my own as well if you disposed of him.
+		1. Deal. Could you point the way?
+			Wenwan: Certainly. The passage to the Northeast will get you there. Do be cautious. Return to us when the deed is done, it will be a relief to hear of your success. <END DIALOGUE>
+		2. Not really feeling the need to hunt down an ogre, but thanks for the information.
+			Wenwan: Very well then. <END DIALOGUE>
+	2. I suppose there are worse critters out there.
+		Wenwan: Yes well, I don't believe we're holding a contest. The point is, an ogre mage has recently fortified itself in these ruins, and has made itself quite a pest. With his raids of Gullykin, I'm sure he's amassed a fair share of treasure. I may offer you something of my own as well if you disposed of him.
+		1. Deal. Could you point the way?
+			Wenwan: Certainly. The passage to the Northeast will get you there. Do be cautious. Return to us when the deed is done, it will be a relief to hear of your success. <END DIALOGUE>
+		2. Not really feeling the need to hunt down an ogre, but thanks for the information.
+			Wenwan: Very well then. <END DIALOGUE>
+
+<option available if OGREQUEST=1>
+3. How about I point an arrow at your face instead?
+	Wenwan: Well now, I've already apologized. What could possibly warrant such hostility?
+	1. A certain ogre mage has a price on your head, and I'd like to collect it.
+		Wenwan: Ahh, consorting with ogre mages, are we? Then you are just as low as that tool, Lendarn. We've been guarding these halls for centuries, and so it shall remain. <END DIALOGUE, SET HALFLING GHOSTS HOSTILE>
+	2. A certain ogre mage has a price on your head. But perhaps you fetch a more fair price for his? I notice you've your fair share of magical treasure.
+		Wenwan: If you think I'm about to hand over one of the few remaining gem bows in Faerun to a traitorous cur as yourself, you're mistaken. Draw steel. <END DIALOGUE, SET HALFLING GHOSTS HOSTILE>
