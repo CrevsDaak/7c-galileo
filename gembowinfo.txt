@@ -8,14 +8,15 @@ OUTLINE
 
 In the depths of the Firewine Ruins, you will find four halfling ghosts inside the largest room.
 
-Wenwan - Level 5 Fighter. Male halfling fighter model, no armor. Base AC 0, base 50 HP.
+Wenwan - Level 5 Fighter. Male halfling fighter model, no armor. Base AC 1, base 50 HP.
 STR 17
 DEX 14
 CON 15
 INT 10
 WIS 10
 CHA 10
-Wields Short Sword +1 and Small Shield.
+Wields Uncharged Gem Bow.
+Behavior: Shoot hostiles with arrows.
 
 Calna - Level 5 Fighter. Female halfling fighter model, no armor. Base AC 3, base 40 HP.
 STR 16
@@ -24,7 +25,8 @@ CON 13
 INT 10
 WIS 10
 CHA 10
-Dual-wields two Daggers +1.
+Dual-wields two Daggers.
+Behavior: Get in hostiles' faces and shank them repeatedly.
 
 Yola - Level 7 Cleric. Female halfling cleric model, no armor. Base AC 4, base 40 HP.
 STR 15
@@ -33,8 +35,25 @@ CON 12
 INT 10
 WIS 18
 CHA 10
-Wields War Hammer +1, Small Shield +1, and Sling +1. She should prefer ranged combat.
+Wields War Hammer, Small Shield, and Sling +1. She should prefer ranged combat.
 Spells: Bless, Cure Light Wounds, Hold Person, Silence, Miscast Magic, Animate Dead, Cloak of Fear.
+Behavior: Auto-cast Bless first. Then begin casting Animate Dead, Cloak of Fear, Silence, Hold Person, Miscast Magic. Then pelt people with rocks.
+
+Jovias - Level 6 Thief. Male halfling thief model, no armor. Base AC 6, base 30 HP.
+STR 13
+DEX 17
+CON 13
+INT 10
+WIS 10
+CHA 10
+Wields Short Sword, Cyrrollalee's Gift. (Buckler +1, with Protection from Fear)
+Behavior: Invisibility, stab.
+
+=========================
+PLOT
+=========================
+
+I bestow this bow unto you, that it may be put to better use than it is locked away in a dusty old tomb such as this. You have proven yourself worthy.
 
 =========================
 DESCRIPTIONS
@@ -43,7 +62,7 @@ DESCRIPTIONS
 
 Uncharged Gem Bow
 
-Created long ago by a prestigious halfling bowyer and the Archmage Bendalyre, gem bows were developed to help halfling societies combat their enemies. Over the years, the gem bows have disappeared from halfling realms. They are now lost and all but forgotten by the race that created them. All are of excellent craftsmanship, and have the ability to gain additional powers. On the face of each bow is an indentation above the handgrip. If certain gemstones are set into this notch, the bow is then capable of bestowing one of numerous special powers on any arrow fired.
+Created long ago by a prestigious halfling bowyer and the Archmage Bendalyre, gem bows were developed to help halfling societies combat their enemies. Over the years, the gem bows have disappeared from halfling realms. They are now lost and all but forgotten by the race that created them. All are of excellent craftsmanship, and have the ability to gain additional powers. On the face of each bow is an indentation above the handgrip. If certain gemstones are set into this notch, the bow is then capable of bestowing one of numerous special powers on any arrow fired. Its abilities do not stack with magically imbued arrows.
 
 Weapon Type: Short Bow
 Damage: +1

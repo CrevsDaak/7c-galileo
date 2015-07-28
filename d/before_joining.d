@@ -196,3 +196,4 @@ IF ~~ BEGIN 7c#no.prob.bob.bye
   SAY @52 /* That's no problem. Let me know if'n you change your mind, I'm bored. */
     IF ~~ DO ~SetGlobal("7C#GalileoHappiness","LOCALS",15)~ EXIT
 END
+

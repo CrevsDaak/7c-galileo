@@ -4,13 +4,15 @@
 // battles cries
 @773 = ~Prepare to die, obviously!~ [7C#GAL02]
 @774 = ~You will find honor in death!~ [7C#GAL03]
-@775 = ~Yes, blood of the innocents! Sorry, got carried away.~ [7C#GAL04]
+@775 = ~Vicariously I live while the whole world dies! Much better you than I.~ [7C#GAL04]
 // bored
 @776 = ~Oi, don't we have anything better to do?~ [7C#GAL05]
 // tired
 @777 = ~This is making me very tired. You won't like me when I'm tired.~ [7C#GAL06]
 // morale failure
 @778 = ~Time to bugger off!~ [7C#GAL07]
+// wounded
+@760 = ~I must admit, I'm bleeding quite a bit.~ [7C#GAL33]
 // selected
 @779 = ~Aye?~ [7C#GAL08]
 @7710 = ~You need me?~ [7C#GAL09]
@@ -38,9 +40,20 @@
 @7725 = ~A stranger halfling I've never known, but I already miss him.~ [7C#GAL24]
 @7726 = ~I thought he was too smart to die?~ [7C#GAL25]
 @7727 = ~Mad as a hatter, dead and it does not matter.~ [7C#GAL26]
+@761 = ~A stranger halfling I've never met, but I'll admit already miss him.~ [7C#GAL34]
+@762 = ~Dishonorably discharged, ya greedy bastard.~ [7C#GAL35]
+@763 = ~Ah, the irony of a self-fulfilling prophecy.~ [7C#GAL36]
+// generic death, good only
+@764 = ~Only the good die young, while the evil seem to live forever.~ [7C#GAL37]
 // critical miss and hit
 @7728 = ~D'oh!~ [7C#GAL27]
 @7729 = ~Take that, you bastard!~ [7C#GAL28]
+// high rep
+@765 = ~It is good to venture alongside such a refined lot.~ [7C#GAL38]
+// low rep
+@766 = ~This party is in desperate need of more heroics.~ [7C#GAL39]
+// terrible rep
+@767 = ~We really must steer our party towards a brighter path, or Wyvernspur help me, I will not remain here!~ [7C#GAL40]
 // picked pocket
 @7730 = ~I need this more than you do. Honest.~ [7C#GAL29]
 // trap set
@@ -57,7 +70,18 @@ At level 10, it also cures and grants party members immunity to Fear for 1 round
 At level 20, it also cures and grants party members immunity to Confusion and Charm for 1 round/level of the caster.~
 @7736 = ~Healed~
 @7737 = ~You cannot fire magical arrows with the Gem Bow.~
-@7738 = ~Gem Bow~
-@7739 = ~<<<GEM BOW DESCRIPTION GOES HERE>>>~
+@7738 = ~Uncharged Gem Bow +1~
+@7739 = ~Uncharged Gem Bow
+
+Created long ago by a prestigious halfling bowyer and the Archmage Bendalyre, gem bows were developed to help halfling societies combat their enemies. Over the years, the gem bows have disappeared from halfling realms. They are now lost and all but forgotten by the race that created them. All are of excellent craftsmanship, and have the ability to gain additional powers. On the face of each bow is an indentation above the handgrip. If certain gemstones are set into this notch, the bow is then capable of bestowing one of numerous special powers on any arrow fired. Its abilities do not stack with magically imbued arrows.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1~
 // biography
 @7740 = ~When asked about his past, GALILEO appears overjoyed, as if no question could make him happier. He informs you that he was raised in Secomber, to the Northeast of the Sword Coast. He became acquainted with music experiencing open performances at an inn called The Seven-Stringed Harp, and apparently took it into his own hands to learn to play music himself. His muse is a confusing mixture of genius and madness, and GALILEO claims that it is none other than demipower Finder Wyvernspur who inspires him. However a halfling such as himself was introduced to such a deity is anyone's guess.~
+@7741 = ~Yola~
+@7742 = ~Jovias~
+@7743 = ~Wenan~
+@7744 = ~Calna~
+@7745 = ~Invisible~

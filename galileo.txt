@@ -10,7 +10,23 @@
   and for a quest-specific banter about Jenkal and reporting
   back to Gandolar.
 
+- GLOBAL 7C#GalileoJustRaisedBack (BG1):
+  This variable is set to 1 (by 7c#gal01.bcs) after
+  Galileo is raised for the first time (the variable is actually
+  set when he dies, so when he is reaised back you he
+  automatically dialogs the PC), and to 2 by 7c#gal1j.dlg.
 
+  Checked by 7c#gal1j.dlg and 7c#gal01.bcs.
+
+- GLOBAL 7C#GalileoJaheiraBanter (BG1):
+  Is set to 1 by 7c#gal01.bcs, checked in 7c#gal1j.dlg
+  to trigger the banter. It is set to 2 by 7c#gal1.dlg after the
+  banter happens.
+
+- GLOBAL 7C#GhostsSpawned (BG1):
+  It is set to 1 after the Halfling Ghosts (and associated
+  invisible creatuers) are spawned in the Firewine Ruins
+  [AR5201]. Only checked by that BAF block itself.
 
 - LOCALS 7C#GalileoHappiness (BG1):
   This variable's default value is 10. It measures Galileo's

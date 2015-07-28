@@ -1,14 +1,21 @@
+// -*- weidu-tp2 -*-
 BACKUP "7c-galileo/backup"
-AUTHOR "Quartz and Crevs Daak"
+AUTHOR "www.github.com/CrevsDaak/7c-galileo/issues/new"
+// AUTHOR ~Quartz and Crevs Daak~
+// troubleshooting > being on AUTHOR ;D
 VERSION "v0.0.2 alpha"
 
+README "7c-galileo/readme_%LANGUAGE%.txt" "7c-galileo/readme.txt"
+
 ALWAYS
+  /* requires re-write IMO
   ACTION_IF "%LANGUAGE%" STR_CMP "english" BEGIN
     LAF HANDLE_CHARSETS
       STR_VAR
         tra_path = "7c-galileo/lang"
     END
   END
+  */
 
   OUTER_SPRINT tra "7c-galileo/lang/%LANGUAGE%"
   LOAD_TRA "%tra%/game.tra"
@@ -26,26 +33,30 @@ ACTION_IF GAME_IS "tutu tutu_totsc" BEGIN
   OUTER_SPRINT bgt_check ""
   OUTER_SPRINT tutu_prefix _
   OUTER_SPRINT melicamp ~"_misc49"~
-  OUTER_SPRINT dead_halfling _halfmir
+  OUTER_SPRINT dead_halfling _halfmir // or is it "_alfmiri" ??
   OUTER_SPRINT Gullykin fw4000
+  INCLUDE "7c-galileo/lib/tutu_items.tpa"
 END ELSE ACTION_IF GAME_IS bgt BEGIN
   OUTER_SPRINT tutu_prefix ""
   OUTER_SPRINT melicamp ~"misc49"~
   OUTER_SPRINT dead_halfling halfmiri
   OUTER_SPRINT Gullykin ar9900
+  DEFINE_PATCH_FUNCTION tutu_items BEGIN END
   OUTER_SPRINT bgt_check ~!Global("endofbg1","GLOBAL",2)~
 END ELSE ACTION_IF GAME_IS eet BEGIN
   OUTER_SPRINT tutu_prefix ""
   OUTER_SPRINT melicamp ~"misc49"~
   OUTER_SPRINT bgt_check ~GlobalLT("endofbg1","GLOBAL",2)~
   OUTER_SPRINT dead_halfling halfmiri
-  OUTER_SPRINT Gullykin fh4000
+  OUTER_SPRINT Gullykin bg4000
+  DEFINE_PATCH_FUNCTION tutu_items BEGIN END
 END ELSE ACTION_IF GAME_IS bgee BEGIN
   OUTER_SPRINT tutu_prefix ""
   OUTER_SPRINT melicamp ~"misc49"~
   OUTER_SPRINT bgt_check ""
   OUTER_SPRINT dead_halfling halfmiri
   OUTER_SPRINT Gullykin ar4000
+  DEFINE_PATCH_FUNCTION tutu_items BEGIN END
 END
 
 COPY "7c-galileo/spl/7c#gal01.bam" override
@@ -106,6 +117,13 @@ COPY "7c-galileo/spl/7c#gal01.spl" override
     END
   END
 
+OUTER_SPRINT path "7c-galileo/ds"
+INCLUDE "7c-galileo/ds.tph"
+
+LAF detectable_spells_setup STR_VAR path END
+LAF detectable_spells STR_VAR table = EVAL "%path%/cddetect.2da" END
+LAF detectable_weapon_enchantment END
+
 COPY "7c-galileo/cre/galileo.cre" "override/7c#gal02.cre"
   SAY NAME1 @771
   SAY NAME2 @771
@@ -135,29 +153,33 @@ COPY "7c-galileo/cre/galileo.cre" "override/7c#gal02.cre"
   SAY SET_A_TRAP @7731
   SAY SPELL_DISRUPTED @7732
   SAY BIO @7740
+  SAY HAPPY @765
+  SAY UNHAPPY_ANNOYED @766
+  SAY UNHAPPY_SERIOUS @767
   WRITE_LONG 0x18 1473
   WRITE_BYTE 0x23b 8
   WRITE_SHORT 0x24 11
   WRITE_SHORT 0x26 11
   WRITE_ASCII 0x34 "7c#gas" #8
   WRITE_ASCII 0x3c "7c#gam" #8
-  WRITE_ASCII 0x2cc "7c#gal1p" #8
+  WRITE_ASCII DIALOG "7c#galp" #8
   WRITE_LONG 0x1c 57
   READ_BYTE 0x6a pick_pockets
   WRITE_BYTE 0x6a (pick_pockets + 5)
-  WRITE_ASCII 0x280 "Galileo1" #32
-  WRITE_ASCII 0x248 "7c#gal01" #8
-  WRITE_ASCII 0x268 "7c#gal00" #8
+  WRITE_ASCII DEATHVAR "Galileo1" #32
+  WRITE_ASCII SCRIPT_DEFAULT "7c#gal00" #8
+  WRITE_ASCII SCRIPT_OVERRIDE "7c#gal01" #8
+  WRITE_ASCII SCRIPT_GENERAL "7c#gal02" #8
   ADD_KNOWN_SPELL 7c#gal01 #0 innate
   ADD_KNOWN_SPELL spwi106 #0 wizard
   ADD_KNOWN_SPELL spwi206 #1 wizard
   ADD_MEMORIZED_SPELL 7c#gal01 #0 innate #1
   ADD_MEMORIZED_SPELL spwi106 #0 wizard #1
-  ADD_CRE_ITEM "%tutu_prefix%ax1h01" #0 #0 #0 none weapon1 EQUIP
   ADD_CRE_ITEM "%tutu_prefix%dart01" #17 #0 #0 none weapon2
+  ADD_CRE_ITEM "%tutu_prefix%ax1h01" #0 #0 #0 none weapon1 EQUIP
   ADD_CRE_ITEM "%tutu_prefix%dart01" #21 #0 #0 none inv1
   ADD_CRE_ITEM "%tutu_prefix%dart01" #18 #0 #0 none inv2
-  PATCH_IF !GAME_IS bgee BEGIN
+  PATCH_IF !GAME_IS "bgee eet" BEGIN
     ADD_CRE_ITEM "%tutu_prefix%shld09" #0 #0 #0 none shield
   END ELSE BEGIN
     ADD_CRE_ITEM shld10a #0 #0 #0 none shield
@@ -176,10 +198,9 @@ COPY_EXISTING 7c#gal02.cre "override/7c#gal04.cre"
   ADD_KNOWN_SPELL spwi207 #1 wizard
   READ_LONG 0x2b0 mem_offset
   READ_LONG 0x2b4 mem_count
-  SET found = 0
   SET extra_plus = 0x0
   SET extra_offset = 0x0
-  FOR (i = 6; i < mem_count && found = 0 ; ++i) BEGIN
+  FOR (i = 6; i < mem_count; ++i) BEGIN
     SET extra_offset += extra_plus
     SET extra = 0x14 * extra_offset
     READ_SHORT (mem_offset + i * 0x10 + extra) spl_lvl
@@ -200,6 +221,8 @@ COPY_EXISTING 7c#gal02.cre "override/7c#gal04.cre"
   ADD_CRE_ITEM bull01 #26 #0 #0 none quiver2
   ADD_CRE_ITEM slng01 #0 #0 #0 none inv3
   SET_BG2_PROFICIENCY PROFICIENCYDART 1
+  LPF tutu_items END
+
 
 COPY_EXISTING 7c#gal04.cre "override/7c#gal06.cre"
   WRITE_SHORT 0x24 30
@@ -222,10 +245,9 @@ COPY_EXISTING 7c#gal04.cre "override/7c#gal06.cre"
   ADD_KNOWN_SPELL spwi224 #1 wizard
   READ_LONG 0x2b0 mem_offset
   READ_LONG 0x2b4 mem_count
-  SET found = 0
   SET extra_plus = 0x0
   SET extra_offset = 0x0
-  FOR (i = 6; i < mem_count && found = 0; ++i) BEGIN
+  FOR (i = 6; i < mem_count; ++i) BEGIN
     SET extra_offset += extra_plus
     SET extra = 0x14 * extra_offset
     READ_SHORT (mem_offset + i * 0x10 + extra) spl_lvl
@@ -270,10 +292,39 @@ APPEND state.ids "0x80101FEF CD_STATE_NOTVALID"
 APPEND state.ids "0x00400010 STATE_NOT_VISIBLE"
   UNLESS STATE_NOT_VISIBLE
 
+COPY_EXISTING - interact.2da override
+  COUNT_2DA_COLS _cols
+  COUNT_2DA_ROWS _cols _rows
+  SET _extra_rows_ = _rows - 24
+  SET _extra_cols = 1 + _cols - 24
+  SPRINT __extra "%TAB%0%TAB%"
+  SPRINT extra_rows ""
+  FOR (i = 0; i <= _extra_rows; ++i) BEGIN
+    SPRINT extra_rows EVAL "%extra_rows%%__extra%"
+    PATCH_IF i == _extra_rows BEGIN
+      SPRINT extra_rows EVAL EVAL "%%extra_rows%%"
+      SPRINT extra_rows EVAL "%extra_rows%0"
+    END
+  END
+  SPRINT __extra " 0 "
+  SPRINT extra_cols ""
+  FOR (i = 0; i <= _extra_cols; ++i) BEGIN
+    SPRINT extra_cols EVAL "%extra_cols%%__extra%"
+    PATCH_IF i == _extra_cols BEGIN
+      SPRINT extra_cols EVAL EVAL "%%extra_cols%%"
+      SPRINT extra_cols EVAL "%extra_cols%0"
+    END
+  END
+BUT_ONLY
+
+APPEND interact.2da ~GALILEO1%TAB%c%TAB%s%TAB%0%TAB%0%TAB%c%TAB%c%TAB%c%TAB%c%TAB%0%TAB%0%TAB%i%TAB%0%TAB%0%TAB%i%TAB%i%TAB%0%TAB%i%TAB%0%TAB%i%TAB%i%TAB%i%TAB%i%TAB%i%extra_rows%~
+APPEND_COL interact.2da ~$ $ GALILEO1 0 0 0 0 0 c c c 0 c 0 0 0 i i c i s i i i 0 i%extra_cols%~
+
 CLEAR_IDS_MAP
 
 COMPILE EVAL "7c-galileo/d/before_joining.d" USING "%tra%/dialog.tra"
 COMPILE EVAL "7c-galileo/d/party_dialog.d" USING "%tra%/dialog.tra"
+COMPILE EVAL "7c-galileo/baf/7c#gal02.baf"
 COMPILE EVAL "7c-galileo/baf/7c#gal01.baf"
 COMPILE EVAL "7c-galileo/baf/7c#gal00.baf"
 
@@ -284,16 +335,16 @@ END ELSE BEGIN
 END
 
 COPY_EXISTING "%Gullykin%.are" override
-  PATCH_IF BUFFER_LENGTH > 0x139 BEGIN
+  PATCH_IF SOURCE_SIZE > 0x139 BEGIN
     READ_ASCII 0x94 are_script
     READ_LONG 0x54 actors_offset
     READ_SHORT 0x58 actors_count
     SET found = 0
-    FOR (j = 0; j < actors_count && found > 1; ++j) BEGIN
+    FOR (j = 0; j < actors_count && found != 1; ++j) BEGIN
       READ_SHORT 0x20 current_x
       READ_SHORT 0x22 current_y
       PATCH_IF current_x = 1431 && current_y = 666 BEGIN
-        WRITE_SHORT 0x20 1044 
+        WRITE_SHORT 0x20 1044
         WRITE_SHORT 0x22 694
         WRITE_SHORT 0x24 1044
         WRITE_SHORT 0x26 694
@@ -312,7 +363,12 @@ END ELSE BEGIN
     WRITE_ASCIIE 0x94 "%Gullykin%"
   BUT_ONLY
 
-  EXTEND_BOTTOM "%Gullykin%.bcs" "7c-galileo/baf/ar4000.baf" EVAL
+  ACTION_IF FILE_EXISTS "%Gullykin%.bcs" BEGIN
+    EXTEND_BOTTOM "%Gullykin%.bcs" "7c-galileo/baf/ar4000.baf" EVAL
+  END ELSE BEGIN
+    COMPILE EVAL "7c-galileo/baf/ar4000.baf"
+    MOVE "override/ar4000.bcs" "override/%Gullykin%.bcs"
+  END
 END
 
 COPY_EXISTING "%tutu_prefix%gandol.dlg" override
@@ -326,5 +382,53 @@ BUT_ONLY
 COPY_EXISTING "%dead_halfling%.cre" override
   WRITE_ASCII 0x280 "DeadHalflingMessager" #32
 BUT_ONLY
+
+INCLUDE "7c-galileo/lib/cloud.tpa"
+
+COPY "7c-galileo/cre/7c#yola.cre" override
+  SAY NAME1 @7741
+  SAY NAME2 @7741
+  LPF tutu_items END
+
+COPY "7c-galileo/cre/7c#jovia.cre" override
+  SAY NAME1 @7742
+  SAY NAME2 @7742
+  ADD_KNOWN_SPELL 7c#jov01 #1 innate
+  LPF tutu_items END
+
+COPY "7c-galileo/cre/7c#wenan.cre" override
+  SAY NAME1 @7743
+  SAY NAME2 @7743
+  LPF tutu_items END
+
+COPY "7c-galileo/cre/7c#calna.cre" override
+  SAY NAME1 @7744
+  SAY NAME2 @7744
+  LPF tutu_items END
+
+COPY "7c-galileo/spl/7c#jov01.spl" override
+  SAY NAME1 #-1
+  LPF ADD_SPELL_EFFECT
+    INT_VAR
+      opcode = 139
+      target = 2
+      power = 2
+      parameter1 = RESOLVE_STR_REF (@7745)
+      timing = 1
+      duration = 0
+      resist_dispel = 3
+  END
+
+ACTION_IF GAME_IS "bg2ee bgee eet" BEGIN
+  OUTER_SPRINT RunAwayFrom RunAwayFromNoLeaveArea
+END ELSE BEGIN
+  OUTERP_SPRINT RunAwayFrom RunAwayFrom
+END
+
+COMPILE EVAL "7c-galileo/baf/7c#jovia.baf"
+COMPILE EVAL "7c-galileo/baf/7c#yola.baf"
+COMPILE EVAL "7c-galileo/baf/7c#wenan.baf"
+COMPILE EVAL "7c-galileo/baf/7c#calna.baf"
+
 
 // eof

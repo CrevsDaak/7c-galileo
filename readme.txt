@@ -199,13 +199,13 @@ Quartz: I want to issue a huge thanks to Crevs for helping me with this
   heart without his implementation of my hours of work.
 
 	Furthermore, I would love to thank my Baldur's Gate Forum fellow Isandir
-for crafting the lovely portrait and not even asking for anything in return.
-What a guy. He stuck as close to the original art style as he could, which is not
-only impressive, but it also satiates my terrible obsessive-compulsive habits!
+  for crafting the lovely portrait and not even asking for anything in return.
+  What a guy. He stuck as close to the original art style as he could, which is not
+  only impressive, but it also satiates my terrible obsessive-compulsive habits!
 
 	But the project is still young, and it is likely that other people will
-contribute in some way or the other. And so, this section is incomplete,
-which is a beautiful thing.
+  contribute in some way or the other. And so, this section is incomplete,
+  which is a beautiful thing.
 
 -----------------------
 IX. Version history

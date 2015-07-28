@@ -65,11 +65,35 @@
 @62 = ~Very funny, but no, I must be off.~
 @63 = ~What a tease! I'll win myself back into your party yet, just you wait.~
 @64 = ~I suppose it will take more than a witty line or two to win myself back into your group. Fair enough. Thanks for stopping by, and best of luck on your travels.~
+// party_dialog.d
 @65 = ~It is fascinating for a halfling to be a follower of Finder Wyvernspur.~
 @66 = ~Aye, you're quite right about that. He's not exactly the most popular god to begin with. You are a Harper, no?~
 @67 = ~Correct. How did you become acquainted with our organization?~
 @68 = ~My old music teacher is a Harper, and quite the admirable man. I hold a lot of respect for them. Mystra sure did get Finder out of a hell of a lot of trouble.~
-@69 /* hehehe */ = ~While it is not my place to question her actions, I do wonder why Mystra bothered. Finder was quite irresponsible in his actions.~
+@69 = ~While it is not my place to question her actions, I do wonder why Mystra bothered. Finder was quite irresponsible in his actions.~
 @70 = ~It is the tale of an impassioned artist becoming too arrogant in his own works, and the consequences it presents.~
 @71 = ~Yes, I suppose so. And have you taken that lesson to heart?~
 @72 = ~Aye, I've attempted to. Honestly, most folks don't appreciate my original pieces, so it's quite humbling, you see.~
+@73 = ~Ahh!~
+@74 = ~You're welcome.~
+@75 = ~Try not to get into trouble again.~
+@76 = ~Not sure why I bothered.~
+@77 = ~I may have had to sell your hat to fund this.~
+@78 = ~Yes, yes, thank you. That was ... frightening.~
+@79 = ~Heh, I'll try my best.~
+@80 = ~Gee, thanks.~
+@81 = ~What?! No! No!!~
+@82 = ~Relax, it's right here.~
+@83 = ~Yeah. Sorry.~
+@84 = ~You nearly gave me a heart attack...~
+@85 = ~This is NOT okay! We have to buy it back, or find another hat, quickly!~
+@86 = ~Ever considered not wearing a hat? You look good to me.~
+@87 = ~If you insist.~
+@88 = ~Galileo, we have more important things to do than go hat shopping.~
+@89 = ~I -- ah, thank you.~
+@90 = ~Let us be off!~
+@91 = ~Ooh, fine.~
+@92 = ~Err, shouldn't we be healing you first?~
+@93 = ~Okay.~
+@94 = ~Healing is for the weak! Let's go! Oww. Okay, maybe a spell or two would be welcome...~
+// before_joining.d
