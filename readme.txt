@@ -113,6 +113,8 @@ V. Tips
 The following tips are spoiler free in terms of dialogue and the like.
 
 Galileo uses Axes and Darts so you can sword while you board, and board while you sword. Buckley's Buckler is a nice choice.
+Have that little halfling fool hurl Darts of Stunning before meleeing people in the face with his axe. Ow.
+It makes for very good fun times to be invisible and sing a Jester song.
 
 -----------------------
 VI. Lines
