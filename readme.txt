@@ -9,12 +9,13 @@ Welcome to Galileo NPC's readme file!
 
 I. Mod Components
 II. Introduction
-III. Stats
-IV. Items
-V. Tips
-VI. Lines
-VII. Credits
-VIII. Version History
+III. Installation Instructions
+IV. Stats
+V. Items
+VI. Tips
+VII. Lines
+VIII. Credits
+IX. Version History
 
 -----------------------
 I. Mod Components
@@ -42,8 +43,37 @@ Galileo is an energetic, melodramatic halfling Jester. He is imaginative, crafti
 
 Galileo can be found in the halfling village of Gullykin, where he enjoys the company of his new friends, but longs for something more exciting than an old tobacco pipe.
 
+------------------------
+III. Installation
+------------------------
+
+-To install the mod on Windows, open the executable ``setup-7c-galileo.exe''
+-and choose the options on screen. The directory to install the
+-mod in should contain the file ``chitin.key''. To uninstall simply open
+-the executable once again and choose to uninstall the mod.
+-When updating the mod, uninstall and completely delete the old version
+-before unpackaging and installing the new version of the mod.
++Galileo can be found in the halfling village of Gullykin, where he enjoys the company of his new friends, but longs for something more exciting than an old tobacco pipe.
+
+-To install on Mac OS X, double-click the file ``galileo-osx.command'' and
+-and choose the options on screen. The directory to install the mod in
+-should contain the file ``chitin.key''. To uninstall simply double-click
+-the file ``galileo-osx.commend'' once again and choose to uninstall the mod.
+-When updating the mod, uninstall and completely delete the old version
+-before unpackaging and installing the new version of the mod.
++Galileo can be found in the halfling village of Gullykin, where he enjoys the company of his new friends, but longs for something more exciting than an old tobacco pipe.
+ 
+-To install on GNU/Linux, download WeiDU from http://www.weidu.org/~thebigg,
+-run tolower, answer [y]es to both queries (if you haven't already generated
+-the linux.ini file), place both weidu and weinstall on /usr/bin (or export
+-their directory to $PATH) and enter ``weinstall galileo'' in your shell
+-(while you are in the directory containing the ``chitin.key'' file). When
+-updating the mod, uninstall and completely delete the old version before
+-unpackaging and installing the new version of the mod.
++Galileo can be found in the halfling village of Gullykin, where he enjoys the company of his new friends, but longs for something more exciting than an old tobacco pipe.
+
 -----------------------
-III. Stats
+IV. Stats
 -----------------------
 
 Galileo
@@ -101,13 +131,13 @@ Knock
 Glitterdust
 
 -----------------------
-IV. Items
+V. Items
 -----------------------
 
 Crevs and I haven't added the items yet! D'oh!
 
 -----------------------
-V. Tips
+VI. Tips
 -----------------------
 
 The following tips are spoiler free in terms of dialogue and the like.
@@ -117,7 +147,7 @@ Have that little halfling fool hurl Darts of Stunning before meleeing people in 
 It makes for very good fun times to be invisible and sing a Jester song.
 
 -----------------------
-VI. Lines
+VII. Lines
 -----------------------
 
 Initial Meeting: Welcome to Gullykin! Lend me your ear a moment, will you?
@@ -179,7 +209,7 @@ Special 2:
 Special 3: 
 
 -----------------------
-VII. Credits
+VIII. Credits
 -----------------------
 
 Creative direction, writing, voice acting: Riordan Zentler, AKA Quartz
@@ -192,7 +222,7 @@ Quartz: I want to issue a huge thanks to Crevs for helping me with this project.
 	But the project is still young, and it is likely that other people will contribute in some way or the other. And so, this section is incomplete, which is a beautiful thing.
 
 -----------------------
-VIII. Version history
+IX. Version history
 -----------------------
 
 v0.0.2:
