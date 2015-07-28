@@ -1,0 +1,203 @@
+-----------
+NPC-NPC BANTERS
+-----------
+
+JAHEIRA - GALILEO 1
+Jaheira: It is fascinating for a halfling to be a follower of Finder Wyvernspur.
+Galileo: Aye, you're quite right about that. He's not exactly the most popular god to begin with. You are a Harper, no?
+Jaheira: Correct. How did you become acquainted with our organization?
+Galileo: My old music teacher is a Harper, and quite the admirable man. I hold a lot of respect for them. Mystra sure did get Finder out of a hell of a lot of trouble.
+Jaheira: While it is not my place to question her actions, I do wonder why Mystra bothered. Finder was quite irresponsible in his actions.
+Galileo: It is the tale of an impassioned artist becoming too arrogant in his own works, and the consequences it presents.
+Jaheira: Yes, I suppose so. And have you taken that lesson to heart?
+Galileo: Aye, I've attempted to. Honestly, most folks don't appreciate my original pieces, so it's quite humbling, you see.
+<END DIALOGUE>
+
+GALILEO - AJANTIS 1
+Galileo: There was a young squire named Ajantis
+He impressed us all with the way he would flaunt his
+Skills in charisma, the sword and board
+No song can capture his honor, no muse nor chord
+Galileo: His passion for knighthood only surpassed
+By his impossible, impassable dedication to integrity
+Ajantis' heart, truly courageous and vast
+On the front lines, unafraid to get his hands dirty
+Galileo: I do not know if I'll live long as he
+But this knight on the battlefield is something to see.
+Ajantis: You bring me great pride with your words, Galileo.
+Galileo: It was my pleasure.
+<END DIALOGUE>
+
+GALILEO - MONTARON 1
+Galileo: I find myself wondering how a halfling became so bitter and rude.
+Montaron: Eyes on the road, keep walking and quit talking, runt.
+Galileo: Runt? I'm barely any smaller than you.
+Montaron: There's more to me than meets the eye. Enjoy the sight while it lasts.
+Galileo: You either prophesied your own demise or threatened to remove my eyes. I'd ask which it was, but from what I've experienced of your company thus far, I reckon I already know the answer.
+(IF XZAR IS IN THE PARTY)
+Xzar: Oho! Quite the clever one, isn't he, Monty?
+Montaron: Blast the both of ye to the ninth circle of Hell! What does it take to get a little quiet?
+(IF XZAR IS NOT IN THE PARTY)
+Montaron: Keep that in mind and shut your mouth, lest you lose your tongue as well.
+Galileo: But I'm rather attached to my eyes, though, you see.
+Montaron: Blast you and your obnoxious wordplay! What does it take to get a little quiet?
+<END DIALOGUE>
+
+GALILEO - KIVAN 1
+Galileo: Perhaps this is too personal, but what do you plan to do once you have exacted your revenge, Kivan?
+Galileo: ...
+Galileo: I guess you're not too interested in talking about this.
+Kivan: Shut up.
+Galileo: Okay!
+<END DIALOGUE>
+
+GALILEO - MINSC 1
+Galileo: Minsc, may I hold your rodent?
+Minsc: This is no mere rodent! Boo is a giant miniature space hamster, of such density that he may snap a small man's wrists just holding him!
+Galileo: Small man? I'm a halfling.
+Minsc: Yes, a halfling, that's right. I had forgotten.
+Galileo: He isn't kidding about that head wound, is he? Here I thought it was a convenient excuse for the abduction of his girlfriend, or whatever.
+1. He practically threatened us with bodily harm if we didn't help him save his witch. I think it's a legitimate excuse.
+	Galileo: Frightening. He's a great warrior, to be sure, but his instability is worrisome.
+	<END DIALOGUE>
+2. Who knows?
+	Galileo: Fair enough. He's a great warrior, to be sure, but his instability is worrisome.
+	<END DIALOGUE>
+
+GALILEO - QUAYLE 1
+Galileo: Hello, Quayle.
+Quayle: Don't waste my time. What do you need?
+Galileo: Fair enough! I won't disguise my intentions. I plan to show our party what a fool you are through a series of mental tests. Are you prepared?
+Quayle: I'll pass any test you throw at me, and then we'll see who the real fool is for questioning my intellect!
+Galileo: What comes down but never goes up?
+Quayle: Rain, of course.
+Galileo: Which weighs more, a pound of feathers or a pound of bricks?
+Quayle: Neither! They both weigh one pound, obviously.
+Galileo: Not bad. What word becomes shorter when you add two letters to it?
+Quayle: What? That's a mathematical impossibility. How stupid do you think I am?
+Galileo: Hah! The answer is the word, "short." How can a pantaloon pocket be empty and still have something in it?
+Quayle: I don't know, some dust or some such. I grow tired of this stupidity.
+Galileo: The pantaloon pocket can have a hole in it. What is at the end of a rainbow?
+Quayle: Enough! These stupid tests are no measure of intelligence! A sharp tongue is different than a sharp mind.
+Galileo: Whatever you say, Quayle.
+Quayle: I wouldn't expect a simpleton such as yourself to understand.
+<END DIALOGUE>
+
+GALILEO - SAFANA 1
+Galileo: I feel like there's something dark about you that I cannot put my finger on for the life of me. I'm not sure as I trust you.
+Safana: Don't be so callous and presume to know me. I assure you I have the party's best interests at heart. Were I made leader -- which would be a prudent choice -- this party would have no room allocated for little men such as yourself. The Sword Coast grows such big men, it's shocking to see us settle for you.
+Galileo: I'm a halfling, not a little man! Besides, I'm quite useful in my way! Oh, the nerve!
+Safana: Now you know how I feel when you question my loyalty.
+Galileo: I don't like her!
+1. Silence yourself, Galileo. You're complaining like a child. Perhaps "little man" is an apt description.
+	Galileo: Ooh! I'm being repressed!
+	<END DIALOGUE>
+2. *Quietly* Galileo, I know she's a snake, but we need her services.
+	Galileo: You're playing a dangerous game with this subversive woman, <CHARNAME>.
+	<END DIALOGUE>
+3. I can't have you two bickering, this group needs to function as a unit. Should we fail in that, any one of us could die at any moment.
+	Galileo: Fine, fine.
+	<END DIALOGUE>
+
+GALILEO - ALORA 1
+<CUE MUSIC>
+Galileo: There is something very enchanting about your very nature, miss.
+Alora: Huh? Oh, me? Well... Thanks! What makes you say that?
+Galileo: Where do I begin? From your hair that practically glows, to your cute little nose, I suppose your natural beauty just shows.
+Alora: Oh, that's a nice poem.
+Galileo: On top of that, your dexterity is unmatched. I must admit that I have grown rather attached, as if I have met my match.
+Alora: Those are some impressive rhymes! How long have you been working on that?
+Galileo: It's all spur of the moment, pure inspiration. It's easy when I have such a ... stimulating ... young lady before me.
+1. Stimulating? How scandalous, Galileo.
+	Galileo: Ack! Not like that. It appears my mental thesaurus has run its course. I must recuperate in silence.
+	Alora: Okay, but I'll miss you.
+	<END DIALOGUE>
+2. *Remain silent*
+	Alora: You're silly, Galileo, but it's cute.
+	<END DIALOGUE>
+
+GALILEO - CORAN 1
+Galileo: Ah, Coran. A lover, fighter, and hunter. Can one meet a more sophisticated adventurer?
+Coran: Hah, you flatter me like someone who wants something from me! I am much obliged.
+Galileo: If anything, I'd like an archery lesson. Or maybe some flirting tips, but I won't press my luck.
+Coran: The road ahead is a long one, where boredom is a constant enemy. Perhaps I may impart some guidance, my friend.
+Galileo: Huzzah!
+<END DIALOGUE>
+
+GALILEO - ELDOTH 1
+
+GARRICK - GALILEO 1
+Garrick: Life is glorious.
+Galileo: Very truly I tell you, it is.
+<END DIALOGUE>
+
+GARRICK - GALILEO 2
+Garrick: Tell me, Galileo, what is your favorite instrument?
+Galileo: Ah, a tough choice, but I must go with the lute. And yourself?
+Garrick: I find that the harp evokes emotions in myself and others that are otherwise unknown.
+Galileo: Indeed. Stringed instruments get the ladies, Garrick.
+<END DIALOGUE>
+
+GALILEO - GARRICK 1
+Galileo: It is good to venture alongside another man with a positive outlook and a taste for the more refined things in life.
+Garrick: I could say the same to you.
+<END DIALOGUE>
+
+GALILEO - IMOEN 1
+Galileo: The road is long and tedious, Imoen.
+Imoen: Ya got that right.
+Galileo: You seem like the type of girl who hates a dull moment... I suggest we entertain ourselves by practicing our pick pocketing skills on <CHARNAME>.
+Imoen: Oh, phooey. I've done that so many times, Gali, it's gotten boring.
+Galileo: Gali?
+Imoen: Yup!
+Galileo: I really hope that doesn't catch on.
+Imoen: Me too, Gali. Me too.
+Galileo: Wyvernspur, grant me patience and long-suffering in abundance…
+Imoen: Who are ya talking to now?
+<END DIALOGUE>
+
+IMOEN - GALILEO 1
+Imoen: Ya know, Gali, I had an imaginary friend once.
+Galileo: *Sigh* I suppose Gali I am. What of your friend?
+Imoen: She kept me company, since the monks in Candlekeep were so dull all the time. Never laughed at any of my jokes, 'specially not the practical ones…
+Galileo: Why are you telling me this?
+Imoen: 'Cause you were talking to your imaginary friend earlier, I heard ya.
+Galileo: Imaginary friend? I venerate him! Wyvernspur is a god. A diety!
+<IF ELDOTH IS IN PARTY> Eldoth: Demi-power. One mustn't misconstrue such details.
+Galileo: Whatever!
+Imoen: Oh. I never heard of him.
+Galileo: It's fine...
+<IF ELDOTH IS NOT IN PARTY> Imoen: Oh. I never heard of him.
+Galileo: It's fine...
+
+GALILEO - TIAX 1
+
+GALILEO - XAN 1
+Galileo: It is your very own gloom that spells your doom, Xan.
+Xan: I suggest that you worry about your own self-fulfilling prophecies, my glass-is-half-full-ling.
+Galileo: What ever could possibly go wrong with a positive outlook?
+Xan: Clearly you've never been tested positive for wyvern-based chlamydia.
+<IF CORAN IS IN PARTY> Coran: Oh, you don't want to get that one.
+Galileo: I... What?
+<END DIALOGUE>
+
+BAELOTH - GALILEO 1
+Baeloth: In The Pits, halflings like yourself were some of my favorites to throw in the arena. Always so cheery until they meet their first minotaur or beholder!
+Galileo: Your fantasies sicken me, Baeloth.
+Baeloth: Not fantasies! I will build my amphitheater empire once again, and in good time, I assure you!
+<END DIALOGUE>
+
+GALILEO - NEERA 1
+Galileo: I must admit, I never thought I'd see myself traveling alongside a Wild Mage.
+Neera: Yeah, I guess you could say we're pretty rare.
+Galileo: It's not that, so much as I prefer to be safe from my own party's magic. It seems like it should be a given. Not so with one such as you around.
+Neera: Well, you can't end up any worse than the last halfling I tried to make friends with.
+Galileo: What?
+Neera: Oh, sorry, that sounded like a threat. I wasn't threatening you. You know, I'm not sure why I'm talking about this. I was on the run from High Forest, and it wasn't exactly one of my best moments.
+Galileo: Okay then.
+<END DIALOGUE>
+
+GALILEO - NEERA 2
+Galileo: I am determined to leave a better, more lasting impression than that last halfling fellow you mentioned. We're friends until the first fireball backfires and hits me, yes?
+Neera: I can't make any promises about the fireball, but you've got yourself a deal.
+<END DIALOGUE>
