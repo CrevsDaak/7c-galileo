@@ -1,6 +1,6 @@
 IF
 	%bgt_check%
-	!Global("7C#DoneFirewineRuins","GLOBAL",1)
+	Global("7C#DoneFirewineRuins","GLOBAL",0)
 	Dead("DICK")
 THEN
 	RESPONSE #100
@@ -26,20 +26,22 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("7C#GalileoMelicampComment","LOCALS",2)
-		Dialog("Player1")
+		Dialog(Player1)
 END
 
 IF
 	%bgt_check%
 	InParty("Galileo1")
 	Detect("DeadHalflingMessager")
-	Range("DeadHalflingMessager",20)
-	Dead("DeadHalflingMessager")
+        Range("DeadHalflingMessager",20)
+        See("DeadHalflingMessager")
+        Dead("DeadHalflingMessager")
+        // I think all those triggers should be enough... Right? ;D
 	Global("7C#GalileoDeadHalflingComment","LOCALS",0)
 THEN
 	RESPONSE #100
 		SetGlobal("7C#GalileoDeadHalflingComment","LOCALS",1)
-		Dialog("Player1")
+		Dialog(Player1)
 END
 
 IF
