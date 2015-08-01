@@ -3,6 +3,7 @@
 =====================================================================
 	       Our coffee machine is currently broken
 	       so we're only serving lame milkshakes!
+	       (Hey man, don't diss milkshakes -Q)
 =====================================================================
 
 Welcome to Galileo NPC's readme file!
@@ -23,17 +24,18 @@ I. Mod Components
 
 Installing this mod will add:
 	- Galileo, recruitable NPC, to Baldur's Gate 1, to Gullykin.
-	- Banters between Galileo and your PC.
-	- Banters between Galileo and other NPCs.
-	- Galileo interjections. (No, not every two seconds, to the point where he hogs the game. Just occasional interjections. You're welcome.)
+	- Banters between Galileo and your PC. (6 of them)
+	- Banters between Galileo and other NPCs. (26 of them, 29 if EE)
+	- Galileo interjections. (10 of them, 11 if EE is the running tally)
 	- Song of Wyvernspur spell.
 	- Galileo portrait.
 	- Several new items.
 Installing this mod will change:
+	- The Firewine Ruins to be a hell of a lot more interesting.
 	- Gandolar Luckyfoot's dialogue.
 	- Firewine Ruins ogre mage dialogue.
-	- The Firewine Ruins to be a lot more interesting.
 	- Some other stuff, just you wait, you've got something coming, pal.
+	- DART01.ITM casts Gate upon successful hit. Just kidding.
 
 -----------------------
 II. Introduction
@@ -116,6 +118,7 @@ Chromatic Orb
 Invisibility
 Knock
 Glitterdust
+Invisibility 10' Radius
 
 -----------------------
 V. Items
@@ -127,11 +130,12 @@ Crevs and I haven't added the items yet! D'oh!
 VI. Tips
 -----------------------
 
-The following tips are spoiler free in terms of dialogue and the like.
+The following tips are MOSTLY spoiler free in terms of dialogue and the like.
 
 Galileo uses Axes and Darts so you can sword while you board, and board while you sword. Buckley's Buckler is a nice choice.
 Have that little halfling fool hurl Darts of Stunning before meleeing people in the face with his axe. Ow.
 It makes for very good fun times to be invisible and sing a Jester song.
+Galileo and Alora exchange a lot of banters together. Me gusta, muy bien.
 
 -----------------------
 VII. Lines
@@ -152,8 +156,6 @@ Selected 3: How can I help you?
 Action 1: Well okay then, boss!
 Action 2: I'll see what I can do.
 Action 3: An excellent plan, good sir.
-Rare 1: Can I just sing instead? No? Fine.
-OR MAYBE
 Rare 1: You had my curiosity, but now you have my attention.
 Rare 2: But I don't want any of that. I'd rather just sing.
 Rare 3: I'm going on an adventure!
@@ -170,7 +172,7 @@ Montaron Death: A stranger halfling I've never met, but I'll admit I already mis
 Quayle Death: And here I thought he was too smart to die.
 Tiax Death: Mad as a hatter, dead and it does not matter.
 Kagain Death: Dishonorably discharged, ya greedy bastard.
-Xan Death: Ah, the irony of a self-fulfilling prophecy.
+Xan Death: I believe we are witnessing the irony of a self-fulfilling prophecy.
 Yeslick, Khalid, Kivan, Ajantis, or Minsc Death: Only the good die young, while the evil seem to live forever.
 Critical Miss: D'oh!
 Critical Hit: Take that, you bastard!
@@ -188,12 +190,15 @@ Insult 3: Why this group tolerates your company, I may never know.
 Respond to Insult 1: You honestly think you're the first to try and use words to break me? Hah!
 Respond to Insult 2: You think you're so tough, talking down to a halfling. I'm not at all impressed.
 Respond to Insult 3: You don't intimidate me in the slightest.
-Compliment 1: Your valiance is unmatched.
-Compliment 2: A more respectable man and warrior I've never known.
-Compliment 3: If I had half the courage you do, I wager I'd be set for life.
-Special 1: 
-Special 2: 
-Special 3: 
+Compliment 1: A more respectable man and warrior I've never known.
+Compliment 2: If I had half the courage you do, I wager I'd be set for life.
+Compliment 3: Ah, my knight in shining armor, you are really quite the charmer.
+Response to Compliment 1: Your kind words strike a chord within my very heart. I thank you.
+Special 1: Your beauty is as boundless as the Sea of Swords, Alora.
+Special 2: You really are quite the thief; it seems you've stolen my heart.
+Special 3: Of all your beautiful curves, your smile is my favorite.
+Inventory Full: I really haven't the space for all that rubbish. Not like a halfling makes for a good pack mule anyhow.
+Target Immune: Blast it, that's no use.
 
 -----------------------
 VIII. Credits
@@ -223,3 +228,7 @@ v0.0.2:
 v0.0.1:
  - Initial alpha release
  - The mod now actually installs.
+
+-----------------------
+Me love you long time.
+-----------------------
