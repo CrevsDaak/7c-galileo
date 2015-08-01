@@ -2,6 +2,19 @@
 TALKS
 -----------
 
+=======
+Contents
+
+New Hat, Amn
+Prying, Part 1
+Second thoughts about Adventuring
+Prying, Part 2
+Prying, Part 3
+Resolution
+
+Total Galileo-PC Talks: 6
+======
+
 TALK 1:
 Galileo: Hmmm, I could use a new hat. What do you think?
 1. I have never had much of an eye for style.
@@ -17,37 +30,37 @@ Galileo: Hmmm, I could use a new hat. What do you think?
 2. Doesn't the one you already have suffice?
 	Galileo: You are probably right. This hat works well with our current climate, but ho hum... Some day, I would so love to visit Amn, partly for the sights and partly to emulate their wonderful sense of style.
 	1. After our business here in the Sword Coast is through, maybe you could give it a visit.
-		Galileo: And leave behind this glorious group? Ahh, maybe. Adventure is very exciting, you know? I shall think on this.
+		Galileo: And leave behind this glorious group? Ahh, maybe. Adventure is very exciting, you know? I shall think on this. <END DIALOGUE>
 	2. I too would like to visit Amn.
-		Galileo: What good fortune! Mayhaps some day we may travel to Amn arm in arm. See what I did there? HahAH, I love this group!
+		Galileo: What good fortune! Mayhaps some day we may travel to Amn arm in arm. See what I did there? HahAH, I love this group! <END DIALOGUE>
 3. You are right, your current hat is rather gaudy.
 	Galileo: Hah! What makes you think my next one will be any less eye-catching?
 	1. I should have known.
 		Galileo: Yes well, this hat works well with our current climate, but ho hum... Some day, I would so love to visit Amn, partly for the sights and partly to emulate their wonderful sense of style.
 		1. After our business here in the Sword Coast is through, maybe you could give it a visit.
-			Galileo: And leave behind this glorious group? Ahh, maybe. Adventure is very exciting, you know? I shall think on this.
+			Galileo: And leave behind this glorious group? Ahh, maybe. Adventure is very exciting, you know? I shall think on this. <END DIALOGUE>
 		2. I too would like to visit Amn.
-			Galileo: What good fortune! Mayhaps some day we may travel to Amn arm in arm. See what I did there? HahAH, I love this group!
+			Galileo: What good fortune! Mayhaps some day we may travel to Amn arm in arm. See what I did there? HahAH, I love this group! <END DIALOGUE>
 	2. I rather like the idea of eye-catching; watching all our half-witted enemies flock towards you with murderous intent could provide for quite some entertainment!
-		Galileo: I'm not sure whether to laugh or be offended. Good one, <CHARNAME>.
+		Galileo: I'm not sure whether to laugh or be offended. Good one, <CHARNAME>. <END DIALOGUE>
 
 TALK 2:
 Galileo: So, if you don't mind me saying, I have been watching you and it seems to me that you have somewhat of an awkward nature walking about the Sword Coast. Err, I say this because you seem -- well, like a very good leader and all and... it just seems strange. Sorry.
 1. Maybe you should have trusted your instincts and not bothered talking, Galileo.
-	Galileo: Right -- sorry, boss. Lead on.
+	Galileo: Right -- sorry, boss. Lead on. <END DIALOGUE>
 2. Perhaps you are right. I hail from Candlekeep, which is a bit separated from the rest of the Sword Coast, in a sense.
 	Galileo: Candlekeep? Ah! That would explain it. A very sheltered life, to be sure. I suppose that must have all changed very suddenly, did it not?
 	1. I'd rather not talk about it.
-		Galileo: My apologies. Lead on.
+		Galileo: My apologies. Lead on. <END DIALOGUE>
 	2. Yes, my life took a very sudden turn not so long ago with the death of my foster father.
 		Galileo: I am sorry to hear that. Ahh, opening new chapters of life is very exciting, it is just a shame when it occurs due to such a tragedy. But I prattle. Thank you, <CHARNAME>, very interesting indeed. <END DIALOGUE><Set parameter GALIFRIENDS=1>
 3. I don't understand what the question is.
 	Galileo: Oh! Right, well, I guess I'm wondering if you're really from around here.
 	1. Well, I am.
-		Galileo: Alright then. (I have my doubts.) <END DIALOGUE>
+		Galileo: Alright then. (I have my doubts.)
 		1. What was that?
 			Galileo: Hmm? Oh! Nothing at all. <END DIALOGUE>
-	2. I hail from Candlekeep, which is a bit separated from the rest of the Sword Coast, in a 	sense.
+	2. I hail from Candlekeep, which is a bit separated from the rest of the Sword Coast, in a sense.
 		Galileo: Candlekeep? Ah! That would explain it. A very sheltered life, to be sure. I suppose that must have all changed very suddenly, did it not?
 		1. I'd rather not talk about it.
 			Galileo: My apologies. Lead on. <END DIALOGUE>
@@ -173,11 +186,11 @@ After "I'm listening":
 		1. He said that a mobile target was harder to hit than an immobile one.
 			Galileo: Wise man, that one. Sorry for the interruption, go on.
 				1. He was struck down by a powerful, heavily-armored man. I've been on my own since and have had to make due.
-					Galileo: A tough break, to be sure. You have my condolences. So then, what is 	the purpose of this quest?
+					Galileo: A tough break, to be sure. You have my condolences. So then, what is the purpose of this quest?
 		2. I don't know. Damn, I wish I had paid more attention to him. I was such a fool, taking his presence for granted. Everything is so much harder now.
 			Galileo: I think you're doing fine, <CHARNAME>. You're a good leader, and we're all by your side.
 				1. Yes, thank you, Galileo. Anyway, he was struck down by a powerful, heavily-armored man. I've been on my own since, and have had to make due.
-					Galileo: A tough break, to be sure. You have my condolences. So then, what is 	the purpose of this quest?
+					Galileo: A tough break, to be sure. You have my condolences. So then, what is the purpose of this quest?
 		3. I don't recall. Anyway, he was struck down by a powerful, heavily-armored man. I've been on my own since, and have had to make due.
 			Galileo: A tough break, to be sure. You have my condolences. So then, what is the purpose of this quest?
 
@@ -188,3 +201,19 @@ Following "Purpose of this quest":
 	Galileo: Ah, yes. I share your sentiment, although I chose this lifestyle in favor of complacency. Onward! <END DIALOGUE><Set parameter GALIFRIENDS=1>
 3. I don't rightly know. One way or the other, we've been helping the Sword Coast. If I get the chance to avenge my foster father, I'll take it.
 	Galileo: I can certainly respect that. Let us continue your journey. <END DIALOGUE><Set parameter GALIFRIENDS=1>
+
+TALK 6:
+
+Galileo: You are my friend, and I hope I am yours'. Together, let us make those responsible answer for their sins upon the Sword Coast region.
+1. Whatever you say, Galileo.
+	Galileo: Not feeling very driven today, <CHARNAME>? I'll pick up the slack. Onward! <END DIALOGUE>
+2. So long as you remember I am leader.
+	Galileo: Well now, I reckon I'd be hard-pressed to forget that. Let us continue on your quest. <END DIALOGUE>
+3. It shall be just as you say, Galileo. Those conspirators will be mighty sorry with our collective boot up their arses. Henceforth!
+	Galileo: Aye, now that's the spirit! <END DIALOGUE>
+4. I'm really not your friend, Galileo.
+	Galileo: Surely you jest. Why not?
+	1. You threatened to leave the group if I did not reveal intimate details of my past. That doesn't exactly make us friends.
+		Galileo: Well, when you put it that way… I'm sorry, <CHARNAME>. Perhaps I was wrong to pry as I did. <END DIALOGUE>
+	2. Yes, I'm joking. When will the jester learn to recognize the jest?
+		Galileo: Ah, you wound me! Bravo, <CHARNAME>. <END DIALOGUE>
