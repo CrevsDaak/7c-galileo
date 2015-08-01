@@ -2,6 +2,49 @@
 NPC-NPC BANTERS
 -----------
 
+=======
+Contents
+
+Jaheira - 1
+Ajantis - 1
+Montaron - 1
+Kivan - 2
+	Post-revenge?
+	Let's Have a smoke
+Minsc - 1
+Quayle - 1
+Safana - 1
+Alora - 6
+	Flirting and Rhyming
+	Pick Pocketing Contest
+	Sneaky Handjob
+	Honeymoon
+	Parental Drama
+	Resolution and a Promise
+Coran - 2
+	Lover, Fighter, Hunter
+	Curves
+Eldoth - 2
+	Douchebaggery + Garrick
+	General Douchebaggery
+Garrick - 3
+	Life is Glorious
+	Favorite Instrument
+	More Flattery
+Imoen - 2
+	Pick Pocket Charname
+	Imaginary Friends
+Tiax - 1
+Xan - 1
+Baeloth - 1
+Neera - 2
+	Wild Mage Drama
+	Fireball
+Shar-Teel - 1
+
+Total Banters: 29
+=======
+
 JAHEIRA - GALILEO 1
 Jaheira: It is fascinating for a halfling to be a follower of Finder Wyvernspur.
 Galileo: Aye, you're quite right about that. He's not exactly the most popular god to begin with. You are a Harper, no?
@@ -49,6 +92,12 @@ Galileo: ...
 Galileo: I guess you're not too interested in talking about this.
 Kivan: Shut up.
 Galileo: Okay!
+<END DIALOGUE>
+
+GALILEO - KIVAN 2
+Galileo: Kivan, I like you, even if you don't like me.
+Kivan: Perhaps when Tazok's body lies mangled at my feet, we can smoke and reminisce about the good old days. That's what halflings do for fun, right?
+Galileo: Hah! Something like that. You've got yourself a deal.
 <END DIALOGUE>
 
 GALILEO - MINSC 1
@@ -103,7 +152,7 @@ Galileo: On top of that, your dexterity is unmatched. I must admit that I have g
 Alora: Those are some impressive rhymes! How long have you been working on that?
 Galileo: It's all spur of the moment, pure inspiration. It's easy when I have such a ... stimulating ... young lady before me.
 1. Stimulating? How scandalous, Galileo.
-	Galileo: Ack! Not like that. It appears my mental thesaurus has run its course. I must recuperate in silence.
+	Galileo: Ack! Not like that. It appears my mental thesaurus has run its course. I must recuperate in silence and… And dark repose. Yes, that.
 	Alora: Okay, but I'll miss you. <END DIALOGUE>
 2. *Remain silent*
 	Alora: You're silly, Galileo, but it's cute. <END DIALOGUE>
@@ -119,16 +168,45 @@ Galileo: Alright, you had me going. Very funny, Alora. Bravo.
 Alora: Teehee!
 <END DIALOGUE>
 
-<< UMMMMM TOO FAR? DO NOT IMPLEMENT YET, THIS WOULD BE LIKE GALILEO-ALORA BANTER #5 EVEN IF I DO KEEP IT >>
-Galileo: I've been watching you, and I can't help but admire your dexterity, Alora.
+GALILEO - ALORA 3
+Galileo: I've been watching you, and I cannot help but admire your dexterity, Alora.
 Alora: Oh, you're so sweet. The compliments never quit with you, do they?
 Galileo: Not with you, they don't. Is there anything those nimble hands of yours' can't do, my lady?
 Alora: Want to find out?
 Galileo: I... What?
 Galileo: Oh!
 Galileo: Oh, that's very nice. Eh... Am I dreaming?
-Alora: Heehee! No one can know, okay? Bye for now!
-Galileo: I... Alright. I suppose I'll admire you from afar for now.
+Alora: Heehee! Sorry, I just got so curious and… No one can know, okay? Bye for now!
+Galileo: I... Alright. I suppose I'll admire you from afar.
+<END DIALOGUE>
+
+GALILEO - ALORA 4
+Galileo: When all of this is over, we'll have to make plans for our honeymoon, you know.
+Alora: Ooh, what a nice thought! Where do you think we'd go?
+Galileo: I'm sure we could go all sorts of places! All of Faerun, each and every last corner requests -- no, demands to be explored! Or at least, all of the parts that two dashing rogues can conquer alone.
+Alora: Ha ha! We'd have the time of our lives.
+Galileo: And along the way, why not see your family again? Back in Iriaebor, you said, right?
+Alora: Home is also home to those nasty Black Talons. I don't think they like us too much.
+Galileo: What ever gives you that thought? Hah! Wow… I had no idea.
+<END DIALOGUE>
+
+GALILEO - ALORA 5
+Galileo: Don't you want to see your parents again, Alora?
+Alora: I'm okay without my parents, Galileo. Really. See, I'm still smiling, and I'm not gonna stop.
+Galileo: Right, but… Is it really the Black Talons stopping you? You're practically invisible when you need to be. Am I missing something?
+Alora: I don't want to talk about it. Stop, you might make me mopey. No one wants to see that.
+Galileo: True, I suppose, but one must take the time to acknowledge their own emotions, mustn't they?
+Alora: Why are you being like this? I can't make other people happy if I'm not happy. Talk to me again when you're more cheery!
+Galileo: But I… What? (How is it possible to be that shallow?)
+<END DIALOGUE>
+
+ALORA - GALILEO 1 (BANTER #6)
+Alora: I need you to promise me something, Galileo.
+Galileo: What's that, dearest?
+Alora: No more talking so serious. We don't need that. No one needs that! I think everything would be best if we were all smiling, all the time.
+Galileo: *Sigh*
+Galileo: Very well, then. I promise.
+Alora: Yipee!
 <END DIALOGUE>
 
 GALILEO - CORAN 1
@@ -141,10 +219,10 @@ Galileo: Huzzah!
 
 GALILEO - CORAN 2
 Galileo: Your skills cause me to question whether or not you ever put that bow down.
-Coran: I only put the curve of my bow aside to place my hands on another set of curves.
+Coran: I only put aside the curve of my bow to place my hands on another set of curves.
 Galileo: That's quite the wordplay there, Coran.
 Coran: My wordplay comes second only to my foreplay, Galileo.
-Galileo: Damn.
+Galileo: Damn...
 <END DIALOGUE>
 
 GALILEO - ELDOTH 1
@@ -155,7 +233,7 @@ Galileo: So you say, but your facade grows weaker by the day.
 Eldoth: My, that's quite the big word you're using there. Don't hurt yourself, I'm afraid there wouldn't be another dysfunctional musician in our group to fill in for you. Unless..? Garrick, my friend, we may have finally found a use for you.
 Garrick: You're nothing but a big bully, Eldoth. I won't let your barbarous words bring me down.
 Eldoth: Oh don't be silly, you hardly need me for that.
-<IF OTHERWISE>
+<IF GARRICK IS NOT IN PARTY>
 Eldoth: My, that's quite the big word you're using there. Don't hurt yourself, I'm afraid there wouldn't be another dysfunctional musician in our group to fill in for you.
 Galileo: Bah!
 <END DIALOGUE>
@@ -205,7 +283,7 @@ Galileo: *Sigh* I suppose Gali I am. What of your friend?
 Imoen: She kept me company, since the monks in Candlekeep were so dull all the time. Never laughed at any of my jokes, 'specially not the practical ones...
 Galileo: Why are you telling me this?
 Imoen: 'Cause you were talking to your imaginary friend earlier, I heard ya.
-Galileo: Imaginary friend? You mean -- ? I venerate him! Wyvernspur is a god. A diety!
+Galileo: Imaginary friend? You mean -- ? I venerate him! Wyvernspur is a god. A deity!
 <IF ELDOTH IS IN PARTY> Eldoth: Demi-power. One mustn't misconstrue such details.
 Galileo: Whatever!
 Imoen: Oh. I never heard of him.
