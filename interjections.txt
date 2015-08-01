@@ -2,6 +2,24 @@
 INTERJECTIONS
 -----------
 
+=======
+Contents
+
+Messenger Body
+Encounter Alora
+Melicamp the Chicken
+Resurrected
+Re-Recruiting
+Booted from Party
+Booted from Party, why can't we be friends?
+Stranger Danger
+Alora Joins
+Dorn's Pretentious Ass
+Zhurlong the Kleptomaniac
+
+Total Interjections: 11
+======
+
 INTERJECTION 1:
 *Halfling body South of Beregost*
 Galileo: Well that's only slightly disturbing. <END DIALOGUE>
@@ -113,7 +131,7 @@ Galileo: Oi! What the bloody hell is your problem?
 ('Tis an overhead in-game message, matey!!)
 
 INTERJECTION 9:
-*Right after Alora joins the party, if in the Hall of Wonders*
+*Right after Alora joins the party*
 Galileo: Hello there, my lady! Welcome aboard.
 Alora: Um... Hi! What's your name?
 Galileo: I am called Galileo; bard, servant of Finder Wyvernspur, and I am at your service, miss.
@@ -124,11 +142,10 @@ Galileo: I am called Galileo; bard, servant of Finder Wyvernspur, and I am at yo
 	Alora: Oops! I just remembered, we need to be more sneaky, Galileo!
 	Galileo: Oh, ahh, right.
 
-<WORK IN PROGRESS, DO NOT IMPLEMENT YET>
 INTERJECTION 10:
 *When Dorn accuses party members of being untrustworthy*
-Galileo: Honestly, Dorn, I don't give a damn what you think. You're a blackguard! Your first priority is your patron, not <CHARNAME>. Who are you to 
-Dorn: He uses verbose speech to cover up his lack of conviction.
+Galileo: Honestly, Dorn, I don't give a damn what you think. You're a blackguard! Your first priority is your patron, not <CHARNAME>. Who are you to question the motives of the rest of us when yours' are undoubtedly the darkest of us all?
+Dorn: Watch your tone with me, halfling. I would crush you right now if <CHARNAME> would not object.
 
 INTERJECTION 11:
 *When Zhurlong pick pockets you/gives you his quest*
