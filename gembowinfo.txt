@@ -53,7 +53,25 @@ Behavior: Invisibility, stab.
 PLOT
 =========================
 
-<Coming within view of Wenwan>
+TALKING TO OGRE MAGE AFTER ACCEPTING HIS OFFER:
+Ogre Mage: What you want? Halfling ghosts not dead!
+1. I've decided to rescind your offer when I should really be killing you. Any last words?
+	Ogre Mage: HAHA! You think you clever, but now you DIE! <END DIALOGUE, SET OGRE MAGE AND ALL OTHERS HOSTILE>
+2. Never mind, I must be getting back to that.
+	Ogre Mage: Good, now get going! <END DIALOGUE>
+
+TALKING TO OGRE MAGE AFTER KILLING HALFLING GHOSTS:
+Ogre Mage: HAHAA! Ghosts is dead, and me own dungeon now!
+1. Yes, yes. You mentioned payment?
+	Ogre Mage: But of course! Puny adventurers want treasure from dungeon. HAH! Here, take this. <Party gains Chrysoberyl Gem>
+	1. This is a single gem. That's not good enough.
+		Ogre Mage: MMMaaaahaha! Then me kill you, me take treasure! <END DIALOGUE, SET OGRE MAGE AND ALL OTHERS HOSTILE>
+	2. Thank you. I'll be on my way.
+		Ogre Mage: Yeeesss. You leave, me take ruins all for self. You tell wealthy "heroes" to come here, okay? HAHA! <END DIALOGUE>
+2. Yes, the deed is done. I'll be on my way now.
+	Ogre Mage: Yeeesss. You leave, me take ruins all for self. You tell wealthy "heroes" to come here, okay? HAHA! <END DIALOGUE>
+
+<Coming within view of Wenwan for first time, Ogre Mage alive>
 Wenwan: Hello then. How very refreshing to see the face of someone other than a kobold. My apologies for pointing an arrow at your face, I'm afraid it's become second nature as of late. I am Wenwan, and these are my comrades-in-arms. To what do I owe the honor?
 1. Greetings. Gullykin, the village above, is a troubled town as of late, and I am seeking out the source.
 	Wenwan: Then you need look no further. There is an ogre mage who stalks these halls, commanding kobolds to rob the village in waves. Dispose of him, and the crisis will quickly subside.
@@ -73,7 +91,6 @@ Wenwan: Hello then. How very refreshing to see the face of someone other than a 
 					Wenwan: Don't miss. <END DIALOGUE, PLACE ONE ARROW OF SLAYING IN SPEAKER'S INVENTORY>
 	2. Very well then. Could you point the way?
 		Wenwan: Certainly. The passage to the Northeast will get you there. Do be cautious. Return to us when the deed is done, it will be a relief to hear of your success. <END DIALOGUE>
-
 2. I'm not entirely sure why I'm here. Just crawling through a dungeon, really.
 	Wenwan: Is that so? Well, you seem the adventurous sort. How fond are you of ogre mages?
 	<KIVAN INTERJECT> Kivan: I thought I smelt one of those beasts when we crawled in here.
@@ -84,12 +101,11 @@ Wenwan: Hello then. How very refreshing to see the face of someone other than a 
 		2. Not really feeling the need to hunt down an ogre, but thanks for the information.
 			Wenwan: Very well then. <END DIALOGUE>
 	2. I suppose there are worse critters out there.
-		Wenwan: Yes well, I don't believe we're holding a contest. The point is, an ogre mage has recently fortified itself in these ruins, and has made itself quite a pest. With his raids of Gullykin, I'm sure he's amassed a fair share of treasure. I may offer you something of my own as well if you disposed of him.
+		Wenwan: Yes well, I don't believe we're holding a contest. The point is, an ogre mage has recently fortified itself in these ruins, and has made itself quite a pest. With his raids of Gullykin, I'm sure he's amassed a fair share of treasure. I may offer you something of my own, as well, if you dispose of him.
 		1. Deal. Could you point the way?
 			Wenwan: Certainly. The passage to the Northeast will get you there. Do be cautious. Return to us when the deed is done, it will be a relief to hear of your success. <END DIALOGUE>
 		2. Not really feeling the need to hunt down an ogre, but thanks for the information.
 			Wenwan: Very well then. <END DIALOGUE>
-
 <option available if OGREQUEST=1>
 3. How about I point an arrow at your face instead?
 	Wenwan: Well now, I've already apologized. What could possibly warrant such hostility?
@@ -98,8 +114,15 @@ Wenwan: Hello then. How very refreshing to see the face of someone other than a 
 	2. A certain ogre mage has a price on your head. But perhaps you fetch a more fair price for his? I notice you've your fair share of magical treasure.
 		Wenwan: If you think I'm about to hand over one of the few remaining gem bows in Faerun to a traitorous cur as yourself, you're mistaken. Draw steel. <END DIALOGUE, SET HALFLING GHOSTS HOSTILE>
 
-<note for a future dialogue. don't do anything with this shit>
-I bestow this bow unto you, that it may be put to better use than it is locked away in a dusty old tomb such as this. You have proven yourself worthy.
+<Coming within view of Wenwan first time, Ogre Mage is dead>
+Wenwan: Hello then. How very refreshing to see the face of someone other than a kobold. My apologies for pointing an arrow at your face, I'm afraid it's become second nature as of late. I am Wenwan, and these are my comrades-in-arms. To what do I owe the honor?
+1. Greetings. I have been venturing this dungeon in hopes of helping Gullykin.
+	Wenwan: Well now, I sense that you have already done the deed. I appreciate you giving the place a once-over though. Your service to Gullykin and these ruins will not soon be forgotten. It only seems appropriate, then, that I bestow this bow unto you, that it may be put to better use than it is locked away in a dusty old tomb such as this. You have proven yourself worthy. Use it well. <END DIALOGUE, TALKING CHARACTER GIVEN "UNCHARGED GEM BOW">
+2. I'm not entirely sure why I'm here. Just crawling through a dungeon, really.
+	Wenwan: Seems like your aloof dungeon crawling is quite profitable, since you've already killed the ogre mage menace. Your service to Gullykin and these ruins will not soon be forgotten. It only seems appropriate, then, that I bestow this bow unto you, that it may be put to better use than it is locked away in a dusty old tomb such as this. You have proven yourself worthy. Use it well. <END DIALOGUE, TALKING CHARACTER GIVEN "UNCHARGED GEM BOW">
+
+<TALKING TO WENWAN AFTER KILLING OGRE MAGE>
+Wenwan: Well, it seems the beast has met its end. Your service to Gullykin and these ruins will not soon be forgotten. It only seems appropriate, then, that I bestow this bow unto you, that it may be put to better use than it is locked away in a dusty old tomb such as this. You have proven yourself worthy. Use it well. <END DIALOGUE, TALKING CHARACTER GIVEN "UNCHARGED GEM BOW">
 
 =========================
 DESCRIPTIONS
