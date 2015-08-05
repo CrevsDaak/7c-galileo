@@ -16,6 +16,31 @@ ALWAYS
     END
   END
   */
+  DEFINE_ACTION_FUNCTION extend_bot
+    STR_VAR
+      script = ""
+      area = ""
+  BEGIN
+    COPY_EXISTING "%area%.are" override
+      READ_ASCII 0x94 are_script
+      PATCH_IF "%are_script%" STR_CMP "" && FILE_EXISTS "%are_script%.bcs" BEGIN
+        INNER_ACTION BEGIN
+          EXTEND_BOTTOM "%are_script%.bcs" "7c-galileo/baf/%script%.baf" EVAL
+        END
+      END ELSE BEGIN
+        WRITE_ASCIIE 0x94 "%area%"
+        PATCH_IF FILE_EXISTS "%area%.bcs" BEGIN
+          INNER_ACTION BEGIN
+            EXTEND_BOTTOM "%area%.bcs" "7c-galileo/baf/%script%.baf" EVAL
+          END
+        END ELSE BEGIN
+          INNER_ACTION BEGIN
+            COMPILE EVAL "7c-galileo/baf/%script%.baf"
+            MOVE "override/%script%.bcs" "override/%area%.bcs"
+          END
+      END
+    BUT_ONLY
+  END
 
   OUTER_SPRINT tra "7c-galileo/lang/%LANGUAGE%"
   LOAD_TRA "%tra%/game.tra"
@@ -33,14 +58,16 @@ ACTION_IF GAME_IS "tutu tutu_totsc" BEGIN
   OUTER_SPRINT bgt_check ""
   OUTER_SPRINT tutu_prefix _
   OUTER_SPRINT melicamp ~"_misc49"~
-  OUTER_SPRINT dead_halfling _halfmir // or is it "_alfmiri" ??
+  OUTER_SPRINT dead_halfling _halfmir // or is it "_alfmiri" ??????
   OUTER_SPRINT Gullykin fw4000
+  OUTER_SPRINT Firewine_Ruins fw5201
   INCLUDE "7c-galileo/lib/tutu_items.tpa"
 END ELSE ACTION_IF GAME_IS bgt BEGIN
   OUTER_SPRINT tutu_prefix ""
   OUTER_SPRINT melicamp ~"misc49"~
   OUTER_SPRINT dead_halfling halfmiri
   OUTER_SPRINT Gullykin ar9900
+  OUTER_SPRINT Firewine_Ruins ar //??????????????????????????????????
   DEFINE_PATCH_FUNCTION tutu_items BEGIN END
   OUTER_SPRINT bgt_check ~!Global("endofbg1","GLOBAL",2)~
 END ELSE ACTION_IF GAME_IS eet BEGIN
@@ -49,6 +76,7 @@ END ELSE ACTION_IF GAME_IS eet BEGIN
   OUTER_SPRINT bgt_check ~GlobalLT("endofbg1","GLOBAL",2)~
   OUTER_SPRINT dead_halfling halfmiri
   OUTER_SPRINT Gullykin bg4000
+  OUTER_SPRINT Firewine_Ruins bg5201
   DEFINE_PATCH_FUNCTION tutu_items BEGIN END
 END ELSE ACTION_IF GAME_IS bgee BEGIN
   OUTER_SPRINT tutu_prefix ""
@@ -56,6 +84,7 @@ END ELSE ACTION_IF GAME_IS bgee BEGIN
   OUTER_SPRINT bgt_check ""
   OUTER_SPRINT dead_halfling halfmiri
   OUTER_SPRINT Gullykin ar4000
+  OUTER_SPRINT Firewine_Ruins ar5201
   DEFINE_PATCH_FUNCTION tutu_items BEGIN END
 END
 
@@ -184,8 +213,6 @@ COPY "7c-galileo/cre/galileo.cre" "override/7c#gal02.cre"
   END ELSE BEGIN
     ADD_CRE_ITEM shld10a #0 #0 #0 none shield
   END
-  SET_BG2_PROFICIENCY PROFICIENCYSHORTBOW 1
-  SET_BG2_PROFICIENCY PROFICIENCYDART 0
 
 COPY_EXISTING 7c#gal02.cre "override/7c#gal04.cre"
   WRITE_SHORT 0x24 20
@@ -220,7 +247,7 @@ COPY_EXISTING 7c#gal02.cre "override/7c#gal04.cre"
   ADD_CRE_ITEM bull01 #34 #0 #0 none quiver1
   ADD_CRE_ITEM bull01 #26 #0 #0 none quiver2
   ADD_CRE_ITEM slng01 #0 #0 #0 none inv3
-  SET_BG2_PROFICIENCY PROFICIENCYDART 1
+  SET_BG2_PROFICIENCY PROFICIENCYSHORTBOW 1
   LPF tutu_items END
 
 
@@ -243,6 +270,7 @@ COPY_EXISTING 7c#gal04.cre "override/7c#gal06.cre"
   WRITE_BYTE 0x57 (save_spell - 2)
   ADD_KNOWN_SPELL spwi118 #0 wizard
   ADD_KNOWN_SPELL spwi224 #1 wizard
+  ADD_KNOWN_SPELL spwi307 #2 wizard
   READ_LONG 0x2b0 mem_offset
   READ_LONG 0x2b4 mem_count
   SET extra_plus = 0x0
@@ -317,8 +345,8 @@ COPY_EXISTING - interact.2da override
   END
 BUT_ONLY
 
-APPEND interact.2da ~GALILEO1%TAB%c%TAB%s%TAB%0%TAB%0%TAB%c%TAB%c%TAB%c%TAB%c%TAB%0%TAB%0%TAB%i%TAB%0%TAB%0%TAB%i%TAB%i%TAB%0%TAB%i%TAB%0%TAB%i%TAB%i%TAB%i%TAB%i%TAB%i%extra_rows%~
-APPEND_COL interact.2da ~$ $ GALILEO1 0 0 0 0 0 c c c 0 c 0 0 0 i i c i s i i i 0 i%extra_cols%~
+APPEND interact.2da ~GALILEO1%TAB%c%TAB%s%TAB%0%TAB%0%TAB%c%TAB%0%TAB%c%TAB%c%TAB%0%TAB%0%TAB%i%TAB%0%TAB%0%TAB%i%TAB%i%TAB%0%TAB%i%TAB%0%TAB%i%TAB%i%TAB%i%TAB%i%TAB%i%extra_rows%~
+APPEND_COL interact.2da ~$ $ GALILEO1 0 0 0 0 0 0 c c 0 c 0 0 0 i i c i s i i i 0 i%extra_cols%~
 
 CLEAR_IDS_MAP
 
@@ -336,7 +364,6 @@ END
 
 COPY_EXISTING "%Gullykin%.are" override
   PATCH_IF SOURCE_SIZE > 0x139 BEGIN
-    READ_ASCII 0x94 are_script
     READ_LONG 0x54 actors_offset
     READ_SHORT 0x58 actors_count
     SET found = 0
@@ -356,20 +383,8 @@ COPY_EXISTING "%Gullykin%.are" override
   END
 BUT_ONLY
 
-ACTION_IF "%are_script%" STR_CMP "" BEGIN
-  EXTEND_BOTTOM "%are_script%.bcs" "7c-galileo/baf/ar4000.baf" EVAL
-END ELSE BEGIN
-  COPY_EXISTING "%Gullykin%.are" override
-    WRITE_ASCIIE 0x94 "%Gullykin%"
-  BUT_ONLY
-
-  ACTION_IF FILE_EXISTS "%Gullykin%.bcs" BEGIN
-    EXTEND_BOTTOM "%Gullykin%.bcs" "7c-galileo/baf/ar4000.baf" EVAL
-  END ELSE BEGIN
-    COMPILE EVAL "7c-galileo/baf/ar4000.baf"
-    MOVE "override/ar4000.bcs" "override/%Gullykin%.bcs"
-  END
-END
+LAF extend_bot STR_VAR script = ar4000 area = EVAL "%Gullykin%" END
+LAF extend_bot STR_VAR script = ar5201 area = EVAL "%Firewine_Ruins%" END
 
 COPY_EXISTING "%tutu_prefix%gandol.dlg" override
   DECOMPILE_AND_PATCH BEGIN
@@ -422,7 +437,7 @@ COPY "7c-galileo/spl/7c#jov01.spl" override
 ACTION_IF GAME_IS "bg2ee bgee eet" BEGIN
   OUTER_SPRINT RunAwayFrom RunAwayFromNoLeaveArea
 END ELSE BEGIN
-  OUTERP_SPRINT RunAwayFrom RunAwayFrom
+  OUTER_SPRINT RunAwayFrom RunAwayFrom
 END
 
 COMPILE EVAL "7c-galileo/baf/7c#jovia.baf"
