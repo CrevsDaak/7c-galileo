@@ -15,7 +15,7 @@ IF ~Global("7C#GalileoJustRaisedBack","GLOBAL",1)~ BEGIN 7c#galileo.back.from.he
     IF ~~ REPLY @74 /* You're welcome. */ GOTO 7c#yes.yes.thanks.but.frightening
     IF ~~ REPLY @75 /* Try not to get into trouble again. */ GOTO 7c#heh.i.will.try
     IF ~~ REPLY @76 /* Not sure why I bothered. */ GOTO 7c#gee.thanks.i.suck
-    IF ~~ REPLY @77 /* ~I may have had to sell yout hat to fund this. */ GOTO 7c#nooooo.not.my.hat
+    IF ~~ REPLY @77 /* ~I may have had to sell your hat to fund this. */ GOTO 7c#nooooo.not.my.hat
 END
 
 CHAIN
@@ -40,6 +40,114 @@ DO ~SetGlobal("7C#GalileoJaheiraBanter","LOCALS",2)~
   @71 /* Yes, I suppose so. And have you taken that lesson to heart? */
   == 7C#GAL1J
   @72 /* Aye, I've attempted to. Honestly, most folks don't appreciate my original pieces, so it's quite humbling, you see. */
+EXIT
+
+CHAIN
+  IF ~Global("7C#GalileoKivanBanter","LOCALS",1)
+      InParty(%kivan_dv%)
+      See(%kivan_dv%)
+      !StateCheck(%kivan_dv%,CD_STATE_NOTVALID)
+      !StateCheck(Myself, CD_STATE_NOTVALID)~ THEN 7C#GAL1J 7c#galileo.kivan.banter.1
+  @95 /* Perhaps this is a touch personal, but what do you plan to do once you have exacted your revenge, Kivan? */
+DO ~SetGlobal("7C#GalileoKivanBanter","LOCALS",2)~
+  =
+  @96 /* ... */
+  =
+  @97 /* I guess you're not too interested in talking about this. */
+  == "%kivan_dialog%"
+  @98 /* Shut up. */
+  == 7C#GAL1J
+  @99 /* Okay! */
+EXIT
+
+CHAIN
+  IF ~Global("7C#GalileoKivanBanter","LOCALS",2)
+      InParty(%kivan_dv%)
+      See(%kivan_dv%)
+      !StateCheck(%kivan_dv%,CD_STATE_NOTVALID)
+      !StateCheck(Myself, CD_STATE_NOTVALID)~ THEN 7C#GAL1J 7c#galileo.kivan.banter.2
+  @100 /* Kivan, I like you, even if you don't like me. */
+DO ~SetGlobal("7C#GalileoKivanBanter","LOCALS",3)~
+  == "%kivan_dialog%"
+  @101 /* Perhaps when Tazok's body lies mangled at my feet, we [...] */
+  == 7C#GAL1J
+  @102 /* Hah! Something like that. You've got yourself a deal. */
+EXIT
+
+CHAIN
+  IF ~Global("7C#GalileoQuayleBanter","LOCALS",1)
+      InParty(%quayle_dv%)
+      See(%quayle_dv%)
+      !StateCheck(%quayle_dv%,CD_STATE_NOTVALID)
+      !StateCheck(Myself, CD_STATE_NOTVALID)~ THEN 7C#GAL1J 7c#galileo.quayle.banter.1
+  @103 /* Hello, Quayle. */
+DO ~SetGlobal("7C#GalileoQuayleBanter","LOCALS",2)~
+  == "%quayle_dialog%"
+  @104 /* Don't waste my time. What do you need? */
+  == 7C#GAL1J
+  @105 /* Fair enough! I won't disguise my intentions. [...] */
+  == "%quayle_dialog%"
+  @106 /* I'll pass any test you throw at me, and then we'll see who [...] */
+  == 7C#GAL1J
+  @107 /* What comes down but never goes up? */
+  == "%quayle_dialog%"
+  @108 /* Rain, of course. */
+  == 7C#GAL1J
+  @109 /* Which weighs more, a pound of feathers or a pound of bricks? */
+  == "%quayle_dialog%"
+  @110 /* Neither! They both weigh one pound, obviously. */
+  == 7C#GAL1J
+  @111 /* Not bad. What word becomes shorter when you add two letters to it? */
+  == "%quayle_dialog%"
+  @112 /* What? That's a grammatical and mathematical impossibility. How [...] */
+  == 7C#GAL1J
+  @113 /* Hah! The answer is the word, "short." How can a pantaloon [...] */
+  == "%quayle_dialog%"
+  @114 /* I don't know, some dust or some such. I grow tired of this stupidity. */
+  == 7C#GAL1J
+  @115 /* The pantaloon pocket can have a hole in it. What is at the end of a rainbow? */
+  == "%quayle_dialog%"
+  @116 /* Enough! These stupid tests are no measure of intelligence! [...] */
+  == 7C#GAL1J
+  @117 /* Whatever you say, Quayle. */
+  == "%quayle_dialog%"
+  @118 /* I wouldn't expect a simpleton such as yourself to understand. */
+EXIT
+
+CHAIN
+  IF ~Global("7C#GalileoCoranBanter","LOCALS",1)
+      InParty(%coran_dv%)
+      See(%coran_dv%)
+      !StateCheck(%coran_dv%,CD_STATE_NOTVALID)
+      !StateCheck(Myself, CD_STATE_NOTVALID)~ THEN 7C#GAL1J 7c#galileo.coran.banter.1
+  @119 /* Ah, Coran. A lover, fighter, and hunter. Can one meet a more sophisticated adventurer? */
+DO ~SetGlobal("7C#GalileoCoranBanter","LOCALS",2)~
+  == "%coran_dialog%"
+  @120 /* Hah, you flatter me like someone who wants something from me! I am much obliged. */
+  == 7C#GAL1J
+  @121 /* If anything, I'd like an archery lesson. Or maybe some flirting tips, [...] */
+  == "%coran_dialog%"
+  @122 /* The road ahead is a long one, where boredom is a constant enemy. [...] */
+  == 7C#GAL1J
+  @123 /* Huzzah! */
+EXIT
+
+CHAIN
+  IF ~Global("7C#GalileoCoranBanter","LOCALS",2)
+      InParty(%coran_dv%)
+      See(%coran_dv%)
+      !StateCheck(%coran_dv%,CD_STATE_NOTVALID)
+      !StateCheck(Myself, CD_STATE_NOTVALID)~ THEN 7C#GAL1J 7c#galileo.coran.banter.2
+  @124 /* Your skills cause me to question whether or not you ever put that bow down. */
+DO ~SetGlobal("7C#GalileoCoranBanter","LOCALS",3)~
+  == "%coran_dialog%"
+  @125 /* I only put aside the curve of my bow to place my hands on another set of curves. */
+  == 7C#GAL1J
+  @126 /* That's quite the wordplay there, Coran. */
+  == "%coran_dialog%"
+  @127 /* My wordplay comes second only to my foreplay, Galileo. */
+  == 7C#GAL1J
+  @128 /* Damn... */
 EXIT
 
 IF ~Global("7C#GalileoJustRaisedBack","GLOBAL",1)~ BEGIN 7c#yes.yes.thanks.but.frightening
@@ -95,4 +203,3 @@ IF ~Global("7C#GalileoJustRaisedBack","GLOBAL",1)~ BEGIN 7c#healing.is.for.the.w
   SAY @94 /* Healing is for the weak! Let's go! Oww. Okay, maybe a spell or two would be welcome... */
     IF ~~ DO ~SetGlobal("7C#GalileoJustRaisedBack","GLOBAL",2)~ EXIT
 END
-    
