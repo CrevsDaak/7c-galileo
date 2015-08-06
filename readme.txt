@@ -216,13 +216,15 @@ VIII. Credits
 -----------------------
 
 Creative direction, writing, voice acting: Riordan Zentler, AKA Quartz
-Programming, implementation, miscellanceous (mis)guidance: Nicolás Clotta, AKA CrevsDaak
+Programming, implementation, miscellaneous (mis)guidance: Nicolás Clotta, AKA CrevsDaak
 Portrait: Isandir
 Item sketches: Diedrich Zentler, AKA Zphal
+Second Opinion: Johnathan Konandreas, AKA booinyoureyes
 
-Quartz: I want to issue a huge thanks to Crevs for helping me with this project. At a certain point, I realized that I very much wanted to make a NPC mod, for Baldur's Gate will always be one of my favorite games, and I enjoy creative writing and voice acting. It wouldn't have been possible without his programming help, as coding intimidates me and I would've lost heart without his implementation of my hours of work.
-	Furthermore, I would love to thank my Baldur's Gate Forum fellow Isandir for crafting the lovely portrait and not even asking for anything in return. What a guy. He stuck as close to the original art style as he could, which is not only impressive, but it also satiates my terrible obsessive-compulsive habits!
-	But the project is still young, and it is likely that other people will contribute in some way or the other. And so, this section is incomplete, which is a beautiful thing.
+Quartz:
+I want to issue a huge thanks to Crevs for helping me with this project. At a certain point, I realized that I very much wanted to make a NPC mod, as Baldur's Gate will always be one of my favorite games, and I enjoy creative writing and voice acting. It wouldn't have been possible without his programming help, as coding intimidates me and I would've lost heart without his implementation of my work. Paint is not good for much without a canvas, and Crevs built the canvas.
+I also must thank Isandir for crafting a marvellous portrait and turning me down when I offered a modest commission fee. What a guy. I couldn't be more happy with the Galileo portrait.
+A big thank you to booinyoureyes for being my second opinion on EVERY Galileo-NPC banter. In doing this project, it was very important to me to not derail the existing NPCs in any way; no out of character moments. He helped me greatly by being a second opinion in these things, and much tweaking was done.
 
 -----------------------
 IX. Version history
