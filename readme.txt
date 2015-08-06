@@ -26,7 +26,7 @@ Installing this mod will add:
 	- Galileo, recruitable NPC, to Baldur's Gate 1, to Gullykin.
 	- Banters between Galileo and your PC. (6 of them)
 	- Banters between Galileo and other NPCs. (26 of them, 29 if EE)
-	- Galileo interjections. (10 of them, 11 if EE is the running tally)
+	- Galileo interjections. (11 of them, 12 if EE is the running tally)
 	- Song of Wyvernspur spell.
 	- Galileo portrait.
 	- Several new items.
@@ -41,25 +41,20 @@ Installing this mod will change:
 II. Introduction
 -----------------------
 
-Galileo is an energetic, melodramatic halfling Jester. He is imaginative, crafting his own bizarre songs to sow disc(h)ord amongst his enemies. He is a jealous sort and will accordingly vie for the attention of those he seeks to please, but is always reliable as well. A follower of Finder Wyvernspur, Galileo holds his own share of religious convictions, too. Being a young, intrepid halfling, he seeks to find adventure, inspiration, and true love.
-
 Galileo can be found in the halfling village of Gullykin, where he enjoys the company of his new friends, but longs for something more exciting than an old tobacco pipe.
 
 ------------------------
 III. Installation
 ------------------------
 
--To install the mod on Windows, open the executable ''setup-7c-galileo.exe'' and choose the options on screen. The directory to install the mod should contain the file ''chitin.key''. To uninstall simply open the executable once again and choose to uninstall the mod.
--When updating the mod, uninstall and completely delete the old version before unpackaging and installing the new version of the mod.
-+Galileo can be found in the halfling village of Gullykin, where he enjoys the company of his new friends, but longs for something more exciting than an old tobacco pipe.
+To install the mod on Windows, open the executable ''setup-7c-galileo.exe'' and choose the options on screen. The directory to install the mod should contain the file ''chitin.key''. To uninstall simply open the executable once again and choose to uninstall the mod.
+When updating the mod, uninstall and completely delete the old version before unpackaging and installing the new version of the mod.
 
--To install on Mac OS X, double-click the file ''galileo-osx.command'' and choose the options on screen. The directory to install the mod should contain the file ''chitin.key''. To uninstall simply double-click the file ''galileo-osx.commend'' once again and choose to uninstall the mod.
--When updating the mod, uninstall and completely delete the old version before unpackaging and installing the new version of the mod.
-+Galileo can be found in the halfling village of Gullykin, where he enjoys the company of his new friends, but longs for something more exciting than an old tobacco pipe.
+To install on Mac OS X, double-click the file ''galileo-osx.command'' and choose the options on screen. The directory to install the mod should contain the file ''chitin.key''. To uninstall simply double-click the file ''galileo-osx.commend'' once again and choose to uninstall the mod.
+When updating the mod, uninstall and completely delete the old version before unpackaging and installing the new version of the mod.
  
--To install on GNU/Linux, download WeiDU from http://www.weidu.org/~thebigg, run tolower, answer [y]es to both queries (if you haven't already generated the linux.ini file), place both weidu and weinstall on /usr/bin (or export their directory to $PATH) and enter ''weinstall galileo'' in your shell. (while you are in the directory containing the ''chitin.key'' file)
--When updating the mod, uninstall and completely delete the old version before unpackaging and installing the new version of the mod.
-+Galileo can be found in the halfling village of Gullykin, where he enjoys the company of his new friends, but longs for something more exciting than an old tobacco pipe.
+To install on GNU/Linux, download WeiDU from http://www.weidu.org/~thebigg, run tolower, answer [y]es to both queries (if you haven't already generated the linux.ini file), place both weidu and weinstall on /usr/bin (or export their directory to $PATH) and enter ''weinstall galileo'' in your shell. (while you are in the directory containing the ''chitin.key'' file)
+When updating the mod, uninstall and completely delete the old version before unpackaging and installing the new version of the mod.
 
 -----------------------
 IV. Stats
@@ -108,7 +103,7 @@ Knock
 
 Level 6
 30 Hit Points
-Short Bow *
+Darts *
 Axe *
 Short Bow *
 Wizard Spells:
@@ -245,6 +240,6 @@ v0.0.1:
  - Initial alpha release
  - The mod now actually installs.
 
------------------------
-Me love you long time.
------------------------
+---------------------------------
+~~ The snake wants a milkshake ~~
+---------------------------------
