@@ -146,7 +146,7 @@ The following tips are MOSTLY spoiler free in terms of dialogue and the like.
 Galileo uses Axes and Darts so you can sword while you board, and board while you sword. Buckley's Buckler is a nice choice.
 Have that little halfling fool hurl Darts of Stunning before meleeing people in the face with his axe. Ow.
 It makes for very good fun times to be invisible and sing a Jester song.
-Galileo and Alora exchange a lot of banters together. Me gusta, muy bien.
+Galileo and Alora exchange a lot of banters together. Bien, me gusta.
 
 -----------------------
 VII. Lines
@@ -216,7 +216,7 @@ VIII. Credits
 -----------------------
 
 Creative direction, writing, voice acting: Riordan Zentler, AKA Quartz
-Programming, implementation: Nicolás Clotta, AKA CrevsDaak
+Programming, implementation, miscellanceous (mis)guidance: Nicolás Clotta, AKA CrevsDaak
 Portrait: Isandir
 Item sketches: Diedrich Zentler, AKA Zphal
 
