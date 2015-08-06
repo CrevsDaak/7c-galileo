@@ -150,6 +150,46 @@ DO ~SetGlobal("7C#GalileoCoranBanter","LOCALS",3)~
   @128 /* Damn... */
 EXIT
 
+CHAIN
+  IF ~Global("7C#GalileoGarrickBanter","LOCALS",1)
+      InParty(%garrick_dv%)
+      See(%garrick_dv%)
+      !StateCheck(%garrick_dv%,CD_STATE_NOTVALID)
+      !StateCheck(Myself, CD_STATE_NOTVALID)~ THEN "%garrick_dialog%" 7c#galileo.garrick.banter.1
+  @129 /* Life is glorious. */
+DO ~SetGlobal("7C#GalileoGarrickBanter","LOCALS",2)~
+  == 7C#GAL1J
+  @130 /* Very truly I tell you, it is. */
+EXIT
+
+CHAIN
+  IF ~Global("7C#GalileoGarrickBanter","LOCALS",2)
+      InParty(%garrick_dv%)
+      See(%garrick_dv%)
+      !StateCheck(%garrick_dv%,CD_STATE_NOTVALID)
+      !StateCheck(Myself, CD_STATE_NOTVALID)~ THEN "%garrick_dialog%" 7c#galileo.garrick.banter.2
+  @131 /* Tell me, Galileo, what is your favorite instrument? */
+DO ~SetGlobal("7C#GalileoGarrickBanter","LOCALS",3)~
+  == 7C#GAL1J
+  @132 /* Ah, a tough choice, but I must go with the lute. And yourself? */
+  == "%garrick_dialog%"
+  @133 /* I find that the harp evokes emotions in myself and others that are otherwise unknown. */
+  == 7C#GAL1J
+  @134 /* Indeed. Stringed instruments get the ladies, Garrick. */
+EXIT
+
+CHAIN
+  IF ~Global("7C#GalileoGarrickBanter","LOCALS",3)
+      InParty(%garrick_dv%)
+      See(%garrick_dv%)
+      !StateCheck(%garrick_dv%,CD_STATE_NOTVALID)
+      !StateCheck(Myself, CD_STATE_NOTVALID)~ THEN 7C#GAL1J 7c#galileo.garrick.banter.3
+  @135 /* It is good to venture alongside another man with a positive outlook and a taste for the more refined things in life. */
+DO ~SetGlobal("7C#GalileoGarrickBanter","LOCALS",4)~
+  == "%garrick_dialog%"
+  @136 /* I could say the same to you, my friend. */
+EXIT
+
 IF ~Global("7C#GalileoJustRaisedBack","GLOBAL",1)~ BEGIN 7c#yes.yes.thanks.but.frightening
   SAY @78 /* Yes, yes, thank you. That was ... frightening. */
     IF ~~ DO ~SetGlobal("7C#GalileoJustRaisedBack","GLOBAL",2)~ EXIT
