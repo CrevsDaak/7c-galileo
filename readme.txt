@@ -124,7 +124,23 @@ Invisibility 10' Radius
 V. Items
 -----------------------
 
-Crevs and I haven't added the items yet! D'oh!
+Gem Bow
+Short Bow
+Damage: 1d6 +1
+THAC0: +1
+Right-click in inventory and use the "Swap Gem" button to equip different gems to the Gem Bow. Each gem supplies a different special effect.
+
+Vesper +1
+Throwing Dagger
+Damage: 1d4 +1, +1 Cold Damage
+THAC0: +1
+Returning throwing dagger.
+
+Cyrrollalee's Gift
+Buckler Shield +1
+Special: Immune to Fear
+
+All items are found in the Firewine Ruins.
 
 -----------------------
 VI. Tips
