@@ -190,6 +190,50 @@ DO ~SetGlobal("7C#GalileoGarrickBanter","LOCALS",4)~
   @136 /* I could say the same to you, my friend. */
 EXIT
 
+CHAIN
+  IF ~Global("7C#GalileoTiaxBanter","LOCALS",1)
+      InParty(%tiax_dv%)
+      See(%tiax_dv%)
+      !StateCheck(%tiax_dv%,CD_STATE_NOTVALID)
+      !StateCheck(Myself, CD_STATE_NOTVALID)~ THEN "%tiax_dialog%" 7c#galileo.tiax.banter.1
+  @137 /* Tiax rules all! */
+DO ~SetGlobal("7C#GalileoTiaxBanter","LOCALS",2)~
+  == 7C#GAL1J
+  @138 /* Somehow I doubt that. */
+  == "%tiax_dialog%"
+  @139 /* You dare to question the dominion of Tiax? */
+  == 7C#GAL1J
+  @140 /* Why is it that you always speak in third person? I've respect [...] */
+  == "%tiax_dialog%"
+  @141 /* The great and powerful Tiax acts for no one! For your mistake, [...] */
+  == 7C#GAL1J
+  @142 /* I see that you are well and truly mad. I suppose I'd best keep my distance. */
+  == "%tiax_dialog%"
+  @143 /* Yes, that will suffice until the moment Tiax transcends time and space. */
+  == 7C#GAL1J
+  @144 /* *Sigh* */
+EXIT
+
+CHAIN
+  IF ~Global("7C#GalileoXanBanter","LOCALS",1)
+      InParty(%xan_dv%)
+      See(%xan_dv%)
+      !StateCheck(%xan_dv%,CD_STATE_NOTVALID)
+      !StateCheck(Myself, CD_STATE_NOTVALID)~ THEN 7C#GAL1J 7c#galileo.xan.banter.1
+  @145 /* It is your very own gloom that spells your doom, Xan. */
+DO ~SetGlobal("7C#GalileoXanBanter","LOCALS",2)~
+  == "%xan_dialog%"
+  @146 /* I suggest that you worry about your own self-fulfilling prophecies, [...] */
+  == 7C#GAL1J
+  @147 /* What ever could possibly go wrong with a positive outlook? */
+  == "%xan_dialog%"
+  @148 /* What good would positive thinking do for an imprisoned individual? [...] */
+  == 7C#GAL1J
+  @149 /* I would suggest that it is different to be a prisoner in spirit [...] */
+  == "%xan_dialog%"
+  @150 /* By all means, tell me as such again once you've been detained [...] */
+EXIT
+
 IF ~Global("7C#GalileoJustRaisedBack","GLOBAL",1)~ BEGIN 7c#yes.yes.thanks.but.frightening
   SAY @78 /* Yes, yes, thank you. That was ... frightening. */
     IF ~~ DO ~SetGlobal("7C#GalileoJustRaisedBack","GLOBAL",2)~ EXIT
