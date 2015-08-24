@@ -1,7 +1,7 @@
 IF
 	%bgt_check%
 	Global("7C#GalileoSpawnedBG1","MYAREA",0)
-	LevelLT("Player1",4)
+	LevelLT(Player1,4)
 THEN
 	RESPONSE #100
 		CreateCreature("7C#GAL02",[1401.656],SE)
@@ -13,8 +13,8 @@ END
 IF
 	%bgt_check%
 	Global("7C#GalileoSpawnedBG1","MYAREA",0)
-	LevelGT("Player1",3)
-	LevelLT("Player1",6)
+	LevelGT(Player1,3)
+	LevelLT(Player1,6)
 THEN
 	RESPONSE #100
 		CreateCreature("7C#GAL04",[1401.656],SE)
@@ -26,7 +26,7 @@ END
 IF
 	%bgt_check%
 	Global("7C#GalileoSpawnedBG1","MYAREA",0)
-	LevelGT("Player1",5)
+	LevelGT(Player1,5)
 THEN
 	RESPONSE #100
 		CreateCreature("7C#GAL06",[1401.656],SE)
