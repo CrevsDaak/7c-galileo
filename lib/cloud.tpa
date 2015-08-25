@@ -1,5 +1,5 @@
 OUTER_SPRINT cl "7c-galileo/clouds"
-OUTER_SET CrevsDaak 0x4461616b
+OUTER_SET CrevsDaak = 0x4461616b
 
 /*
  * cloud.tpa
@@ -9,7 +9,11 @@ OUTER_SET CrevsDaak 0x4461616b
  *
  * This library needs the following files to
  * work:
- *   - 7c#cloud.2da *   - 7c#cloud.baf *   - 7c#cloud.cre *   - 7c#cloud.eff *   - 7c#sp318.baf
+ *   - 7c#cloud.2da
+ *   - 7c#cloud.baf
+ *   - 7c#cloud.cre
+ *   - 7c#cloud.eff
+ *   - 7c#sp318.baf
  * 
  * It creates an invisible creature that Shout()s
  * to other creatures, whom move out away form
@@ -26,19 +30,19 @@ OUTER_SET CrevsDaak 0x4461616b
 
 OUTER_SPRINT 7c_det_cl_ver v1.1
 
-ACTION_IF !FILE_EXSISTS "override/7c#cloud.mrk" BEGIN
+ACTION_IF !FILE_EXISTS  "override/7c#cloud.mrk" BEGIN
 
   COPY - "%cl%/7c#cloud.2da" "%cl%/7c#cloud.2da"
     READ_2DA_ENTRIES_NOW __7c#cloud__ 6
     FOR (in = 0; in < __7c#cloud__; ++in) BEGIN
-      READ_2DA_ENTRY_FORMER __7c#cloud__ in 1 new
-      READ_2DA_ENTRY_FORMER __7c#cloud__ in 2 res
-      READ_2DA_ENTRY_FORMER __7c#cloud__ in 3 time
-      READ_2DA_ENTRY_FORMER __7c#cloud__ in 4 shout
-      READ_2DA_ENTRY_FORMER __7c#cloud__ in 5 type
-      READ_2DA_ENTRY_FORMER __7c#cloud__ in 6 is_cloud
+      READ_2DA_ENTRY_FORMER __7c#cloud__ in 0 new
+      READ_2DA_ENTRY_FORMER __7c#cloud__ in 1 res
+      READ_2DA_ENTRY_FORMER __7c#cloud__ in 2 time
+      READ_2DA_ENTRY_FORMER __7c#cloud__ in 3 shout
+      READ_2DA_ENTRY_FORMER __7c#cloud__ in 4 type
+      READ_2DA_ENTRY_FORMER __7c#cloud__ in 5 is_cloud
       INNER_ACTION BEGIN
-        ACTION_IF FILE_EXSISTS_IN_GAME "%res%.%type%" BEGIN
+        ACTION_IF FILE_EXISTS_IN_GAME "%res%.%type%" BEGIN
           COPY "%cl%/7c#cloud.baf" "%cl%/%new%.baf"
           COMPILE EVAL "%cl%/%new%.baf"
 
@@ -79,7 +83,6 @@ ACTION_IF !FILE_EXSISTS "override/7c#cloud.mrk" BEGIN
     END
   BUT_ONLY
 
-  DELETE + "override/7c#sp318.bcs"
   COMPILE EVAL "%cl%/7c#sp318.baf"
 
   COPY_EXISTING sw1h01.itm "override/7c#cloud.mrk"

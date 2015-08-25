@@ -234,6 +234,8 @@ DO ~SetGlobal("7C#GalileoXanBanter","LOCALS",2)~
   @150 /* By all means, tell me as such again once you've been detained [...] */
 EXIT
 
+APPEND "7C#GAL1J"
+
 IF ~Global("7C#GalileoJustRaisedBack","GLOBAL",1)~ BEGIN 7c#yes.yes.thanks.but.frightening
   SAY @78 /* Yes, yes, thank you. That was ... frightening. */
     IF ~~ DO ~SetGlobal("7C#GalileoJustRaisedBack","GLOBAL",2)~ EXIT
