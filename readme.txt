@@ -152,7 +152,7 @@ Galileo and Alora exchange a lot of banters together. Bien, me gusta.
 VII. Lines
 -----------------------
 
-Initial Meeting: Welcome to Gullykin! Lend me your ear a moment, will you?
+Initial Meeting: Welcome to Gullykin. Lend me your ear a moment, will you?
 Leader: What? The bard in the front? Have you gone mad?
 Battle Cry 1: Prepare to die, obviously!
 Battle Cry 2: You will find honor in death!
@@ -178,13 +178,14 @@ Dungeon: There's nothing quite like a crawl in a dungeon, but I can't wait to ge
 City: These human settlements never cease to amaze me. So ambitious and filled with wonder.
 Alora Death: No! Not Alora...
 Coran Death: A merrier fool I've never known.
+Eldoth Death: Oh, I'm sure we're all going to miss him dearly.
 Garrick Death: Goodnight, sweet bard.
+Kagain Death: Dishonorably discharged, ya greedy bastard.
 Montaron Death: A stranger halfling I've never met, but I'll admit I already miss him.
 Quayle Death: And here I thought he was too smart to die.
 Tiax Death: Mad as a hatter, dead and it does not matter.
-Kagain Death: Dishonorably discharged, ya greedy bastard.
 Xan Death: I believe we are witnessing the irony of a self-fulfilling prophecy.
-Yeslick, Khalid, Kivan, Ajantis, or Minsc Death: Only the good die young, while the evil seem to live forever.
+Generic Death (Good characters only): Only the good die young, while the evil seem to live forever.
 Critical Miss: D'oh!
 Critical Hit: Take that, you bastard!
 Pick Pocket: I need this more than you do. Honest.
@@ -193,7 +194,7 @@ Spell Interrupted: You bastard! You vicious, heartless bastard!
 Good Reputation: It is good to venture alongside such a refined lot.
 Bad Reputation: This party is in desperate need of more heroics.
 Very Bad Reputation: We really must steer our party towards a brighter path, or Wyvernspur help me, I will not remain here!
-Reputation Break: I should have noticed the darkened depths of your souls the moment I laid my eyes on you lot. Goodbye and good riddance.
+Reputation Break: I should have noticed the darkened depths of your souls the moment I laid eyes on you lot. Goodbye and good riddance.
 Turned Hostile: Oi! What the bloody hell is your problem?
 Insult 1: I'll be completely transparent: I don't reckon I much like you.
 Insult 2: Your presence in this party brings us all down, you know.
@@ -202,12 +203,12 @@ Respond to Insult 1: You honestly think you're the first to try and use words to
 Respond to Insult 2: You think you're so tough, talking down to a halfling. I'm not at all impressed.
 Respond to Insult 3: You don't intimidate me in the slightest.
 Compliment 1: A more respectable man and warrior I've never known.
-Compliment 2: If I had half the courage you do, I wager I'd be set for life.
-Compliment 3: Ah, my knight in shining armor, you are really quite the charmer.
+Compliment 2: If I had half the courage you do, I reckon I'd be set for life.
+Compliment 3: Ahh, my knight in shining armor. You are really quite the charmer!
 Response to Compliment 1: Your kind words strike a chord within my very heart. I thank you.
-Special 1: Your beauty is as boundless as the Sea of Swords, Alora.
-Special 2: You really are quite the thief; it seems you've stolen my heart.
-Special 3: Of all your beautiful curves, your smile is my favorite.
+Flirt 1: Your beauty is perhaps as boundless as the Sea of Swords, my lady.
+Flirt 2: You really are quite the thief; it seems you've stolen my heart.
+Flirt 3: Of all your beautiful curves, your smile is my favorite.
 Inventory Full: I really haven't the space for all that rubbish. Not like a halfling makes for a good pack mule anyhow.
 Target Immune: Blast it, that's no use.
 
