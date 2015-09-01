@@ -222,7 +222,7 @@ Programming, implementation, miscellaneous (mis)guidance: Nicolás Clotta, AKA C
 Portrait: Isandir
 Item sketches: Diedrich Zentler, AKA Zphal
 Second Opinion: Johnathan Konandreas, AKA booinyoureyes
-EET testing, Official Unofficial Beta Volunteering Tester: WhiteAgnus
+EET testing, Official Unofficial EET Beta Tester Volunteer™: WhiteAgnus
 
 Quartz:
 I want to issue a huge thanks to Crevs for helping me with this project. At a certain point, I realized that I very much wanted to make a NPC mod, as Baldur's Gate will always be one of my favorite games, and I enjoy creative writing and voice acting. It wouldn't have been possible without his programming help, as coding intimidates me and I would've lost heart without his implementation of my work. Paint is not good for much without a canvas, and Crevs built the canvas.
