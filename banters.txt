@@ -17,7 +17,7 @@ Safana - 1
 Alora - 6
 	Flirting and Rhyming
 	Pick Pocketing Contest
-	Sneaky Handjob
+	Innuendo
 	Honeymoon
 	Parental Drama
 	Resolution and a Promise
@@ -173,11 +173,15 @@ Galileo: I've been watching you, and I cannot help but admire your dexterity, Al
 Alora: Oh, you're so sweet. The compliments never quit with you, do they?
 Galileo: Not with you, they don't. Is there anything those nimble hands of yours' can't do, my lady?
 Alora: Want to find out?
-Galileo: I... What?
-Galileo: Oh!
-Galileo: Oh, that's very nice. Eh... Am I dreaming?
-Alora: Heehee! Sorry, I just got so curious and… No one can know, okay? Bye for now!
-Galileo: I... Alright. I suppose I'll admire you from afar.
+Galileo: What ever do you mean?
+Galileo: Oh! Oh, that's very nice. Mmm... Am I dreaming?
+Alora: Hmm... I don't think so!
+Galileo: Ahh...
+Galileo: That... That felt amazing, Alora.
+Alora: Heehee, we should do it again some time.
+Galileo: Yeah? Alright, how about tonight... When they are all asleep?
+Alora: Okay!
+Galileo: Phew... Alora gives the best backrubs.
 <END DIALOGUE>
 
 GALILEO - ALORA 4
