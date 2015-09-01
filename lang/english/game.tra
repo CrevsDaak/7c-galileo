@@ -29,8 +29,12 @@
 @7718 = ~Does this seem like a good idea to you? Yes other Galileo, yes it does.~ [7C#GAL17]
 // area_day
 @7719 = ~I'm walkin' on sunshine! Whoa-oh!~ [7C#GAL18]
+// area_forest
+@7973 = ~If you listen closely, the wind in the trees play their own tune, don't you see?~ [7C#GAL46]
 // area_night
 @7720 = ~The night is young, and you're so beautiful.~ [7C#GAL19]
+// area_dungeon
+@7972 = ~There's nothing quite like a crawl in a dungeon, but I can't wait to get out.~ [7C#GAL45]
 // area_city
 @7721 = ~These human settlements never cease to amaze me. So ambitious and filled with wonder.~ [7C#GAL20]
 // specific death comments
@@ -43,6 +47,7 @@
 @761 = ~A stranger halfling I've never met, but I'll admit already miss him.~ [7C#GAL34]
 @762 = ~Dishonorably discharged, ya greedy bastard.~ [7C#GAL35]
 @763 = ~I believe we've witnessed the irony of a self-fulfilling prophecy.~ [7C#GAL36]
+@7974 = ~Oh, I'm sure we're all going to miss him dearly.~  [7C#GAL45]
 // generic death, good only
 @764 = ~Only the good die young, while the evil seem to live forever.~ [7C#GAL37]
 // critical miss and hit
@@ -54,6 +59,34 @@
 @766 = ~This party is in desperate need of more heroics.~ [7C#GAL39]
 // terrible rep
 @767 = ~We really must steer our party towards a brighter path, or Wyvernspur help me, I will not remain here!~ [7C#GAL40]
+// break rep
+@768 = ~I should have noticed the darkened depths of your souls the moment I laid eyes on you lot. Goodbye and good riddance.~ [7C#GAL41]
+// compliments
+@769 = ~A more respectable man and warrior I've never known.~ [7C#GAL42]
+@7970 = ~If I had half the courage you do, I reckon I'd be set for life.~ [7C#GAL43]
+@7971 = ~Ahh, my knight in shining armor. You really are quite the charmer!~ [7C#GAL44]
+// special compliment
+@7975 = ~Your beauty is perhaps as boundless as the Sea of Swords, my lady.~ [7C#GAL46]
+@7976 = ~You really are quite the thief. It seems you've stolen my heart.~ [7C#GAL47]
+7977 = ~Of all your beautiful curves, your smile is my favorite.~ [7C#GAL48]
+// death
+@7978 = ~Hoh... I've met my match...~ [7C#GAL49]
+// target immune
+@7979 = ~Blast it! That's no use.~ [7C#GAL50]
+// initial meeting
+@7980 = ~Welcome to Gullykin. Lend me your ear a moment, will you?~ [7C#GAL51]
+// insults
+@7981 = ~I'll be completely transparent: I don't reckon I much like you.~ [7C#GAL60]
+@7982 = ~Your presence in this party brings us all down, you know.~ [7C#GAL61]
+@7983 = ~Why this group tolerates your company, I may never know.~ [7C#GAL62]
+// inventory full
+@7984 = ~I really haven't the room for all that rubbish. Not like a halfling makes for a good pack mule anyhow.~ [7C#GAL63]
+// respond to compliment
+@7985 = ~Your kind words strike a chord within my very heart. I thank you.~ [7C#GAL64]
+// respond to insult
+@7986 = ~You honestly think you're the first to try and use words to break me? Hah!~ [7C#GAL65]
+@7987 = ~You think you're so tough, talking down to halfling. I'm not at all impressed.~ [7C#GAL66]
+@7988 = ~You don't intimidate me in the slightest.~ [7C#GAL67]
 // picked pocket
 @7730 = ~I need this more than you do. Honest.~ [7C#GAL29]
 // trap set
@@ -85,3 +118,4 @@ THAC0: +1~
 @7743 = ~Wenan~
 @7744 = ~Calna~
 @7745 = ~Invisible~
+// next -> @7989
