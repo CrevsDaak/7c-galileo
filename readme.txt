@@ -161,6 +161,7 @@ Bored: Oi, don't we have anything better to do?
 Tired: This is making me very tired. You won't like me when I'm tired.
 Morale Failure: Time to bugger off!
 Badly Wounded: I must admit, I'm bleeding quite a bit.
+Death: Hoh... I've met my match...
 Selected 1: Aye?
 Selected 2: You need me?
 Selected 3: How can I help you?
