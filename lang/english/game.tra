@@ -118,4 +118,16 @@ THAC0: +1~
 @7743 = ~Wenan~
 @7744 = ~Calna~
 @7745 = ~Invisible~
-// next -> @7989
+
+@7988 = ~Cyrrollalee's Gift +1~
+// next is placeholder for Cyrrollalee's Gift's description.
+@7989 = ~Item with no Description:
+
+Next statement is false. Previous statement is false.
+
+Weight: obviously less than urmom
+
+NOT USABLE BY:
+  Wizzzzzzzzzzzards
+~
+// next -> @7990

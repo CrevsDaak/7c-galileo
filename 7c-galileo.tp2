@@ -161,6 +161,7 @@ LAF detectable_spells STR_VAR table = EVAL "cddetect.2da" END
 LAF detectable_weapon_enchantment END
 
 COPY "7c-galileo/cre/galileo.cre" "override/7c#gal02.cre"
+  /* TODO: add missing/replace old/add new soundset lines */
   SAY NAME1 @771
   SAY NAME2 @771
   SAY LEADER @772
@@ -406,6 +407,12 @@ COPY_EXISTING "%dead_halfling%.cre" override
 BUT_ONLY
 
 INCLUDE "7c-galileo/lib/cloud.tpa"
+
+COPY "7c-galileo/bam" override
+
+COPY "7c-galileo/itm/7c#gshl1.itm" override
+  SAY 0xC @7988
+  SAY IDENTIFIED_DESC @7989
 
 COPY "7c-galileo/cre/7c#yola.cre" override
   SAY NAME1 @7741
