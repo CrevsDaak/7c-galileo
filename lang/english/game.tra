@@ -1,6 +1,6 @@
 @771 = ~Galileo~
 // leader
-@772 = ~What? The Jester in the front? Have you gone mad?~ [7C#GAL01]
+@772 = ~What? The bard in the front? Have you gone mad?~ [7C#GAL01]
 // battles cries
 @773 = ~Prepare to die, obviously!~ [7C#GAL02]
 @774 = ~You will find honor in death!~ [7C#GAL03]
@@ -22,7 +22,7 @@
 @7713 = ~I'll see what I can do.~ [7C#GAL12]
 @7714 = ~An excellent plan, good sir.~ [7C#GAL13]
 // rare selected
-@7715 = ~Can I just sing instead? No? Fine.~ [7C#GAL14]
+@7715 = ~You had my curiosity, but now you have my attention.~ [7C#GAL14]
 @7716 = ~But I don't want any of that. I'd rather just sing.~ [7C#GAL15]
 // rare action 
 @7717 = ~I'm going on an adventure!~ [7C#GAL16]
@@ -38,11 +38,11 @@
 @7723 = ~A merrier fool I've never known.~ [7C#GAL22]
 @7724 = ~Goodnight, sweet bard.~ [7C#GAL23]
 @7725 = ~A stranger halfling I've never known, but I already miss him.~ [7C#GAL24]
-@7726 = ~I thought he was too smart to die?~ [7C#GAL25]
+@7726 = ~I thought he was too smart to die!~ [7C#GAL25]
 @7727 = ~Mad as a hatter, dead and it does not matter.~ [7C#GAL26]
 @761 = ~A stranger halfling I've never met, but I'll admit already miss him.~ [7C#GAL34]
 @762 = ~Dishonorably discharged, ya greedy bastard.~ [7C#GAL35]
-@763 = ~Ah, the irony of a self-fulfilling prophecy.~ [7C#GAL36]
+@763 = ~I believe we've witnessed the irony of a self-fulfilling prophecy.~ [7C#GAL36]
 // generic death, good only
 @764 = ~Only the good die young, while the evil seem to live forever.~ [7C#GAL37]
 // critical miss and hit
