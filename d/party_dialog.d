@@ -1,3 +1,4 @@
+// -*- weidu-d -*-
 BEGIN "7C#GAL1J"
 
 IF ~Global("7C#GalileoMelicampComment","LOCALS",2)~ BEGIN 7c#melicamp.joke.1

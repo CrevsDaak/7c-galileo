@@ -1,3 +1,4 @@
+// -*- weidu-d -*-
 BEGIN "7C#GAL1P"
 
 IF ~!NumTimesTalkedTo(0)
