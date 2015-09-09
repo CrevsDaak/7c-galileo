@@ -14,10 +14,10 @@ ALWAYS
     INT_VAR
       infer_charset = 1
     STR_VAR
-      tra_path = EVAL ~7c-galileo/lang~
+      tra_path = "7c-galileo/lang"
       noconvert_array = fl#noconvert
       reload_array = fl#reload
-	  iconv_path = ~7c-galileo/lang/iconv~
+      iconv_path = "7c-galileo/lang/iconv"
   END
   DEFINE_ACTION_FUNCTION extend_bot
     STR_VAR
@@ -58,42 +58,24 @@ BEGIN @1 DESIGNATED 100
 REQUIRE_PREDICATE GAME_IS "bgee bgt eet tutu tutu_totsc" @2
 
 ACTION_IF GAME_IS "tutu tutu_totsc" BEGIN
-  OUTER_SPRINT bgt_check ""
-  OUTER_SPRINT tutu_prefix _
-  OUTER_SPRINT melicamp ~"_misc49"~
-  OUTER_SPRINT dead_halfling _alfmiri
-  OUTER_SPRINT Gullykin fw4000
-  OUTER_SPRINT Firewine_Ruins fw5201
-  OUTER_SPRINT eet_var ""
-  INCLUDE "7c-galileo/lib/tutu_items.tpa"
+  INCLUDE "7c-galileo/lib/vars/g3_tutu_cpmvars.tpa"
 END ELSE ACTION_IF GAME_IS bgt BEGIN
-  OUTER_SPRINT bgt_check ~!Global("endofbg1","GLOBAL",2)~
-  OUTER_SPRINT tutu_prefix ""
-  OUTER_SPRINT melicamp ~"misc49"~
-  OUTER_SPRINT dead_halfling halfmiri
-  OUTER_SPRINT Gullykin ar9900
-  OUTER_SPRINT Firewine_Ruins ar3401
-  OUTER_SPRINT eet_var ""
-  DEFINE_PATCH_FUNCTION tutu_items BEGIN END
+  INCLUDE "7c-galileo/lib/vars/g3_bgt_cpmvars.tpa"
 END ELSE ACTION_IF GAME_IS eet BEGIN
-  OUTER_SPRINT bgt_check ~GlobalLT("endofbg1","GLOBAL",2)~
-  OUTER_SPRINT tutu_prefix ""
-  OUTER_SPRINT melicamp ~"misc49"~
-  OUTER_SPRINT dead_halfling halfmiri
-  OUTER_SPRINT Gullykin bg4000
-  OUTER_SPRINT Firewine_Ruins bg5201
-  OUTER_SPRINT eet_var "_"
-  DEFINE_PATCH_FUNCTION tutu_items BEGIN END
+  INCLUDE  "7c-galileo/lib/vars/eet_cpmvars.tpa"
 END ELSE ACTION_IF GAME_IS bgee BEGIN
-  OUTER_SPRINT bgt_check ""
-  OUTER_SPRINT tutu_prefix ""
-  OUTER_SPRINT melicamp ~"misc49"~
-  OUTER_SPRINT dead_halfling halfmiri
-  OUTER_SPRINT Gullykin ar4000
-  OUTER_SPRINT Firewine_Ruins ar5201
-  OUTER_SPRINT eet_var ""
+  INCLUDE "7c-galileo/lib/vars/liam_bgee_vars.tpa"
+END
+
+ACTION_IF GAME_IS "tutu tutu_totsc" BEGIN
+  INCLUDE "7c-galileo/lib/tutu_items.tpa"
+END ELSE BEGIN
   DEFINE_PATCH_FUNCTION tutu_items BEGIN END
 END
+
+// get around using BGT_VAR
+// OUTER_SPRINT bgt_check ~!Global("endofbg1","GLOBAL",2)~
+OUTER_SPRINT melicamp EVAL ~"~ ^ EVAL ~%tutu_var%misc46"~
 
 COPY "7c-galileo/spl/7c#gal01.bam" override
 COPY "7c-galileo/spl/7c#gal01.spl" override
@@ -212,12 +194,12 @@ COPY "7c-galileo/cre/galileo.cre" "override/7c#gal02.cre"
   ADD_KNOWN_SPELL spwi206 #1 wizard
   ADD_MEMORIZED_SPELL 7c#gal01 #0 innate #1
   ADD_MEMORIZED_SPELL spwi106 #0 wizard #1
-  ADD_CRE_ITEM "%tutu_prefix%dart01" #17 #0 #0 none weapon2
-  ADD_CRE_ITEM "%tutu_prefix%ax1h01" #0 #0 #0 none weapon1 EQUIP
-  ADD_CRE_ITEM "%tutu_prefix%dart01" #21 #0 #0 none inv1
-  ADD_CRE_ITEM "%tutu_prefix%dart01" #18 #0 #0 none inv2
+  ADD_CRE_ITEM "%tutu_var%dart01" #17 #0 #0 none weapon2
+  ADD_CRE_ITEM "%tutu_var%ax1h01" #0 #0 #0 none weapon1 EQUIP
+  ADD_CRE_ITEM "%tutu_var%dart01" #21 #0 #0 none inv1
+  ADD_CRE_ITEM "%tutu_var%dart01" #18 #0 #0 none inv2
   PATCH_IF !GAME_IS "bgee eet" BEGIN
-    ADD_CRE_ITEM "%tutu_prefix%shld09" #0 #0 #0 none shield
+    ADD_CRE_ITEM "%tutu_var%shld09" #0 #0 #0 none shield
   END ELSE BEGIN
     ADD_CRE_ITEM shld10a #0 #0 #0 none shield
   END
@@ -392,9 +374,9 @@ COPY_EXISTING "%Gullykin%.are" override
 BUT_ONLY
 
 LAF extend_bot STR_VAR script = ar4000 area = EVAL "%Gullykin%" END
-LAF extend_bot STR_VAR script = ar5201 area = EVAL "%Firewine_Ruins%" END
+LAF extend_bot STR_VAR script = ar5201 area = EVAL "%FirewineRuins%" END
 
-COPY_EXISTING "%tutu_prefix%gandol.dlg" override
+COPY_EXISTING "%tutu_var%gandol.dlg" override
   DECOMPILE_AND_PATCH BEGIN
     REPLACE_TEXTUALLY ~GiveGoldForce\(.*.$\)~ ~GiveGoldForce\1
 SetGlobal("7C#DoneFirewineRuins","GLOBAL",1)~
@@ -402,7 +384,7 @@ SetGlobal("7C#DoneFirewineRuins","GLOBAL",1)~
   UNLESS ~7C#DoneFirewineRuins~
 BUT_ONLY
 
-COPY_EXISTING "%dead_halfling%.cre" override
+COPY_EXISTING "%tutu_scripth%alfmiri.cre" override
   WRITE_ASCII 0x280 "DeadHalflingMessager" #32
 BUT_ONLY
 
@@ -458,6 +440,5 @@ COMPILE EVAL "7c-galileo/baf/7c#jovia.baf"
 COMPILE EVAL "7c-galileo/baf/7c#yola.baf"
 COMPILE EVAL "7c-galileo/baf/7c#wenan.baf"
 COMPILE EVAL "7c-galileo/baf/7c#calna.baf"
-
 
 // eof
