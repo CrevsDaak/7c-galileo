@@ -1,0 +1,52 @@
+// -*- weidu-tp2 -*-
+
+COPY_EXISTING "%avaricem%.cre" override
+  ADD_CRE_ITEM misc1j #0 #0 #0 identified INV
+BUT_ONLY
+
+COPY "7c-galileo/itm/gembow.itm" "override/7cgembow.itm"
+  SAY 0x8
+  SAY 0xC
+  SAY 0x50
+  SAY 0x54
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY gembow BEGIN
+  "MISC19" => "7c#gbw01"
+  "MISC16" => "7c#gbw02"
+  "MISC17" => "7c#gbw03"
+  "MISC18" => "7c#gbw04"
+  "MISC22" => "7c#gbw05"
+  "MISC23" => "7c#gbw06"
+  "MISC24" => "7c#gbw07"
+  "MISC26" => "7c#gbw08"
+  "MISC21" => "7c#gbw09"
+  "MISC25" => "7c#gbw10"
+  "MISC20" => "7c#gbw11"
+  "MISC27" => "7c#gbw12"
+  "MISC29" => "7c#gbw13"
+  "MISC30" => "7c#gbw14"
+  "MISC28" => "7c#gbw15"
+  "MISC32" => "7c#gbw16"
+  "MISC31" => "7c#gbw17"
+  "MISC35" => "7c#gbw18"
+  "MISC33" => "7c#gbw19"
+  "MISC34" => "7c#gbw20"
+  "MISC36" => "7c#gbw21"
+  "MISC37" => "7c#gbw22"
+  "MISC38" => "7c#gbw23"
+  "MISC39" => "7c#gbw24"
+  "MISC40" => "7c#gbw25"
+  "MISC42" => "7c#gbw26"
+  "MISC43" => "7c#gbw27"
+  "MISC41" => "7c#gbw28"
+  "MISC44" => "7c#gbw29"
+  "MISC45" => "7c#gbw30"
+  "BGMISC45" => "7c#gbw30"
+  "DMGEM1" => "7c#gbw30"
+  "MISC6Z" => "7c#gbw31"
+  "MISC1J" => "7c#gbw31"
+END
+
+ACTION_PHP_EACH gembow AS gem => bow BEGIN
+  
+END
