@@ -35,7 +35,6 @@ Installing this mod will change:
 	- Gandolar Luckyfoot's dialogue.
 	- Firewine Ruins ogre mage dialogue.
 	- Some other stuff, just you wait, you've got something coming, pal.
-	- DART01.ITM casts Gate upon successful hit. Just kidding.
 
 -----------------------
 II. Introduction
