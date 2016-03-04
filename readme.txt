@@ -33,7 +33,6 @@ Installing this mod will add:
 Installing this mod will change:
 	- The Firewine Ruins to be a hell of a lot more interesting.
 	- Gandolar Luckyfoot's dialogue.
-	- Firewine Ruins ogre mage dialogue.
 	- Some other stuff, just you wait, you've got something coming, pal.
 
 -----------------------
