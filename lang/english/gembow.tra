@@ -1,0 +1,462 @@
+@666000 = ~Glittering Gem Bow +1~
+@666001 = ~Glittering Gem Bow
+
+Currently, there is a Turquoise gem affixed to it. The Gem Bow glitters more than ever, making its wearer appear to be incredibly desirable.
+
+STATISTICS:
+
+Damage: +1
+THAC0: +1
+Charisma: +1
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666002 = ~Infernal Gem Bow +1~
+@666003 = ~Infernal Gem Bow
+
+Currently, there is a Fire Agate gem affixed to it. The result is that any arrows shot from the Gem Bow catch fire, doing additional damage upon impact.
+
+STATISTICS:
+
+Damage: +1, +2 Fire Damage
+THAC0: +1
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666004 = ~Dead Eye Gem Bow +1~
+@666005 = ~Dead Eye Gem Bow
+
+Currently, there is a Lynx Eye gem affixed to it. Enhanced with this gem, the Gem Bow is even more deadly and likely to make its mark.
+
+STATISTICS:
+
+Damage: +2
+THAC0: +2
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666006 = ~Bright Light Gem Bow +1~
+@666007 = ~Bright Light Gem Bow
+
+Currently, there is a Sunstone gem affixed to it. Each arrow fired has a chance to blind its target for two rounds unless a successful Save vs. Spell is made.
+
+STATISTICS:
+
+Damage: +1
+THAC0: +1
+Special: Blindness on hit for two rounds (Save vs. Spell)
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666008 = ~Blasted Gem Bow +1~
+@666009 = ~Blasted Gem Bow
+
+Currently, there is an Andar gem affixed to it. Arrows fired from the Gem Bow crackle with magical energy as they assault their target.
+
+STATISTICS:
+
+Damage: +1, +2 Magic Damage
+THAC0: +1
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666010 = ~Gem Bow of Tasloi Slaying +1~
+@666011 = ~Gem Bow of Tasloi Slaying
+
+Currently, there is a Jasper gem affixed to it. Any tasloi unfortunate enough to be struck by your arrow will explode into bloody chunks, its soul condemned to the Nine Hells for all eternity.
+
+STATISTICS:
+
+Damage: +1
+THAC0: +1
+Special: Slays Tasloi on hit (no save)
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666012 = ~Vengeful Gem Bow +1~
+@666013 = ~Vengeful Gem Bow
+
+Currently, there is a Tchazar gem affixed to it. Each arrow fired pelts its targets with such force it incurs an additional 3 Crushing Damage.
+
+STATISTICS:
+
+Damage: +1, +3 Crushing Damage
+THAC0: +1
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666014 = ~Rainbow Gem Bow +1~
+@666015 = ~Rainbow Gem Bow
+
+Currently, there is a Iol gem affixed to it. Each arrow fired incurs the Mage spell Color Spray upon its target.
+
+STATISTICS:
+
+Damage: +1
+THAC0: +1
+Special: Color Spray is casted on the target upon hit
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666016 = ~White Gem Bow +1~
+@666017 = ~White Gem Bow
+
+Currently, there is a Skydrop gem affixed to it. Whether a blessing or a curse, each arrow that makes its mark slows poison.
+
+STATISTICS:
+
+Damage: +1
+THAC0: +1
+Special: Slow Poison is casted on the target upon hit
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666018 = ~Stone Gem Bow +1~
+@666019 = ~Stone Gem Bow
+
+Currently, there is a Zircon gem affixed to it. The wielder is protected from petrification.
+
+STATISTICS:
+
+Damage: +1
+THAC0: +1
+Special: Protection from Petrification while equipped
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666020 = ~Crimson Gem Bow +1~
+@666021 = ~Crimson Gem Bow
+
+Currently, there is a Bloodstone gem affixed to it. Upon hit, it causes additional bleeding in its targets.
+
+STATISTICS:
+
+Damage: +1
+THAC0: +1
+Special: Bleeding effect on hit for 2 rounds
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666022 = ~Lunar Gem Bow +1~
+@666023 = ~Lunar Gem Bow
+
+Currently, there is a Moonstone gem affixed to it. Upon hit, it confuses its targets for 1 round.
+
+STATISTICS:
+
+Damage: +1
+THAC0: +1
+Special: Confusion effect on hit for 1 round (save vs. spell)
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666024 = ~Seductive Gem Bow +1~
+@666025 = ~Seductive Gem Bow
+
+Currently, there is a Ziose gem affixed to it. Upon hit, a humanoid target must save vs. spell at +4 or be charmed.
+
+STATISTICS:
+
+Damage: +1
+THAC0: +1
+Special: Charm Person effect on target when hit (lasts 4 rounds)
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666026 = ~Pernicious Gem Bow +1~
+@666027 = ~Pernicious Gem Bow
+
+Currently, there is a Chrysoberyl gem affixed to it. Upon hit, the target must save vs. spell or be polymorphed into a Tasloi, the poor bastard.
+
+STATISTICS:
+
+Damage: +1
+THAC0: +1
+Special: Polymorphs target into a pathetic Tasloi unless a save vs. spell is made
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666028 = ~Blessed Gem Bow +1~
+@666029 = ~Blessed Gem Bow
+
+Currently, there is a Waterstar gem affixed to it. The wearer is protected from evil.
+
+Weapon Type: Short Bow
+Damage: +1
+THAC0: +1
+Special: Protection from Evil while equipped
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666030 = ~Gem Bow of Liberation +1~
+@666031 = ~Gem Bow of Liberation
+
+Currently, there is a Shandon gem affixed to it. Whether a blessing or a curse, the wearer is granted Free Action.
+
+STATISTICS:
+
+Damage: +1
+THAC0: +1
+Special: Free Action while equipped
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength
+~
+@666032 = ~Withering Gem Bow +1~
+@666033 = ~Withering Gem Bow
+
+Currently, there is a Star Diopside gem affixed to it. Arrows fired from the Gem Bow are coated in poison.
+
+STATISTICS:
+
+Damage: +1
+THAC0: +1
+Special: Poison target on hit unless successful save vs. death is made
+   (Poison lasts 2 rounds and deals 2 damage every 2 seconds)
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666034 = ~Black Gem Bow +1~
+@666035 = ~Black Gem Bow
+
+Currently, there is a Horn Coral gem affixed to it. Upon hit, the target must save vs. spell or be struck with fear, as if being struck with an arrow isn't enough to ruin someone's day.
+
+STATISTICS:
+
+Damage: +1
+THAC0: +1
+Special: Upon hit, the target must save vs. spell or be struck with Fear for 5 rounds.
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666036 = ~Vampiric Gem Bow +1~
+@666037 = ~Vampiric Gem Bow
+
+Currently, there is an Aquamarine gem affixed to it. Upon hit, the target will be drained of a further 1d4 hit points, which is returned to the Gem Bow's user.
+
+STATISTICS:
+
+Damage: +1
+THAC0: +1
+Special: Larloch's Minor Drain on hit
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666038 = ~Jinxing Gem Bow +1~
+@666039 = ~Jinxing Gem Bow
+
+Currently, there is a Garnet gem affixed to it. The target is struck with the mage spell Greater Malison upon a successful hit.
+Get Jinx'd.
+
+STATISTICS:
+
+Damage: +1
+THAC0: +1
+Special: Greater Malison on hit
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666040 = ~Sirine's Gem Bow +1~
+@666041 = ~Sirine's Gem Bow
+
+Currently, there is a Pearl affixed to it. The wearer is protected from alluring charm magics.
+
+STATISTICS:
+
+Damage: +1
+THAC0: +1
+Special: wearer is protected from Charm and similar spells while equipped
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666042 = ~Nature's Gem Bow +1~
+@666043 = ~Nature's Gem Bow
+
+Currently, there is a Sphene gem affixed to it. Enemies struck must successfully save vs. spell or be entangled, unable to move.
+
+STATISTICS:
+
+Damage: +1
+THAC0: +1
+Special: Entangle on hit (save vs. spell), lasts 2 rounds.
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666044 = ~Molasses' Gem Bow +1~
+@666045 = ~Molasses' Gem Bow
+
+Currently, there is a Black Opal gem affixed to it. Enemies hit must successfully save vs. spell or be coated in a black ichor, greatly slowing their movement speed.
+
+STATISTICS:
+
+Damage: +1
+THAC0: +1
+Special: Grease on hit (save vs. spell), lasts 5 rounds.
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666046 = ~Soothing Gem Bow +1~
+@666047 = ~Soothing Gem Bow
+
+Currently, there is a Water Opal affixed to it. The wielder slowly regenerates health.
+
+STATISTICS:
+
+Damage: +1
+THAC0: +1
+Special: the wearer regenerates 1 HP every 3 rounds.
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666048 = ~Freezing Gem Bow +1~
+@666049 = ~Freezing Gem Bow
+
+Currently, there is a Moonbar gem affixed to it. Arrows fired from the Gem Bow sizzle with a chilling frost effect.
+
+STATISTICS:
+
+Damage: +1, +3 Cold Damage
+THAC0: +1
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666050 = ~Thunderous Gem Bow +1~
+@666051 = ~Thunderous Gem Bow
+
+Currently, there is a Diamond affixed to it. Arrows fired from the Gem Bow are quite striking, if you catch my drift.
+
+STATISTICS:
+
+Damage: +1, +4 Electrical Damage
+THAC0: +1
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666052 = ~Stinging Gem Bow +1~
+@666053 = ~Stinging Gem Bow
+
+Currently, there is an Emerald affixed to it. Arrows fired from the Gem Bow are coated in a rapid and potent acid.
+
+STATISTICS:
+
+Damage: +1, +4 Acid Damage
+THAC0: +1
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666054 = ~Boring Gem Bow +1~
+@666055 = ~Boring Gem Bow
+
+Currently, there is a Star Sapphire affixed to it. The Gem Bow fires arrows at breakneck speed, penetrating deeper into its unfortunate targets.
+
+STATISTICS:
+
+Damage: +1, +3 Piercing Damage
+THAC0: +1
+
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666056 = ~Gambler's Gem Bow +1~
+@666057 = ~Gambler's Gem Bow
+
+Currently, there is a King's Tear affixed to it. This exotic Gem Bow seems to hum slightly with powerful and strange magics. Upon hitting a target, the wielder will find they have either lost or gained 5 Gold Pieces. It may also compensate its victims with gems.
+
+Do you feel lucky, punk?
+
+STATISTICS:
+
+Damage: +1
+THAC0: +1
+Special: On hit, 50% chance of adding 5 GP, 50% chance of removing 5 GP. 10% chance of "Gems!" wild magic effect on target.
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666058 = ~Rogue's Gem Bow +1~
+@666059 = ~Rogue's Gem Bow
+
+Currently, there is a Rogue Stone affixed to it. This magnificent bow grants its user additional dexterity and accuracy.
+
+STATISTICS:
+
+Damage: +1
+THAC0: +2
+Special: +1 Dexterity while equipped
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~
+@666060 = ~Exotic Gem Bow +1~
+@666061 = ~Exotic Gem Bow
+
+Currently, there is a Glittering Bejurril Stone affixed to it. You think yourself quite clever, don't you?
+
+STATISTICS:
+
+Damage: +1
+THAC0: +1
+Special: Wild Magic incurred on target for the next five rounds upon hit
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength~

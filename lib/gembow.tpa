@@ -4,11 +4,44 @@ COPY_EXISTING "%avaricem%.cre" override
   ADD_CRE_ITEM misc1j #0 #0 #0 identified INV
 BUT_ONLY
 
+ACTION_DEFINE_ASSOCIATIVE_ARRAY arrows BEGIN
+  // empty on purpose
+END
+
+COPY_EXISTING_REGEXP - ~^.*\.itm$~ override
+  PATCH_IF SOURCE_SIZE > 0x71 BEGIN
+    PATCH_IF SHORT_AT 0x1c == 5 && NOT ("%SOURCE_RES%" STR_EQ "AROW01" || "%SOURCE_RES%" STR_EQ "_AROW01") BEGIN
+      $arrows("%SOURCE_RES%") = 1
+    END
+  END ELSE BEGIN
+    PRINT ~ERROR: %SOURCE_FILE% is under 0x72 bytes in length: corrupt .itm file!~
+  END
+BUT_ONLY
+
+ACTION_IF MOD_IS_INSTALLED stratagems.tp2 3010 BEGIN
+  $arrows("%tutu_var%AROW02") = 0
+END
+
 COPY "7c-galileo/itm/gembow.itm" "override/7cgembow.itm"
-  SAY 0x8
-  SAY 0xC
-  SAY 0x50
-  SAY 0x54
+  SAY 0x8 #6864
+  SAY 0xC @7738
+  SAY 0x50 #6866
+  SAY 0x54 @7739
+  WRITE_BYTE 0x19 (THIS | BIT3)
+  PHP_EACH arrows AS arrow => n BEGIN
+    PATCH_IF n == 1 BEGIN
+      LPF ADD_ITEM_EFFECT
+        INT_VAR
+          parameter1 = RESOLVE_STR_REF (@7992)
+          opcode = 180
+          timing = 2
+        STR_VAR
+          resource = EVAL "%arrow%"
+      END
+    END
+  END
+
+LOAD_TRA "7c-galileo/lang/%LANGUAGE%/gembow.tra"
 
 ACTION_DEFINE_ASSOCIATIVE_ARRAY gembow BEGIN
   "MISC19" => "7c#gbw01"
@@ -45,6 +78,40 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY gembow BEGIN
   "DMGEM1" => "7c#gbw30"
   "MISC6Z" => "7c#gbw31"
   "MISC1J" => "7c#gbw31"
+END
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY gembow_names BEGIN
+  "7c#gbw01" => @666000
+  "7c#gbw02" => @666002
+  "7c#gbw03" => @666004
+  "7c#gbw04" => @666006
+  "7c#gbw05" => @666008
+  "7c#gbw06" => @666010
+  "7c#gbw07" => @666012
+  "7c#gbw08" => @666014
+  "7c#gbw09" => @666016
+  "7c#gbw10" => @666018
+  "7c#gbw11" => @666020
+  "7c#gbw12" => @666022
+  "7c#gbw13" => @666024
+  "7c#gbw14" => @666026
+  "7c#gbw15" => @666028
+  "7c#gbw16" => @666030
+  "7c#gbw17" => @666032
+  "7c#gbw18" => @666034
+  "7c#gbw19" => @666036
+  "7c#gbw20" => @666038
+  "7c#gbw21" => @666040
+  "7c#gbw22" => @666042
+  "7c#gbw23" => @666044
+  "7c#gbw24" => @666046
+  "7c#gbw25" => @666048
+  "7c#gbw26" => @666050
+  "7c#gbw27" => @666052
+  "7c#gbw28" => @666054
+  "7c#gbw29" => @666056
+  "7c#gbw30" => @666058
+  "7c#gbw31" => @666060
 END
 
 ACTION_PHP_EACH gembow AS gem => bow BEGIN

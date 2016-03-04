@@ -389,6 +389,7 @@ COPY_EXISTING "%tutu_scripth%alfmiri.cre" override
 BUT_ONLY
 
 INCLUDE "7c-galileo/lib/cloud.tpa"
+INCLUDE "7c-galileo/lib/gembow.tpa"
 
 COPY "7c-galileo/bam" override
 
