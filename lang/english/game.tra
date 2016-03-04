@@ -42,12 +42,12 @@
 @7723 = ~A merrier fool I've never known.~ [7C#GAL22]
 @7724 = ~Goodnight, sweet bard.~ [7C#GAL23]
 @7725 = ~A stranger halfling I've never known, but I already miss him.~ [7C#GAL24]
-@7726 = ~I thought he was too smart to die!~ [7C#GAL25]
+@7726 = ~And here I thought he was too smart to die!~ [7C#GAL25]
 @7727 = ~Mad as a hatter, dead and it does not matter.~ [7C#GAL26]
 @761 = ~A stranger halfling I've never met, but I'll admit already miss him.~ [7C#GAL34]
-@762 = ~Dishonorably discharged, ya greedy bastard.~ [7C#GAL35]
+@762 = ~Dishonourably discharged, ya greedy bastard.~ [7C#GAL35]
 @763 = ~I believe we've witnessed the irony of a self-fulfilling prophecy.~ [7C#GAL36]
-@7974 = ~Oh, I'm sure we're all going to miss him dearly.~  [7C#GAL45]
+@7974 = ~Oh, I'm sure we're all going to miss him dearly.~  [7C#GAL55]
 // generic death, good only
 @764 = ~Only the good die young, while the evil seem to live forever.~ [7C#GAL37]
 // critical miss and hit
@@ -64,13 +64,15 @@
 // compliments
 @769 = ~A more respectable man and warrior I've never known.~ [7C#GAL42]
 @7970 = ~If I had half the courage you do, I reckon I'd be set for life.~ [7C#GAL43]
-@7971 = ~Ahh, my knight in shining armor. You really are quite the charmer!~ [7C#GAL44]
+@7971 = ~Ahh, my knight in shining armour. You really are quite the charmer!~ [7C#GAL44]
 // special compliment
-@7975 = ~Your beauty is perhaps as boundless as the Sea of Swords, my lady.~ [7C#GAL46]
+@7975 = ~Your beauty is perhaps as boundless as the Sea of Swords, my lady.~ [7C#GAL57]
 @7976 = ~You really are quite the thief. It seems you've stolen my heart.~ [7C#GAL47]
-@7977 = ~Of all your beautiful curves, your smile is my favorite.~ [7C#GAL48]
+@7977 = ~Of all your beautiful curves, your smile is my favourite.~ [7C#GAL48]
 // death
-@7978 = ~Hoh... I've met my match...~ [7C#GAL49]
+@7978 = ~Huuh Ahhh... I've met my match...~ [7C#GAL49]
+// hit
+@779978 = ~Oah!~ [7C#GAL56]
 // target immune
 @7979 = ~Blast it! That's no use.~ [7C#GAL50]
 // initial meeting
@@ -108,9 +110,17 @@ At level 20, it also cures and grants party members immunity to Confusion and Ch
 
 Created long ago by a prestigious halfling bowyer and the Archmage Bendalyre, gem bows were developed to help halfling societies combat their enemies. Over the years, the gem bows have disappeared from halfling realms. They are now lost and all but forgotten by the race that created them. All are of excellent craftsmanship, and have the ability to gain additional powers. On the face of each bow is an indentation above the handgrip. If certain gemstones are set into this notch, the bow is then capable of bestowing one of numerous special powers on any arrow fired. Its abilities do not stack with magically imbued arrows.
 
-Weapon Type: Short Bow
+STATISTICS:
+
 Damage: +1
-THAC0: +1~
+THAC0: +1
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength
+
+Weight: 2~
 // biography
 @7740 = ~When asked about his past, GALILEO appears overjoyed, as if no question could make him happier. He informs you that he was raised in Secomber, to the Northeast of the Sword Coast. He became acquainted with music experiencing open performances at an inn called The Seven-Stringed Harp, and apparently took it into his own hands to learn to play music himself. His muse is a confusing mixture of genius and madness, and GALILEO claims that it is none other than demipower Finder Wyvernspur who inspires him. However a halfling such as himself was introduced to such a deity is anyone's guess.~
 @7741 = ~Yola~
@@ -130,4 +140,6 @@ Weight: obviously less than urmom
 NOT USABLE BY:
   Wizzzzzzzzzzzards
 ~
-// next -> @7990
+@7990 = ~Attach a ~
+@7991 = ~ to the Gembow.~
+@7992 = ~You can only use non-magical arrows with the Gembow~
