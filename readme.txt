@@ -117,20 +117,20 @@ Invisibility 10' Radius
 V. Items
 -----------------------
 
-Gem Bow
+Gem Bow +1
 Short Bow
-Damage: 1d6 +1
-THAC0: +1
-Right-click in inventory and use the "Swap Gem" button to equip different gems to the Gem Bow. Each gem supplies a different special effect.
+Damage: Arrow Base Damage + 6d6 Lingering Burning Damage if the user is killed by Gibberling while Swapping a Gem. Hehe.
 
-Vesper +1
-Returning Throwing Dagger
-Damage: 1d4 +1, +1 Cold Damage
-THAC0: +1
+(But for realzis. Right-click in inventory and use the "Swap Gem" button to equip different gems to the Gem Bow. Each gem supplies a different special effect.)
 
-Cyrrollalee's Gift
-Buckler Shield +1
-Special: Immune to Fear
+?????
+Throwing Dagger
+Damage: Obviously less than your girlfriend's words. Ouuuch.
+To Hit Armor Class ZERO = oh yeah bb
+
+?????
+Buckler Shield +69 of chatspamkappa123
+Special: Immunity to Angry Koalas and Loose Lawnmovers
 
 Next statement is false. Previous statement is false.
 
@@ -139,7 +139,7 @@ Weight: obviously less than urmom
 NOT USABLE BY:
   Wizzzzzzzzzzzards
 
-All items are found in the Firewine Ruins.
+There is an Enchanted Buckler and a Throwing Dagger in the Firewine Ruins. Get moving and go look for that stuff, don't be lazy.
 
 -----------------------
 VI. Tips
