@@ -130,16 +130,33 @@ Weight: 2~
 @7745 = ~Invisible~
 
 @7988 = ~Cyrrollalee's Gift +1~
-// next is placeholder for Cyrrollalee's Gift's description.
-@7989 = ~Item with no Description:
+@7989 = ~Cyrrollalee's Gift
+
+This is a buckler devoted to Cyrrollalee, the halfling deity of friendship and trust. It was likely dedicated in her name, rather than bestowed directly from her. It increases the morale of any who would bear it.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +2
+– No protection against missile and piercing attacks
+
+Requires:
+ 4 Strength
+
+Weight: 2~
+@7990 = ~Attach a ~
+@7991 = ~ to the Gembow.~
+@7992 = ~You can only use non-magical arrows with the Gembow~
+
+/*
+[[ next is placeholder for Cyrrollalee's Gift's description.
+
+Item with no Description:
 
 Next statement is false. Previous statement is false.
 
 Weight: obviously less than urmom
 
 NOT USABLE BY:
-  Wizzzzzzzzzzzards
-~
-@7990 = ~Attach a ~
-@7991 = ~ to the Gembow.~
-@7992 = ~You can only use non-magical arrows with the Gembow~
+  Wizzzzzzzzzzzards"
+*/
