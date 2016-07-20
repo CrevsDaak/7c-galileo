@@ -7,10 +7,12 @@ THEN
     CreateCreature("7C#WENAN",[1649.1299],SW)
     CreateCreature("7C#YOLA",[1727.1267],S)
     CreateCreature("7C#JOVIA",[1721.1223],SE)
-    CreateCreature("7C#INVI0",[1679.1249],N)
-    ActionOverride("7C#GhostCalna",CreateCreature("7C#INVI1",[-1.-1],N))
-    ActionOverride("7C#GhostWenan",CreateCreature("7C#INVI2",[-1.-1],N))
-    ActionOverride("7C#GhostYola",CreateCreature("7C#INVI3",[-1.-1],N))
-    ActionOverride("7C#GhostJovias",CreateCreature("7C#INVI4",[-1.-1],N))
+    // IDK wth are these so I'm commenting them out.
+    // I started working on this script so long ago that I can't remeber lol
+//    CreateCreature("7C#INVI0",[1679.1249],N)
+//    ActionOverride("7C#GhostCalna",CreateCreature("7C#INVI1",[-1.-1],N))
+//    ActionOverride("7C#GhostWenan",CreateCreature("7C#INVI2",[-1.-1],N))
+//    ActionOverride("7C#GhostYola",CreateCreature("7C#INVI3",[-1.-1],N))
+//    ActionOverride("7C#GhostJovias",CreateCreature("7C#INVI4",[-1.-1],N))
     SetGlobal("7C#GhostsSpawned","GLOBAL",1)
 END

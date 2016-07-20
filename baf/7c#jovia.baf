@@ -6,222 +6,255 @@
  * - If no enemies are there, turn invisible.
  * - Shout(573) if HP < 40% and Shout(574) if HP < 20%.
  * - Run away from Fighter enemies > level 4.
- * - Enemy Mages are first priority targets, Bards 2nd.
+ * - Enemy Mages are first priority targets, Bards/druids without prot. spells 2nd
  * - If invisible try backstabbing vulnerable enemies on range.
  *
  */
 
 IF
-	!Allegiance(Myself, ENEMY)
-	Heard([ANYONE],570)
+  !Allegiance(Myself, ENEMY)
+  Heard([ANYONE],570)
 THEN
-	RESPONSE #100
-		Enemy()
+  RESPONSE #100
+    Enemy()
 END
 
 IF
-	!Allegiance(Myself, ENEMY)
-	OR(6)
-		AttackedBy([GOODCUTOFF.0.0.0.0.SUMMONED],DEFAULT)
-		AttackedBy([PC],DEFAULT)
-		AttackedBy([FAMILIAR],DEFAULT)
-		AttackedBy([ALLY],DEFAULT)
-		AttackedBy([CONTROLLED],DEFAULT)
-		AttackedBy([CHARMED],DEFAULT)
+  !Allegiance(Myself, ENEMY)
+  OR(6)
+    AttackedBy([GOODCUTOFF.0.0.0.0.SUMMONED],DEFAULT)
+    AttackedBy([PC],DEFAULT)
+    AttackedBy([FAMILIAR],DEFAULT)
+    AttackedBy([ALLY],DEFAULT)
+    AttackedBy([CONTROLLED],DEFAULT)
+    AttackedBy([CHARMED],DEFAULT)
 THEN
-	RESPONSE #100
-		Shout(570)
-		Enemy()
+  RESPONSE #100
+    Shout(570)
+    Enemy()
 END
 
 IF
-	Allegiance(Myself, ENEMY)
-	!See(NearestEnemyOf(Myself))
+  Allegiance(Myself, ENEMY)
+  !See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_INVISIBLE)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    ForceSpellRES("7C#JOV01", Myself)
+    SetGlobalTimer("7C#CAST_SPELL", "LOCAL", ONE_ROUND)
+    SetInterrupt(TRUE)
+    Continue()
+END
+
+IF
+  Allegiance(Myself, ENEMY)
+  !GlobalTimerNotExpired("7C#CAST_SPELL", "LOCAL")
+  !Global("7C#INIT_INVISIBILITY", "LOCAL", 1)
+  !StateCheck(Myself, STATE_INVISIBLE)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    ForceSpellRES("7C#JOV01", Myself)
+    SetGlobal("7C#INIT_INVISIBILITY", "LOCAL", 1)
+    SetGlobalTimer("7C#CAST_SPELL", "LOCAL", ONE_ROUND)
+    SetInterrupt(TRUE)
+    Continue()
+END
+
+IF
+  Allegiance(Myself, ENEMY)
+  !GlobalTimerNotExpired("7C#BACKSTAB_HAPPENED", "LOCAL")
+  !GlobalTimerNotExpired("7C#CAST_SPELL", "LOCAL")
 	!StateCheck(Myself, STATE_INVISIBLE)
 THEN
-	RESPONSE #100
-		SetInterrupt(FALSE)
-		ForceSpellRES("7C#JOV01", Myself)
-		SetGlobalTimer("7C#CAST_SPELL", "LOCAL", ONE_ROUND)
-		SetInterrupt(TRUE)
-		Continue()
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    ForceSpellRES("7C#JOV01", Myself)
+    SetGlobalTimer("7C#CAST_SPELL", "LOCAL", ONE_ROUND)
+    SetInterrupt(TRUE)
+    Continue()
 END
 
 IF
-	Allegiance(Myself, ENEMY)
-	!GlobalTimerNotExpired("7C#CAST_SPELL", "LOCAL")
-	!Global("7C#INIT_INVISIBILITY", "LOCAL", 1)
-	!StateCheck(Myself, STATE_INVISIBLE)
+  !Allegiance(Myself, ENEMY)
+  OR(8)
+    Heard([ANYONE], 770)
+    Heard([ANYONE], 771)
+    Heard([ANYONE], 772)
+    Heard([ANYONE], 773)
+    Heard([ANYONE], 774)
+    Heard([ANYONE], 775)
+    Heard([ANYONE], 776)
+    Heard([ANYONE], 777)
+  Range(LastHeardBy(Myself),10)
 THEN
-	RESPONSE #100
-		SetInterrupt(FALSE)
-		ForceSpellRES("7C#JOV01", Myself)
-		SetGlobal("7C#INIT_INVISIBILITY", "LOCAL", 1)
-		SetGlobalTimer("7C#CAST_SPELL", "LOCAL", ONE_ROUND)
-		SetInterrupt(TRUE)
-		Continue()
+  RESPONSE #100
+    Shout(570)
+    Enemy()
+    %RunAwayFrom%(LastHeardBy(Myself), 27)
 END
 
 IF
-	Allegiance(Myself, ENEMY)
-	!GlobalTimerNotExpired("7C#BACKSTAB_HAPPENED", "LOCAL")
-	!GlobalTimerNotExpired("7C#CAST_SPELL", "LOCAL")
-	!StateCheck(Myself, STATE_INVISIBLE)
+  Allegiance(Myself, ENEMY)
+  OR(2)
+    !See(NearestEnemyOf(Myself))
+    !Range(NearestEnemyOf(Myself), 3)
+  OR(8)
+    Heard([ANYONE], 770)
+    Heard([ANYONE], 771)
+    Heard([ANYONE], 772)
+    Heard([ANYONE], 773)
+    Heard([ANYONE], 774)
+    Heard([ANYONE], 775)
+    Heard([ANYONE], 776)
+    Heard([ANYONE], 777)
+  Range(LastHeardBy(Myself), 10)
+  OR(2)
+    !Class(NearestEnemyOf(Myself), FIGHTER)
+    !LevelGT(NearestEnemyOf(Myself), 5)
 THEN
-	RESPONSE #100
-		SetInterrupt(FALSE)
-		ForceSpellRES("7C#JOV01", Myself)
-		SetGlobalTimer("7C#CAST_SPELL", "LOCAL", ONE_ROUND)
-		SetInterrupt(TRUE)
-		Continue()
+  RESPONSE #100
+    %RunAwayFrom%(LastHeardBy(Myself), 27)
+    Continue()
 END
 
 IF
-	!Allegiance(Myself, ENEMY)
-	OR(8)
-		Heard([ANYONE], 770)
-		Heard([ANYONE], 771)
-		Heard([ANYONE], 772)
-		Heard([ANYONE], 773)
-		Heard([ANYONE], 774)
-		Heard([ANYONE], 775)
-		Heard([ANYONE], 776)
-		Heard([ANYONE], 777)
-	Range(LastHeardBy(Myself),10)
+  Allegiance(Myself, ENEMY)
+  Range([PC.0.0.FIGHTER], 10)
+  LevelGT([PC.0.0.FIGHTER], 4)
+  !StateCheck(Myself, STATE_INVISIBLE)
 THEN
-	RESPONSE #100
-		Shout(570)
-		Enemy()
-		%RunAwayFrom%(LastHeardBy(Myself), 27)
+  RESPONSE #100
+    %RunAwayFrom%([PC.0.0.FIGHTER], 10)
 END
 
 IF
-	Allegiance(Myself, ENEMY)
-	OR(2)
-		!See(NearestEnemyOf(Myself))
-		!Range(NearestEnemyOf(Myself), 3)
-	OR(8)
-		Heard([ANYONE], 770)
-		Heard([ANYONE], 771)
-		Heard([ANYONE], 772)
-		Heard([ANYONE], 773)
-		Heard([ANYONE], 774)
-		Heard([ANYONE], 775)
-		Heard([ANYONE], 776)
-		Heard([ANYONE], 777)
-	Range(LastHeardBy(Myself), 10)
-	OR(2)
-		!Class(NearestEnemyOf(Myself), FIGHTER)
-		!LevelGT(NearestEnemyOf(Myself), 5)
+  HPPercentLT(Myself, 40)
+  !GlobalTimerNotExpired("7C#SHOUTED_HURT", "LOCAL")
 THEN
-	RESPONSE #100
-		%RunAwayFrom%(LastHeardBy(Myself), 27)
-		Continue()
+  RESPONSE #100
+    Shout(573)
+    SetGlobalTimer("7C#SHOUTED_HURT", "LOCAL", ONE_ROUND)
+    Continue()
 END
 
 IF
-	Allegiance(Myself, ENEMY)
-	Range([PC.0.0.FIGHTER], 10)
-	LevelGT([PC.0.0.FIGHTER], 4)
-	!StateCheck(Myself, STATE_INVISIBLE)
+  HPPercentLT(Myself, 20)
+  !GlobalTimerNotExpired("7C#SHOUTED_HURT", "LOCAL")
+  !GlobalTimerNotExpired("7C#SHOUTED_DYING", "LOCAL")
 THEN
-	RESPONSE #100
-		%RunAwayFrom%([PC.0.0.FIGHTER], 10)
-		Continue()
+  RESPONSE #100
+    Shout(574)
+    SetGlobalTimer("7C#SHOUTED_DYING", "LOCAL", ONE_ROUND)
+    Continue()
 END
 
 IF
-	HPPercentLT(Myself, 40)
-	!GlobalTimerNotExpired("7C#SHOUTED_HURT", "LOCAL")
+  Allegiance(Myself, ENEMY)
+  StateCheck(Myself, STATE_INVISIBLE)
+  See([PC.0.0.MAGE])
+  CheckStatGT([PC.0.0.MAGE], -3, ARMORCLASS)
+  CheckStatLT([PC.0.0.MAGE], 1, STONESKINS)
+  !StateCheck([PC.0.0.MAGE], STATE_MIRRORIMAGE)
+  Range([PC.0.0.MAGE], 15)
 THEN
-	RESPONSE #100
-		Shout(573)
-		SetGlobalTimer("7C#SHOUTED_HURT", "LOCAL", ONE_ROUND)
-		Continue()
+  RESPONSE #100
+    MoveToObject([PC.0.0.MAGE])
+    Backstab([PC.0.0.MAGE])
+    SetGlobalTimer("7C#BACKSTAB_HAPPENED", "LOCAL", ONE_ROUND)
 END
 
 IF
-	HPPercentLT(Myself, 20)
-	!GlobalTimerNotExpired("7C#SHOUTED_HURT", "LOCAL")
-	!GlobalTimerNotExpired("7C#SHOUTED_DYING", "LOCAL")
+  Allegiance(Myself, ENEMY)
+  !StateCheck(Myself, STATE_INVISIBLE)
+  See([PC.0.0.MAGE])
+  CheckStatGT([PC.0.0.MAGE], -1, ARMORCLASS)
+  !StateCheck([PC.0.0.MAGE], STATE_NOT_VISIBLE)
+  !StateCheck([PC.0.0.MAGE], STATE_MIRRORIMAGE)
+  Range([PC.0.0.MAGE], 5)
 THEN
-	RESPONSE #100
-		Shout(574)
-		SetGlobalTimer("7C#SHOUTED_DYING", "LOCAL", ONE_ROUND)
-		Continue()
+  RESPONSE #100
+    AttackOneRound([PC.0.0.MAGE])
 END
 
 IF
-	Allegiance(Myself, ENEMY)
-	!StateCheck(Myself, STATE_INVISIBLE)
-	See([PC.0.0.MAGE])
-	!StateCheck([PC.0.0.MAGE], STATE_NOT_VISIBLE)
-	!StateCheck([PC.0.0.MAGE], STATE_MIRRORIMAGE)
-	Range([PC.0.0.MAGE], 5)
+  Allegiance(Myself, ENEMY)
+  StateCheck(Myself, STATE_INVISIBLE)
+  See([PC.0.0.BARD])
+  CheckStatGT([PC.0.0.BARD], -3, ARMORCLASS)
+  CheckStatLT([PC.0.0.BARD], 1, STONESKINS)
+  !StateCheck([PC.0.0.BARD], STATE_MIRRORIMAGE)
+  Range([PC.0.0.BARD], 15)
 THEN
-	RESPONSE #100
-		AttackOneRound([PC.0.0.MAGE])
+  RESPONSE #100
+    MoveToObject([PC.0.0.BARD])
+    Backstab([PC.0.0.BARD])
+    SetGlobalTimer("7C#BACKSTAB_HAPPENED", "LOCAL", ONE_ROUND)
 END
 
 IF
-	Allegiance(Myself, ENEMY)
-	StateCheck(Myself, STATE_INVISIBLE)
-	See([PC.0.0.MAGE])
-	!StateCheck([PC.0.0.MAGE], STATE_MIRRORIMAGE)
-	Range([PC.0.0.MAGE], 15)
+  Allegiance(Myself, ENEMY)
+  !StateCheck(Myself, STATE_INVISIBLE)
+  See([PC.0.0.BARD])
+  CheckStatGT([PC.0.0.BARD], -1, ARMORCLASS)
+  !StateCheck([PC.0.0.BARD], STATE_NOT_VISIBLE)
+  !StateCheck([PC.0.0.BARD], STATE_MIRRORIMAGE)
+  Range([PC.0.0.BARD], 5)
 THEN
-	RESPONSE #100
-		MoveToObject([PC.0.0.MAGE])
-		Backstab([PC.0.0.MAGE])
-		SetGlobalTimer("7C#BACKSTAB_HAPPENED", "LOCAL", ONE_ROUND)
+  RESPONSE #100
+    AttackOneRound([PC.0.0.BARD])
 END
 
 IF
-	Allegiance(Myself, ENEMY)
-	!StateCheck(Myself, STATE_INVISIBLE)
-	See([PC.0.0.BARD])
-	!StateCheck([PC.0.0.BARD], STATE_NOT_VISIBLE)
-	!StateCheck([PC.0.0.BARD], STATE_MIRRORIMAGE)
-	Range([PC.0.0.BARD], 5)
+  Allegiance(Myself, ENEMY)
+  StateCheck(Myself, STATE_INVISIBLE)
+  See([PC.0.0.DRUID])
+  CheckStatGT([PC.0.0.DRUID], -3, ARMORCLASS)
+  !StateCheck([PC.0.0.DRUID], STATE_MIRRORIMAGE)
+  Range([PC.0.0.DRUID], 15)
 THEN
-	RESPONSE #100
-		AttackOneRound([PC.0.0.BARD])
+  RESPONSE #100
+    MoveToObject([PC.0.0.BARD])
+    Backstab([PC.0.0.BARD])
+    SetGlobalTimer("7C#BACKSTAB_HAPPENED", "LOCAL", ONE_ROUND)
 END
 
 IF
-	Allegiance(Myself, ENEMY)
-	StateCheck(Myself, STATE_INVISIBLE)
-	See([PC.0.0.BARD])
-	!StateCheck([PC.0.0.BARD], STATE_MIRRORIMAGE)
-	Range([PC.0.0.BARD], 15)
+  Allegiance(Myself, ENEMY)
+  !StateCheck(Myself, STATE_INVISIBLE)
+  See([PC.0.0.DRUID])
+  !StateCheck([PC.0.0.DRUID], STATE_NOT_VISIBLE)
+  Range([PC.0.0.DRUID], 5)
 THEN
-	RESPONSE #100
-		MoveToObject([PC.0.0.BARD])
-		Backstab([PC.0.0.BARD])
-		SetGlobalTimer("7C#BACKSTAB_HAPPENED", "LOCAL", ONE_ROUND)
+  RESPONSE #100
+    AttackOneRound([PC.0.0.DRUID])
 END
 
 IF
-	Allegiance(Myself, ENEMY)
-	!StateCheck(Myself, STATE_INVISIBLE)
-	See(NearestEnemyOf(Myself))
-	!StateCheck(NearestEnemyOf(Myself), STATE_NOT_VISIBLE)
-	!StateCheck(NearestEnemyOf(Myself), STATE_MIRRORIMAGE)
-	Range(NearestEnemyOf(Myself), 5)
+  Allegiance(Myself, ENEMY)
+  StateCheck(Myself, STATE_INVISIBLE)
+  See(NearestEnemyOf(Myself))
+  CheckStatGT(NearestEnemyOf(Myself), -3, ARMORCLASS)
+  !StateCheck(NearestEnemyOf(Myself), STATE_MIRRORIMAGE)
+  Range(NearestEnemyOf(Myself), 10)
 THEN
-	RESPONSE #100
-		AttackOneRound(NearestEnemyOf(Myself))
+  RESPONSE #100
+    MoveToObject(NearestEnemyOf(Myself))
+    Backstab(NearestEnemyOf(Myself))
+    SetGlobalTimer("7C#BACKSTAB_HAPPENED", "LOCAL", ONE_ROUND)
 END
 
 IF
-	Allegiance(Myself, ENEMY)
-	StateCheck(Myself, STATE_INVISIBLE)
-	See(NearestEnemyOf(Myself))
-	!StateCheck(NearestEnemyOf(Myself), STATE_MIRRORIMAGE)
-	Range(NearestEnemyOf(Myself), 10)
+  Allegiance(Myself, ENEMY)
+  !StateCheck(Myself, STATE_INVISIBLE)
+  See(NearestEnemyOf(Myself))
+  !Class(NearestEnemyOf(Myself), FIGHTER)
+  CheckStatGT(NearestEnemyOf(Myself), -1, ARMORCLASS)
+  !StateCheck(NearestEnemyOf(Myself), STATE_NOT_VISIBLE)
+  !StateCheck(NearestEnemyOf(Myself), STATE_MIRRORIMAGE)
+  Range(NearestEnemyOf(Myself), 5)
 THEN
-	RESPONSE #100
-		MoveToObject(NearestEnemyOf(Myself))
-		Backstab(NearestEnemyOf(Myself))
-		SetGlobalTimer("7C#BACKSTAB_HAPPENED", "LOCAL", ONE_ROUND)
+  RESPONSE #100
+    AttackOneRound(NearestEnemyOf(Myself))
 END
