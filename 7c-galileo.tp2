@@ -143,7 +143,7 @@ LAF detectable_spells STR_VAR table = EVAL "cddetect.2da" END
 LAF detectable_weapon_enchantment END
 
 COPY "7c-galileo/cre/galileo.cre" "override/7c#gal02.cre"
-  /* TODO: add missing/replace old/add new soundset lines */
+  /* TODO: add check to use BG2 lines only in BG2 or maybe not */
   SAY NAME1 @771
   SAY NAME2 @771
   SAY LEADER @772
@@ -166,6 +166,8 @@ COPY "7c-galileo/cre/galileo.cre" "override/7c#gal02.cre"
   SAY AREA_DAY @7719
   SAY AREA_NIGHT @7720
   SAY AREA_CITY @7721
+  SAY AREA_DUNGEON @7972
+  SAY AREA_FOREST @7973
   SAY CRITICAL_MISS @7728
   SAY CRITICAL_HIT @7729
   SAY PICKED_POCKET @7730
@@ -175,6 +177,16 @@ COPY "7c-galileo/cre/galileo.cre" "override/7c#gal02.cre"
   SAY HAPPY @765
   SAY UNHAPPY_ANNOYED @766
   SAY UNHAPPY_SERIOUS @767
+  SAY UNHAPPY_BREAKING @768
+  SAY RESPONSE_TO_INSULT1 @7986
+  SAY RESPONSE_TO_INSULT2 @7987
+  SAY RESPONSE_TO_INSULT3 @7988
+  SAY INITIAL_MEETING @7980
+  SAY DYING @7978
+  SAY DAMAGE @77998
+  SAY TARGET_IMMUNE @7979
+  SAY INVENTORY_FULL @7984
+  SAY REACT_TO_DIE_SPECIFIC @764
   WRITE_LONG 0x18 1473
   WRITE_BYTE 0x23b 8
   WRITE_SHORT 0x24 11
@@ -338,7 +350,6 @@ BUT_ONLY
 APPEND interact.2da ~GALILEO1%TAB%c%TAB%s%TAB%0%TAB%0%TAB%c%TAB%0%TAB%c%TAB%c%TAB%0%TAB%0%TAB%i%TAB%0%TAB%0%TAB%i%TAB%i%TAB%0%TAB%i%TAB%0%TAB%i%TAB%i%TAB%i%TAB%i%TAB%i%extra_rows%~
 APPEND_COL interact.2da ~$ $ GALILEO1 0 0 0 0 0 0 c c 0 c 0 0 0 i i c i s i i i 0 i%extra_cols%~
 
-CLEAR_IDS_MAP
 
 COMPILE EVAL "7c-galileo/d/before_joining.d" USING "%tra%/dialog.tra"
 COMPILE EVAL "7c-galileo/d/party_dialog.d" USING "%tra%/dialog.tra"
@@ -385,7 +396,7 @@ SetGlobal("7C#DoneFirewineRuins","GLOBAL",1)~
 BUT_ONLY
 
 COPY_EXISTING "%tutu_scripth%alfmiri.cre" override
-  WRITE_ASCII 0x280 "DeadHalflingMessager" #32
+  WRITE_ASCII 0x280 "HalflingMessager" #32
 BUT_ONLY
 
 INCLUDE "7c-galileo/lib/cloud.tpa"

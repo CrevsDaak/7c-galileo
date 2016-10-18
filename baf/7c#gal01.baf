@@ -32,10 +32,10 @@ END
 IF
 	%bgt_check%
 	InParty("Galileo1")
-	Detect("DeadHalflingMessager")
-        Range("DeadHalflingMessager",20)
-        See("DeadHalflingMessager")
-        Dead("DeadHalflingMessager")
+	Detect("HalflingMessager")
+        Range("HalflingMessager",20)
+        See("HalflingMessager")
+        Dead("HalflingMessager")
         // I think all those triggers should be enough... Right? ;D
 	Global("7C#GalileoDeadHalflingComment","LOCALS",0)
 THEN
