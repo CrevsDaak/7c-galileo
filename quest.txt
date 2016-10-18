@@ -11,7 +11,7 @@ GANDOL:
 
 Gandolar Luckyfoot: Aye, I can point the way to you, and gladly so, but I must warn you as well. There be many an odd thing that roam through there, and I hear tell they be a touch more organized than your normal critters, but I hear many things. Just go to the basement of the winery, there you will find a secret door. If you'd like some local help, you could likely enlist Galileo, our resident bard. I reckon he's caught the adventuring bug, much the same as yourselves.
 
-(Crevs -- that bit of dialogue appears in a couple of different dialogues, I believe. If you approach Gandolar he initially assumes you're in need of healing after attacking Durlag's, and you can tell him you're going for Firewine and he'll say this. If you talk to him a second time *without* following said dialogue path previously, he'll directly ask you to investigate the Firewine Ruins and accepting it will result in that same line. Please make sure to edit both of those! Thanks!! -Q)
+(Crevs -- that bit of dialogue appears in a couple of different dialogues, I believe. If you approach Gandolar he initially assumes you're in need of healing after attacking Durlag's, and you can tell him you're going for Firewine and he'll say this. If you talk to him a second time *without* following said dialogue path previously, he'll directly ask you to investigate the Firewine Ruins and accepting it will result in that same line. Please make sure to edit both of those! Thanks!! -Q) (k, ill have the in mind -A Boosted Monkey)
 
 Ogre Mage in Firewine Ruins:
 
