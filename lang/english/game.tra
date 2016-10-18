@@ -38,16 +38,15 @@
 // area_city
 @7721 = ~These human settlements never cease to amaze me. So ambitious and filled with wonder.~ [7C#GAL20]
 // specific death comments
-@7722 = ~No! Not Alora...~ [7C#GAL21]
-@7723 = ~A merrier fool I've never known.~ [7C#GAL22]
-@7724 = ~Goodnight, sweet bard.~ [7C#GAL23]
-@7725 = ~A stranger halfling I've never known, but I already miss him.~ [7C#GAL24]
-@7726 = ~And here I thought he was too smart to die!~ [7C#GAL25]
-@7727 = ~Mad as a hatter, dead and it does not matter.~ [7C#GAL26]
-@761 = ~A stranger halfling I've never met, but I'll admit already miss him.~ [7C#GAL34]
-@762 = ~Dishonourably discharged, ya greedy bastard.~ [7C#GAL35]
-@763 = ~I believe we've witnessed the irony of a self-fulfilling prophecy.~ [7C#GAL36]
-@7974 = ~Oh, I'm sure we're all going to miss him dearly.~  [7C#GAL55]
+@7722 = ~No! Not Alora...~ [7C#GAL21] // alora, duuuuuh
+@7723 = ~A merrier fool I've never known.~ [7C#GAL22] // coran
+@7724 = ~Goodnight, sweet bard.~ [7C#GAL23] // garrick
+@7726 = ~And here I thought he was too smart to die!~ [7C#GAL25] // quayle
+@7727 = ~Mad as a hatter, dead and it does not matter.~ [7C#GAL26] // tiax
+@761 = ~A stranger halfling I've never met, but I'll admit already miss him.~ [7C#GAL34] // montaron
+@762 = ~Dishonourably discharged, ya greedy bastard.~ [7C#GAL35] // kagain
+@763 = ~I believe we've witnessed the irony of a self-fulfilling prophecy.~ [7C#GAL36] // xan
+@7974 = ~Oh, I'm sure we're all going to miss him dearly.~  [7C#GAL55] // eldoth
 // generic death, good only
 @764 = ~Only the good die young, while the evil seem to live forever.~ [7C#GAL37]
 // critical miss and hit
@@ -104,7 +103,7 @@ Heals party members 1d8+1/level hit points of all party members within a 30 feet
 At level 10, it also cures and grants party members immunity to Fear for 1 round/level of the caster.
 At level 20, it also cures and grants party members immunity to Confusion and Charm for 1 round/level of the caster.~
 @7736 = ~Healed~
-@7737 = ~You cannot fire magical arrows with the Gem Bow.~
+@7737 = ~You cannot fire magically imbued arrows with the Gem Bow.~
 @7738 = ~Uncharged Gem Bow +1~
 @7739 = ~Uncharged Gem Bow
 
@@ -144,9 +143,6 @@ Requires:
  4 Strength
 
 Weight: 2~
-@7990 = ~Attach a ~
-@7991 = ~ to the Gembow.~
-@7992 = ~You can only use non-magical arrows with the Gembow~
 
 /*
 [[ next is placeholder for Cyrrollalee's Gift's description.
