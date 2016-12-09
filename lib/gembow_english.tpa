@@ -1,5 +1,39 @@
-@666000 = ~Glittering Gem Bow +1~
-@666001 = ~Glittering Gem Bow
+ACTION_DEFINE_ASSOCIATIVE_ARRAY gembow_names BEGIN
+  "7c#gbw01" => ~Glittering Gem Bow +1~
+  "7c#gbw02" => ~Infernal Gem Bow +1~
+  "7c#gbw03" => ~Dead Eye Gem Bow +1~
+  "7c#gbw04" => ~Bright Light Gem Bow +1~
+  "7c#gbw05" => ~Blasted Gem Bow +1~
+  "7c#gbw06" => ~Gem Bow of Tasloi Slaying +1~
+  "7c#gbw07" => ~Vengeful Gem Bow +1~
+  "7c#gbw08" => ~Rainbow Gem Bow +1~
+  "7c#gbw09" => ~White Gem Bow +1~
+  "7c#gbw10" => ~Stone Gem Bow +1~
+  "7c#gbw11" => ~Crimson Gem Bow +1~
+  "7c#gbw12" => ~Lunar Gem Bow +1~
+  "7c#gbw13" => ~Seductive Gem Bow +1~
+  "7c#gbw14" => ~Pernicious Gem Bow +1~
+  "7c#gbw15" => ~Blessed Gem Bow +1~
+  "7c#gbw16" => ~Gem Bow of Liberation +1~
+  "7c#gbw17" => ~Withering Gem Bow +1~
+  "7c#gbw18" => ~Black Gem Bow +1~
+  "7c#gbw19" => ~Vampiric Gem Bow +1~
+  "7c#gbw20" => ~Jinxing Gem Bow +1~
+  "7c#gbw21" => ~Sirine's Gem Bow +1~
+  "7c#gbw22" => ~Nature's Gem Bow +1~
+  "7c#gbw23" => ~Molasses' Gem Bow +1~
+  "7c#gbw24" => ~Soothing Gem Bow +1~
+  "7c#gbw25" => ~Freezing Gem Bow +1~
+  "7c#gbw26" => ~Thunderous Gem Bow +1~
+  "7c#gbw27" => ~Stinging Gem Bow +1~
+  "7c#gbw28" => ~Boring Gem Bow +1~
+  "7c#gbw29" => ~Gambler's Gem Bow +1~
+  "7c#gbw30" => ~Rogue's Gem Bow +1~
+  "7c#gbw31" => ~Exotic Gem Bow +1~
+END
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY gembow_descs BEGIN
+  "7c#gbw01" => ~Glittering Gem Bow
 
 Currently, there is a Turquoise gem affixed to it. The Gem Bow glitters more than ever, making its wearer appear to be incredibly desirable.
 
@@ -13,8 +47,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666002 = ~Infernal Gem Bow +1~
-@666003 = ~Infernal Gem Bow
+  "7c#gbw02" => ~Infernal Gem Bow
 
 Currently, there is a Fire Agate gem affixed to it. The result is that any arrows shot from the Gem Bow catch fire, doing additional damage upon impact.
 
@@ -27,8 +60,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666004 = ~Dead Eye Gem Bow +1~
-@666005 = ~Dead Eye Gem Bow
+  "7c#gbw03" => ~Dead Eye Gem Bow
 
 Currently, there is a Lynx Eye gem affixed to it. Enhanced with this gem, the Gem Bow is even more deadly and likely to make its mark.
 
@@ -41,8 +73,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666006 = ~Bright Light Gem Bow +1~
-@666007 = ~Bright Light Gem Bow
+  "7c#gbw04" => ~Bright Light Gem Bow
 
 Currently, there is a Sunstone gem affixed to it. Each arrow fired has a chance to blind its target for two rounds unless a successful Save vs. Spell is made.
 
@@ -56,8 +87,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666008 = ~Blasted Gem Bow +1~
-@666009 = ~Blasted Gem Bow
+  "7c#gbw05" => ~Blasted Gem Bow
 
 Currently, there is an Andar gem affixed to it. Arrows fired from the Gem Bow crackle with magical energy as they assault their target.
 
@@ -70,8 +100,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666010 = ~Gem Bow of Tasloi Slaying +1~
-@666011 = ~Gem Bow of Tasloi Slaying
+  "7c#gbw06" => ~Gem Bow of Tasloi Slaying
 
 Currently, there is a Jasper gem affixed to it. Any tasloi unfortunate enough to be struck by your arrow will explode into bloody chunks, its soul condemned to the Nine Hells for all eternity.
 
@@ -85,8 +114,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666012 = ~Vengeful Gem Bow +1~
-@666013 = ~Vengeful Gem Bow
+  "7c#gbw07" => ~Vengeful Gem Bow
 
 Currently, there is a Tchazar gem affixed to it. Each arrow fired pelts its targets with such force it incurs an additional 3 Crushing Damage.
 
@@ -99,8 +127,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666014 = ~Rainbow Gem Bow +1~
-@666015 = ~Rainbow Gem Bow
+  "7c#gbw08" => ~Rainbow Gem Bow
 
 Currently, there is a Iol gem affixed to it. Each arrow fired incurs the Mage spell Color Spray upon its target.
 
@@ -114,8 +141,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666016 = ~White Gem Bow +1~
-@666017 = ~White Gem Bow
+  "7c#gbw09" => ~White Gem Bow
 
 Currently, there is a Skydrop gem affixed to it. Whether a blessing or a curse, each arrow that makes its mark slows poison.
 
@@ -129,8 +155,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666018 = ~Stone Gem Bow +1~
-@666019 = ~Stone Gem Bow
+  "7c#gbw10" => ~Stone Gem Bow
 
 Currently, there is a Zircon gem affixed to it. The wielder is protected from petrification.
 
@@ -144,8 +169,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666020 = ~Crimson Gem Bow +1~
-@666021 = ~Crimson Gem Bow
+  "7c#gbw11" => ~Crimson Gem Bow
 
 Currently, there is a Bloodstone gem affixed to it. Upon hit, it causes additional bleeding in its targets.
 
@@ -159,8 +183,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666022 = ~Lunar Gem Bow +1~
-@666023 = ~Lunar Gem Bow
+  "7c#gbw12" => ~Lunar Gem Bow
 
 Currently, there is a Moonstone gem affixed to it. Upon hit, it confuses its targets for 1 round.
 
@@ -174,8 +197,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666024 = ~Seductive Gem Bow +1~
-@666025 = ~Seductive Gem Bow
+  "7c#gbw13" =>  ~Seductive Gem Bow
 
 Currently, there is a Ziose gem affixed to it. Upon hit, a humanoid target must save vs. spell at +4 or be charmed.
 
@@ -189,8 +211,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666026 = ~Pernicious Gem Bow +1~
-@666027 = ~Pernicious Gem Bow
+  "7c#gbw14" => ~Pernicious Gem Bow
 
 Currently, there is a Chrysoberyl gem affixed to it. Upon hit, the target must save vs. spell or be polymorphed into a Tasloi, the poor bastard.
 
@@ -204,8 +225,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666028 = ~Blessed Gem Bow +1~
-@666029 = ~Blessed Gem Bow
+  "7c#gbw15" => ~Blessed Gem Bow
 
 Currently, there is a Waterstar gem affixed to it. The wearer is protected from evil.
 
@@ -218,8 +238,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666030 = ~Gem Bow of Liberation +1~
-@666031 = ~Gem Bow of Liberation
+  "7c#gbw16" => ~Gem Bow of Liberation
 
 Currently, there is a Shandon gem affixed to it. Whether a blessing or a curse, the wearer is granted Free Action.
 
@@ -232,10 +251,8 @@ Speed Factor: 5
 Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
- 6 Strength
-~
-@666032 = ~Withering Gem Bow +1~
-@666033 = ~Withering Gem Bow
+ 6 Strength~
+  "7c#gbw17" => ~Withering Gem Bow
 
 Currently, there is a Star Diopside gem affixed to it. Arrows fired from the Gem Bow are coated in poison.
 
@@ -250,8 +267,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666034 = ~Black Gem Bow +1~
-@666035 = ~Black Gem Bow
+  "7c#gbw18" => ~Black Gem Bow
 
 Currently, there is a Horn Coral gem affixed to it. Upon hit, the target must save vs. spell or be struck with fear, as if being struck with an arrow isn't enough to ruin someone's day.
 
@@ -265,8 +281,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666036 = ~Vampiric Gem Bow +1~
-@666037 = ~Vampiric Gem Bow
+  "7c#gbw19" => ~Vampiric Gem Bow
 
 Currently, there is an Aquamarine gem affixed to it. Upon hit, the target will be drained of a further 1d4 hit points, which is returned to the Gem Bow's user.
 
@@ -280,8 +295,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666038 = ~Jinxing Gem Bow +1~
-@666039 = ~Jinxing Gem Bow
+  "7c#gbw20" => ~Jinxing Gem Bow
 
 Currently, there is a Garnet gem affixed to it. The target is struck with the mage spell Greater Malison upon a successful hit.
 Get Jinx'd.
@@ -296,8 +310,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666040 = ~Sirine's Gem Bow +1~
-@666041 = ~Sirine's Gem Bow
+  "7c#gbw21" => ~Sirine's Gem Bow
 
 Currently, there is a Pearl affixed to it. The wearer is protected from alluring charm magics.
 
@@ -311,8 +324,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666042 = ~Nature's Gem Bow +1~
-@666043 = ~Nature's Gem Bow
+  "7c#gbw22" => ~Nature's Gem Bow
 
 Currently, there is a Sphene gem affixed to it. Enemies struck must successfully save vs. spell or be entangled, unable to move.
 
@@ -326,8 +338,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666044 = ~Molasses' Gem Bow +1~
-@666045 = ~Molasses' Gem Bow
+  "7c#gbw23" => ~Molasses' Gem Bow
 
 Currently, there is a Black Opal gem affixed to it. Enemies hit must successfully save vs. spell or be coated in a black ichor, greatly slowing their movement speed.
 
@@ -341,8 +352,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666046 = ~Soothing Gem Bow +1~
-@666047 = ~Soothing Gem Bow
+  "7c#gbw24" => ~Soothing Gem Bow
 
 Currently, there is a Water Opal affixed to it. The wielder slowly regenerates health.
 
@@ -356,8 +366,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666048 = ~Freezing Gem Bow +1~
-@666049 = ~Freezing Gem Bow
+  "7c#gbw25" => ~Freezing Gem Bow
 
 Currently, there is a Moonbar gem affixed to it. Arrows fired from the Gem Bow sizzle with a chilling frost effect.
 
@@ -370,8 +379,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666050 = ~Thunderous Gem Bow +1~
-@666051 = ~Thunderous Gem Bow
+  "7c#gbw26" => ~Thunderous Gem Bow
 
 Currently, there is a Diamond affixed to it. Arrows fired from the Gem Bow are quite striking, if you catch my drift.
 
@@ -384,8 +392,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666052 = ~Stinging Gem Bow +1~
-@666053 = ~Stinging Gem Bow
+  "7c#gbw27" => ~Stinging Gem Bow
 
 Currently, there is an Emerald affixed to it. Arrows fired from the Gem Bow are coated in a rapid and potent acid.
 
@@ -398,8 +405,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666054 = ~Boring Gem Bow +1~
-@666055 = ~Boring Gem Bow
+  "7c#gbw28" => ~Boring Gem Bow
 
 Currently, there is a Star Sapphire affixed to it. The Gem Bow fires arrows at breakneck speed, penetrating deeper into its unfortunate targets.
 
@@ -413,8 +419,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666056 = ~Gambler's Gem Bow +1~
-@666057 = ~Gambler's Gem Bow
+  "7c#gbw29" => ~Gambler's Gem Bow
 
 Currently, there is a King's Tear affixed to it. This exotic Gem Bow seems to hum slightly with powerful and strange magics. Upon hitting a target, the wielder will find they have either lost or gained 5 Gold Pieces. It may also compensate its victims with gems.
 
@@ -430,8 +435,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666058 = ~Rogue's Gem Bow +1~
-@666059 = ~Rogue's Gem Bow
+  "7c#gbw30" => ~Rogue's Gem Bow
 
 Currently, there is a Rogue Stone affixed to it. This magnificent bow grants its user additional dexterity and accuracy.
 
@@ -445,8 +449,7 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
-@666060 = ~Exotic Gem Bow +1~
-@666061 = ~Exotic Gem Bow
+  "7c#gbw31" => ~Exotic Gem Bow
 
 Currently, there is a Glittering Bejurril Stone affixed to it. You think yourself quite clever, don't you?
 
@@ -460,3 +463,4 @@ Proficiency Type: Shortbow
 Type: Two-handed
 Requires:
  6 Strength~
+END
