@@ -5,7 +5,7 @@
  * - If attacked turn hostile and Shout(570).
  * - If no enemies are there, turn invisible.
  * - Shout(573) if HP < 40% and Shout(574) if HP < 20%.
- * - Run away from Fighter enemies > level 4.
+ * - Run away from Fighter enemies > level 5.
  * - Enemy Mages are first priority targets, Bards/druids without prot. spells 2nd
  * - If invisible try backstabbing vulnerable enemies on range.
  *
@@ -87,12 +87,12 @@ IF
     Heard([ANYONE], 775)
     Heard([ANYONE], 776)
     Heard([ANYONE], 777)
-  Range(LastHeardBy(Myself),10)
+  Range(LastHeardBy(Myself),20)
 THEN
   RESPONSE #100
     Shout(570)
     Enemy()
-    %RunAwayFrom%(LastHeardBy(Myself), 27)
+    %RunAwayFrom%(LastHeardBy(Myself), 25)
 END
 
 IF
@@ -115,18 +115,18 @@ IF
     !LevelGT(NearestEnemyOf(Myself), 5)
 THEN
   RESPONSE #100
-    %RunAwayFrom%(LastHeardBy(Myself), 27)
+    %RunAwayFrom%(LastHeardBy(Myself), 25)
     Continue()
 END
 
 IF
   Allegiance(Myself, ENEMY)
   Range([PC.0.0.FIGHTER], 10)
-  LevelGT([PC.0.0.FIGHTER], 4)
+  LevelGT([PC.0.0.FIGHTER], 5)
   !StateCheck(Myself, STATE_INVISIBLE)
 THEN
   RESPONSE #100
-    %RunAwayFrom%([PC.0.0.FIGHTER], 10)
+    %RunAwayFrom%([PC.0.0.FIGHTER], 5)
 END
 
 IF
@@ -154,7 +154,7 @@ IF
   Allegiance(Myself, ENEMY)
   StateCheck(Myself, STATE_INVISIBLE)
   See([PC.0.0.MAGE])
-  CheckStatGT([PC.0.0.MAGE], -3, ARMORCLASS)
+  CheckStatGT([PC.0.0.MAGE], 1, ARMORCLASS)
   CheckStatLT([PC.0.0.MAGE], 1, STONESKINS)
   !StateCheck([PC.0.0.MAGE], STATE_MIRRORIMAGE)
   Range([PC.0.0.MAGE], 15)
@@ -169,7 +169,7 @@ IF
   Allegiance(Myself, ENEMY)
   !StateCheck(Myself, STATE_INVISIBLE)
   See([PC.0.0.MAGE])
-  CheckStatGT([PC.0.0.MAGE], -1, ARMORCLASS)
+  CheckStatGT([PC.0.0.MAGE], 1, ARMORCLASS)
   !StateCheck([PC.0.0.MAGE], STATE_NOT_VISIBLE)
   !StateCheck([PC.0.0.MAGE], STATE_MIRRORIMAGE)
   Range([PC.0.0.MAGE], 5)
@@ -182,7 +182,7 @@ IF
   Allegiance(Myself, ENEMY)
   StateCheck(Myself, STATE_INVISIBLE)
   See([PC.0.0.BARD])
-  CheckStatGT([PC.0.0.BARD], -3, ARMORCLASS)
+  CheckStatGT([PC.0.0.BARD], 1, ARMORCLASS)
   CheckStatLT([PC.0.0.BARD], 1, STONESKINS)
   !StateCheck([PC.0.0.BARD], STATE_MIRRORIMAGE)
   Range([PC.0.0.BARD], 15)
@@ -197,7 +197,7 @@ IF
   Allegiance(Myself, ENEMY)
   !StateCheck(Myself, STATE_INVISIBLE)
   See([PC.0.0.BARD])
-  CheckStatGT([PC.0.0.BARD], -1, ARMORCLASS)
+  CheckStatGT([PC.0.0.BARD], 3, ARMORCLASS)
   !StateCheck([PC.0.0.BARD], STATE_NOT_VISIBLE)
   !StateCheck([PC.0.0.BARD], STATE_MIRRORIMAGE)
   Range([PC.0.0.BARD], 5)
@@ -210,7 +210,7 @@ IF
   Allegiance(Myself, ENEMY)
   StateCheck(Myself, STATE_INVISIBLE)
   See([PC.0.0.DRUID])
-  CheckStatGT([PC.0.0.DRUID], -3, ARMORCLASS)
+  CheckStatGT([PC.0.0.DRUID], 2, ARMORCLASS)
   !StateCheck([PC.0.0.DRUID], STATE_MIRRORIMAGE)
   Range([PC.0.0.DRUID], 15)
 THEN
@@ -235,7 +235,7 @@ IF
   Allegiance(Myself, ENEMY)
   StateCheck(Myself, STATE_INVISIBLE)
   See(NearestEnemyOf(Myself))
-  CheckStatGT(NearestEnemyOf(Myself), -3, ARMORCLASS)
+  CheckStatGT(NearestEnemyOf(Myself), 4, ARMORCLASS)
   !StateCheck(NearestEnemyOf(Myself), STATE_MIRRORIMAGE)
   Range(NearestEnemyOf(Myself), 10)
 THEN
@@ -250,7 +250,7 @@ IF
   !StateCheck(Myself, STATE_INVISIBLE)
   See(NearestEnemyOf(Myself))
   !Class(NearestEnemyOf(Myself), FIGHTER)
-  CheckStatGT(NearestEnemyOf(Myself), -1, ARMORCLASS)
+  CheckStatGT(NearestEnemyOf(Myself), 2, ARMORCLASS)
   !StateCheck(NearestEnemyOf(Myself), STATE_NOT_VISIBLE)
   !StateCheck(NearestEnemyOf(Myself), STATE_MIRRORIMAGE)
   Range(NearestEnemyOf(Myself), 5)

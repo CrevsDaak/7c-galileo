@@ -31,11 +31,12 @@ END
 
 IF
 	%bgt_check%
-	InParty("Galileo1")
-	Detect("HalflingMessager")
+        InParty("Galileo1")
+        !ActuallyInCombat() // Gali isn't dumb; he won't talk if Ogrillions are about
+//	Detect("HalflingMessager")
         Range("HalflingMessager",20)
         See("HalflingMessager")
-        Dead("HalflingMessager")
+//        Dead("HalflingMessager")
         // I think all those triggers should be enough... Right? ;D
 	Global("7C#GalileoDeadHalflingComment","LOCALS",0)
 THEN
