@@ -12,7 +12,7 @@ END
 
 COPY_EXISTING_REGEXP - ~^.*\.itm$~ override
   PATCH_IF SOURCE_SIZE > 0x71 BEGIN
-    PATCH_IF SHORT_AT 0x1c == 5 && LONG_AT 0x60 == 0 && NOT ("%SOURCE_RES%" STR_EQ "%tutu_var%AROW01" || "%SOURCE_RES%" STR_EQ "%tutu_var%AROW02") BEGIN
+    PATCH_IF SHORT_AT 0x1c == 5 && LONG_AT 0x60 == 0 && (NOT "%SOURCE_RES%" STR_EQ "%tutu_var%AROW01") BEGIN
       $arrows("%SOURCE_RES%") = 1
     END
   END ELSE BEGIN
