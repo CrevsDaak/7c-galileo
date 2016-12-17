@@ -24,7 +24,7 @@ ACTION_IF MOD_IS_INSTALLED stratagems.tp2 3010 BEGIN
   $arrows("%tutu_var%AROW02") = 0
 END
 
-COPY "7c-galileo/itm/gembow.itm" "override/7cgembow.itm"
+COPY "7c-galileo/itm/gembow.itm" "override/c7gembow.itm"
   SAY 0x8 #6864
   SAY 0xC @7738
   SAY 0x50 #6866
@@ -43,47 +43,47 @@ COPY "7c-galileo/itm/gembow.itm" "override/7cgembow.itm"
     END
   END
 
-COMPILE "7c-galileo/d/7cgembow.d" USING "7c-galileo/lang/%LANGUAGE%/gembow_dialog.tra"
+COMPILE "7c-galileo/d/c7gembow.d" USING "7c-galileo/lang/%LANGUAGE%/gembow_dialog.tra"
 
 ACTION_DEFINE_ASSOCIATIVE_ARRAY gembow BEGIN
-  "MISC19" => "7c#gbw01"
-  "MISC16" => "7c#gbw02"
-  "MISC17" => "7c#gbw03"
-  "MISC18" => "7c#gbw04"
-  "MISC22" => "7c#gbw05"
-  "MISC23" => "7c#gbw06"
-  "MISC24" => "7c#gbw07"
-  "MISC26" => "7c#gbw08"
-  "MISC21" => "7c#gbw09"
-  "MISC25" => "7c#gbw10"
-  "MISC20" => "7c#gbw11"
-  "MISC27" => "7c#gbw12"
-  "MISC29" => "7c#gbw13"
-  "MISC30" => "7c#gbw14"
-  "MISC28" => "7c#gbw15"
-  "MISC32" => "7c#gbw16"
-  "MISC31" => "7c#gbw17"
-  "MISC35" => "7c#gbw18"
-  "MISC33" => "7c#gbw19"
-  "MISC34" => "7c#gbw20"
-  "MISC36" => "7c#gbw21"
-  "MISC37" => "7c#gbw22"
-  "MISC38" => "7c#gbw23"
-  "MISC39" => "7c#gbw24"
-  "MISC40" => "7c#gbw25"
-  "MISC42" => "7c#gbw26"
-  "MISC43" => "7c#gbw27"
-  "MISC41" => "7c#gbw28"
-  "MISC44" => "7c#gbw29"
-  "MISC45" => "7c#gbw30"
-  "MISC1J" => "7c#gbw31"
+  "MISC19" => "c7#gbw01"
+  "MISC16" => "c7#gbw02"
+  "MISC17" => "c7#gbw03"
+  "MISC18" => "c7#gbw04"
+  "MISC22" => "c7#gbw05"
+  "MISC23" => "c7#gbw06"
+  "MISC24" => "c7#gbw07"
+  "MISC26" => "c7#gbw08"
+  "MISC21" => "c7#gbw09"
+  "MISC25" => "c7#gbw10"
+  "MISC20" => "c7#gbw11"
+  "MISC27" => "c7#gbw12"
+  "MISC29" => "c7#gbw13"
+  "MISC30" => "c7#gbw14"
+  "MISC28" => "c7#gbw15"
+  "MISC32" => "c7#gbw16"
+  "MISC31" => "c7#gbw17"
+  "MISC35" => "c7#gbw18"
+  "MISC33" => "c7#gbw19"
+  "MISC34" => "c7#gbw20"
+  "MISC36" => "c7#gbw21"
+  "MISC37" => "c7#gbw22"
+  "MISC38" => "c7#gbw23"
+  "MISC39" => "c7#gbw24"
+  "MISC40" => "c7#gbw25"
+  "MISC42" => "c7#gbw26"
+  "MISC43" => "c7#gbw27"
+  "MISC41" => "c7#gbw28"
+  "MISC44" => "c7#gbw29"
+  "MISC45" => "c7#gbw30"
+  "MISC1J" => "c7#gbw31"
 END
 
 INCLUDE "7c-galileo/lib/gembow_%LANGUAGE%.tpa"
 
 ACTION_PHP_EACH gembow AS gem => bow BEGIN
   ACTION_IF !FILE_EXISTS bow BEGIN
-    COPY_EXISTING 7cgembow.itm "override/%bow%.itm"
+    COPY_EXISTING c7gembow.itm "override/%bow%.itm"
       SAY 0xC EVAL $gembow_names(%bow%)
       SAY 0x54 EVAL $gembow_descs(%bow%)
       PATCH_INCLUDE "7c-galileo/lib/gembow/%bow%.tpa"
