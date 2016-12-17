@@ -1,7 +1,8 @@
 Update dialog files to use new WeiDU variables (more, easier compatibility)
 Update code using old WeiDU variables to use the new ones
 Missing scripts for the ghosts, missing items
-Gembow Generator X-Treme(TM)
+Gembow dialogue for others than c7gembow.itm (use template and auto gen)
+Gembow patches for all gembows other than c7gembow.itm
 Test everything (?)
 ???
 Profit.
