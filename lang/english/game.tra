@@ -143,6 +143,22 @@ Requires:
  4 Strength
 
 Weight: 2~
+@7990 = ~dagger name~
+@7991 = ~Vesper +1
+The origins of this wicked-looking dagger are unknown. The design hints at a sinister creation, perhaps at the hands of a lich. Even gripping the hilt causes an unnatural chill to wash over you. Despite its somewhat contorted design, it is beautifully weighted and can be thrown with pinpoint accuracy.
+
+STATISTICS:
+
+Damage: 1d4+1 (missile), +1 Cold damage
+THAC0: +1
+Speed Factor: 1
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 1~
+
 
 /*
 [[ next is placeholder for Cyrrollalee's Gift's description.
