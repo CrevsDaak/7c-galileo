@@ -135,6 +135,13 @@ COPY "7c-galileo/spl/7c#gal01.spl" override
     END
   END
 
+ADD_PROJECTILE "7c-galileo/c7#daga.pro"
+
+COPY "7c-galileo/itm/c7#daga.itm" override
+  SAY 0xC @7990
+  SAY 0x54 @7991
+  WRITE_SHORT ((LONG_AT 0x064) + 0x2a) "%c7#daga%"
+
 OUTER_SPRINT path "7c-galileo/ds"
 INCLUDE "7c-galileo/ds/ds.tph"
 
