@@ -211,8 +211,7 @@ Requires:
 
 Gem Bow of Tasloi Slaying
 
-Currently, there is a Jasper gem affixed to it. Any tasloi unfortunate enough to be struck by your arrow will explode into bloody chunks, its soul condemned to the Nine Hells for all eternity.
-
+Currently, there is a Jasper gem affixed to it. Any tasloi unfortunate enough to be struck by your arrow will explode into bloody chunks, its soul condemned to the Nine Hells for all eternity, Save vs. Death at -2 penalty to avoid.
 STATISTICS:
 
 Damage: +1
@@ -618,21 +617,21 @@ MISC16 - Fire Agate Gem - 5 GP - Infernal Gem Bow: +2 Fire Damage.
 MISC17 - Lynx Eye Gem - 7 GP - Dead Eye Gem Bow: Further +1 THAC0, +1 Damage.
 MISC18 - Sunstone Gem - 12 GP - Bright Light Gem Bow: Blind target for 2 rounds on hit. (Unless successful save vs. spell is made)
 MISC22 - Andar Gem - 15 GP - Blasted Gem Bow: +2 Magic Damage. (Needs a pretty cool effect on the flying arrow, if possible)
-MISC23 - Jasper Gem - 17 GP - Gem Bow of Tasloi Slaying: Instantly slays tasloi on hit. (Into bloody chunks. Also, the "soul leaving" effect from Finger of Death" would be proper if doable.)
+MISC23 - Jasper Gem - 17 GP - Gem Bow of Tasloi Slaying: Instantly slays tasloi on hit save vs death at -2. (Into bloody chunks. Also, the "soul leaving" effect from Finger of Death" would be proper if doable.)
 MISC24 - Tchazar Gem - 17 GP - Vengeful Gem Bow: +3 Blunt Damage.
 MISC26 - Iol Gem - 20 GP - Rainbow Gem Bow: Color Spray effect on target when hit.
 MISC21 - Skydrop Gem - 20 GP - White Gem Bow: Slows Poison on hit.
 MISC25 - Zircon Gem - 22 GP - Stone Gem Bow: Protection from Petrification while equipped.
 MISC20 - Bloodstone Gem - 25 GP - Crimson Gem Bow: Bleeding activated on hit, adding 1 extra damage for 2 rounds.
-MISC27 -Moonstone Gem - 25 GP - Lunar Gem Bow: Confuse target for 1 round on hit. (Unless successful save vs. spell is made)
+MISC27 - Moonstone Gem - 25 GP - Lunar Gem Bow: Confuse target for 1 round on hit. (Unless successful save vs. spell is made)
 MISC29 - Ziose Gem - 30 GP - Seductive Gem Bow: Charm Person effect on target when hit.
 MISC30 - Chrysoberyl Gem - 35 GP - Pernicious Gem Bow: Polymorph target into Tasloi on hit. (Unless successful save vs. spell is made at +4) (Victim adopts tasloi armor class, attacks, basically everything except hit points.)
 MISC28 - Waterstar Gem - 40 GP - Blessed Gem Bow: Protection from Evil on wearer.
 MISC32 - Shandon Gem - 45 GP - Gem Bow of Liberation: Free Action on wearer.
 MISC31 - Star Diopside Gem - 47 GP - Withering Gem Bow: Weak poison incurred on hit unless Save vs. Death is made. Should not stack with itself.
 MISC35 - Horn Coral Gem - 67 GP - Black Gem Bow: Low level Spook on target.
-MISC33 - Aquamarine Gem - 75 GP - Vampiric Gem Bow: Larloch's Minor Drain on target when hit. (Force not to allow user to gain hit points beyond their usual maximum)
-MISC34 - Garnet Gem - 87 GP - Jinxing Gem Bow: Greater Malison effect on target when hit.
+MISC33 - Aquamarine Gem - 75 GP - Vampiric Gem Bow: Heals 1 HP on hit.
+MISC34 - Garnet Gem - 87 GP - Jinxing Gem Bow: Greater Malison effect on target when hit. (Lasts 4 rounds)
 MISC36 - Pearl - 100 GP - Sirine's Gem Bow: Protection from Charm while equipped.
 MISC37 - Sphene Gem - 112 GP - Nature's Gem Bow: Entangle target on hit. (Unless successful save vs. spell is made)
 MISC38 - Black Opal - 150 GP - Molasses' Gem Bow: Grease target for 2 rounds on hit. (Unless successful save vs. spell is made)
