@@ -21,9 +21,9 @@ END
 
 CHAIN
   IF ~Global("7C#GalileoJaheiraBanter","LOCALS",1)
-      InParty(%jaheira_dv%)
-      See(%jaheira_dv%)
-      !StateCheck(%jaheira_dv%,CD_STATE_NOTVALID)
+      InParty("%jaheira_dv%")
+      See("%jaheira_dv%")
+      !StateCheck("%jaheira_dv%",CD_STATE_NOTVALID)
       !StateCheck(Myself, CD_STATE_NOTVALID)~ THEN "%jaheira_dialog%" 7c#galileo.jaheira.banter.1
   @65 /* It is fascinating for a halfling to be a follower of Finder Wyvernspur. */
 DO ~SetGlobal("7C#GalileoJaheiraBanter","LOCALS",2)~
@@ -45,9 +45,9 @@ EXIT
 
 CHAIN
   IF ~Global("7C#GalileoKivanBanter","LOCALS",1)
-      InParty(%kivan_dv%)
-      See(%kivan_dv%)
-      !StateCheck(%kivan_dv%,CD_STATE_NOTVALID)
+      InParty("%kivan_dv%")
+      See("%kivan_dv%")
+      !StateCheck("%kivan_dv%",CD_STATE_NOTVALID)
       !StateCheck(Myself, CD_STATE_NOTVALID)~ THEN 7C#GAL1J 7c#galileo.kivan.banter.1
   @95 /* Perhaps this is a touch personal, but what do you plan to do once you have exacted your revenge, Kivan? */
 DO ~SetGlobal("7C#GalileoKivanBanter","LOCALS",2)~
@@ -63,9 +63,9 @@ EXIT
 
 CHAIN
   IF ~Global("7C#GalileoKivanBanter","LOCALS",2)
-      InParty(%kivan_dv%)
-      See(%kivan_dv%)
-      !StateCheck(%kivan_dv%,CD_STATE_NOTVALID)
+      InParty("%kivan_dv%")
+      See("%kivan_dv%")
+      !StateCheck("%kivan_dv%",CD_STATE_NOTVALID)
       !StateCheck(Myself, CD_STATE_NOTVALID)~ THEN 7C#GAL1J 7c#galileo.kivan.banter.2
   @100 /* Kivan, I like you, even if you don't like me. */
 DO ~SetGlobal("7C#GalileoKivanBanter","LOCALS",3)~
@@ -77,9 +77,9 @@ EXIT
 
 CHAIN
   IF ~Global("7C#GalileoQuayleBanter","LOCALS",1)
-      InParty(%quayle_dv%)
-      See(%quayle_dv%)
-      !StateCheck(%quayle_dv%,CD_STATE_NOTVALID)
+      InParty("%quayle_dv%")
+      See("%quayle_dv%")
+      !StateCheck("%quayle_dv%",CD_STATE_NOTVALID)
       !StateCheck(Myself, CD_STATE_NOTVALID)~ THEN 7C#GAL1J 7c#galileo.quayle.banter.1
   @103 /* Hello, Quayle. */
 DO ~SetGlobal("7C#GalileoQuayleBanter","LOCALS",2)~
@@ -117,9 +117,9 @@ EXIT
 
 CHAIN
   IF ~Global("7C#GalileoCoranBanter","LOCALS",1)
-      InParty(%coran_dv%)
-      See(%coran_dv%)
-      !StateCheck(%coran_dv%,CD_STATE_NOTVALID)
+      InParty("%coran_dv%")
+      See("%coran_dv%")
+      !StateCheck("%coran_dv%",CD_STATE_NOTVALID)
       !StateCheck(Myself, CD_STATE_NOTVALID)~ THEN 7C#GAL1J 7c#galileo.coran.banter.1
   @119 /* Ah, Coran. A lover, fighter, and hunter. Can one meet a more sophisticated adventurer? */
 DO ~SetGlobal("7C#GalileoCoranBanter","LOCALS",2)~
@@ -135,9 +135,9 @@ EXIT
 
 CHAIN
   IF ~Global("7C#GalileoCoranBanter","LOCALS",2)
-      InParty(%coran_dv%)
-      See(%coran_dv%)
-      !StateCheck(%coran_dv%,CD_STATE_NOTVALID)
+      InParty("%coran_dv%")
+      See("%coran_dv%")
+      !StateCheck("%coran_dv%",CD_STATE_NOTVALID)
       !StateCheck(Myself, CD_STATE_NOTVALID)~ THEN 7C#GAL1J 7c#galileo.coran.banter.2
   @124 /* Your skills cause me to question whether or not you ever put that bow down. */
 DO ~SetGlobal("7C#GalileoCoranBanter","LOCALS",3)~
@@ -153,9 +153,9 @@ EXIT
 
 CHAIN
   IF ~Global("7C#GalileoGarrickBanter","LOCALS",1)
-      InParty(%garrick_dv%)
-      See(%garrick_dv%)
-      !StateCheck(%garrick_dv%,CD_STATE_NOTVALID)
+      InParty("%garrick_dv%")
+      See("%garrick_dv%")
+      !StateCheck("%garrick_dv%",CD_STATE_NOTVALID)
       !StateCheck(Myself, CD_STATE_NOTVALID)~ THEN "%garrick_dialog%" 7c#galileo.garrick.banter.1
   @129 /* Life is glorious. */
 DO ~SetGlobal("7C#GalileoGarrickBanter","LOCALS",2)~
@@ -165,9 +165,9 @@ EXIT
 
 CHAIN
   IF ~Global("7C#GalileoGarrickBanter","LOCALS",2)
-      InParty(%garrick_dv%)
-      See(%garrick_dv%)
-      !StateCheck(%garrick_dv%,CD_STATE_NOTVALID)
+      InParty("%garrick_dv%")
+      See("%garrick_dv%")
+      !StateCheck("%garrick_dv%",CD_STATE_NOTVALID)
       !StateCheck(Myself, CD_STATE_NOTVALID)~ THEN "%garrick_dialog%" 7c#galileo.garrick.banter.2
   @131 /* Tell me, Galileo, what is your favorite instrument? */
 DO ~SetGlobal("7C#GalileoGarrickBanter","LOCALS",3)~
@@ -181,9 +181,9 @@ EXIT
 
 CHAIN
   IF ~Global("7C#GalileoGarrickBanter","LOCALS",3)
-      InParty(%garrick_dv%)
-      See(%garrick_dv%)
-      !StateCheck(%garrick_dv%,CD_STATE_NOTVALID)
+      InParty("%garrick_dv%")
+      See("%garrick_dv%")
+      !StateCheck("%garrick_dv%",CD_STATE_NOTVALID)
       !StateCheck(Myself, CD_STATE_NOTVALID)~ THEN 7C#GAL1J 7c#galileo.garrick.banter.3
   @135 /* It is good to venture alongside another man with a positive outlook and a taste for the more refined things in life. */
 DO ~SetGlobal("7C#GalileoGarrickBanter","LOCALS",4)~
@@ -193,8 +193,8 @@ EXIT
 
 CHAIN
   IF ~Global("7C#GalileoTiaxBanter","LOCALS",1)
-      InParty(%tiax_dv%)
-      See(%tiax_dv%)
+      InParty("%tiax_dv%")
+      See("%tiax_dv%")
       !StateCheck(%tiax_dv%,CD_STATE_NOTVALID)
       !StateCheck(Myself, CD_STATE_NOTVALID)~ THEN "%tiax_dialog%" 7c#galileo.tiax.banter.1
   @137 /* Tiax rules all! */
@@ -217,8 +217,8 @@ EXIT
 
 CHAIN
   IF ~Global("7C#GalileoXanBanter","LOCALS",1)
-      InParty(%xan_dv%)
-      See(%xan_dv%)
+      InParty("%xan_dv%")
+      See("%xan_dv%")
       !StateCheck(%xan_dv%,CD_STATE_NOTVALID)
       !StateCheck(Myself, CD_STATE_NOTVALID)~ THEN 7C#GAL1J 7c#galileo.xan.banter.1
   @145 /* It is your very own gloom that spells your doom, Xan. */

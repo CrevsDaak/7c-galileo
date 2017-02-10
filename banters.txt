@@ -5,14 +5,14 @@ NPC-NPC BANTERS
 =======
 Contents
 
-Jaheira - 1
+Jaheira - 1 - Done
 Ajantis - 1
 Montaron - 1
-Kivan - 2
+Kivan - 2 - Done
 	Post-revenge?
 	Let's Have a smoke
 Minsc - 1
-Quayle - 1
+Quayle - 1 - Done
 Safana - 1
 Alora - 6
 	Flirting and Rhyming
@@ -21,21 +21,21 @@ Alora - 6
 	Honeymoon
 	Parental Drama
 	Resolution and a Promise
-Coran - 2
+Coran - 2 - Done
 	Lover, Fighter, Hunter
 	Curves
 Eldoth - 2
 	Douchebaggery + Garrick
 	General Douchebaggery
-Garrick - 3
+Garrick - 3 - Done
 	Life is Glorious
 	Favorite Instrument
 	More Flattery
 Imoen - 2
 	Pick Pocket Charname
 	Imaginary Friends
-Tiax - 1
-Xan - 1
+Tiax - 1 - Done
+Xan - 1 - Done
 Baeloth - 1
 Neera - 2
 	Wild Mage Drama
