@@ -1,6 +1,6 @@
 // -*- weidu-tp2 -*-
 
-// currently, it's a BG1 only file, since misc1j cannot be found in BG2 (misc6z has to be used instead).
+// currently, it's a BG1-only file, since misc1j cannot be found in BG2 (misc6z has to be used instead).
 
 COPY_EXISTING "%avaricem%.cre" override
   ADD_CRE_ITEM misc1j #0 #0 #0 identified INV
@@ -45,6 +45,17 @@ COPY "7c-galileo/itm/gembow.itm" "override/c7gembow.itm"
 
 COMPILE "7c-galileo/d/c7gembow.d" USING "7c-galileo/lang/%LANGUAGE%/gembow_dialog.tra"
 
+APPEND race.ids "244 TASLOI" UNLESS "TASLOI"
+
+COPY_EXISTING_REGEXP "^.*\.itm$" override
+  PATCH_IF SOURCE_SIZE > 0x71 BEGIN
+    READ_LONG 0xC name
+    PATCH_IF name == 8752 || name == 8753 BEGIN
+      WRITE_BYTE 0x272 244
+    END
+  END
+BUT_ONLY
+
 ACTION_DEFINE_ASSOCIATIVE_ARRAY gembow BEGIN
   "MISC19" => "c7#gbw01"
   "MISC16" => "c7#gbw02"
@@ -82,24 +93,22 @@ END
 INCLUDE "7c-galileo/lib/gembow_%LANGUAGE%.tpa"
 
 ACTION_PHP_EACH gembow AS gem => bow BEGIN
-  ACTION_IF !FILE_EXISTS bow BEGIN
-    COPY_EXISTING c7gembow.itm "override/%bow%.itm"
-      SAY 0xC EVAL $gembow_names(%bow%)
-      SAY 0x54 EVAL $gembow_descs(%bow%)
-      PATCH_INCLUDE "7c-galileo/lib/gembow/%bow%.tpa"
+  COPY_EXISTING c7gembow.itm "override/%bow%.itm"
+    SAY 0xC EVAL $gembow_names(%bow%)
+    SAY 0x54 EVAL $gembow_descs(%bow%)
+    PATCH_INCLUDE "7c-galileo/lib/gembow/%bow%.tpa"
 
-    COPY_EXISTING "%gem%.itm" override
-      GET_STRREF (LONG_AT 0xC) gem_name
-    BUT_ONLY
+  COPY_EXISTING "%gem%.itm" override
+    GET_STRREF (LONG_AT 0xC) gem_name
+  BUT_ONLY
 
-    COPY "7c-galileo/d/gembow/template.d" "7c-galileo/d/gembow/%bow%.d"
-      REPLACE_TEXTUALLY ~gem_item_name_goes_here~ ~%gem%~
-      REPLACE_TEXTUALLY ~gembow_item_name_goes_here~ ~%bow%~
+  COPY "7c-galileo/d/gembow/template.d" "7c-galileo/d/gembow/%bow%.d"
+    REPLACE_TEXTUALLY ~gem_item_name_goes_here~ ~%gem%~
+    REPLACE_TEXTUALLY ~gembow_item_name_goes_here~ ~%bow%~
 
-    COPY "7c-galileo/lang/%LANGUAGE%/gembow/template.tra" "7c-galileo/lang/%LANGUAGE%/gembow/%bow%.tra"
-      REPLACE_TEXTUALLY ~gem_name_goes_here~ ~%gem_name%~
-      REPLACE_TEXTUALLY ~gembow_name_goes_here~ ~$gembow_names(%bow%)~
+  COPY "7c-galileo/lang/%LANGUAGE%/gembow/template.tra" "7c-galileo/lang/%LANGUAGE%/gembow/%bow%.tra"
+    REPLACE_TEXTUALLY ~gem_name_goes_here~ ~%gem_name%~
+    REPLACE_TEXTUALLY ~gembow_name_goes_here~ ~$gembow_names(%bow%)~
 
-    COMPILE "7c-galileo/d/gembow/%bow%.d" EVAL USING "7c-galileo/lang/%LANGUAGE%/gembow/%bow%.tra" "7c-galileo/lang/%LANGUAGE%/gembow_dialog.tra"
-  END
+  COMPILE "7c-galileo/d/gembow/%bow%.d" EVAL USING "7c-galileo/lang/%LANGUAGE%/gembow/%bow%.tra" "7c-galileo/lang/%LANGUAGE%/gembow_dialog.tra"
 END

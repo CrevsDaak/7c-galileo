@@ -1,0 +1,14 @@
+// c7#gbw16.tpa.tpa, created 2016-12-19 14:09:40 -0300 by /Users/nico/7c-galileo/gembow_gen.rb.
+
+// I just hope this works... It's way too hackish.
+
+fx_size = 0
+INNER_ACTION BEGIN
+  COPY_EXISTING ring09.itm override
+    fx_size = (SOURCE_SIZE - (LONG_AT 0x64))
+    READ_ASCII (LONG_AT 0x64) fx fx_size
+  BUT_ONLY
+END
+
+INSERT_BYTES (LONG_AT 0x64) fx_size
+WRITE_ASCII (LONG_AT 0x64) fx (fx_size)

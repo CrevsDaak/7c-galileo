@@ -1,0 +1,69 @@
+// c7#gbw18.tpa.tpa, created 2016-12-19 14:09:40 -0300 by /Users/nico/7c-galileo/gembow_gen.rb.
+LPF ADD_ITEM_EFFECT
+ INT_VAR
+   type = 4
+   opcode = 142
+   duration = 30
+   parameter2 = 36
+   resist_dispel = 1
+   target = 2
+   savingthrow = 1
+END
+
+LPF ADD_ITEM_EFFECT
+  INT_VAR
+    type = 4
+    opcode = 24
+    target = 2
+    resist_dispel = 1
+    duration = 30
+    savingthrow = 1
+END
+
+LPF ADD_ITEM_EFFECT
+  INT_VAR
+    type = 4
+    opcode = 139
+    parameter1 = 25818
+    target = 2
+    timing = 1
+    resist_dispel = 1
+    duration = 30
+    savingthrow = 1
+END
+
+LPF ADD_ITEM_EFFECT
+  INT_VAR
+    type = 4
+    opcode = 174
+    target = 2
+    timing = 4
+    resist_dispel = 1
+    duration = 30
+    savingthrow = 1
+  STR_VAR
+    resource = "EFF_E06"
+END
+
+LPF ADD_ITEM_EFFECT
+  INT_VAR
+    type = 4
+    opcode = 174
+    target = 2
+    timing = 1
+    resist_dispel = 1
+    savingthrow = 1
+  STR_VAR
+    resource = "EFF_M79"
+END
+
+LPF ADD_ITEM_EFFECT
+  INT_VAR
+    type = 4
+    opcode = 141
+    target = 2
+    timing = 1
+    resist_dispel = 1
+    parameter2 = 17
+    savingthrow = 1
+END

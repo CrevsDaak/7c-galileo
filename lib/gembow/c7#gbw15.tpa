@@ -1,0 +1,59 @@
+// c7#gbw15.tpa.tpa, created 2016-12-19 14:09:40 -0300 by /Users/nico/7c-galileo/gembow_gen.rb.
+LPF ADD_ITEM_EQEFFECT
+  INT_VAR
+    opcode = 219
+    target = 1
+    parameter1 = 3
+    parameter2 = 8
+    timing = 2
+    resist_dispel = 3
+END
+
+LPF ADD_ITEM_EQEFFECT
+  INT_VAR
+    opcode = 215
+    target = 1
+    parameter2 = 1
+    resist_dispel = 3
+    duration = 4
+  STR_VAR
+    resource = "sprotect"
+END
+
+LPF ADD_ITEM_EQEFFECT
+  INT_VAR
+    opcode = 100
+    target = 1
+    resist_dispel = 3
+    timing = 2
+    parameter1 = 9
+    parameter2 = 7
+END
+
+LPF ADD_ITEM_EQEFFECT
+  INT_VAR
+    opcode = 233
+    target = 1
+    resist_dispel = 3
+    timing = 2
+    parameter1 = 1
+    parameter2 = 117
+END
+
+LPF ADD_ITEM_EQEFFECT
+  INT_VAR
+    opcode = 142
+    target = 1
+    timing = 2
+    resist_dispel = 3
+    parameter2 = 9
+END
+
+LPF ADD_ITEM_EQEFFECT
+  INT_VAR
+    opcode = 139
+    target = 1
+    timing = 1
+    resist_dispel = 3
+    parameter1 = 25815
+END

@@ -1,0 +1,25 @@
+// c7#gbw19.tpa.tpa, created 2016-12-19 14:09:40 -0300 by /Users/nico/7c-galileo/gembow_gen.rb.
+// change to heal 1hp and nothing else, add healing animation.
+LPF ADD_ITEM_EFFECT
+  INT_VAR
+    opcode = 215
+    parameter2 = 1
+    target = 1
+    duration = 3
+  STR_VAR
+    resource = sphealin
+END
+LPF ADD_ITEM_EFFECT
+  INT_VAR
+    opcode = 17
+    parameter1 = 1
+    target = 1
+    timing = 9
+END
+LPF ADD_ITEM_EFFECT
+  INT_VAR
+    opcode = 139
+    parameter1 = 14022
+    duration = 1
+    target = 1
+END

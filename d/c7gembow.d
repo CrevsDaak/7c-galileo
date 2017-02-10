@@ -2,23 +2,28 @@
 
 BEGIN ~c7gembow~
 
-IF ~~ BEGIN 1
+IF ~!CombatCounter(0)~ BEGIN worthless
+  SAY @70 /* u can't affix gems during combat, get rekt */
+    IF ~~ DO ~~ EXIT
+END
+
+IF ~CombatCounter(0)~ BEGIN 1
   SAY @1 /* The gmebow has no gems watch wanna do u punk */
     IF ~~ REPLY @67 /* lemme pick a shiny 4 mah bow pls bruh */ GOTO 4
     IF ~~ REPLY @2 /* get me out u bieathc bug off u lil piss of shiet */ GOTO 2
 END
 
-IF ~~ BEGIN 2
+IF ~CombatCounter(0)~ BEGIN 2
   SAY @3 /* u put tha gamblo away */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 3
+IF ~CombatCounter(0)~ BEGIN 3
   SAY @35 /* u dip dat shiet into the gembu and shove it away */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 4
+IF ~CombatCounter(0)~ BEGIN 4
   SAY @67 /* whihc jnsknfkjdnfskdm u want to insert bhaal's deep in ur gemcuntblow */
     IF ~~ REPLY @69 GOTO 2
     IF ~PartyHasItemIdentified("MISC19")~ REPLY @4 /* attach a Turquoise Gem */
@@ -59,7 +64,7 @@ IF ~~ BEGIN 4
        DO ~TakePartyItemNum("MISC35",1) DestroyItem("MISC35") TakePartyItem("c7gembow") DestroyItem("c7gembow") GiveItemCreate("c7#gbw18",LastTalkedToBy(Myself),0,0,0)~ GOTO 22
     IF ~PartyHasItemIdentified("MISC33")~ REPLY @22 /* attach a Aquamarine Gem */
        DO ~TakePartyItemNum("MISC33",1) DestroyItem("MISC33") TakePartyItem("c7gembow") DestroyItem("c7gembow") GiveItemCreate("c7#gbw19",LastTalkedToBy(Myself),0,0,0)~ GOTO 23
-2    IF ~PartyHasItemIdentified("MISC34")~ REPLY @23 /* attach a Garnet Gem */
+    IF ~PartyHasItemIdentified("MISC34")~ REPLY @23 /* attach a Garnet Gem */
        DO ~TakePartyItemNum("MISC34",1) DestroyItem("MISC34") TakePartyItem("c7gembow") DestroyItem("c7gembow") GiveItemCreate("c7#gbw20",LastTalkedToBy(Myself),0,0,0)~ GOTO 24
     IF ~PartyHasItemIdentified("MISC36")~ REPLY @24 /* attach a Pearl */
        DO ~TakePartyItemNum("MISC36",1) DestroyItem("MISC36") TakePartyItem("c7gembow") DestroyItem("c7gembow") GiveItemCreate("c7#gbw21",LastTalkedToBy(Myself),0,0,0)~ GOTO 25
@@ -85,157 +90,157 @@ IF ~~ BEGIN 4
        DO ~TakePartyItemNum("MISC1J",1) DestroyItem("MISC1J") TakePartyItem("c7gembow") DestroyItem("c7gembow") GiveItemCreate("c7#gbw31",LastTalkedToBy(Myself),0,0,0)~ GOTO 35
 END
 
-IF ~~ BEGIN 5
+IF ~CombatCounter(0)~ BEGIN 5
   SAY @36 /* Turquoise Gem */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 6
+IF ~CombatCounter(0)~ BEGIN 6
   SAY @37 /* Fire Agate Gem */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 7
+IF ~CombatCounter(0)~ BEGIN 7
   SAY @38 /* Lynx Eye Gem */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 8
+IF ~CombatCounter(0)~ BEGIN 8
   SAY @39 /* Sunstone Gem */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 9
+IF ~CombatCounter(0)~ BEGIN 9
   SAY @40 /* Andar Gem */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 10
+IF ~CombatCounter(0)~ BEGIN 10
   SAY @41 /* Jasper Gem */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 11
+IF ~CombatCounter(0)~ BEGIN 11
   SAY @42 /* Tchazar Gem */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 12
+IF ~CombatCounter(0)~ BEGIN 12
   SAY @43 /* Iol Gem */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 13
+IF ~CombatCounter(0)~ BEGIN 13
   SAY @44 /* Skydrop Gem */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 14
+IF ~CombatCounter(0)~ BEGIN 14
   SAY @45 /* Zircon Gem */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 15
+IF ~CombatCounter(0)~ BEGIN 15
   SAY @46 /* Bloodstone Gem */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 16
+IF ~CombatCounter(0)~ BEGIN 16
   SAY @47 /* Moonstone Gem */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 17
+IF ~CombatCounter(0)~ BEGIN 17
   SAY @48 /* Ziose Gem */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 18
+IF ~CombatCounter(0)~ BEGIN 18
   SAY @49 /* Chrysoberyl Gem */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 19
+IF ~CombatCounter(0)~ BEGIN 19
   SAY @50 /* Waterstar Gem */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 20
+IF ~CombatCounter(0)~ BEGIN 20
   SAY @51 /* Shandon Gem */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 21
+IF ~CombatCounter(0)~ BEGIN 21
   SAY @52 /* Star Diopside Gem */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 22
+IF ~CombatCounter(0)~ BEGIN 22
   SAY @53 /* Horn Coral Gem */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 23
+IF ~CombatCounter(0)~ BEGIN 23
   SAY @54 /* Aquamarine Gem */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 24
+IF ~CombatCounter(0)~ BEGIN 24
   SAY @55 /* Garnet Gem */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 25
+IF ~CombatCounter(0)~ BEGIN 25
   SAY @56 /* Pearl */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 26
+IF ~CombatCounter(0)~ BEGIN 26
   SAY @57 /* Sphene Gem */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 27
+IF ~CombatCounter(0)~ BEGIN 27
   SAY @58 /* Black Opal */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 28
+IF ~CombatCounter(0)~ BEGIN 28
   SAY @59 /* Water Opal */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 29
+IF ~CombatCounter(0)~ BEGIN 29
   SAY @60 /* Moonbar Gem */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 30
+IF ~CombatCounter(0)~ BEGIN 30
   SAY @61 /* Diamond */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 31
+IF ~CombatCounter(0)~ BEGIN 31
   SAY @62 /* Emerald */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 32
+IF ~CombatCounter(0)~ BEGIN 32
   SAY @63 /* Star Sapphire */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 33
+IF ~CombatCounter(0)~ BEGIN 33
   SAY @64 /* King's Tears */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 34
+IF ~CombatCounter(0)~ BEGIN 34
   SAY @65 /* Rogue Stone */
     IF ~~ DO ~~ EXIT
 END
 
-IF ~~ BEGIN 35
+IF ~CombatCounter(0)~ BEGIN 35
   SAY @66 /* Glittering Beljuril Gemstone */
     IF ~~ DO ~~ EXIT
 END

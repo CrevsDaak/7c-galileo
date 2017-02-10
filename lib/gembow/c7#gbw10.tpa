@@ -1,0 +1,42 @@
+// c7#gbw10.tpa.tpa, created 2016-12-19 14:09:40 -0300 by /Users/nico/7c-galileo/gembow_gen.rb.
+LPF ADD_ITEM_EQEFFECT
+  INT_VAR
+    opcode = 142
+    parameter2 = 10
+    target = 1
+    timing = 2
+END
+
+LPF ADD_ITEM_EQEFFECT
+  INT_VAR
+    opcode = 101
+    parameter2 = 134
+    target = 1
+    timing = 2
+END
+
+LPF ADD_ITEM_EQEFFECT
+  INT_VAR
+    opcode = 328
+    parameter2 = 107
+    target = 1
+    timing = 2
+END
+
+LPF ADD_ITEM_EQEFFECT
+  INT_VAR
+    opcode = 267
+    parameter1 = 25863
+    target = 1
+    timinig = 2
+END
+
+LPF ADD_ITEM_EQEFFECT
+  INT_VAR
+    opcode = 215
+    target = 1
+    parameter2 = 1
+    duration = 1
+  STR_VAR
+    resource = "icrmpari"
+END

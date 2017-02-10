@@ -1,0 +1,37 @@
+// c7#gbw20.tpa.tpa, created 2016-12-19 14:09:40 -0300 by /Users/nico/7c-galileo/gembow_gen.rb.
+INNER_ACTION BEGIN
+  COPY "7c-galileo/spl/c7#gbw20.spl" override
+
+  COPY_EXISTING spwi412.spl override
+    LPF ADD_SPELL_EFFECT
+      INT_VAR
+        opcode = 321
+	duration = 666666
+	power = 4
+	resist_dispel = 1
+	target = 2
+      STR_VAR
+        resource = c7#gbw20
+    END
+    GET_OFFSET_ARRAY ab SPL_V10_HEADERS
+    PHP_EACH ab AS d => ab_off BEGIN
+      READ_SHORT (ab_off + 0x10) lvl
+      GET_OFFSET_ARRAY2 fx ab_off SPL_V10_HEAD_EFFECTS
+      PHP_EACH fx AS d => fx_off BEGIN
+        PATCH_IF ((SHORT_AT fx_off) == 321) && ((LONG_AT (fx_off + 0xE)) == 666666) BEGIN
+	  WRITE_LONG (fx_off + 0xE) (lvl*2*6)
+	END
+      END
+    END
+  BUT_ONLY
+END
+
+LPF ADD_ITEM_EFFECT
+  INT_VAR
+    opcode = 146
+    parameter1 = 1
+    parameter2 = 1
+    target = 2
+  STR_VAR
+    resource = c7#gbw20
+END

@@ -1,0 +1,45 @@
+// c7#gbw13.tpa.tpa, created 2016-12-19 14:09:40 -0300 by /Users/nico/7c-galileo/gembow_gen.rb.
+LPF ADD_ITEM_EFFECT
+  INT_VAR
+    type = 4
+    opcode = 5
+    duration = 24
+    target = 2
+    parameter1 = 1
+    resist_dispel = 1
+    savingthrow = 1
+    savebonus = 4
+END
+
+LPF ADD_ITEM_EFFECT
+  INT_VAR
+    type = 4
+    target = 2
+    opcode = 174
+    duration = 24
+    timing = 3
+    resist_dispel = 1
+    savingthrow = 1
+    savebonus = 4
+END
+// look, I've even implemented the elven racial immunities!
+PATCH_FOR_EACH race IN 2 3 BEGIN
+  PATCH_IF race == 2 BEGIN
+    rval = 90
+  END ELSE BEGIN
+    rval = 30
+  END
+
+  PATCH_FOR_EACH n IN 0 1 2 3 4 5 6 BEGIN
+    LPF ADD_ITEM_EFFECT
+      INT_VAR
+        type = 4
+        opcode = 177
+	target = 2
+	parameter1 = race
+	parameter2 = 4
+	probability1 = rval
+      STR_VAR
+        resource = EVAL "cdelfcm%n%"
+  END
+END

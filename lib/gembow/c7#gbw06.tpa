@@ -1,0 +1,23 @@
+// c7#gbw06.tpa.tpa, created 2016-12-19 14:09:40 -0300 by /Users/nico/7c-galileo/gembow_gen.rb.
+LPF ADD_ITEM_EFFECT
+  INT_VAR
+    opcode = 55
+    parameter1 = 244
+    parameter2 = 4
+    timing = 1
+END
+
+LPF ADD_ITEM_EFFECT
+  INT_VAR
+    opcode = 177
+    type = 4
+    target = 2
+    parameter2 = 4
+    parameter1 = 244
+  STR_VAR
+    resource = "c7#gbw06"
+END
+
+INNER_ACTION BEGIN
+  COPY "7c-galileo/eff/c7#gbw06.eff" override
+END

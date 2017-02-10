@@ -1,0 +1,12 @@
+// c7#gbw17.tpa.tpa, created 2016-12-19 14:09:40 -0300 by /Users/nico/7c-galileo/gembow_gen.rb.
+LPF ADD_ITEM_EFFECT
+  INT_VAR
+    type = 4
+    opcode = 25
+    target = 2
+    timing = 0
+    duration = 12
+    parameter1 = 2
+    parameter2 = 2
+    resist_dispel = 1
+END

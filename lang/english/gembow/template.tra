@@ -1,0 +1,14 @@
+// -*- weidu-tra -*-
+
+/* NOTE: don't change the words: 'gem_name_goes_here' and 'gembow_name_goes_here'
+ * leave them where they should be, their translation is taken from the game
+ * in case of the gems and from gembow_%LANGUAGE%.tpa for the gem bows.
+ */
+
+@0 = ~Currently, there is a gem_name_goes_here affixed to the Gem Bow. What would you like to do?~
+@1 = ~Remove the gem_name_goes_here from the Gem Bow.~
+// @2 is identical to @2 from gembow_dialog.tra
+@2 = ~get me out u bieathc bug off u lil piss of shiet [placeholder]~
+@3 = ~You successfully remove the gem_name_goes_here from the gembow_name_goes_here.~
+// @4 is identical to @3 from gembow_dialog.tra
+@4 = ~u put tha gamblo away [placeholder]~
