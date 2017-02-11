@@ -3,23 +3,23 @@
 BEGIN ~c7gembow~
 
 IF ~!CombatCounter(0)~ BEGIN worthless
-  SAY @70 /* u can't affix gems during combat, get rekt */
+  SAY @70 /* You pause to admire your Gem Bow for a moment before remembering you’re in the middle of combat, and that’s a rather pressing matter. */
     IF ~~ DO ~~ EXIT
 END
 
 IF ~CombatCounter(0)~ BEGIN 1
-  SAY @1 /* The gmebow has no gems watch wanna do u punk */
-    IF ~~ REPLY @67 /* lemme pick a shiny 4 mah bow pls bruh */ GOTO 4
-    IF ~~ REPLY @2 /* get me out u bieathc bug off u lil piss of shiet */ GOTO 2
+  SAY @1 /* The Gem Bow is currently uncharged with no gem affixed to its indentation. */
+    IF ~~ REPLY @67 /* Affix a gem. */ GOTO 4
+    IF ~~ REPLY @2 /* Do nothing. */ GOTO 2
 END
 
 IF ~CombatCounter(0)~ BEGIN 2
-  SAY @3 /* u put tha gamblo away */
+  SAY @3 /* You put the Gem Bow away. */
     IF ~~ DO ~~ EXIT
 END
 
 IF ~CombatCounter(0)~ BEGIN 3
-  SAY @35 /* u dip dat shiet into the gembu and shove it away */
+  SAY @35 /* u dip dat shiet into the gembu and shove it away ... bitch */
     IF ~~ DO ~~ EXIT
 END
 
