@@ -9,7 +9,7 @@ END
 
 IF ~CombatCounter(0)~ BEGIN 1
   SAY @1 /* The Gem Bow is currently uncharged with no gem affixed to its indentation. */
-    IF ~~ REPLY @67 /* Affix a gem. */ GOTO 4
+    IF ~~ REPLY @68 /* Affix a gem. */ GOTO 4
     IF ~~ REPLY @2 /* Do nothing. */ GOTO 2
 END
 
