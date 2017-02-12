@@ -1,8 +1,5 @@
 // -*- weidu-tra -*-
 
-// ask Quartz next week for the real strings, and drop the placeholders
-// but ONLY from this file (keep them in the comments on the other one).
-
 @1 = ~The Gem Bow is currently uncharged with no gem affixed to its indentation.~
 @2 = ~Do nothing.~
 @3 = ~You put the Gem Bow away.~
@@ -38,38 +35,38 @@
 @33 = ~Affix a Rogue Stone to the indentation.~
 @34 = ~Affix a Glittering Beljuril Gemstone to the indentation.~
 @35 = ~u dip dat shiet into the gembu and shove it away [placeholder]~
-@36 = ~With a Turquoise gem attached, the Gem Bow glitters more than ever, making its wearer appear to be incredibly desirable.~
-@37 = ~With a Fire Agate gem attached, any arrows shot from the Gem Bow now catch fire, doing additional damage upon impact.~
-@38 = ~With a Lynx Eye gem attached, the Gem Bow is even more deadly and likely to make its mark.~
-@39 = ~With a Sunstone gem attached, each arrow fired has a chance to blind its target.~
-@40 = ~With an Andar gem attached, arrows fired from the Gem Bow assault their target with magical energy.~
-@41 = ~With a Jasper gem attached, you suddenly get the odd feeling this Gem Bow harbors a palpable hatred for tasloi.~
-@42 = ~With a Tchazar gem attached, each arrow fired pelts its targets with extreme concussive force.~
-@43 = ~With an Iol gem attached, each arrow fired strikes its target with a dazzling flurry of colors.~
-@44 = ~With a Skydrop gem attached, each arrow that makes its mark slows poison.~
-@45 = ~With a Zircon gem attached, the Gem Bow’s wielder is protected from petrification.~
-@46 = ~With a Bloodstone gem attached, the Gem Bow’s arrows cause additional bleeding in its targets.~
-@47 = ~With a Moonstone gem attached, the Gem Bow’s victims now find it confusing they are being used as a pincushion.~
-@48 = ~With a Ziose gem attached, the Gem Bow’s user can pretend to be some kind of sadistic Cupid.~
-@49 = ~With a Chrysoberyl gem attached, the Gem Bow’s victims run the risk of being polymorphed into tasloi.~
-@50 = ~The Gem Bow radiates goodness and ebbs with holy light. With a Waterstar gem attached, the Gem Bow’s user is protected from evil.~
-@51 = ~With a Shandon gem attached, the Gem Bow’s user becomes immune to anything that would boost or hinder their movement.~
+@36 = ~When you attach a Turquoise gem, the Gem Bow begins to glitter more than ever.~
+@37 = ~With a Fire Agate gem attached, the tips of arrows nocked to the Gem Bow glow red with searing heat.~
+@38 = ~When you attach a Lynx Eye gem, the Gem Bow begins to feel even more like an extension of your hands.~
+@39 = ~With a Sunstone gem attached, the tips of arrows nocked to the Gem Bow glow painfully white.~
+@40 = ~With an Andar gem attached, the string of the Gem Bow crackles with magical energy.~
+@41 = ~With a Jasper gem attached, the Gem Bow seems to radiate with palpable hatred for its age-old enemy.~
+@42 = ~With a Tchazar gem attached, the tips of arrows nocked to the Gem Bow morph into something of a hammerhead.~
+@43 = ~With an Iol gem attached, the tips of arrows nocked to the Gem Bow glow a small but brilliant rainbow of colors.~
+@44 = ~With a Skydrop gem attached, the tips of arrows nocked to the Gem Bow glow with a subtle bluish light.~
+@45 = ~When you attach a Zircon gem, the Gem Bow suddenly loses all pliability and turns to stone. A moment later, the stone encasing cracks and falls to pieces onto the ground below.~
+@46 = ~With a Bloodstone gem attached, the tips of arrows nocked to the Gem Bow grow additional spikes and barbs.~
+@47 = ~When you attach a Moonstone gem, your head momentarily spins and churns before subsiding.~
+@48 = ~When you attach a Ziose gem, you feel your self-confidence grow quite suddenly.~
+@49 = ~With a Chrysoberyl gem attached, the Gem Bow rather paradoxically communicates an insatiable desire to convert all living beings into the image of its age-old enemy.~
+@50 = ~With a Waterstar gem attached, the Gem Bow radiates goodness and ebbs with holy light.~
+@51 = ~With a Shandon gem attached, you suddenly feel empowered and unstoppable.~
 @52 = ~With a Star Diopside gem attached, the tips of arrows nocked to the Gem Bow suddenly glow a sickly, poisonous green.~
-@53 = ~With a Horn Coral gem attached, the Gem Bow’s arrows become more terrifying than usual.~
-@54 = ~With an Aquamarine gem attached, the Gem Bow’s arrows steal a portion of its enemy’s life force and returns it to the user.~
-@55 = ~With a Garnet gem attached, the Gem Bow’s victims feel even more unlucky than they usually would, being shot full of arrows and all.~
-@56 = ~With a Pearl attached, the Gem Bow’s user finds charm magics not all that alluring.~
+@53 = ~With a Horn Coral gem attached, the tips of arrows nocked to the Gem Bow become almost painfully black. You find yourself unable to look directly at the arrow tips.~
+@54 = ~With an Aquamarine gem attached, arrows nocked to the Gem Bow periodically assume a subtle blue tint.~
+@55 = ~You feel a sudden sense of dread wash over you when you attach a Garnet gem to the Gem Bow.~
+@56 = ~When you attach a Pearl to the Gem Bow, you are immediately certain you have made the right choice.~
 @57 = ~With a Sphene gem attached, the tips of arrows nocked to the Gem Bow grow nimble, constricting vines.~
-@58 = ~With a Black Opal attached, the tips of arrows nocked to the Gem Bow become coated in a sickly black ichor.~
-@59 = ~The Gem Bow grows subtly yet noticeably warm and comforting. With a Water Opal attached, the Gem Bow’s user slowly regenerates health.~
+@58 = ~With a Black Opal attached, arrows nocked to the Gem Bow become coated in a sickly black ichor.~
+@59 = ~When you attach a Water Opal, the Gem Bow grows subtly yet noticeably warm and comforting.~
 @60 = ~With a Moonbar gem attached, the tips of arrows nocked to the Gem Bow become incredibly cold.~
 @61 = ~The small hairs on your hands and wrist begin to stand on end. With a Diamond attached, the tips of arrows nocked to the Gem Bow become electrically charged.~
 @62 = ~With an Emerald attached, the tips of arrows nocked to the Gem Bow drip a sickly, acidic green.~
 @63 = ~With a Star Sapphire attached, the tips of arrows nocked to the Gem Bow become sharper and more elongated than before.~
-@64 = ~The Gem Bow subtly hums with powerful and mysterious magics. A single thought runs almost invasively through the user’s head: Do you feel lucky, punk?~
-@65 = ~With a Rogue Stone attached, the Gem Bow begins to feel as a counterbalance. Its user feels more nimble than before..~
+@64 = ~When you attach a Kings Tears to the Gem Bow, you feel bold and reckless. It subtly hums with powerful and mysterious magics.~
+@65 = ~With a Rogue Stone attached, the Gem Bow begins to feel as a counterbalance. You feel more nimble than before.~
 @66 = ~The Gem Bow bends and convulses in its users hands, almost as if it were fighting the Glittering Beljuril Stone. After a moment, it slowly becomes inanimate once again, as if stubbornly accepting the stone.~
 @67 = ~Which gem would you like to equip?~
-@68 = ~lemme pick a shiny 4 mah bow pls bruh [placeholder]~
-@69 = ~don't wanna do anything with the gembow I WANT TO GO HOME I WANT TO BE FREE [placeholder]~
+@68 = ~Attach a gem to the Gem Bow.~
+@69 = ~Never mind.~
 @70 = ~You pause to admire your Gem Bow for a moment before remembering you’re in the middle of combat, and that’s a rather pressing matter.~
