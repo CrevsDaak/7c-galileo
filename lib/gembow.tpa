@@ -48,7 +48,7 @@ COMPILE "7c-galileo/d/c7gembow.d" USING "7c-galileo/lang/%LANGUAGE%/gembow_dialo
 APPEND race.ids "244 TASLOI" UNLESS "TASLOI" // might need something more solid
 
 COPY_EXISTING_REGEXP "^.*\.cre$" override
-  PATCH_IF SOURCE_SIZE > 0x2cc BEGIN
+  PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
     READ_LONG 0xC name
     PATCH_IF name == 8752 || name == 8753 BEGIN
       WRITE_BYTE 0x272 244
