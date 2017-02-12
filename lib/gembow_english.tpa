@@ -455,7 +455,7 @@ STATISTICS:
 
 Damage: +1
 THAC0: +1
-Special: Wild Magic incurred on target for the next five rounds upon hit
+Special: Upon hit, for the next five rounds targets' magic will be subject to Wild Surges.
 Speed Factor: 5
 Proficiency Type: Shortbow
 Type: Two-handed
