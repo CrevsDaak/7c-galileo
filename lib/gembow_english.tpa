@@ -89,7 +89,7 @@ Requires:
  6 Strength~
   "7c#gbw05" => ~Blasted Gem Bow
 
-Currently, there is an Andar gem affixed to it. Arrows fired from the Gem Bow crackle with magical energy as they assault their target.
+Currently, there is an Andar gem affixed to it. Arrows fired from the Gem Bow assault their target with magical energy.
 
 STATISTICS:
 
@@ -102,7 +102,7 @@ Requires:
  6 Strength~
   "7c#gbw06" => ~Gem Bow of Tasloi Slaying
 
-Currently, there is a Jasper gem affixed to it. Any tasloi unfortunate enough to be struck by your arrow will explode into bloody chunks, its soul condemned to the Nine Hells for all eternity, Save vs. Death at -2 to escape it's effects.
+Currently, there is a Jasper gem affixed to it. Any tasloi unfortunate enough to be struck by your arrow and fail their saving throw will explode into bloody chunks, its soul condemned to the Nine Hells for all eternity.
 
 STATISTICS:
 
@@ -185,7 +185,7 @@ Requires:
  6 Strength~
   "7c#gbw12" => ~Lunar Gem Bow
 
-Currently, there is a Moonstone gem affixed to it. Upon hit, it confuses its targets for 1 round.
+Currently, there is a Moonstone gem affixed to it. Upon hit, it confuses its targets for 1 round. (Unless a successful save vs. spell is made)
 
 STATISTICS:
 
@@ -213,8 +213,7 @@ Requires:
  6 Strength~
   "7c#gbw14" => ~Pernicious Gem Bow
 
-Currently, there is a Chrysoberyl gem affixed to it. Upon hit, the target must save vs. spell at +4 or be polymorphed into a Tasloi, the poor bastard.
-
+Currently, there is a Chrysoberyl gem affixed to it. Upon hit, the target must save vs. spell at +4 or be polymorphed into a tasloi, the poor bastard.
 STATISTICS:
 
 Damage: +1
@@ -325,7 +324,7 @@ Requires:
  6 Strength~
   "7c#gbw22" => ~Nature's Gem Bow
 
-Currently, there is a Sphene gem affixed to it. Enemies struck must successfully save vs. spell or be entangled, unable to move.
+Currently, there is a Sphene gem affixed to it. Enemies struck must successfully save vs. spell or be entangled with vines, momentarily unable to move.
 
 STATISTICS:
 
@@ -353,7 +352,7 @@ Requires:
  6 Strength~
   "7c#gbw24" => ~Soothing Gem Bow
 
-Currently, there is a Water Opal affixed to it. The wielder slowly regenerates health.
+Currently, there is a Water Opal affixed to it. As the bow emanates with inner light, the user feels a subtle warmth and comfort wash over them. The wielder slowly regenerates health.
 
 STATISTICS:
 
@@ -367,7 +366,7 @@ Requires:
  6 Strength~
   "7c#gbw25" => ~Freezing Gem Bow
 
-Currently, there is a Moonbar gem affixed to it. Arrows fired from the Gem Bow sizzle with a chilling frost effect.
+Currently, there is a Moonbar gem affixed to it. Arrows fired from the Gem Bow seem to sizzle sinisterly with a chilling frost effect.
 
 STATISTICS:
 
@@ -436,7 +435,7 @@ Requires:
  6 Strength~
   "7c#gbw30" => ~Rogue's Gem Bow
 
-Currently, there is a Rogue Stone affixed to it. This magnificent bow grants its user additional dexterity and accuracy.
+Currently, there is a Rogue Stone affixed to it. Imbued with this stone, the bow seems to help its user remain balanced. This magnificent bow grants its user additional dexterity and accuracy.
 
 STATISTICS:
 
@@ -450,7 +449,7 @@ Requires:
  6 Strength~
   "7c#gbw31" => ~Exotic Gem Bow
 
-Currently, there is a Glittering Bejurril Stone affixed to it. You think yourself quite clever, don't you?
+Currently, there is an exceedingly rare Glittering Beljuril Stone affixed to it. You think yourself quite clever, don't you?
 
 STATISTICS:
 
