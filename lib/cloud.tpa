@@ -1,11 +1,5 @@
-OUTER_SPRINT cl "7c-galileo/clouds"
-OUTER_SET CrevsDaak = 0x4461616b
-
 /*
  * cloud.tpa
- *
- * WeiDU library by Nicolas Clotta (CrevsDaak)
- * Last edited on 2015-06-18.
  *
  * This library needs the following files to
  * work:
@@ -14,23 +8,14 @@ OUTER_SET CrevsDaak = 0x4461616b
  *   - 7c#cloud.cre
  *   - 7c#cloud.eff
  *   - 7c#sp318.baf
- * 
- * It creates an invisible creature that Shout()s
- * to other creatures, whom move out away form
- * that creature right after hearing it, so they
- * get out of the cloud.
  *
- * The idea was taken from SCS's way of detecting
- * Cloudkill-like spells with stationary effects.
- *
- * Edited on purpose for the Galileo NPC mod. Use
- * the version alongside 7c-improved (ask Crevs).
+ * Rudimentary implementation (read: shameless copy)
+ * of SCS's method of detecting clouds, much simpler,
+ * and doesn't rely on SFO.
  *
  */
 
-OUTER_SPRINT 7c_det_cl_ver v1.1
-
-ACTION_IF !FILE_EXISTS  "override/7c#cloud.mrk" BEGIN
+ACTION_IF !FILE_EXISTS "override/7c#cloud.mrk" BEGIN
 
   COPY - "%cl%/7c#cloud.2da" "%cl%/7c#cloud.2da"
     READ_2DA_ENTRIES_NOW __7c#cloud__ 6
@@ -51,7 +36,6 @@ ACTION_IF !FILE_EXISTS  "override/7c#cloud.mrk" BEGIN
 
           COPY "%cl%/7c#cloud.eff" "override/%new%.eff"
             WRITE_ASCIIE 0x30 "%new%"
-            WRITE_LONG 0x50 CrevsDaak
 
           ACTION_IF "%type%" STR_EQ "spl" BEGIN
             COPY_EXISTING "%res%.spl" override

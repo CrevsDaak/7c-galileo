@@ -36,8 +36,8 @@ IF
 //	Detect("HalflingMessager")
         Range("HalflingMessager",20)
         See("HalflingMessager")
-//        Dead("HalflingMessager")
-        // I think all those triggers should be enough... Right? ;D
+//      Dead("HalflingMessager")
+// I think all those triggers should be enough... Right? ;D
 	Global("7C#GalileoDeadHalflingComment","LOCALS",0)
 THEN
 	RESPONSE #100

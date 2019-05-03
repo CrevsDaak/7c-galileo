@@ -1,9 +1,56 @@
-Update dialog files to use new WeiDU variables (more, easier compatibility)
-Update code using old WeiDU variables to use the new ones
-Missing scripts for the ghosts, missing items
-Gembow dialogue for others than c7gembow.itm (use template and auto gen)
-Gembow patches for all gembows other than c7gembow.itm
-Test everything (?)
-???
-Profit.
-(for Quartz) Write missing descriptions (and dialogs if any)
+===(CrevsDaak):
+-strip clean .tp2 of its own TODOs
+-clean this directory of dev files
+-check if icons are done, do if not done
+-check for mods that alter memo tables, apply changes as needed
+-check for mods that alter spells we're using, apply changes as needed
+-install tutu and eet for testing, get a second bgt install as well
+-enforce game-specific checks in a more strict manner
+-checkout how charsets stuff works if done. I hope what's there works honestly.
+-check dialogs, banters for possible bugs
+-apparently we're adding a .pro? check this out.
+-compression of .wav files? 10 megs is nothing today. check this out anyway
+-update galileo.txt accordingly
+-add thanks section to readme
+-specially for DS and the rest of the, uumh, stolen? borrowed, code. ahem.
+-iesdp, weidu, NI, davidW for scs, the usual: add them as well.
+
+Firewine:
+-finish scripts for the Ghosts (see gembowinfo.txt)
+-something else i forgot now
+-balance fight for a ~5th level party
+
+Gembow:
+-finish patches and specific effects for each of them
+-better to ship finished product than at-install gen? test, need working version
+-test installation & in-game.
+
+(one of each test, succesful on a single platform should get us to beta status)
+Test:
+-installation: in vbg1, bgt, bg:ee, eet
+-spawn: in vbg1, bgt, modded bgt, bg:ee, eet
+-firewine battle: in vbg1, bgt, bg:ee
+-firewine related dialgo: in vbg1, bgt, bg:ee, tutu
+-gembow: in vbg1, bgt, bg:ee, tutu
+-scripts: in vbg1, bgt, bg:ee
+-dialog: in vbg1, bg:ee
+-banter: in vbg1, bg:ee, bgt, tutu
+-crashes: in vbg1, eet, tutu
+
+Tested (aka current version of X works on Y platform):
+nothing ;-)
+yet...
+
+
+===(Quartz):
+-Write missing descriptions
+-Check if all existing dialogs have been converted into .d format
+-check against banters.txt to see if it's up to date. update as necessary
+-same goes for interjections.txt
+-Convert into .d formet as necessary
+-update galileo.txt accordingly.
+-Write more dialogs if required
+-write replacement for placeholder string @35 for gembow_dialog.tra
+-update dialog.tra, game.tra as necessary when adding new text.
+-is the stuff for talks.txt implemented anywhere actually?
+-same for main_plot_dialogues.txt, but I can take care of that -CD

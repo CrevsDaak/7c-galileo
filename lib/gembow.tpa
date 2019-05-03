@@ -3,7 +3,7 @@
 // currently, it's a BG1-only file, since misc1j cannot be found in BG2 (misc6z has to be used instead).
 
 COPY_EXISTING "%avaricem%.cre" override
-  ADD_CRE_ITEM misc1j #0 #0 #0 identified INV
+  ADD_CRE_ITEM misc1j #0 #0 #0 "unstealable&identified" INV
 BUT_ONLY
 
 ACTION_DEFINE_ASSOCIATIVE_ARRAY arrows BEGIN
@@ -45,7 +45,7 @@ COPY "7c-galileo/itm/gembow.itm" "override/c7gembow.itm"
 
 COMPILE "7c-galileo/d/c7gembow.d" USING "7c-galileo/lang/%LANGUAGE%/gembow_dialog.tra"
 
-APPEND race.ids "244 TASLOI" UNLESS "TASLOI" // might need something more solid
+APPEND race.ids "244 TASLOI" UNLESS "TASLOI"
 
 COPY_EXISTING_REGEXP "^.*\.cre$" override
   PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN

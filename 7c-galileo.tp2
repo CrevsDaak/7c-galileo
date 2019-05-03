@@ -3,9 +3,11 @@ BACKUP "7c-galileo/backup"
 AUTHOR "www.github.com/CrevsDaak/7c-galileo/issues/new"
 // AUTHOR ~Quartz and Crevs Daak~
 // troubleshooting > being on AUTHOR ;D
-VERSION "v0.0.2 alpha"
+VERSION "v0.0.2"
 
 README "7c-galileo/readme_%LANGUAGE%.txt" "7c-galileo/readme.txt"
+
+AUTO_EVAL_STRINGS
 
 ALWAYS
   ACTION_DEFINE_ARRAY fl#reload BEGIN setup END
@@ -56,7 +58,7 @@ LANGUAGE "English"
 
 BEGIN @1 DESIGNATED 100
 REQUIRE_PREDICATE GAME_IS "bgee bgt eet tutu tutu_totsc" @2
-
+/*todo: check, and update cmpvars (if necessary, but do check them!!)*/
 ACTION_IF GAME_IS "tutu tutu_totsc" BEGIN
   INCLUDE "7c-galileo/lib/vars/g3_tutu_cpmvars.tpa"
 END ELSE ACTION_IF GAME_IS bgt BEGIN
@@ -70,11 +72,16 @@ END
 ACTION_IF GAME_IS "tutu tutu_totsc" BEGIN
   INCLUDE "7c-galileo/lib/tutu_items.tpa"
 END ELSE BEGIN
+/*todo: write this deviant piece of hellish code
+intended to remove items without an underscore before
+their filename on a .cre file if they exist*/
   DEFINE_PATCH_FUNCTION tutu_items BEGIN END
 END
 
 // get around using BGT_VAR
 // OUTER_SPRINT bgt_check ~!Global("endofbg1","GLOBAL",2)~
+/*todo: why is this commented out?*/
+
 OUTER_SPRINT melicamp EVAL ~"~ ^ EVAL ~%tutu_var%misc46"~
 
 COPY "7c-galileo/bam/7c#gal01.bam" override
@@ -142,15 +149,16 @@ COPY "7c-galileo/itm/c7#daga.itm" override
   SAY 0x54 @7991
   WRITE_SHORT ((LONG_AT 0x064) + 0x2a) "%c7#daga%"
 
-OUTER_SPRINT path "7c-galileo/ds"
-INCLUDE "7c-galileo/ds/ds.tph"
+INCLUDE "7c-galileo/ds.tph"
 
-LAF detectable_spells_setup STR_VAR path END
-LAF detectable_spells STR_VAR table = EVAL "cddetect.2da" END
+LAF detectable_spells_setup END
+LAF detectable_spells END
 LAF detectable_weapon_enchantment END
 
+/*todo:read saves.2da table, assign proper saves from game, not arbitrarily.*/
 COPY "7c-galileo/cre/galileo.cre" "override/7c#gal02.cre"
   /* TODO: add check to use BG2 lines only in BG2... or maybe not */
+  //todo: definitely needs a check to avoid incorrect lines in vBG1??
   SAY NAME1 @771
   SAY NAME2 @771
   SAY LEADER @772
@@ -364,7 +372,7 @@ COMPILE EVAL "7c-galileo/baf/7c#gal02.baf"
 COMPILE EVAL "7c-galileo/baf/7c#gal01.baf"
 COMPILE EVAL "7c-galileo/baf/7c#gal00.baf"
 
-ACTION_IF GAME_IS "bgee eet sod" BEGIN
+ACTION_IF GAME_IS "bgee eet" BEGIN
   COPY "7c-galileo/bmp/ee" override
 END ELSE BEGIN
   COPY "7c-galileo/bmp/bg" override
@@ -403,9 +411,11 @@ SetGlobal("7C#DoneFirewineRuins","GLOBAL",1)~
 BUT_ONLY
 
 COPY_EXISTING "%tutu_scripth%alfmiri.cre" override
-  WRITE_ASCII 0x280 "HalflingMessager" #32
+  WRITE_ASCII 0x280 "HalflingMessager" #32 /*warning:this is destructive.
+  	      	    		           check for possible conflicts*/
 BUT_ONLY
 
+OUTER_SPRINT cl "7c-galileo/clouds"
 INCLUDE "7c-galileo/lib/cloud.tpa"
 INCLUDE "7c-galileo/lib/gembow.tpa"
 
@@ -449,7 +459,7 @@ COPY "7c-galileo/spl/7c#jov01.spl" override
       resist_dispel = 3
   END
 
-ACTION_IF GAME_IS "bgee eet sod" BEGIN
+ACTION_IF GAME_IS "bgee eet" BEGIN
   OUTER_SPRINT RunAwayFrom RunAwayFromNoLeaveArea
 END ELSE BEGIN
   OUTER_SPRINT RunAwayFrom RunAwayFrom
