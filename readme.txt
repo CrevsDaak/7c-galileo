@@ -45,14 +45,8 @@ Galileo can be found in the halfling village of Gullykin, where he enjoys the co
 III. Installation
 ------------------------
 
-To install the mod on Windows, open the executable ''setup-7c-galileo.exe'' and choose the options on screen. The directory to install the mod should contain the file ''chitin.key''. To uninstall simply open the executable once again and choose to uninstall the mod.
-When updating the mod, uninstall and completely delete the old version before unpackaging and installing the new version of the mod.
-
-To install on Mac OS X, double-click the file ''galileo-osx.command'' and choose the options on screen. The directory to install the mod should contain the file ''chitin.key''. To uninstall simply double-click the file ''galileo-osx.commend'' once again and choose to uninstall the mod.
-When updating the mod, uninstall and completely delete the old version before unpackaging and installing the new version of the mod.
- 
-To install on GNU/Linux, download WeiDU from http://www.weidu.org/~thebigg, run tolower, answer [y]es to both queries (if you haven't already generated the linux.ini file), place both weidu and weinstall on /usr/bin (or export their directory to $PATH) and enter ''weinstall galileo'' in your shell. (while you are in the directory containing the ''chitin.key'' file)
-When updating the mod, uninstall and completely delete the old version before unpackaging and installing the new version of the mod.
+Galileo is installed via WeiDU. If you've not been shipped a copy of it together with this mod, you can pick up one  from this site: http://weidu.org/~thebigg/
+Installing mod with WeiDU is pretty straightforward and there's guides describing out do it elsewhere in case you don't know how to yet. Normally, on Windows you'd open up setup-7c-galileo.exe and then read the stuff that it'll show you on screen.
 
 -----------------------
 IV. Stats
