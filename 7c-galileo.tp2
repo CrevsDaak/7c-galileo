@@ -3,7 +3,7 @@ BACKUP "7c-galileo/backup"
 AUTHOR "www.github.com/CrevsDaak/7c-galileo/issues/new"
 // AUTHOR ~Quartz and Crevs Daak~
 // troubleshooting > being on AUTHOR ;D
-VERSION "v0.0.2"
+VERSION "v0.0.2 alpha"
 
 README "7c-galileo/readme_%LANGUAGE%.txt" "7c-galileo/readme.txt"
 
