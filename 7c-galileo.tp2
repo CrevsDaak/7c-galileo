@@ -1,11 +1,11 @@
 // -*- weidu-tp2 -*-
-BACKUP "7c-galileo/backup"
+BACKUP "weidu_external/backup/7c-galileo"
 AUTHOR "www.github.com/CrevsDaak/7c-galileo/issues/new"
 // AUTHOR ~Quartz and Crevs Daak~
 // troubleshooting > being on AUTHOR ;D
 VERSION "v0.0.2 alpha"
 
-README "7c-galileo/readme_%LANGUAGE%.txt" "7c-galileo/readme.txt"
+README "%MOD_FOLDER%/readme_%LANGUAGE%.txt" "%MOD_FOLDER%/readme.txt"
 
 AUTO_EVAL_STRINGS
 
@@ -16,10 +16,10 @@ ALWAYS
     INT_VAR
       infer_charset = 1
     STR_VAR
-      tra_path = "7c-galileo/lang"
+      tra_path = "%MOD_FOLDER%/lang"
       noconvert_array = fl#noconvert
       reload_array = fl#reload
-      iconv_path = "7c-galileo/lang/iconv"
+      iconv_path = "%MOD_FOLDER%/lang/iconv"
   END
   DEFINE_ACTION_FUNCTION extend_bot
     STR_VAR
@@ -30,17 +30,17 @@ ALWAYS
       READ_ASCII 0x94 are_script
       PATCH_IF "%are_script%" STR_CMP "" && FILE_EXISTS_IN_GAME "%are_script%.bcs" BEGIN
         INNER_ACTION BEGIN
-          EXTEND_BOTTOM "%are_script%.bcs" "7c-galileo/baf/%script%.baf" EVAL
+          EXTEND_BOTTOM "%are_script%.bcs" "%MOD_FOLDER%/baf/%script%.baf" EVAL
         END
       END ELSE BEGIN
         WRITE_ASCIIE 0x94 "%area%"
         PATCH_IF FILE_EXISTS "%area%.bcs" BEGIN
           INNER_ACTION BEGIN
-            EXTEND_BOTTOM "%area%.bcs" "7c-galileo/baf/%script%.baf" EVAL
+            EXTEND_BOTTOM "%area%.bcs" "%MOD_FOLDER%/baf/%script%.baf" EVAL
           END
         END ELSE BEGIN
           INNER_ACTION BEGIN
-            COMPILE EVAL "7c-galileo/baf/%script%.baf"
+            COMPILE EVAL "%MOD_FOLDER%/baf/%script%.baf"
             MOVE "override/%script%.bcs" "override/%area%.bcs"
           END
       END
@@ -48,29 +48,29 @@ ALWAYS
   END
 END
 
-  OUTER_SPRINT tra "7c-galileo/lang/%LANGUAGE%"
+  OUTER_SPRINT tra "%MOD_FOLDER%/lang/%LANGUAGE%"
   LOAD_TRA "%tra%/game.tra"
 END
 
 LANGUAGE "English"
  "english"
- "7c-galileo/lang/english/setup.tra"
+ "%MOD_FOLDER%/lang/english/setup.tra"
 
 BEGIN @1 DESIGNATED 100
 REQUIRE_PREDICATE GAME_IS "bgee bgt eet tutu tutu_totsc" @2
 /*todo: check, and update cmpvars (if necessary, but do check them!!)*/
 ACTION_IF GAME_IS "tutu tutu_totsc" BEGIN
-  INCLUDE "7c-galileo/lib/vars/g3_tutu_cpmvars.tpa"
+  INCLUDE "%MOD_FOLDER%/lib/vars/g3_tutu_cpmvars.tpa"
 END ELSE ACTION_IF GAME_IS bgt BEGIN
-  INCLUDE "7c-galileo/lib/vars/g3_bgt_cpmvars.tpa"
+  INCLUDE "%MOD_FOLDER%/lib/vars/g3_bgt_cpmvars.tpa"
 END ELSE ACTION_IF GAME_IS eet BEGIN
-  INCLUDE  "7c-galileo/lib/vars/eet_cpmvars.tpa"
+  INCLUDE  "%MOD_FOLDER%/lib/vars/eet_cpmvars.tpa"
 END ELSE ACTION_IF GAME_IS bgee BEGIN
-  INCLUDE "7c-galileo/lib/vars/liam_bgee_vars.tpa"
+  INCLUDE "%MOD_FOLDER%/lib/vars/liam_bgee_vars.tpa"
 END
 
 ACTION_IF GAME_IS "tutu tutu_totsc" BEGIN
-  INCLUDE "7c-galileo/lib/tutu_items.tpa"
+  INCLUDE "%MOD_FOLDER%/lib/tutu_items.tpa"
 END ELSE BEGIN
 /*todo: write this deviant piece of hellish code
 intended to remove items without an underscore before
@@ -84,8 +84,8 @@ END
 
 OUTER_SPRINT melicamp EVAL ~"~ ^ EVAL ~%tutu_var%misc46"~
 
-COPY "7c-galileo/bam/7c#gal01.bam" override
-COPY "7c-galileo/spl/7c#gal01.spl" override
+COPY "%MOD_FOLDER%/bam/7c#gal01.bam" override
+COPY "%MOD_FOLDER%/spl/7c#gal01.spl" override
   SAY 0x8 @7734
   SAY 0x50 @7735
   WRITE_ASCII 0x3a "7c#gal01" #8
@@ -142,21 +142,21 @@ COPY "7c-galileo/spl/7c#gal01.spl" override
     END
   END
 
-ADD_PROJECTILE "7c-galileo/c7#daga.pro"
+ADD_PROJECTILE "%MOD_FOLDER%/c7#daga.pro"
 
-COPY "7c-galileo/itm/c7#daga.itm" override
+COPY "%MOD_FOLDER%/itm/c7#daga.itm" override
   SAY 0xC @7990
   SAY 0x54 @7991
   WRITE_SHORT ((LONG_AT 0x064) + 0x2a) "%c7#daga%"
 
-INCLUDE "7c-galileo/ds.tph"
+INCLUDE "%MOD_FOLDER%/ds.tph"
 
 LAF detectable_spells_setup END
 LAF detectable_spells END
 LAF detectable_weapon_enchantment END
 
 /*todo:read saves.2da table, assign proper saves from game, not arbitrarily.*/
-COPY "7c-galileo/cre/galileo.cre" "override/7c#gal02.cre"
+COPY "%MOD_FOLDER%/cre/galileo.cre" "override/7c#gal02.cre"
   /* TODO: add check to use BG2 lines only in BG2... or maybe not */
   //todo: definitely needs a check to avoid incorrect lines in vBG1??
   SAY NAME1 @771
@@ -366,16 +366,16 @@ APPEND interact.2da ~GALILEO1%TAB%c%TAB%s%TAB%0%TAB%0%TAB%c%TAB%0%TAB%c%TAB%c%TA
 APPEND_COL interact.2da ~$ $ GALILEO1 0 0 0 0 0 0 c c 0 c 0 0 0 i i c i s i i i 0 i%extra_cols%~
 
 
-COMPILE EVAL "7c-galileo/d/before_joining.d" USING "%tra%/dialog.tra"
-COMPILE EVAL "7c-galileo/d/party_dialog.d" USING "%tra%/dialog.tra"
-COMPILE EVAL "7c-galileo/baf/7c#gal02.baf"
-COMPILE EVAL "7c-galileo/baf/7c#gal01.baf"
-COMPILE EVAL "7c-galileo/baf/7c#gal00.baf"
+COMPILE EVAL "%MOD_FOLDER%/d/before_joining.d" USING "%tra%/dialog.tra"
+COMPILE EVAL "%MOD_FOLDER%/d/party_dialog.d" USING "%tra%/dialog.tra"
+COMPILE EVAL "%MOD_FOLDER%/baf/7c#gal02.baf"
+COMPILE EVAL "%MOD_FOLDER%/baf/7c#gal01.baf"
+COMPILE EVAL "%MOD_FOLDER%/baf/7c#gal00.baf"
 
 ACTION_IF GAME_IS "bgee eet" BEGIN
-  COPY "7c-galileo/bmp/ee" override
+  COPY "%MOD_FOLDER%/bmp/ee" override
 END ELSE BEGIN
-  COPY "7c-galileo/bmp/bg" override
+  COPY "%MOD_FOLDER%/bmp/bg" override
 END
 
 COPY_EXISTING "%Gullykin%.are" override
@@ -412,41 +412,41 @@ BUT_ONLY
 
 COPY_EXISTING "%tutu_scripth%alfmiri.cre" override
   WRITE_ASCII 0x280 "HalflingMessager" #32 /*warning:this is destructive.
-  	      	    		           check for possible conflicts*/
+                                           check for possible conflicts*/
 BUT_ONLY
 
-OUTER_SPRINT cl "7c-galileo/clouds"
-INCLUDE "7c-galileo/lib/cloud.tpa"
-INCLUDE "7c-galileo/lib/gembow.tpa"
+OUTER_SPRINT cl "%MOD_FOLDER%/clouds"
+INCLUDE "%MOD_FOLDER%/lib/cloud.tpa"
+INCLUDE "%MOD_FOLDER%/lib/gembow.tpa"
 
-COPY "7c-galileo/bam" override
+COPY "%MOD_FOLDER%/bam" override
 
-COPY "7c-galileo/itm/c7#gshl1.itm" override
+COPY "%MOD_FOLDER%/itm/c7#gshl1.itm" override
   SAY 0xC @7988
   SAY IDENTIFIED_DESC @7989
 
-COPY "7c-galileo/cre/7c#yola.cre" override
+COPY "%MOD_FOLDER%/cre/7c#yola.cre" override
   SAY NAME1 @7741
   SAY NAME2 @7741
   LPF tutu_items END
 
-COPY "7c-galileo/cre/7c#jovia.cre" override
+COPY "%MOD_FOLDER%/cre/7c#jovia.cre" override
   SAY NAME1 @7742
   SAY NAME2 @7742
   ADD_KNOWN_SPELL 7c#jov01 #1 innate
   LPF tutu_items END
 
-COPY "7c-galileo/cre/7c#wenan.cre" override
+COPY "%MOD_FOLDER%/cre/7c#wenan.cre" override
   SAY NAME1 @7743
   SAY NAME2 @7743
   LPF tutu_items END
 
-COPY "7c-galileo/cre/7c#calna.cre" override
+COPY "%MOD_FOLDER%/cre/7c#calna.cre" override
   SAY NAME1 @7744
   SAY NAME2 @7744
   LPF tutu_items END
 
-COPY "7c-galileo/spl/7c#jov01.spl" override
+COPY "%MOD_FOLDER%/spl/7c#jov01.spl" override
   SAY NAME1 #-1
   LPF ADD_SPELL_EFFECT
     INT_VAR
@@ -465,9 +465,9 @@ END ELSE BEGIN
   OUTER_SPRINT RunAwayFrom RunAwayFrom
 END
 
-COMPILE EVAL "7c-galileo/baf/7c#jovia.baf"
-COMPILE EVAL "7c-galileo/baf/7c#yola.baf"
-COMPILE EVAL "7c-galileo/baf/7c#wenan.baf"
-COMPILE EVAL "7c-galileo/baf/7c#calna.baf"
+COMPILE EVAL "%MOD_FOLDER%/baf/7c#jovia.baf"
+COMPILE EVAL "%MOD_FOLDER%/baf/7c#yola.baf"
+COMPILE EVAL "%MOD_FOLDER%/baf/7c#wenan.baf"
+COMPILE EVAL "%MOD_FOLDER%/baf/7c#calna.baf"
 
 // eof

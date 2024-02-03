@@ -19,5 +19,5 @@ LPF ADD_ITEM_EFFECT
 END
 
 INNER_ACTION BEGIN
-  COPY "7c-galileo/eff/c7#gbw06.eff" override
+  COPY "%MOD_FOLDER%/eff/c7#gbw06.eff" override
 END
