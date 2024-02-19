@@ -52,9 +52,10 @@ END
   LOAD_TRA "%tra%/game.tra"
 END
 
+// Don't use %MOD_FOLDER% for LANGUAGE until it will be fixed, https://forums.pocketplane.net/index.php?topic=29956.msg340386#msg340386
 LANGUAGE "English"
  "english"
- "%MOD_FOLDER%/lang/english/setup.tra"
+ "7c-galileo/lang/english/setup.tra"
 
 BEGIN @1 DESIGNATED 100
 REQUIRE_PREDICATE GAME_IS "bgee bgt eet tutu tutu_totsc" @2
