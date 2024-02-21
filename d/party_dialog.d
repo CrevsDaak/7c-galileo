@@ -19,29 +19,30 @@ IF ~Global("7C#GalileoJustRaisedBack","GLOBAL",1)~ BEGIN 7c#galileo.back.from.he
     IF ~~ REPLY @77 /* ~I may have had to sell your hat to fund this. */ GOTO 7c#nooooo.not.my.hat
 END
 
-CHAIN
-  IF ~Global("7C#GalileoJaheiraBanter","LOCALS",1)
-      InParty("%jaheira_dv%")
-      See("%jaheira_dv%")
-      !StateCheck("%jaheira_dv%",CD_STATE_NOTVALID)
-      !StateCheck(Myself, CD_STATE_NOTVALID)~ THEN "%jaheira_dialog%" 7c#galileo.jaheira.banter.1
-  @65 /* It is fascinating for a halfling to be a follower of Finder Wyvernspur. */
-DO ~SetGlobal("7C#GalileoJaheiraBanter","LOCALS",2)~
-  == 7C#GAL1J
-  @66 /* Aye, you're quite right about that. He's not exactly the most popular god to begin with. You are a Harper, no? */
-  == "%jaheira_dialog%"
-  @67 /* Correct. How did you become acquainted with our organization? */
-  == 7C#GAL1J
-  @68 /* My old music teacher is a Harper, and quite the admirable man. I hold a lot of respect [...] */
-  == "%jaheira_dialog%"
-  @69 /* While it is not my place to question her actions, I do wonder why Mystra [...] */
-  == 7C#GAL1J
-  @70 /* It is the tale of an impassioned artist becoming too arrogant in his own works, and the consequences it presents. */
-  == "%jaheira_dialog%"
-  @71 /* Yes, I suppose so. And have you taken that lesson to heart? */
-  == 7C#GAL1J
-  @72 /* Aye, I've attempted to. Honestly, most folks don't appreciate my original pieces, so it's quite humbling, you see. */
-EXIT
+// This Jaheira-Galileo banter was very out-of-character as Jaheira is not out-and-proud about being a Harper in BG1. Removed.
+// CHAIN
+  // IF ~Global("7C#GalileoJaheiraBanter","LOCALS",1)
+      // InParty("%jaheira_dv%")
+      // See("%jaheira_dv%")
+      // !StateCheck("%jaheira_dv%",CD_STATE_NOTVALID)
+      // !StateCheck(Myself, CD_STATE_NOTVALID)~ THEN "%jaheira_dialog%" 7c#galileo.jaheira.banter.1
+  // @65 /* It is fascinating for a halfling to be a follower of Finder Wyvernspur. */
+// DO ~SetGlobal("7C#GalileoJaheiraBanter","LOCALS",2)~
+  // == 7C#GAL1J
+  // @66 /* Aye, you're quite right about that. He's not exactly the most popular god to begin with. You are a Harper, no? */
+  // == "%jaheira_dialog%"
+  // @67 /* Correct. How did you become acquainted with our organization? */
+  // == 7C#GAL1J
+  // @68 /* My old music teacher is a Harper, and quite the admirable man. I hold a lot of respect [...] */
+  // == "%jaheira_dialog%"
+  // @69 /* While it is not my place to question her actions, I do wonder why Mystra [...] */
+  // == 7C#GAL1J
+  // @70 /* It is the tale of an impassioned artist becoming too arrogant in his own works, and the consequences it presents. */
+  // == "%jaheira_dialog%"
+  // @71 /* Yes, I suppose so. And have you taken that lesson to heart? */
+  // == 7C#GAL1J
+  // @72 /* Aye, I've attempted to. Honestly, most folks don't appreciate my original pieces, so it's quite humbling, you see. */
+// EXIT
 
 CHAIN
   IF ~Global("7C#GalileoKivanBanter","LOCALS",1)
